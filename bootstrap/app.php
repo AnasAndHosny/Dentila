@@ -12,7 +12,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        $middleware->api(prepend: [
+            \App\Http\Middleware\Localization::class, //change locale language for api routes
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
