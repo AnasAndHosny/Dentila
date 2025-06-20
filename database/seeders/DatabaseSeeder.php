@@ -20,5 +20,9 @@ class DatabaseSeeder extends Seeder
             'phone_number' => 'admin',
             'password' => 'admin'
         ]);
+
+        $this->call([
+            MedicationSeeder::class,
+        ]);
     }
 }

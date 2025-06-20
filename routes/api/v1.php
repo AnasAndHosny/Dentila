@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\V1\AuthController;
+use App\Http\Controllers\Api\V1\MedicationController;
 
 Route::prefix('v1')->group(function () {
     Route::get('test', function () {
@@ -11,5 +12,13 @@ Route::prefix('v1')->group(function () {
     Route::controller(AuthController::class)->group(function () {
         Route::post('login', 'login');
         Route::get('logout', 'logout')->middleware('auth:sanctum');
+    });
+
+    Route::prefix('medication')->controller(MedicationController::class)->group(function () {
+        Route::get('/', 'index');
+        Route::post('/', 'store');
+        Route::get('{medication}', 'show');
+        Route::patch('{medication}', 'update');
+        Route::delete('{medication}', 'destroy');
     });
 });

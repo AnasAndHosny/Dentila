@@ -80,5 +80,7 @@
     "The resetting password code has been sent successfully to your phone number.":"تم إرسال رمز إعادة تعيين كلمة المرور إلى رقم هاتفك بنجاح.",
     "Your password has been reset successfully.":"تم إعادة تعيين كلمة المرور الخاصة بك بنجاح.",
     "notifications":"الإشعارات",
-    "dashboard":"لوحة التحكم"
+    "dashboard":"لوحة التحكم",
+    "medication":"الدواء",
+    "medications":"الأدوية"
 }
