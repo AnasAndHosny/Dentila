@@ -2397,6 +2397,665 @@
 							]
 						}
 					]
+				},
+				{
+					"name": "Category",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/category",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"category"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/category",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"category"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 21 Jun 2025 14:13:12 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 4,\n            \"name\": \"figfgd\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"first categorydfdfad\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"first categorydfdfa\"\n        },\n        {\n            \"id\": 1,\n            \"name\": \"first category\"\n        }\n    ],\n    \"message\": \"تم جلب قائمة التصنيفات بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "store",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "locale",
+										"value": "en",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "first category",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/category",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"category"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "locale",
+												"value": "en",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "first category",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/category",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"category"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 21 Jun 2025 14:11:36 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"first category\"\n    },\n    \"message\": \"Category created successfully.\"\n}"
+								},
+								{
+									"name": "Unique",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "locale",
+												"value": "en",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "first category",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/category",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"category"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 21 Jun 2025 14:11:47 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"name\": [\n            \"The name has already been taken.\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "Required",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "locale",
+												"value": "en",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "first category",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/category",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"category"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 21 Jun 2025 14:12:16 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"name\": [\n            \"The name field is required.\"\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "show",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/category/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"category",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/category/2",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"category",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 21 Jun 2025 14:13:36 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"first categorydfdfa\"\n    },\n    \"message\": \"تم جلب التصنيف بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "second category",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/category/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"category",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "second category",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/category/2",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"category",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 21 Jun 2025 14:14:41 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"second category\"\n    },\n    \"message\": \"تم تحديث التصنيف بنجاح.\"\n}"
+								},
+								{
+									"name": "Unique",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "second category",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/category/2",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"category",
+												"2"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 21 Jun 2025 14:14:49 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"name\": [\n            \"قيمة حقل الاسم مُستخدمة من قبل\"\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "destroy",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/category/4",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"category",
+										"4"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/category/4",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"category",
+												"4"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 21 Jun 2025 14:15:35 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [],\n    \"message\": \"تم حذف التصنيف بنجاح.\"\n}"
+								}
+							]
+						}
+					]
 				}
 			]
 		},

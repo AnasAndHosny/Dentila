@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\V1\AuthController;
+use App\Http\Controllers\Api\V1\CategoryController;
 use App\Http\Controllers\Api\V1\MedicationController;
 use App\Http\Controllers\Api\V1\TreatmentNoteController;
 use App\Http\Controllers\Api\V1\MedicationPlanController;
@@ -39,5 +40,13 @@ Route::prefix('v1')->group(function () {
         Route::get('{treatmentNote}', 'show');
         Route::patch('{treatmentNote}', 'update');
         Route::delete('{treatmentNote}', 'destroy');
+    });
+
+    Route::prefix('category')->controller(CategoryController::class)->group(function () {
+        Route::get('/', 'index');
+        Route::post('/', 'store');
+        Route::get('{category}', 'show');
+        Route::patch('{category}', 'update');
+        Route::delete('{category}', 'destroy');
     });
 });
