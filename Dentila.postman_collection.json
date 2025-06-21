@@ -3056,6 +3056,34 @@
 							]
 						}
 					]
+				},
+				{
+					"name": "Tooth Status",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/tooth-status",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"tooth-status"
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				}
 			]
 		},

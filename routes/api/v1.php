@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\V1\CategoryController;
 use App\Http\Controllers\Api\V1\MedicationController;
 use App\Http\Controllers\Api\V1\TreatmentNoteController;
 use App\Http\Controllers\Api\V1\MedicationPlanController;
+use App\Http\Controllers\Api\V1\ToothStatusController;
 
 Route::prefix('v1')->group(function () {
     Route::get('test', function () {
@@ -48,5 +49,9 @@ Route::prefix('v1')->group(function () {
         Route::get('{category}', 'show');
         Route::patch('{category}', 'update');
         Route::delete('{category}', 'destroy');
+    });
+
+    Route::prefix('tooth-status')->controller(ToothStatusController::class)->group(function () {
+        Route::get('/', 'index');
     });
 });
