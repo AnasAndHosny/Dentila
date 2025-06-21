@@ -84,5 +84,7 @@
     "medication":"الدواء",
     "medications":"الأدوية",
     "medication plans":"خطط منح الدواء",
-    "medication plan":"خطة منح الدواء"
+    "medication plan":"خطة منح الدواء",
+    "treatment notes":"ملاحظات العلاج",
+    "treatment note":"ملاحظة العلاج"
 }

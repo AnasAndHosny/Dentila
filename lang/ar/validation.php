@@ -221,6 +221,7 @@ return [
         'medication_id'         => 'الدواء',
         'duration_value'        => 'قيمة الدمدة',
         'duration_unit'         => 'وحدة المدة',
+        'text'                  => 'النص',
     ],
 
 ];
