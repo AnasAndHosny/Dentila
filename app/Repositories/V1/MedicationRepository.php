@@ -37,4 +37,9 @@ class MedicationRepository
     {
         return $medication->delete();
     }
+
+    public function getPlans(Medication $medication)
+    {
+        return $medication->medicationPlans()->latest()->get();
+    }
 }

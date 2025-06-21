@@ -82,5 +82,7 @@
     "notifications":"الإشعارات",
     "dashboard":"لوحة التحكم",
     "medication":"الدواء",
-    "medications":"الأدوية"
+    "medications":"الأدوية",
+    "medication plans":"خطط منح الدواء",
+    "medication plan":"خطة منح الدواء"
 }

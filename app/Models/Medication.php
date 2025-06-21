@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Medication extends Model
 {
@@ -11,4 +12,9 @@ class Medication extends Model
         'name',
         'info',
     ];
+
+    public function medicationPlans(): HasMany
+    {
+        return $this->hasMany(MedicationPlan::class);
+    }
 }

@@ -679,7 +679,7 @@
 							]
 						},
 						{
-							"name": "Destroy",
+							"name": "destroy",
 							"request": {
 								"method": "DELETE",
 								"header": [
@@ -758,6 +758,862 @@
 									],
 									"cookie": [],
 									"body": "{\n    \"status\": 1,\n    \"data\": [],\n    \"message\": \"تم حذف الدواء بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "plans",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/medication/5/plans",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"medication",
+										"5",
+										"plans"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/medication/5/plans",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"medication",
+												"5",
+												"plans"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 21 Jun 2025 02:46:54 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 3,\n            \"medication\": {\n                \"id\": 5,\n                \"image\": \"images/1750380602.jpg\",\n                \"name\": \"medication 2\",\n                \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n            },\n            \"dose\": \"حبة كل يومين\",\n            \"duration_value\": 4,\n            \"duration_unit\": \"weeks\"\n        },\n        {\n            \"id\": 1,\n            \"medication\": {\n                \"id\": 5,\n                \"image\": \"images/1750380602.jpg\",\n                \"name\": \"medication 2\",\n                \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n            },\n            \"dose\": null,\n            \"duration_value\": 4,\n            \"duration_unit\": \"weeks\"\n        }\n    ],\n    \"message\": \"تم جلب خطط منح الدواء بنجاح.\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Medication Plan",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/medication-plan",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"medication-plan"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/medication-plan",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"medication-plan"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 21 Jun 2025 02:45:10 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 4,\n            \"medication\": {\n                \"id\": 7,\n                \"image\": null,\n                \"name\": \"medication 9\",\n                \"info\": null\n            },\n            \"dose\": \"حبة كل 24 ساعة\",\n            \"duration_value\": 4,\n            \"duration_unit\": \"weeks\"\n        },\n        {\n            \"id\": 3,\n            \"medication\": {\n                \"id\": 5,\n                \"image\": \"images/1750380602.jpg\",\n                \"name\": \"medication 2\",\n                \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n            },\n            \"dose\": null,\n            \"duration_value\": 4,\n            \"duration_unit\": \"weeks\"\n        },\n        {\n            \"id\": 1,\n            \"medication\": {\n                \"id\": 5,\n                \"image\": \"images/1750380602.jpg\",\n                \"name\": \"medication 2\",\n                \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n            },\n            \"dose\": null,\n            \"duration_value\": 4,\n            \"duration_unit\": \"weeks\"\n        }\n    ],\n    \"message\": \"تم جلب قائمة خطط منح الدواء بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "store",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "locale",
+										"value": "en",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "medication_id",
+											"value": "7",
+											"type": "text"
+										},
+										{
+											"key": "dose",
+											"value": "حبة كل 24 ساعة",
+											"type": "text"
+										},
+										{
+											"key": "duration_value",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "duration_unit",
+											"value": "weeks",
+											"description": "days, weeks, months",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/medication-plan",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"medication-plan"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "locale",
+												"value": "en",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "medication_id",
+													"value": "7",
+													"type": "text"
+												},
+												{
+													"key": "dose",
+													"value": "حبة كل 24 ساعة",
+													"type": "text"
+												},
+												{
+													"key": "duration_value",
+													"value": "4",
+													"type": "text"
+												},
+												{
+													"key": "duration_unit",
+													"value": "weeks",
+													"description": "days, weeks, months",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/medication-plan",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"medication-plan"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 21 Jun 2025 02:45:25 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 5,\n        \"medication\": {\n            \"id\": 7,\n            \"image\": null,\n            \"name\": \"medication 9\",\n            \"info\": null\n        },\n        \"dose\": \"حبة كل 24 ساعة\",\n        \"duration_value\": 4,\n        \"duration_unit\": \"weeks\"\n    },\n    \"message\": \"Medication plan created successfully.\"\n}"
+								},
+								{
+									"name": "required",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "locale",
+												"value": "en",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "medication_id",
+													"value": "7",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "dose",
+													"value": "حبة كل 24 ساعة",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "duration_value",
+													"value": "4",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "duration_unit",
+													"value": "weeks",
+													"description": "days, weeks, months",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/medication-plan",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"medication-plan"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 21 Jun 2025 02:32:44 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"medication_id\": [\n            \"The medication id field is required.\"\n        ],\n        \"duration_value\": [\n            \"The duration value field is required.\"\n        ],\n        \"duration_unit\": [\n            \"The duration unit field is required.\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "Invalid values",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "medication_id",
+													"value": "9",
+													"type": "text"
+												},
+												{
+													"key": "dose",
+													"value": "حبة كل 24 ساعة",
+													"type": "text"
+												},
+												{
+													"key": "duration_value",
+													"value": "-7",
+													"type": "text"
+												},
+												{
+													"key": "duration_unit",
+													"value": "weeksdfsf",
+													"description": "days, weeks, months",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/medication-plan",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"medication-plan"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 21 Jun 2025 02:38:58 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"medication_id\": [\n            \"الدواء المختار غير صالح.\"\n        ],\n        \"duration_value\": [\n            \"يجب أن تكون قيمة الحقل عدد التكرارات مساوية أو أكبر لـ 1.\"\n        ],\n        \"duration_unit\": [\n            \"الحقل وحدة التكرارات لاغٍ\"\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "show",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/medication-plan/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"medication-plan",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/medication-plan/3",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"medication-plan",
+												"3"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 21 Jun 2025 02:45:47 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 3,\n        \"medication\": {\n            \"id\": 5,\n            \"image\": \"images/1750380602.jpg\",\n            \"name\": \"medication 2\",\n            \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n        },\n        \"dose\": null,\n        \"duration_value\": 4,\n        \"duration_unit\": \"weeks\"\n    },\n    \"message\": \"تم جلب خطة منح الدواء بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "medication_id",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "dose",
+											"value": "حبة كل يومين",
+											"type": "text"
+										},
+										{
+											"key": "duration_value",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "duration_unit",
+											"value": "weeks",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/medication-plan/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"medication-plan",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "medication_id",
+													"value": "5",
+													"type": "text"
+												},
+												{
+													"key": "dose",
+													"value": "حبة كل يومين",
+													"type": "text"
+												},
+												{
+													"key": "duration_value",
+													"value": "4",
+													"type": "text"
+												},
+												{
+													"key": "duration_unit",
+													"value": "weeks",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/medication-plan/3",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"medication-plan",
+												"3"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 21 Jun 2025 02:46:33 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 3,\n        \"medication\": {\n            \"id\": 5,\n            \"image\": \"images/1750380602.jpg\",\n            \"name\": \"medication 2\",\n            \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n        },\n        \"dose\": \"حبة كل يومين\",\n        \"duration_value\": 4,\n        \"duration_unit\": \"weeks\"\n    },\n    \"message\": \"تم تحديث خطة منح الدواء بنجاح.\"\n}"
+								},
+								{
+									"name": "Invalid Values",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "medication_id",
+													"value": "5sfasf",
+													"type": "text"
+												},
+												{
+													"key": "dose",
+													"value": "حبة كل يومينafsf",
+													"type": "text"
+												},
+												{
+													"key": "duration_value",
+													"value": "4afafsad",
+													"type": "text"
+												},
+												{
+													"key": "duration_unit",
+													"value": "weeksafsdfd",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/medication-plan/2",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"medication-plan",
+												"2"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 21 Jun 2025 02:43:47 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"medication_id\": [\n            \"الدواء المختار غير صالح.\"\n        ],\n        \"duration_value\": [\n            \"يجب أن يكون الحقل عدد التكرارات عددًا صحيحًا\"\n        ],\n        \"duration_unit\": [\n            \"الحقل وحدة التكرارات لاغٍ\"\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "destroy",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/medication-plan/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"medication-plan",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/medication-plan/2",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"medication-plan",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 21 Jun 2025 02:44:12 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [],\n    \"message\": \"تم حذف خطة منح الدواء بنجاح.\"\n}"
 								}
 							]
 						}

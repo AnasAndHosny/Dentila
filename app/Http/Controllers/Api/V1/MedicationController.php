@@ -77,4 +77,12 @@ class MedicationController extends Controller
             $this->medicationService->destroy($medication)
         );
     }
+
+    public function showPlans(Medication $medication): JsonResponse
+    {
+        return $this->handleService(
+            fn() =>
+            $this->medicationService->showPlans($medication)
+        );
+    }
 }

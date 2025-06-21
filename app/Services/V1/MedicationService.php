@@ -2,6 +2,7 @@
 
 namespace App\Services\V1;
 
+use App\Http\Resources\V1\MedicationPlanResource;
 use App\Http\Resources\V1\MedicationResource;
 use App\Models\Medication;
 use App\Repositories\V1\MedicationRepository;
@@ -60,5 +61,15 @@ class MedicationService
         $message = __('messages.destroy_success', ['class' => __('medication')]);
         $code = 200;
         return ['data' => [], 'message' => $message, 'code' => $code];
+    }
+
+    public function showPlans(Medication $medication): array
+    {
+        $medicationPlans = $this->medicationRepo->getPlans($medication);
+        $medicationPlans = MedicationPlanResource::collection($medicationPlans);
+
+        $message = __('messages.show_success', ['class' => __('medication plans')]);
+        $code = 200;
+        return ['data' => $medicationPlans, 'message' => $message, 'code' => $code];
     }
 }

@@ -218,6 +218,9 @@ return [
         'max'                   => 'القيمة القصوى',
         'permissions'           => 'الصلاحيات',
         'frequency'             => 'التسلسل',
+        'medication_id'         => 'الدواء',
+        'duration_value'        => 'قيمة الدمدة',
+        'duration_unit'         => 'وحدة المدة',
     ],
 
 ];
