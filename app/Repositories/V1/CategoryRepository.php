@@ -30,4 +30,9 @@ class CategoryRepository
     {
         return $category->delete();
     }
+
+    public function getPlans(Category $category): mixed
+    {
+        return $category->treatmentPlans()->latest()->get();
+    }
 }

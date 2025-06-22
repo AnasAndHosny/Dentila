@@ -3,6 +3,7 @@
 namespace App\Services\V1;
 
 use App\Http\Resources\V1\CategoryResource;
+use App\Http\Resources\V1\TreatmentPlanResource;
 use App\Models\Category;
 use App\Repositories\V1\CategoryRepository;
 
@@ -60,5 +61,15 @@ class CategoryService
         $message = __('messages.destroy_success', ['class' => __('category')]);
         $code = 200;
         return ['data' => [], 'message' => $message, 'code' => $code];
+    }
+
+    public function showPlans(Category $category): array
+    {
+        $categoryPlans = $this->categoryRepo->getPlans($category);
+        $categoryPlans = TreatmentPlanResource::collection($categoryPlans);
+
+        $message = __('messages.index_success', ['class' => __('treatment plans')]);
+        $code = 200;
+        return ['data' => $categoryPlans, 'message' => $message, 'code' => $code];
     }
 }

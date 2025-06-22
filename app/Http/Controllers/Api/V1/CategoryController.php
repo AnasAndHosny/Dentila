@@ -75,4 +75,12 @@ class CategoryController extends Controller
             $this->categoryService->destroy($category)
         );
     }
+
+    public function showPlans(Category $category): JsonResponse
+    {
+        return $this->handleService(
+            fn() =>
+            $this->categoryService->showPlans($category)
+        );
+    }
 }

@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
             MedicationSeeder::class,
             TreatmentNoteSeeder::class,
             ToothStatusSeeder::class,
+            TreatmentPlanSeeder::class,
         ]);
     }
 }

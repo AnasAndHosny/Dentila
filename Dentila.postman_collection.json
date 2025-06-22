@@ -1631,11 +1631,6 @@
 										"key": "locale",
 										"value": "ar",
 										"type": "text"
-									},
-									{
-										"key": "Accept",
-										"value": "application/json",
-										"type": "text"
 									}
 								],
 								"url": {
@@ -1657,11 +1652,6 @@
 											{
 												"key": "locale",
 												"value": "ar",
-												"type": "text"
-											},
-											{
-												"key": "Accept",
-												"value": "application/json",
 												"type": "text"
 											}
 										],
@@ -1697,7 +1687,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Sat, 21 Jun 2025 03:33:43 GMT"
+											"value": "Sun, 22 Jun 2025 14:12:44 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -1709,7 +1699,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 2,\n            \"title\": \"treat 4\",\n            \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n        },\n        {\n            \"id\": 1,\n            \"title\": \"treat 7\",\n            \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n        }\n    ],\n    \"message\": \"تم جلب قائمة ملاحظات العلاج بنجاح.\"\n}"
+									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 5,\n            \"title\": \"treat 16\",\n            \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n            \"duration_value\": 234,\n            \"duration_unit\": \"days\"\n        },\n        {\n            \"id\": 4,\n            \"title\": \"treat 13\",\n            \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n            \"duration_value\": 234,\n            \"duration_unit\": \"days\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"treat 1\",\n            \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n            \"duration_value\": 234,\n            \"duration_unit\": \"days\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"treat 5\",\n            \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n            \"duration_value\": 234,\n            \"duration_unit\": \"days\"\n        },\n        {\n            \"id\": 1,\n            \"title\": \"treat 7\",\n            \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n            \"duration_value\": 234,\n            \"duration_unit\": \"days\"\n        }\n    ],\n    \"message\": \"تم جلب قائمة ملاحظات العلاج بنجاح.\"\n}"
 								}
 							]
 						},
@@ -1736,6 +1726,17 @@
 											"key": "text",
 											"value": "ajfajg;oagjsd\nafj;ajfna;lsdf\nagdgfhfh",
 											"type": "text"
+										},
+										{
+											"key": "duration_value",
+											"value": "234",
+											"type": "text"
+										},
+										{
+											"key": "duration_unit",
+											"value": "days",
+											"description": "days, weeks, months",
+											"type": "text"
 										}
 									]
 								},
@@ -1757,7 +1758,7 @@
 										"header": [
 											{
 												"key": "locale",
-												"value": "en",
+												"value": "ar",
 												"type": "text"
 											}
 										],
@@ -1772,6 +1773,17 @@
 												{
 													"key": "text",
 													"value": "ajfajg;oagjsd\nafj;ajfna;lsdf\nagdgfhfh",
+													"type": "text"
+												},
+												{
+													"key": "duration_value",
+													"value": "234",
+													"type": "text"
+												},
+												{
+													"key": "duration_unit",
+													"value": "days",
+													"description": "days, weeks, months",
 													"type": "text"
 												}
 											]
@@ -1808,7 +1820,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Sat, 21 Jun 2025 03:29:07 GMT"
+											"value": "Sun, 22 Jun 2025 14:06:22 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -1820,7 +1832,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 2,\n        \"title\": \"treat 4\",\n        \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n    },\n    \"message\": \"Treatment note created successfully.\"\n}"
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"treat 4\",\n        \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n        \"duration_value\": 234,\n        \"duration_unit\": \"days\"\n    },\n    \"message\": \"تم إنشاء ملاحظة العلاج بنجاح.\"\n}"
 								},
 								{
 									"name": "Unique",
@@ -1829,7 +1841,7 @@
 										"header": [
 											{
 												"key": "locale",
-												"value": "en",
+												"value": "ar",
 												"type": "text"
 											}
 										],
@@ -1844,6 +1856,17 @@
 												{
 													"key": "text",
 													"value": "ajfajg;oagjsd\nafj;ajfna;lsdf\nagdgfhfh",
+													"type": "text"
+												},
+												{
+													"key": "duration_value",
+													"value": "234",
+													"type": "text"
+												},
+												{
+													"key": "duration_unit",
+													"value": "days",
+													"description": "days, weeks, months",
 													"type": "text"
 												}
 											]
@@ -1880,7 +1903,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Sat, 21 Jun 2025 03:29:26 GMT"
+											"value": "Sun, 22 Jun 2025 14:07:05 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -1892,10 +1915,10 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"title\": [\n            \"The title has already been taken.\"\n        ]\n    }\n}"
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"title\": [\n            \"قيمة حقل العنوان مُستخدمة من قبل\"\n        ]\n    }\n}"
 								},
 								{
-									"name": "required",
+									"name": "Required",
 									"originalRequest": {
 										"method": "POST",
 										"header": [
@@ -1919,6 +1942,19 @@
 													"value": "ajfajg;oagjsd\nafj;ajfna;lsdf\nagdgfhfh",
 													"type": "text",
 													"disabled": true
+												},
+												{
+													"key": "duration_value",
+													"value": "234",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "duration_unit",
+													"value": "days",
+													"description": "days, weeks, months",
+													"type": "text",
+													"disabled": true
 												}
 											]
 										},
@@ -1954,7 +1990,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Sat, 21 Jun 2025 03:29:43 GMT"
+											"value": "Sun, 22 Jun 2025 14:07:53 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -1966,7 +2002,90 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"title\": [\n            \"The title field is required.\"\n        ],\n        \"text\": [\n            \"The text field is required.\"\n        ]\n    }\n}"
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"title\": [\n            \"The title field is required.\"\n        ],\n        \"text\": [\n            \"The text field is required.\"\n        ],\n        \"duration_value\": [\n            \"The duration value field is required.\"\n        ],\n        \"duration_unit\": [\n            \"The duration unit field is required.\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "Invalid unit",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "locale",
+												"value": "en",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title",
+													"value": "treat 5",
+													"type": "text"
+												},
+												{
+													"key": "text",
+													"value": "ajfajg;oagjsd\nafj;ajfna;lsdf\nagdgfhfh",
+													"type": "text"
+												},
+												{
+													"key": "duration_value",
+													"value": "234",
+													"type": "text"
+												},
+												{
+													"key": "duration_unit",
+													"value": "fdsfsf",
+													"description": "days, weeks, months",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/treatment-note",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment-note"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 22 Jun 2025 14:09:56 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"duration_unit\": [\n            \"The selected duration unit is invalid.\"\n        ]\n    }\n}"
 								}
 							]
 						},
@@ -2005,13 +2124,13 @@
 											}
 										],
 										"url": {
-											"raw": "{{base_url}}/treatment-note/2",
+											"raw": "{{base_url}}/treatment-note/1",
 											"host": [
 												"{{base_url}}"
 											],
 											"path": [
 												"treatment-note",
-												"2"
+												"1"
 											]
 										}
 									},
@@ -2037,7 +2156,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Sat, 21 Jun 2025 03:31:00 GMT"
+											"value": "Sun, 22 Jun 2025 14:08:29 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -2049,7 +2168,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 2,\n        \"title\": \"treat 4\",\n        \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n    },\n    \"message\": \"تم جلب ملاحظة العلاج بنجاح.\"\n}"
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"treat 4\",\n        \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n        \"duration_value\": 234,\n        \"duration_unit\": \"days\"\n    },\n    \"message\": \"تم جلب ملاحظة العلاج بنجاح.\"\n}"
 								}
 							]
 						},
@@ -2076,6 +2195,18 @@
 											"key": "text",
 											"value": "ajfajg;oagjsd\nafj;ajfna;lsdf\nagdgfhfh",
 											"type": "text"
+										},
+										{
+											"key": "duration_value",
+											"value": "234",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "duration_unit",
+											"value": "days",
+											"type": "text",
+											"disabled": true
 										}
 									]
 								},
@@ -2113,6 +2244,17 @@
 												{
 													"key": "text",
 													"value": "ajfajg;oagjsd\nafj;ajfna;lsdf\nagdgfhfh",
+													"type": "text"
+												},
+												{
+													"key": "duration_value",
+													"value": "234",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "duration_unit",
+													"value": "days",
 													"type": "text",
 													"disabled": true
 												}
@@ -2151,7 +2293,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Sat, 21 Jun 2025 03:31:35 GMT"
+											"value": "Sun, 22 Jun 2025 14:10:53 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -2163,10 +2305,10 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"treat 7\",\n        \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n    },\n    \"message\": \"تم تحديث ملاحظة العلاج بنجاح.\"\n}"
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"treat 7\",\n        \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n        \"duration_value\": 234,\n        \"duration_unit\": \"days\"\n    },\n    \"message\": \"تم تحديث ملاحظة العلاج بنجاح.\"\n}"
 								},
 								{
-									"name": "Uniqe",
+									"name": "Unique",
 									"originalRequest": {
 										"method": "PATCH",
 										"header": [
@@ -2188,6 +2330,18 @@
 													"key": "text",
 													"value": "ajfajg;oagjsd\nafj;ajfna;lsdf\nagdgfhfh",
 													"type": "text"
+												},
+												{
+													"key": "duration_value",
+													"value": "234",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "duration_unit",
+													"value": "days",
+													"type": "text",
+													"disabled": true
 												}
 											]
 										},
@@ -2224,7 +2378,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Sat, 21 Jun 2025 03:32:16 GMT"
+											"value": "Sun, 22 Jun 2025 14:11:04 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -2239,7 +2393,7 @@
 									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"title\": [\n            \"قيمة حقل العنوان مُستخدمة من قبل\"\n        ]\n    }\n}"
 								},
 								{
-									"name": "null text",
+									"name": "Null text",
 									"originalRequest": {
 										"method": "PATCH",
 										"header": [
@@ -2255,12 +2409,25 @@
 												{
 													"key": "title",
 													"value": "treat 7",
-													"type": "text"
+													"type": "text",
+													"disabled": true
 												},
 												{
 													"key": "text",
 													"value": "",
 													"type": "text"
+												},
+												{
+													"key": "duration_value",
+													"value": "234",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "duration_unit",
+													"value": "days",
+													"type": "text",
+													"disabled": true
 												}
 											]
 										},
@@ -2297,7 +2464,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Sat, 21 Jun 2025 03:33:03 GMT"
+											"value": "Sun, 22 Jun 2025 14:11:40 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -2309,7 +2476,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"title\": [\n            \"قيمة حقل العنوان مُستخدمة من قبل\"\n        ],\n        \"text\": [\n            \"يجب أن يكون حقل النص نصآ.\"\n        ]\n    }\n}"
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"text\": [\n            \"يجب أن يكون حقل النص نصآ.\"\n        ]\n    }\n}"
 								}
 							]
 						},
@@ -3054,6 +3221,91 @@
 									"body": "{\n    \"status\": 1,\n    \"data\": [],\n    \"message\": \"تم حذف التصنيف بنجاح.\"\n}"
 								}
 							]
+						},
+						{
+							"name": "plans",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/category/1/plans",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"category",
+										"1",
+										"plans"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/category/1/plans",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"category",
+												"1",
+												"plans"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 22 Jun 2025 13:51:43 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 5,\n            \"name\": \"plan 3\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"tooth_status\": {\n                \"id\": 3,\n                \"name\": \"تاج\"\n            }\n        },\n        {\n            \"id\": 4,\n            \"name\": \"plan 6\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"tooth_status\": {\n                \"id\": 3,\n                \"name\": \"تاج\"\n            }\n        },\n        {\n            \"id\": 3,\n            \"name\": \"plan 4\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"tooth_status\": {\n                \"id\": 3,\n                \"name\": \"تاج\"\n            }\n        },\n        {\n            \"id\": 1,\n            \"name\": \"plan 9\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"tooth_status\": {\n                \"id\": 3,\n                \"name\": \"تاج\"\n            }\n        }\n    ],\n    \"message\": \"تم جلب قائمة خطط العلاج بنجاح.\"\n}"
+								}
+							]
 						}
 					]
 				},
@@ -3082,6 +3334,950 @@
 								}
 							},
 							"response": []
+						}
+					]
+				},
+				{
+					"name": "Treatment Plan",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/treatment-plan",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"treatment-plan"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/treatment-plan",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment-plan"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 22 Jun 2025 13:34:28 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 5,\n            \"name\": \"plan 3\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"tooth_status\": {\n                \"id\": 3,\n                \"name\": \"تاج\"\n            }\n        },\n        {\n            \"id\": 4,\n            \"name\": \"plan 6\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"tooth_status\": {\n                \"id\": 3,\n                \"name\": \"تاج\"\n            }\n        },\n        {\n            \"id\": 3,\n            \"name\": \"plan 4\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"tooth_status\": {\n                \"id\": 3,\n                \"name\": \"تاج\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"name\": \"plan 1\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 50000,\n            \"tooth_status\": {\n                \"id\": 2,\n                \"name\": \"لبية\"\n            }\n        },\n        {\n            \"id\": 1,\n            \"name\": \"plan 23232\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"tooth_status\": {\n                \"id\": 3,\n                \"name\": \"تاج\"\n            }\n        }\n    ],\n    \"message\": \"تم جلب قائمة خطط العلاج بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "store",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "plan 1",
+											"type": "text"
+										},
+										{
+											"key": "category_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "cost",
+											"value": "150000",
+											"type": "text"
+										},
+										{
+											"key": "tooth_status_id",
+											"value": "",
+											"description": "null value = don`t change tooth status",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/treatment-plan",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"treatment-plan"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "plan 23232",
+													"type": "text"
+												},
+												{
+													"key": "category_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "cost",
+													"value": "150000",
+													"type": "text"
+												},
+												{
+													"key": "tooth_status_id",
+													"value": "3",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/treatment-plan",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment-plan"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 22 Jun 2025 11:14:38 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"plan 23232\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 150000,\n        \"tooth_status\": {\n            \"id\": 3,\n            \"name\": \"تاج\"\n        }\n    },\n    \"message\": \"تم إنشاء خطة العلاج بنجاح.\"\n}"
+								},
+								{
+									"name": "Unique",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "plan 1",
+													"type": "text"
+												},
+												{
+													"key": "category_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "cost",
+													"value": "50000",
+													"type": "text"
+												},
+												{
+													"key": "tooth_status_id",
+													"value": "2",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/treatment-plan",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment-plan"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 22 Jun 2025 13:31:27 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"name\": [\n            \"قيمة حقل الاسم مُستخدمة من قبل\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "Invalid value",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "plan 2",
+													"type": "text"
+												},
+												{
+													"key": "category_id",
+													"value": "888",
+													"type": "text"
+												},
+												{
+													"key": "cost",
+													"value": "-9999",
+													"type": "text"
+												},
+												{
+													"key": "tooth_status_id",
+													"value": "999",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/treatment-plan",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment-plan"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 22 Jun 2025 13:32:31 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"category_id\": [\n            \"التصنيف المختار غير صالح.\"\n        ],\n        \"cost\": [\n            \"يجب أن تكون قيمة الحقل التكلفة مساوية أو أكبر لـ 0.\"\n        ],\n        \"tooth_status_id\": [\n            \"حالة السن المختار غير صالح.\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "Required",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "plan 1",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "category_id",
+													"value": "1",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "cost",
+													"value": "150000",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "tooth_status_id",
+													"value": "",
+													"description": "null value = don`t change tooth status",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/treatment-plan",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment-plan"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 22 Jun 2025 16:14:10 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"name\": [\n            \"حقل الاسم مطلوب.\"\n        ],\n        \"category_id\": [\n            \"حقل التصنيف مطلوب.\"\n        ],\n        \"cost\": [\n            \"حقل التكلفة مطلوب.\"\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "show",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/treatment-plan/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"treatment-plan",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/treatment-plan/2",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment-plan",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 22 Jun 2025 13:33:23 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"plan 1\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 50000,\n        \"tooth_status\": {\n            \"id\": 2,\n            \"name\": \"لبية\"\n        }\n    },\n    \"message\": \"تم جلب خطة العلاج بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "plan 9",
+											"type": "text"
+										},
+										{
+											"key": "category_id",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "cost",
+											"value": "150000",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "tooth_status_id",
+											"value": "3",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/treatment-plan/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"treatment-plan",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "plan 9",
+													"type": "text"
+												},
+												{
+													"key": "category_id",
+													"value": "1",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "cost",
+													"value": "150000",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "tooth_status_id",
+													"value": "3",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/treatment-plan/1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment-plan",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 22 Jun 2025 13:36:57 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"plan 9\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 150000,\n        \"tooth_status\": {\n            \"id\": 3,\n            \"name\": \"تاج\"\n        }\n    },\n    \"message\": \"تم تحديث خطة العلاج بنجاح.\"\n}"
+								},
+								{
+									"name": "Unique",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "plan 9",
+													"type": "text"
+												},
+												{
+													"key": "category_id",
+													"value": "1",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "cost",
+													"value": "150000",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "tooth_status_id",
+													"value": "3",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/treatment-plan/1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment-plan",
+												"1"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 22 Jun 2025 13:37:12 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"name\": [\n            \"قيمة حقل الاسم مُستخدمة من قبل\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "Invalid value",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "plan 9",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "category_id",
+													"value": "177",
+													"type": "text"
+												},
+												{
+													"key": "cost",
+													"value": "150000.55",
+													"type": "text"
+												},
+												{
+													"key": "tooth_status_id",
+													"value": "36",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/treatment-plan/1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment-plan",
+												"1"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 22 Jun 2025 13:38:29 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"category_id\": [\n            \"التصنيف المختار غير صالح.\"\n        ],\n        \"cost\": [\n            \"يجب أن يكون الحقل التكلفة عددًا صحيحًا\"\n        ],\n        \"tooth_status_id\": [\n            \"حالة السن المختار غير صالح.\"\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "destroy",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/treatment-plan/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"treatment-plan",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/treatment-plan/2",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment-plan",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 22 Jun 2025 13:39:33 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [],\n    \"message\": \"تم حذف خطة العلاج بنجاح.\"\n}"
+								}
+							]
 						}
 					]
 				}

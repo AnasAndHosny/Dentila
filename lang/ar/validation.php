@@ -222,6 +222,7 @@ return [
         'duration_value'        => 'قيمة الدمدة',
         'duration_unit'         => 'وحدة المدة',
         'text'                  => 'النص',
+        'tooth_status_id'       => 'حالة السن',
     ],
 
 ];
