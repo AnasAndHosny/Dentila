@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class TreatmentPlan extends Model
 {
@@ -22,5 +23,11 @@ class TreatmentPlan extends Model
     public function toothStatus(): BelongsTo
     {
         return $this->belongsTo(ToothStatus::class);
+    }
+
+    public function treatmentSteps(): HasMany
+    {
+        return $this->hasMany(TreatmentStep::class)
+            ->orderBy('queue')->orderBy('created_ut');
     }
 }

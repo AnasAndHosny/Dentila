@@ -5,7 +5,7 @@ namespace App\Http\Resources\V1;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class TreatmentPlanResource extends JsonResource
+class TreatmentStepResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -17,10 +17,10 @@ class TreatmentPlanResource extends JsonResource
         return [
             'id' => (int)$this->id,
             'name' => $this->name,
-            'category' => new CategoryResource($this->category),
-            'cost' => (int)$this->cost,
-            'tooth_status' => new CategoryResource($this->toothStatus),
-            'steps' => TreatmentStepResource::collection($this->treatmentSteps),
+            'queue' => (int)$this->queue,
+            'optional' => (int)$this->optional,
+            'treatment_note' => new TreatmentNoteResource($this->treatmentNote),
+            'medication_plan' => new MedicationPlanResource($this->medicationPlan),
         ];
     }
 }

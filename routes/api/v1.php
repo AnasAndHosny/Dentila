@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\V1\TreatmentNoteController;
 use App\Http\Controllers\Api\V1\MedicationPlanController;
 use App\Http\Controllers\Api\V1\ToothStatusController;
 use App\Http\Controllers\Api\V1\TreatmentPlanController;
+use App\Http\Controllers\Api\V1\TreatmentStepController;
 
 Route::prefix('v1')->group(function () {
     Route::get('test', function () {
@@ -63,5 +64,11 @@ Route::prefix('v1')->group(function () {
         Route::get('{treatmentPlan}', 'show');
         Route::patch('{treatmentPlan}', 'update');
         Route::delete('{treatmentPlan}', 'destroy');
+    });
+
+    Route::prefix('treatment-step')->controller(TreatmentStepController::class)->group(function () {
+        Route::post('/', 'store');
+        Route::patch('{treatmentStep}', 'update');
+        Route::delete('{treatmentStep}', 'destroy');
     });
 });
