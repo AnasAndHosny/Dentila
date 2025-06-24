@@ -3344,13 +3344,7 @@
 							"name": "index",
 							"request": {
 								"method": "GET",
-								"header": [
-									{
-										"key": "locale",
-										"value": "ar",
-										"type": "text"
-									}
-								],
+								"header": [],
 								"url": {
 									"raw": "{{base_url}}/treatment-plan",
 									"host": [
@@ -3366,13 +3360,7 @@
 									"name": "Success",
 									"originalRequest": {
 										"method": "GET",
-										"header": [
-											{
-												"key": "locale",
-												"value": "ar",
-												"type": "text"
-											}
-										],
+										"header": [],
 										"url": {
 											"raw": "{{base_url}}/treatment-plan",
 											"host": [
@@ -3405,7 +3393,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Sun, 22 Jun 2025 13:34:28 GMT"
+											"value": "Tue, 24 Jun 2025 13:00:33 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -3417,7 +3405,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 5,\n            \"name\": \"plan 3\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"tooth_status\": {\n                \"id\": 3,\n                \"name\": \"تاج\"\n            }\n        },\n        {\n            \"id\": 4,\n            \"name\": \"plan 6\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"tooth_status\": {\n                \"id\": 3,\n                \"name\": \"تاج\"\n            }\n        },\n        {\n            \"id\": 3,\n            \"name\": \"plan 4\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"tooth_status\": {\n                \"id\": 3,\n                \"name\": \"تاج\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"name\": \"plan 1\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 50000,\n            \"tooth_status\": {\n                \"id\": 2,\n                \"name\": \"لبية\"\n            }\n        },\n        {\n            \"id\": 1,\n            \"name\": \"plan 23232\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"tooth_status\": {\n                \"id\": 3,\n                \"name\": \"تاج\"\n            }\n        }\n    ],\n    \"message\": \"تم جلب قائمة خطط العلاج بنجاح.\"\n}"
+									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 9,\n            \"name\": \"test plan\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 25000,\n            \"tooth_status\": {\n                \"id\": 1,\n                \"name\": \"حشوة\"\n            },\n            \"steps\": [\n                {\n                    \"id\": 38,\n                    \"name\": \"ألمرحلة الثانية\",\n                    \"queue\": 8,\n                    \"optional\": 1,\n                    \"treatment_note\": {\n                        \"id\": 1,\n                        \"title\": \"treat 4\",\n                        \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                        \"duration_value\": 234,\n                        \"duration_unit\": \"days\"\n                    },\n                    \"medication_plan\": {\n                        \"id\": 1,\n                        \"medication\": {\n                            \"id\": 1,\n                            \"image\": null,\n                            \"name\": \"medication 1\",\n                            \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                        },\n                        \"dose\": \"حبة كل 24 ساعة\",\n                        \"duration_value\": 4,\n                        \"duration_unit\": \"weeks\"\n                    },\n                    \"treatment_substeps\": []\n                }\n            ]\n        },\n        {\n            \"id\": 8,\n            \"name\": \"plan 5\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"tooth_status\": {\n                \"id\": 3,\n                \"name\": \"تاج\"\n            },\n            \"steps\": []\n        },\n        {\n            \"id\": 7,\n            \"name\": \"plan 4\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"tooth_status\": null,\n            \"steps\": []\n        },\n        {\n            \"id\": 6,\n            \"name\": \"plan 3\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"tooth_status\": {\n                \"id\": 3,\n                \"name\": \"تاج\"\n            },\n            \"steps\": []\n        },\n        {\n            \"id\": 5,\n            \"name\": \"plan 2\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"tooth_status\": null,\n            \"steps\": []\n        },\n        {\n            \"id\": 4,\n            \"name\": \"plan 1\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"tooth_status\": null,\n            \"steps\": [\n                {\n                    \"id\": 35,\n                    \"name\": \"ألمرحلة الأولى\",\n                    \"queue\": 8,\n                    \"optional\": 1,\n                    \"treatment_note\": {\n                        \"id\": 1,\n                        \"title\": \"treat 4\",\n                        \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                        \"duration_value\": 234,\n                        \"duration_unit\": \"days\"\n                    },\n                    \"medication_plan\": {\n                        \"id\": 1,\n                        \"medication\": {\n                            \"id\": 1,\n                            \"image\": null,\n                            \"name\": \"medication 1\",\n                            \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                        },\n                        \"dose\": \"حبة كل 24 ساعة\",\n                        \"duration_value\": 4,\n                        \"duration_unit\": \"weeks\"\n                    },\n                    \"treatment_substeps\": [\n                        {\n                            \"id\": 1,\n                            \"name\": \"ألمرحلة تجريب\",\n                            \"queue\": 8,\n                            \"optional\": 1\n                        },\n                        {\n                            \"id\": 2,\n                            \"name\": \"ألمرحلة تجريب\",\n                            \"queue\": 8,\n                            \"optional\": 1\n                        },\n                        {\n                            \"id\": 3,\n                            \"name\": \"ألمرحلة تجريب\",\n                            \"queue\": 8,\n                            \"optional\": 1\n                        },\n                        {\n                            \"id\": 4,\n                            \"name\": \"ألمرحلة تجريب\",\n                            \"queue\": 8,\n                            \"optional\": 1\n                        },\n                        {\n                            \"id\": 5,\n                            \"name\": \"ألمرحلة تجريب\",\n                            \"queue\": 8,\n                            \"optional\": 1\n                        },\n                        {\n                            \"id\": 6,\n                            \"name\": \"ألمرحلة تجريب\",\n                            \"queue\": 8,\n                            \"optional\": 1\n                        },\n                        {\n                            \"id\": 7,\n                            \"name\": \"ألمرحلة تجريب\",\n                            \"queue\": 8,\n                            \"optional\": 1\n                        },\n                        {\n                            \"id\": 8,\n                            \"name\": \"ألمرحلة تجريب\",\n                            \"queue\": 8,\n                            \"optional\": 1\n                        },\n                        {\n                            \"id\": 9,\n                            \"name\": \"ألمرحلة تجريب\",\n                            \"queue\": 8,\n                            \"optional\": 1\n                        }\n                    ]\n                },\n                {\n                    \"id\": 37,\n                    \"name\": \"ألمرحلة الثانية\",\n                    \"queue\": 9,\n                    \"optional\": 1,\n                    \"treatment_note\": {\n                        \"id\": 1,\n                        \"title\": \"treat 4\",\n                        \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                        \"duration_value\": 234,\n                        \"duration_unit\": \"days\"\n                    },\n                    \"medication_plan\": {\n                        \"id\": 1,\n                        \"medication\": {\n                            \"id\": 1,\n                            \"image\": null,\n                            \"name\": \"medication 1\",\n                            \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                        },\n                        \"dose\": \"حبة كل 24 ساعة\",\n                        \"duration_value\": 4,\n                        \"duration_unit\": \"weeks\"\n                    },\n                    \"treatment_substeps\": []\n                }\n            ]\n        }\n    ],\n    \"message\": \"تم جلب قائمة خطط العلاج بنجاح.\"\n}"
 								}
 							]
 						},
@@ -3437,7 +3425,7 @@
 									"formdata": [
 										{
 											"key": "name",
-											"value": "plan 1",
+											"value": "plan 5",
 											"type": "text"
 										},
 										{
@@ -3452,7 +3440,7 @@
 										},
 										{
 											"key": "tooth_status_id",
-											"value": "",
+											"value": "3",
 											"description": "null value = don`t change tooth status",
 											"type": "text"
 										}
@@ -3485,7 +3473,7 @@
 											"formdata": [
 												{
 													"key": "name",
-													"value": "plan 23232",
+													"value": "plan 5",
 													"type": "text"
 												},
 												{
@@ -3501,6 +3489,7 @@
 												{
 													"key": "tooth_status_id",
 													"value": "3",
+													"description": "null value = don`t change tooth status",
 													"type": "text"
 												}
 											]
@@ -3537,7 +3526,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Sun, 22 Jun 2025 11:14:38 GMT"
+											"value": "Tue, 24 Jun 2025 12:00:39 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -3549,92 +3538,10 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"plan 23232\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 150000,\n        \"tooth_status\": {\n            \"id\": 3,\n            \"name\": \"تاج\"\n        }\n    },\n    \"message\": \"تم إنشاء خطة العلاج بنجاح.\"\n}"
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 8,\n        \"name\": \"plan 5\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 150000,\n        \"tooth_status\": {\n            \"id\": 3,\n            \"name\": \"تاج\"\n        },\n        \"steps\": []\n    },\n    \"message\": \"تم إنشاء خطة العلاج بنجاح.\"\n}"
 								},
 								{
 									"name": "Unique",
-									"originalRequest": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "locale",
-												"value": "ar",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "formdata",
-											"formdata": [
-												{
-													"key": "name",
-													"value": "plan 1",
-													"type": "text"
-												},
-												{
-													"key": "category_id",
-													"value": "1",
-													"type": "text"
-												},
-												{
-													"key": "cost",
-													"value": "50000",
-													"type": "text"
-												},
-												{
-													"key": "tooth_status_id",
-													"value": "2",
-													"type": "text"
-												}
-											]
-										},
-										"url": {
-											"raw": "{{base_url}}/treatment-plan",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"treatment-plan"
-											]
-										}
-									},
-									"status": "Unprocessable Content",
-									"code": 422,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Host",
-											"value": "localhost:8000"
-										},
-										{
-											"key": "Connection",
-											"value": "close"
-										},
-										{
-											"key": "X-Powered-By",
-											"value": "PHP/8.2.12"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, private"
-										},
-										{
-											"key": "Date",
-											"value": "Sun, 22 Jun 2025 13:31:27 GMT"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										}
-									],
-									"cookie": [],
-									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"name\": [\n            \"قيمة حقل الاسم مُستخدمة من قبل\"\n        ]\n    }\n}"
-								},
-								{
-									"name": "Invalid value",
 									"originalRequest": {
 										"method": "POST",
 										"header": [
@@ -3654,17 +3561,18 @@
 												},
 												{
 													"key": "category_id",
-													"value": "888",
+													"value": "1",
 													"type": "text"
 												},
 												{
 													"key": "cost",
-													"value": "-9999",
+													"value": "150000",
 													"type": "text"
 												},
 												{
 													"key": "tooth_status_id",
-													"value": "999",
+													"value": "3",
+													"description": "null value = don`t change tooth status",
 													"type": "text"
 												}
 											]
@@ -3701,7 +3609,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Sun, 22 Jun 2025 13:32:31 GMT"
+											"value": "Tue, 24 Jun 2025 11:56:47 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -3713,7 +3621,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"category_id\": [\n            \"التصنيف المختار غير صالح.\"\n        ],\n        \"cost\": [\n            \"يجب أن تكون قيمة الحقل التكلفة مساوية أو أكبر لـ 0.\"\n        ],\n        \"tooth_status_id\": [\n            \"حالة السن المختار غير صالح.\"\n        ]\n    }\n}"
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"name\": [\n            \"قيمة حقل الاسم مُستخدمة من قبل\"\n        ]\n    }\n}"
 								},
 								{
 									"name": "Required",
@@ -3731,7 +3639,7 @@
 											"formdata": [
 												{
 													"key": "name",
-													"value": "plan 1",
+													"value": "plan 2",
 													"type": "text",
 													"disabled": true
 												},
@@ -3749,7 +3657,7 @@
 												},
 												{
 													"key": "tooth_status_id",
-													"value": "",
+													"value": "3",
 													"description": "null value = don`t change tooth status",
 													"type": "text",
 													"disabled": true
@@ -3788,7 +3696,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Sun, 22 Jun 2025 16:14:10 GMT"
+											"value": "Tue, 24 Jun 2025 11:57:01 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -3801,6 +3709,89 @@
 									],
 									"cookie": [],
 									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"name\": [\n            \"حقل الاسم مطلوب.\"\n        ],\n        \"category_id\": [\n            \"حقل التصنيف مطلوب.\"\n        ],\n        \"cost\": [\n            \"حقل التكلفة مطلوب.\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "Invalid",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "plan 5",
+													"type": "text"
+												},
+												{
+													"key": "category_id",
+													"value": "19",
+													"type": "text"
+												},
+												{
+													"key": "cost",
+													"value": "-150000",
+													"type": "text"
+												},
+												{
+													"key": "tooth_status_id",
+													"value": "39",
+													"description": "null value = don`t change tooth status",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/treatment-plan",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment-plan"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 24 Jun 2025 11:59:02 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"category_id\": [\n            \"التصنيف المختار غير صالح.\"\n        ],\n        \"cost\": [\n            \"يجب أن تكون قيمة الحقل التكلفة مساوية أو أكبر لـ 0.\"\n        ],\n        \"tooth_status_id\": [\n            \"حالة السن المختار غير صالح.\"\n        ]\n    }\n}"
 								}
 							]
 						},
@@ -3816,13 +3807,13 @@
 									}
 								],
 								"url": {
-									"raw": "{{base_url}}/treatment-plan/2",
+									"raw": "{{base_url}}/treatment-plan/4",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"treatment-plan",
-										"2"
+										"4"
 									]
 								}
 							},
@@ -3839,13 +3830,13 @@
 											}
 										],
 										"url": {
-											"raw": "{{base_url}}/treatment-plan/2",
+											"raw": "{{base_url}}/treatment-plan/4",
 											"host": [
 												"{{base_url}}"
 											],
 											"path": [
 												"treatment-plan",
-												"2"
+												"4"
 											]
 										}
 									},
@@ -3871,7 +3862,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Sun, 22 Jun 2025 13:33:23 GMT"
+											"value": "Tue, 24 Jun 2025 13:01:09 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -3883,7 +3874,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"plan 1\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 50000,\n        \"tooth_status\": {\n            \"id\": 2,\n            \"name\": \"لبية\"\n        }\n    },\n    \"message\": \"تم جلب خطة العلاج بنجاح.\"\n}"
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"plan 1\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 150000,\n        \"tooth_status\": null,\n        \"steps\": [\n            {\n                \"id\": 35,\n                \"name\": \"ألمرحلة الأولى\",\n                \"queue\": 8,\n                \"optional\": 1,\n                \"treatment_note\": {\n                    \"id\": 1,\n                    \"title\": \"treat 4\",\n                    \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                    \"duration_value\": 234,\n                    \"duration_unit\": \"days\"\n                },\n                \"medication_plan\": {\n                    \"id\": 1,\n                    \"medication\": {\n                        \"id\": 1,\n                        \"image\": null,\n                        \"name\": \"medication 1\",\n                        \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                    },\n                    \"dose\": \"حبة كل 24 ساعة\",\n                    \"duration_value\": 4,\n                    \"duration_unit\": \"weeks\"\n                },\n                \"treatment_substeps\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 2,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 3,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 4,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 5,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 6,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 7,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 8,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 9,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    }\n                ]\n            },\n            {\n                \"id\": 37,\n                \"name\": \"ألمرحلة الثانية\",\n                \"queue\": 9,\n                \"optional\": 1,\n                \"treatment_note\": {\n                    \"id\": 1,\n                    \"title\": \"treat 4\",\n                    \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                    \"duration_value\": 234,\n                    \"duration_unit\": \"days\"\n                },\n                \"medication_plan\": {\n                    \"id\": 1,\n                    \"medication\": {\n                        \"id\": 1,\n                        \"image\": null,\n                        \"name\": \"medication 1\",\n                        \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                    },\n                    \"dose\": \"حبة كل 24 ساعة\",\n                    \"duration_value\": 4,\n                    \"duration_unit\": \"weeks\"\n                },\n                \"treatment_substeps\": []\n            }\n        ]\n    },\n    \"message\": \"تم جلب خطة العلاج بنجاح.\"\n}"
 								}
 							]
 						},
@@ -3927,13 +3918,13 @@
 									]
 								},
 								"url": {
-									"raw": "{{base_url}}/treatment-plan/1",
+									"raw": "{{base_url}}/treatment-plan/4",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"treatment-plan",
-										"1"
+										"4"
 									]
 								}
 							},
@@ -3978,13 +3969,13 @@
 											]
 										},
 										"url": {
-											"raw": "{{base_url}}/treatment-plan/1",
+											"raw": "{{base_url}}/treatment-plan/4",
 											"host": [
 												"{{base_url}}"
 											],
 											"path": [
 												"treatment-plan",
-												"1"
+												"4"
 											]
 										}
 									},
@@ -4010,7 +4001,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Sun, 22 Jun 2025 13:36:57 GMT"
+											"value": "Tue, 24 Jun 2025 13:02:08 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -4022,10 +4013,10 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"plan 9\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 150000,\n        \"tooth_status\": {\n            \"id\": 3,\n            \"name\": \"تاج\"\n        }\n    },\n    \"message\": \"تم تحديث خطة العلاج بنجاح.\"\n}"
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"plan 9\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 150000,\n        \"tooth_status\": null,\n        \"steps\": [\n            {\n                \"id\": 35,\n                \"name\": \"ألمرحلة الأولى\",\n                \"queue\": 8,\n                \"optional\": 1,\n                \"treatment_note\": {\n                    \"id\": 1,\n                    \"title\": \"treat 4\",\n                    \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                    \"duration_value\": 234,\n                    \"duration_unit\": \"days\"\n                },\n                \"medication_plan\": {\n                    \"id\": 1,\n                    \"medication\": {\n                        \"id\": 1,\n                        \"image\": null,\n                        \"name\": \"medication 1\",\n                        \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                    },\n                    \"dose\": \"حبة كل 24 ساعة\",\n                    \"duration_value\": 4,\n                    \"duration_unit\": \"weeks\"\n                },\n                \"treatment_substeps\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 2,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 3,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 4,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 5,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 6,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 7,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 8,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 9,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    }\n                ]\n            },\n            {\n                \"id\": 37,\n                \"name\": \"ألمرحلة الثانية\",\n                \"queue\": 9,\n                \"optional\": 1,\n                \"treatment_note\": {\n                    \"id\": 1,\n                    \"title\": \"treat 4\",\n                    \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                    \"duration_value\": 234,\n                    \"duration_unit\": \"days\"\n                },\n                \"medication_plan\": {\n                    \"id\": 1,\n                    \"medication\": {\n                        \"id\": 1,\n                        \"image\": null,\n                        \"name\": \"medication 1\",\n                        \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                    },\n                    \"dose\": \"حبة كل 24 ساعة\",\n                    \"duration_value\": 4,\n                    \"duration_unit\": \"weeks\"\n                },\n                \"treatment_substeps\": []\n            }\n        ]\n    },\n    \"message\": \"تم تحديث خطة العلاج بنجاح.\"\n}"
 								},
 								{
-									"name": "Unique",
+									"name": "Invalid",
 									"originalRequest": {
 										"method": "PATCH",
 										"header": [
@@ -4041,36 +4032,34 @@
 												{
 													"key": "name",
 													"value": "plan 9",
-													"type": "text"
+													"type": "text",
+													"disabled": true
 												},
 												{
 													"key": "category_id",
-													"value": "1",
-													"type": "text",
-													"disabled": true
+													"value": "199",
+													"type": "text"
 												},
 												{
 													"key": "cost",
-													"value": "150000",
-													"type": "text",
-													"disabled": true
+													"value": "-150000",
+													"type": "text"
 												},
 												{
 													"key": "tooth_status_id",
-													"value": "3",
-													"type": "text",
-													"disabled": true
+													"value": "399",
+													"type": "text"
 												}
 											]
 										},
 										"url": {
-											"raw": "{{base_url}}/treatment-plan/1",
+											"raw": "{{base_url}}/treatment-plan/4",
 											"host": [
 												"{{base_url}}"
 											],
 											"path": [
 												"treatment-plan",
-												"1"
+												"4"
 											]
 										}
 									},
@@ -4096,7 +4085,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Sun, 22 Jun 2025 13:37:12 GMT"
+											"value": "Tue, 24 Jun 2025 13:02:37 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -4108,91 +4097,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"name\": [\n            \"قيمة حقل الاسم مُستخدمة من قبل\"\n        ]\n    }\n}"
-								},
-								{
-									"name": "Invalid value",
-									"originalRequest": {
-										"method": "PATCH",
-										"header": [
-											{
-												"key": "locale",
-												"value": "ar",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "urlencoded",
-											"urlencoded": [
-												{
-													"key": "name",
-													"value": "plan 9",
-													"type": "text",
-													"disabled": true
-												},
-												{
-													"key": "category_id",
-													"value": "177",
-													"type": "text"
-												},
-												{
-													"key": "cost",
-													"value": "150000.55",
-													"type": "text"
-												},
-												{
-													"key": "tooth_status_id",
-													"value": "36",
-													"type": "text"
-												}
-											]
-										},
-										"url": {
-											"raw": "{{base_url}}/treatment-plan/1",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"treatment-plan",
-												"1"
-											]
-										}
-									},
-									"status": "Unprocessable Content",
-									"code": 422,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Host",
-											"value": "localhost:8000"
-										},
-										{
-											"key": "Connection",
-											"value": "close"
-										},
-										{
-											"key": "X-Powered-By",
-											"value": "PHP/8.2.12"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, private"
-										},
-										{
-											"key": "Date",
-											"value": "Sun, 22 Jun 2025 13:38:29 GMT"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										}
-									],
-									"cookie": [],
-									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"category_id\": [\n            \"التصنيف المختار غير صالح.\"\n        ],\n        \"cost\": [\n            \"يجب أن يكون الحقل التكلفة عددًا صحيحًا\"\n        ],\n        \"tooth_status_id\": [\n            \"حالة السن المختار غير صالح.\"\n        ]\n    }\n}"
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"category_id\": [\n            \"التصنيف المختار غير صالح.\"\n        ],\n        \"cost\": [\n            \"يجب أن تكون قيمة الحقل التكلفة مساوية أو أكبر لـ 0.\"\n        ],\n        \"tooth_status_id\": [\n            \"حالة السن المختار غير صالح.\"\n        ]\n    }\n}"
 								}
 							]
 						},
@@ -4208,13 +4113,13 @@
 									}
 								],
 								"url": {
-									"raw": "{{base_url}}/treatment-plan/2",
+									"raw": "{{base_url}}/treatment-plan/8",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"treatment-plan",
-										"2"
+										"8"
 									]
 								}
 							},
@@ -4231,13 +4136,13 @@
 											}
 										],
 										"url": {
-											"raw": "{{base_url}}/treatment-plan/2",
+											"raw": "{{base_url}}/treatment-plan/8",
 											"host": [
 												"{{base_url}}"
 											],
 											"path": [
 												"treatment-plan",
-												"2"
+												"8"
 											]
 										}
 									},
@@ -4263,7 +4168,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Sun, 22 Jun 2025 13:39:33 GMT"
+											"value": "Tue, 24 Jun 2025 13:03:29 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -4276,6 +4181,1033 @@
 									],
 									"cookie": [],
 									"body": "{\n    \"status\": 1,\n    \"data\": [],\n    \"message\": \"تم حذف خطة العلاج بنجاح.\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Treatment Steps",
+					"item": [
+						{
+							"name": "store",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "treatment_plan_id",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "ألمرحلة الثانية",
+											"type": "text"
+										},
+										{
+											"key": "queue",
+											"value": "8",
+											"description": "default 0",
+											"type": "text"
+										},
+										{
+											"key": "optional",
+											"value": "1",
+											"description": "boolean value 1 or 0 (default 0)",
+											"type": "text"
+										},
+										{
+											"key": "treatment_note_id",
+											"value": "",
+											"description": "can be null",
+											"type": "text"
+										},
+										{
+											"key": "medication_plan_id",
+											"value": "",
+											"description": "can be null",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/treatment-step",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"treatment-step"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "treatment_plan_id",
+													"value": "4",
+													"type": "text"
+												},
+												{
+													"key": "name",
+													"value": "ألمرحلة الأولى",
+													"type": "text"
+												},
+												{
+													"key": "queue",
+													"value": "8",
+													"description": "default 0",
+													"type": "text"
+												},
+												{
+													"key": "optional",
+													"value": "1",
+													"description": "default 0",
+													"type": "text"
+												},
+												{
+													"key": "treatment_note_id",
+													"value": "",
+													"description": "can be null",
+													"type": "text"
+												},
+												{
+													"key": "medication_plan_id",
+													"value": "",
+													"description": "can be null",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/treatment-step",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment-step"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 23 Jun 2025 19:13:17 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"plan 1\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 150000,\n        \"tooth_status\": null,\n        \"steps\": [\n            {\n                \"id\": 35,\n                \"name\": \"ألمرحلة الأولى\",\n                \"queue\": 8,\n                \"optional\": 1,\n                \"treatment_note\": null,\n                \"medication_plan\": null,\n                \"treatment_substeps\": []\n            }\n        ]\n    },\n    \"message\": \"تم إنشاء خطوة العلاج بنجاح.\"\n}"
+								},
+								{
+									"name": "Required",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "treatment_plan_id",
+													"value": "4",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "name",
+													"value": "ألمرحلة الأولى",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "queue",
+													"value": "8",
+													"description": "default 0",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "optional",
+													"value": "1",
+													"description": "default 0",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "treatment_note_id",
+													"value": "",
+													"description": "can be null",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "medication_plan_id",
+													"value": "",
+													"description": "can be null",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/treatment-step",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment-step"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 23 Jun 2025 19:14:37 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"treatment_plan_id\": [\n            \"حقل خطة العلاج مطلوب.\"\n        ],\n        \"name\": [\n            \"حقل الاسم مطلوب.\"\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "ألمرحلة تجريب",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "queue",
+											"value": "8",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "optional",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "treatment_note_id",
+											"value": "1",
+											"description": "can be null",
+											"type": "text"
+										},
+										{
+											"key": "medication_plan_id",
+											"value": "1",
+											"description": "can be null",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/treatment-step/35",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"treatment-step",
+										"35"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "ألمرحلة تجريب",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "queue",
+													"value": "8",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "optional",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "treatment_note_id",
+													"value": "1",
+													"description": "can be null",
+													"type": "text"
+												},
+												{
+													"key": "medication_plan_id",
+													"value": "1",
+													"description": "can be null",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/treatment-step/35",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment-step",
+												"35"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 24 Jun 2025 11:24:25 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"plan 1\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 150000,\n        \"tooth_status\": null,\n        \"steps\": [\n            {\n                \"id\": 35,\n                \"name\": \"ألمرحلة الأولى\",\n                \"queue\": 8,\n                \"optional\": 1,\n                \"treatment_note\": {\n                    \"id\": 1,\n                    \"title\": \"treat 4\",\n                    \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                    \"duration_value\": 234,\n                    \"duration_unit\": \"days\"\n                },\n                \"medication_plan\": {\n                    \"id\": 1,\n                    \"medication\": {\n                        \"id\": 1,\n                        \"image\": null,\n                        \"name\": \"medication 1\",\n                        \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                    },\n                    \"dose\": \"حبة كل 24 ساعة\",\n                    \"duration_value\": 4,\n                    \"duration_unit\": \"weeks\"\n                },\n                \"treatment_substeps\": []\n            },\n            {\n                \"id\": 36,\n                \"name\": \"ألمرحلة الثانية\",\n                \"queue\": 9,\n                \"optional\": 1,\n                \"treatment_note\": null,\n                \"medication_plan\": null,\n                \"treatment_substeps\": []\n            },\n            {\n                \"id\": 37,\n                \"name\": \"ألمرحلة الثانية\",\n                \"queue\": 9,\n                \"optional\": 1,\n                \"treatment_note\": {\n                    \"id\": 1,\n                    \"title\": \"treat 4\",\n                    \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                    \"duration_value\": 234,\n                    \"duration_unit\": \"days\"\n                },\n                \"medication_plan\": {\n                    \"id\": 1,\n                    \"medication\": {\n                        \"id\": 1,\n                        \"image\": null,\n                        \"name\": \"medication 1\",\n                        \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                    },\n                    \"dose\": \"حبة كل 24 ساعة\",\n                    \"duration_value\": 4,\n                    \"duration_unit\": \"weeks\"\n                },\n                \"treatment_substeps\": []\n            }\n        ]\n    },\n    \"message\": \"تم تحديث خطوة العلاج بنجاح.\"\n}"
+								},
+								{
+									"name": "Invalid",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "ألمرحلة تجريب",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "queue",
+													"value": "8",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "optional",
+													"value": "166",
+													"type": "text"
+												},
+												{
+													"key": "treatment_note_id",
+													"value": "166",
+													"description": "can be null",
+													"type": "text"
+												},
+												{
+													"key": "medication_plan_id",
+													"value": "166",
+													"description": "can be null",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/treatment-step/35",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment-step",
+												"35"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 24 Jun 2025 11:29:05 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"optional\": [\n            \"يجب أن تكون قيمة الحقل اختياري إما true أو false \"\n        ],\n        \"treatment_note_id\": [\n            \"ملاحظات العلاج المختار غير صالح.\"\n        ],\n        \"medication_plan_id\": [\n            \"خطة الدواء المختار غير صالح.\"\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "destroy",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/treatment-step/36",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"treatment-step",
+										"36"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/treatment-step/36",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment-step",
+												"36"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 24 Jun 2025 11:45:36 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"plan 1\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 150000,\n        \"tooth_status\": null,\n        \"steps\": [\n            {\n                \"id\": 35,\n                \"name\": \"ألمرحلة الأولى\",\n                \"queue\": 8,\n                \"optional\": 1,\n                \"treatment_note\": {\n                    \"id\": 1,\n                    \"title\": \"treat 4\",\n                    \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                    \"duration_value\": 234,\n                    \"duration_unit\": \"days\"\n                },\n                \"medication_plan\": {\n                    \"id\": 1,\n                    \"medication\": {\n                        \"id\": 1,\n                        \"image\": null,\n                        \"name\": \"medication 1\",\n                        \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                    },\n                    \"dose\": \"حبة كل 24 ساعة\",\n                    \"duration_value\": 4,\n                    \"duration_unit\": \"weeks\"\n                },\n                \"treatment_substeps\": []\n            },\n            {\n                \"id\": 37,\n                \"name\": \"ألمرحلة الثانية\",\n                \"queue\": 9,\n                \"optional\": 1,\n                \"treatment_note\": {\n                    \"id\": 1,\n                    \"title\": \"treat 4\",\n                    \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                    \"duration_value\": 234,\n                    \"duration_unit\": \"days\"\n                },\n                \"medication_plan\": {\n                    \"id\": 1,\n                    \"medication\": {\n                        \"id\": 1,\n                        \"image\": null,\n                        \"name\": \"medication 1\",\n                        \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                    },\n                    \"dose\": \"حبة كل 24 ساعة\",\n                    \"duration_value\": 4,\n                    \"duration_unit\": \"weeks\"\n                },\n                \"treatment_substeps\": []\n            }\n        ]\n    },\n    \"message\": \"تم حذف خطوة العلاج بنجاح.\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Treatment Substeps",
+					"item": [
+						{
+							"name": "store",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "treatment_step_id",
+											"value": "8",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "ألمرحلة تجريب",
+											"type": "text"
+										},
+										{
+											"key": "queue",
+											"value": "8",
+											"description": "default 0",
+											"type": "text"
+										},
+										{
+											"key": "optional",
+											"value": "1",
+											"description": "boolean value 1 or 0 (default 0)",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/treatment-substep",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"treatment-substep"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "treatment_step_id",
+													"value": "35",
+													"type": "text"
+												},
+												{
+													"key": "name",
+													"value": "ألمرحلة تجريب",
+													"type": "text"
+												},
+												{
+													"key": "queue",
+													"value": "8",
+													"description": "default 0",
+													"type": "text"
+												},
+												{
+													"key": "optional",
+													"value": "1",
+													"description": "boolean value 1 or 0 (default 0)",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/treatment-substep",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment-substep"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 24 Jun 2025 12:11:03 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"plan 1\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 150000,\n        \"tooth_status\": null,\n        \"steps\": [\n            {\n                \"id\": 35,\n                \"name\": \"ألمرحلة الأولى\",\n                \"queue\": 8,\n                \"optional\": 1,\n                \"treatment_note\": {\n                    \"id\": 1,\n                    \"title\": \"treat 4\",\n                    \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                    \"duration_value\": 234,\n                    \"duration_unit\": \"days\"\n                },\n                \"medication_plan\": {\n                    \"id\": 1,\n                    \"medication\": {\n                        \"id\": 1,\n                        \"image\": null,\n                        \"name\": \"medication 1\",\n                        \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                    },\n                    \"dose\": \"حبة كل 24 ساعة\",\n                    \"duration_value\": 4,\n                    \"duration_unit\": \"weeks\"\n                },\n                \"treatment_substeps\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 2,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 3,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 4,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 5,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 6,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 7,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 8,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 9,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    }\n                ]\n            },\n            {\n                \"id\": 37,\n                \"name\": \"ألمرحلة الثانية\",\n                \"queue\": 9,\n                \"optional\": 1,\n                \"treatment_note\": {\n                    \"id\": 1,\n                    \"title\": \"treat 4\",\n                    \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                    \"duration_value\": 234,\n                    \"duration_unit\": \"days\"\n                },\n                \"medication_plan\": {\n                    \"id\": 1,\n                    \"medication\": {\n                        \"id\": 1,\n                        \"image\": null,\n                        \"name\": \"medication 1\",\n                        \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                    },\n                    \"dose\": \"حبة كل 24 ساعة\",\n                    \"duration_value\": 4,\n                    \"duration_unit\": \"weeks\"\n                },\n                \"treatment_substeps\": []\n            }\n        ]\n    },\n    \"message\": \"تم إنشاء خطوة العلاج بنجاح.\"\n}"
+								},
+								{
+									"name": "Required",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "treatment_step_id",
+													"value": "35",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "name",
+													"value": "ألمرحلة تجريب",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "queue",
+													"value": "8",
+													"description": "default 0",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "optional",
+													"value": "1",
+													"description": "boolean value 1 or 0 (default 0)",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/treatment-substep",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment-substep"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 24 Jun 2025 12:21:51 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"treatment_step_id\": [\n            \"حقل خطوة العلاج مطلوب.\"\n        ],\n        \"name\": [\n            \"حقل الاسم مطلوب.\"\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "ألمرحلة تعديل",
+											"type": "text"
+										},
+										{
+											"key": "queue",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "optional",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/treatment-substep/10",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"treatment-substep",
+										"10"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "ألمرحلة تعديل",
+													"type": "text"
+												},
+												{
+													"key": "queue",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "optional",
+													"value": "0",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/treatment-substep/10",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment-substep",
+												"10"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 24 Jun 2025 12:32:00 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 9,\n        \"name\": \"test plan\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 25000,\n        \"tooth_status\": {\n            \"id\": 1,\n            \"name\": \"حشوة\"\n        },\n        \"steps\": [\n            {\n                \"id\": 38,\n                \"name\": \"ألمرحلة الثانية\",\n                \"queue\": 8,\n                \"optional\": 1,\n                \"treatment_note\": {\n                    \"id\": 1,\n                    \"title\": \"treat 4\",\n                    \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                    \"duration_value\": 234,\n                    \"duration_unit\": \"days\"\n                },\n                \"medication_plan\": {\n                    \"id\": 1,\n                    \"medication\": {\n                        \"id\": 1,\n                        \"image\": null,\n                        \"name\": \"medication 1\",\n                        \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                    },\n                    \"dose\": \"حبة كل 24 ساعة\",\n                    \"duration_value\": 4,\n                    \"duration_unit\": \"weeks\"\n                },\n                \"treatment_substeps\": [\n                    {\n                        \"id\": 10,\n                        \"name\": \"ألمرحلة تعديل\",\n                        \"queue\": 1,\n                        \"optional\": 0\n                    }\n                ]\n            }\n        ]\n    },\n    \"message\": \"تم تحديث خطوة العلاج بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "destroy",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/treatment-substep/10",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"treatment-substep",
+										"10"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/treatment-substep/10",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment-substep",
+												"10"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 24 Jun 2025 12:34:08 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 9,\n        \"name\": \"test plan\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 25000,\n        \"tooth_status\": {\n            \"id\": 1,\n            \"name\": \"حشوة\"\n        },\n        \"steps\": [\n            {\n                \"id\": 38,\n                \"name\": \"ألمرحلة الثانية\",\n                \"queue\": 8,\n                \"optional\": 1,\n                \"treatment_note\": {\n                    \"id\": 1,\n                    \"title\": \"treat 4\",\n                    \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                    \"duration_value\": 234,\n                    \"duration_unit\": \"days\"\n                },\n                \"medication_plan\": {\n                    \"id\": 1,\n                    \"medication\": {\n                        \"id\": 1,\n                        \"image\": null,\n                        \"name\": \"medication 1\",\n                        \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                    },\n                    \"dose\": \"حبة كل 24 ساعة\",\n                    \"duration_value\": 4,\n                    \"duration_unit\": \"weeks\"\n                },\n                \"treatment_substeps\": []\n            }\n        ]\n    },\n    \"message\": \"تم حذف خطوة العلاج بنجاح.\"\n}"
 								}
 							]
 						}
@@ -4403,7 +5335,15 @@
 			"script": {
 				"type": "text/javascript",
 				"exec": [
-					""
+					"pm.request.headers.add({\r",
+					"    key: 'Accept',\r",
+					"    value: 'application/json'\r",
+					"});\r",
+					"\r",
+					"pm.request.headers.add({\r",
+					"    key: 'locale',\r",
+					"    value: 'ar'\r",
+					"});"
 				]
 			}
 		},

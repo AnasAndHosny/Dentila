@@ -13,22 +13,12 @@ class TreatmentPlanRepository
 
     public function create($request)
     {
-        return TreatmentPlan::create([
-            'name' => $request['name'],
-            'category_id' => $request['category_id'],
-            'cost' => $request['cost'],
-            'tooth_status_id' => $request['tooth_status_id'],
-        ]);
+        return TreatmentPlan::create($request->validated());
     }
 
     public function update($request, TreatmentPlan $treatmentPlan)
     {
-        $treatmentPlan->update([
-            'name' => $request['name'] ?? $treatmentPlan['name'],
-            'category_id' => $request['category_id'] ?? $treatmentPlan['category_id'],
-            'cost' => $request['cost'] ?? $treatmentPlan['cost'],
-            'tooth_status_id' => $request['tooth_status_id'] ?? $treatmentPlan['tooth_status_id'],
-        ]);
+        $treatmentPlan->update($request->validated());
         return $treatmentPlan;
     }
 

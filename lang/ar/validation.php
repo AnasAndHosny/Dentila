@@ -223,6 +223,11 @@ return [
         'duration_unit'         => 'وحدة المدة',
         'text'                  => 'النص',
         'tooth_status_id'       => 'حالة السن',
+        'treatment_plan_id'     => 'خطة العلاج',
+        'optional'              => 'اختياري',
+        'treatment_note_id'     => 'ملاحظات العلاج',
+        'medication_plan_id'    => 'خطة الدواء',
+        'treatment_step_id'     => 'خطوة العلاج',
     ],
 
 ];

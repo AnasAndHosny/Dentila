@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class TreatmentStep extends Model
@@ -29,5 +30,11 @@ class TreatmentStep extends Model
     public function medicationPlan(): BelongsTo
     {
         return $this->belongsTo(MedicationPlan::class);
+    }
+
+    public function treatmentSubsteps(): HasMany
+    {
+        return $this->hasMany(TreatmentSubstep::class)
+            ->orderBy('queue')->orderBy('created_ut');
     }
 }

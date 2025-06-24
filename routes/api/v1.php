@@ -4,11 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\CategoryController;
 use App\Http\Controllers\Api\V1\MedicationController;
-use App\Http\Controllers\Api\V1\TreatmentNoteController;
-use App\Http\Controllers\Api\V1\MedicationPlanController;
 use App\Http\Controllers\Api\V1\ToothStatusController;
+use App\Http\Controllers\Api\V1\TreatmentNoteController;
 use App\Http\Controllers\Api\V1\TreatmentPlanController;
 use App\Http\Controllers\Api\V1\TreatmentStepController;
+use App\Http\Controllers\Api\V1\MedicationPlanController;
+use App\Http\Controllers\Api\V1\TreatmentSubstepController;
 
 Route::prefix('v1')->group(function () {
     Route::get('test', function () {
@@ -70,5 +71,11 @@ Route::prefix('v1')->group(function () {
         Route::post('/', 'store');
         Route::patch('{treatmentStep}', 'update');
         Route::delete('{treatmentStep}', 'destroy');
+    });
+
+    Route::prefix('treatment-substep')->controller(TreatmentSubstepController::class)->group(function () {
+        Route::post('/', 'store');
+        Route::patch('{treatmentSubstep}', 'update');
+        Route::delete('{treatmentSubstep}', 'destroy');
     });
 });
