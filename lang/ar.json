@@ -92,5 +92,7 @@
     "treatment plan":"خطة العلاج",
     "treatment step":"خطوة العلاج",
     "diseases":"الأمراض",
-    "disease":"المرض"
+    "disease":"المرض",
+    "intake medications":"الأدوية المأخوذة",
+    "intake medication":"الدواء المأخوذ"
 }

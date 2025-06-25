@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
             ToothStatusSeeder::class,
             TreatmentPlanSeeder::class,
             DiseaseSeeder::class,
+            IntakeMedicationSeeder::class,
         ]);
     }
 }
