@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\CategoryController;
+use App\Http\Controllers\Api\V1\DiseaseController;
 use App\Http\Controllers\Api\V1\MedicationController;
 use App\Http\Controllers\Api\V1\ToothStatusController;
 use App\Http\Controllers\Api\V1\TreatmentNoteController;
@@ -77,5 +78,12 @@ Route::prefix('v1')->group(function () {
         Route::post('/', 'store');
         Route::patch('{treatmentSubstep}', 'update');
         Route::delete('{treatmentSubstep}', 'destroy');
+    });
+
+    Route::prefix('disease')->controller(DiseaseController::class)->group(function () {
+        Route::get('/', 'index');
+        Route::post('/', 'store');
+        Route::patch('{disease}', 'update');
+        Route::delete('{disease}', 'destroy');
     });
 });
