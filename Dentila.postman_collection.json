@@ -6237,6 +6237,996 @@
 							]
 						}
 					]
+				},
+				{
+					"name": "Patients",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/patient",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/patient",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 27 Jun 2025 17:00:07 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 11,\n            \"name\": \"Anas\",\n            \"phone_number\": \"0957875892\",\n            \"birthdate\": \"2002-01-12\",\n            \"age\": 23,\n            \"gender\": \"male\",\n            \"job\": \"مهندس قد الدنيا\",\n            \"marital_status\": \"\",\n            \"address\": \"ضاحية قدسيا\",\n            \"social_history\": \"\",\n            \"note\": \"\",\n            \"intake_medications\": [\n                {\n                    \"id\": 1,\n                    \"name\": \"test 8\"\n                }\n            ],\n            \"diseases\": [],\n            \"teeth\": [\n                {\n                    \"number\": 11,\n                    \"name\": \"ثنية علوي يمين\",\n                    \"note\": \"\",\n                    \"has_treatment\": 0,\n                    \"status_id\": 3,\n                    \"status_name\": \"تاج\"\n                },\n                {\n                    \"number\": 18,\n                    \"name\": \"رحى ثالثة علوي يمين\",\n                    \"note\": \"أداة مكسورة في القناة\",\n                    \"has_treatment\": 1,\n                    \"status_id\": 1,\n                    \"status_name\": \"حشوة\"\n                },\n                {\n                    \"number\": 21,\n                    \"name\": \"ثنية علوي يسار\",\n                    \"note\": \"\",\n                    \"has_treatment\": 0,\n                    \"status_id\": 0,\n                    \"status_name\": \"سليم\"\n                }\n            ]\n        },\n        {\n            \"id\": 10,\n            \"name\": \"Anas\",\n            \"phone_number\": \"0957875894\",\n            \"birthdate\": \"2002-01-12\",\n            \"age\": 23,\n            \"gender\": \"male\",\n            \"job\": \"مهندس قد الدنيا\",\n            \"marital_status\": \"\",\n            \"address\": \"ضاحية قدسيا\",\n            \"social_history\": \"\",\n            \"note\": \"\",\n            \"intake_medications\": [\n                {\n                    \"id\": 1,\n                    \"name\": \"test 8\"\n                }\n            ],\n            \"diseases\": [\n                {\n                    \"id\": 4,\n                    \"name\": \"test 4\"\n                },\n                {\n                    \"id\": 3,\n                    \"name\": \"test 3\"\n                }\n            ],\n            \"teeth\": [\n                {\n                    \"number\": 11,\n                    \"name\": \"ثنية علوي يمين\",\n                    \"note\": \"\",\n                    \"has_treatment\": 0,\n                    \"status_id\": 0,\n                    \"status_name\": \"سليم\"\n                },\n                {\n                    \"number\": 22,\n                    \"name\": \"رباعية علوي يسار\",\n                    \"note\": \"\",\n                    \"has_treatment\": 1,\n                    \"status_id\": 0,\n                    \"status_name\": \"سليم\"\n                },\n                {\n                    \"number\": 34,\n                    \"name\": \"ضاحك أول سفلي يسار\",\n                    \"note\": \"\",\n                    \"has_treatment\": 1,\n                    \"status_id\": 3,\n                    \"status_name\": \"تاج\"\n                },\n                {\n                    \"number\": 46,\n                    \"name\": \"رحى أولى سفلي يمين\",\n                    \"note\": \"\",\n                    \"has_treatment\": 0,\n                    \"status_id\": 4,\n                    \"status_name\": \"وتد\"\n                }\n            ]\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Anas\",\n            \"phone_number\": \"0957875896\",\n            \"birthdate\": \"2002-01-11\",\n            \"age\": 23,\n            \"gender\": \"male\",\n            \"job\": \"مهندس قد الدنيا\",\n            \"marital_status\": \"\",\n            \"address\": \"ضاحية قدسيا\",\n            \"social_history\": \"\",\n            \"note\": \"\",\n            \"intake_medications\": [],\n            \"diseases\": [],\n            \"teeth\": []\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Anas\",\n            \"phone_number\": \"0957875898\",\n            \"birthdate\": \"2002-01-11\",\n            \"age\": 23,\n            \"gender\": \"male\",\n            \"job\": \"مهندس قد الدنيا\",\n            \"marital_status\": \"\",\n            \"address\": \"ضاحية قدسيا\",\n            \"social_history\": \"\",\n            \"note\": \"\",\n            \"intake_medications\": [],\n            \"diseases\": [],\n            \"teeth\": []\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Anas\",\n            \"phone_number\": \"0957875899\",\n            \"birthdate\": \"2002-01-11\",\n            \"age\": 23,\n            \"gender\": \"male\",\n            \"job\": \"مهندس قد الدنيا\",\n            \"marital_status\": \"\",\n            \"address\": \"ضاحية قدسيا\",\n            \"social_history\": \"\",\n            \"note\": \"\",\n            \"intake_medications\": [],\n            \"diseases\": [],\n            \"teeth\": []\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Anas\",\n            \"phone_number\": \"0957875897\",\n            \"birthdate\": \"2002-01-11\",\n            \"age\": 23,\n            \"gender\": \"male\",\n            \"job\": \"مهندس قد الدنيا\",\n            \"marital_status\": \"\",\n            \"address\": \"ضاحية قدسيا\",\n            \"social_history\": \"\",\n            \"note\": \"\",\n            \"intake_medications\": [],\n            \"diseases\": [],\n            \"teeth\": []\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Anas\",\n            \"phone_number\": \"0957875895\",\n            \"birthdate\": \"2002-01-11\",\n            \"age\": 23,\n            \"gender\": \"male\",\n            \"job\": \"مهندس قد الدنيا\",\n            \"marital_status\": \"\",\n            \"address\": \"ضاحية قدسيا\",\n            \"social_history\": \"\",\n            \"note\": \"\",\n            \"intake_medications\": [],\n            \"diseases\": [],\n            \"teeth\": []\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Anas\",\n            \"phone_number\": \"0957875893\",\n            \"birthdate\": \"2002-01-11\",\n            \"age\": 23,\n            \"gender\": \"male\",\n            \"job\": \"مهندس قد الدنيا\",\n            \"marital_status\": \"\",\n            \"address\": \"ضاحية قدسيا\",\n            \"social_history\": \"\",\n            \"note\": \"\",\n            \"intake_medications\": [],\n            \"diseases\": [],\n            \"teeth\": []\n        }\n    ],\n    \"message\": \"تم جلب قائمة ألمرضى بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "store",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Anas",
+											"type": "text"
+										},
+										{
+											"key": "phone_number",
+											"value": "0957875891",
+											"type": "text"
+										},
+										{
+											"key": "birthdate",
+											"value": "2002-01-11",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "male",
+											"description": "male, female",
+											"type": "text"
+										},
+										{
+											"key": "job",
+											"value": "مهندس قد الدنيا",
+											"description": "nullable",
+											"type": "text"
+										},
+										{
+											"key": "marital_status",
+											"value": "",
+											"description": "nullable",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "ضاحية قدسيا",
+											"description": "nullable",
+											"type": "text"
+										},
+										{
+											"key": "social_history",
+											"value": "",
+											"description": "nullable",
+											"type": "text"
+										},
+										{
+											"key": "note",
+											"value": "",
+											"description": "nullable",
+											"type": "text"
+										},
+										{
+											"key": "intake_medications_ids[]",
+											"value": "1",
+											"description": "don`t send the array if there is no intake medications",
+											"type": "text"
+										},
+										{
+											"key": "diseases_ids[]",
+											"value": "4",
+											"description": "don`t send the array if there is no diseases",
+											"type": "text"
+										},
+										{
+											"key": "diseases_ids[]",
+											"value": "3",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/patient",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "Anas",
+													"type": "text"
+												},
+												{
+													"key": "phone_number",
+													"value": "0957875891",
+													"type": "text"
+												},
+												{
+													"key": "birthdate",
+													"value": "2002-01-11",
+													"type": "text"
+												},
+												{
+													"key": "gender",
+													"value": "male",
+													"description": "male, female",
+													"type": "text"
+												},
+												{
+													"key": "job",
+													"value": "مهندس قد الدنيا",
+													"description": "nullable",
+													"type": "text"
+												},
+												{
+													"key": "marital_status",
+													"value": "",
+													"description": "nullable",
+													"type": "text"
+												},
+												{
+													"key": "address",
+													"value": "ضاحية قدسيا",
+													"description": "nullable",
+													"type": "text"
+												},
+												{
+													"key": "social_history",
+													"value": "",
+													"description": "nullable",
+													"type": "text"
+												},
+												{
+													"key": "note",
+													"value": "",
+													"description": "nullable",
+													"type": "text"
+												},
+												{
+													"key": "intake_medications_ids[]",
+													"value": "1",
+													"description": "don`t send the array if there is no intake medications",
+													"type": "text"
+												},
+												{
+													"key": "diseases_ids[]",
+													"value": "4",
+													"description": "don`t send the array if there is no diseases",
+													"type": "text"
+												},
+												{
+													"key": "diseases_ids[]",
+													"value": "3",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/patient",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 27 Jun 2025 18:44:01 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 12,\n        \"name\": \"Anas\",\n        \"phone_number\": \"0957875891\",\n        \"birthdate\": \"2002-01-11\",\n        \"age\": 23,\n        \"gender\": \"male\",\n        \"job\": \"مهندس قد الدنيا\",\n        \"marital_status\": \"\",\n        \"address\": \"ضاحية قدسيا\",\n        \"social_history\": \"\",\n        \"note\": \"\",\n        \"intake_medications\": [\n            {\n                \"id\": 1,\n                \"name\": \"test 8\"\n            }\n        ],\n        \"diseases\": [\n            {\n                \"id\": 4,\n                \"name\": \"test 4\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"test 3\"\n            }\n        ],\n        \"teeth\": []\n    },\n    \"message\": \"تم إنشاء المريض بنجاح.\"\n}"
+								},
+								{
+									"name": "Required",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "Anas",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "phone_number",
+													"value": "0957875892",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "birthdate",
+													"value": "2002-01-11",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "gender",
+													"value": "male",
+													"description": "male, female",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "job",
+													"value": "مهندس قد الدنيا",
+													"description": "nullable",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "marital_status",
+													"value": "",
+													"description": "nullable",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "address",
+													"value": "ضاحية قدسيا",
+													"description": "nullable",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "social_history",
+													"value": "",
+													"description": "nullable",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "intake_medications_ids[0]",
+													"value": "1",
+													"description": "don`t send the array if there is no intake medications",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "diseases_ids[0]",
+													"value": "4",
+													"description": "don`t send the array if there is no diseases",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "diseases_ids[1]",
+													"value": "3",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/patient",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 25 Jun 2025 23:23:33 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"name\": [\n            \"حقل الاسم مطلوب.\"\n        ],\n        \"phone_number\": [\n            \"حقل رقم الهاتف مطلوب.\"\n        ],\n        \"birthdate\": [\n            \"حقل تاريخ الميلاد مطلوب.\"\n        ],\n        \"gender\": [\n            \"حقل الجنس مطلوب.\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "Unique",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "Anas",
+													"type": "text"
+												},
+												{
+													"key": "phone_number",
+													"value": "0957875892",
+													"type": "text"
+												},
+												{
+													"key": "birthdate",
+													"value": "2002-01-11",
+													"type": "text"
+												},
+												{
+													"key": "gender",
+													"value": "male",
+													"description": "male, female",
+													"type": "text"
+												},
+												{
+													"key": "job",
+													"value": "مهندس قد الدنيا",
+													"description": "nullable",
+													"type": "text"
+												},
+												{
+													"key": "marital_status",
+													"value": "",
+													"description": "nullable",
+													"type": "text"
+												},
+												{
+													"key": "address",
+													"value": "ضاحية قدسيا",
+													"description": "nullable",
+													"type": "text"
+												},
+												{
+													"key": "social_history",
+													"value": "",
+													"description": "nullable",
+													"type": "text"
+												},
+												{
+													"key": "intake_medications_ids[0]",
+													"value": "1",
+													"description": "don`t send the array if there is no intake medications",
+													"type": "text"
+												},
+												{
+													"key": "diseases_ids[0]",
+													"value": "4",
+													"description": "don`t send the array if there is no diseases",
+													"type": "text"
+												},
+												{
+													"key": "diseases_ids[1]",
+													"value": "3",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/patient",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 25 Jun 2025 23:23:58 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"phone_number\": [\n            \"قيمة حقل رقم الهاتف مُستخدمة من قبل\"\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "show",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/patient/10",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient",
+										"10"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/patient/10",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient",
+												"10"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 27 Jun 2025 16:58:31 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 10,\n        \"name\": \"Anas\",\n        \"phone_number\": \"0957875894\",\n        \"birthdate\": \"2002-01-12\",\n        \"age\": 23,\n        \"gender\": \"male\",\n        \"job\": \"مهندس قد الدنيا\",\n        \"marital_status\": \"\",\n        \"address\": \"ضاحية قدسيا\",\n        \"social_history\": \"\",\n        \"note\": \"\",\n        \"intake_medications\": [\n            {\n                \"id\": 1,\n                \"name\": \"test 8\"\n            }\n        ],\n        \"diseases\": [\n            {\n                \"id\": 4,\n                \"name\": \"test 4\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"test 3\"\n            }\n        ],\n        \"teeth\": [\n            {\n                \"number\": 11,\n                \"name\": \"ثنية علوي يمين\",\n                \"note\": \"\",\n                \"has_treatment\": 0,\n                \"status_id\": 0,\n                \"status_name\": \"سليم\"\n            },\n            {\n                \"number\": 22,\n                \"name\": \"رباعية علوي يسار\",\n                \"note\": \"\",\n                \"has_treatment\": 1,\n                \"status_id\": 0,\n                \"status_name\": \"سليم\"\n            },\n            {\n                \"number\": 34,\n                \"name\": \"ضاحك أول سفلي يسار\",\n                \"note\": \"\",\n                \"has_treatment\": 1,\n                \"status_id\": 3,\n                \"status_name\": \"تاج\"\n            },\n            {\n                \"number\": 46,\n                \"name\": \"رحى أولى سفلي يمين\",\n                \"note\": \"\",\n                \"has_treatment\": 0,\n                \"status_id\": 4,\n                \"status_name\": \"وتد\"\n            }\n        ]\n    },\n    \"message\": \"تم جلب المريض بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Anas",
+											"type": "text"
+										},
+										{
+											"key": "phone_number",
+											"value": "0957875892",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "birthdate",
+											"value": "2002-01-12",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "male",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "job",
+											"value": "مهندس قد الدنيا",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "marital_status",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "address",
+											"value": "ضاحية قدسيا",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "social_history",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "note",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "intake_medications_ids[]",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "diseases_ids[]",
+											"value": "4",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "diseases_ids[]",
+											"value": "3",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/patient/10",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient",
+										"10"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "Anas",
+													"type": "text"
+												},
+												{
+													"key": "phone_number",
+													"value": "0957875892",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "birthdate",
+													"value": "2002-01-12",
+													"type": "text"
+												},
+												{
+													"key": "gender",
+													"value": "male",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "job",
+													"value": "مهندس قد الدنيا",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "marital_status",
+													"value": "",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "address",
+													"value": "ضاحية قدسيا",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "social_history",
+													"value": "",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "note",
+													"value": "",
+													"type": "text"
+												},
+												{
+													"key": "intake_medications_ids[]",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "diseases_ids[]",
+													"value": "4",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "diseases_ids[]",
+													"value": "3",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/patient/10",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient",
+												"10"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 27 Jun 2025 18:44:32 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 10,\n        \"name\": \"Anas\",\n        \"phone_number\": \"0957875894\",\n        \"birthdate\": \"2002-01-12\",\n        \"age\": 23,\n        \"gender\": \"male\",\n        \"job\": \"مهندس قد الدنيا\",\n        \"marital_status\": \"\",\n        \"address\": \"ضاحية قدسيا\",\n        \"social_history\": \"\",\n        \"note\": \"\",\n        \"intake_medications\": [\n            {\n                \"id\": 1,\n                \"name\": \"test 8\"\n            }\n        ],\n        \"diseases\": [\n            {\n                \"id\": 4,\n                \"name\": \"test 4\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"test 3\"\n            }\n        ],\n        \"teeth\": [\n            {\n                \"number\": 11,\n                \"name\": \"ثنية علوي يمين\",\n                \"note\": \"\",\n                \"has_treatment\": 0,\n                \"status_id\": 0,\n                \"status_name\": \"سليم\"\n            },\n            {\n                \"number\": 22,\n                \"name\": \"رباعية علوي يسار\",\n                \"note\": \"\",\n                \"has_treatment\": 1,\n                \"status_id\": 0,\n                \"status_name\": \"سليم\"\n            },\n            {\n                \"number\": 34,\n                \"name\": \"ضاحك أول سفلي يسار\",\n                \"note\": \"\",\n                \"has_treatment\": 1,\n                \"status_id\": 3,\n                \"status_name\": \"تاج\"\n            },\n            {\n                \"number\": 46,\n                \"name\": \"رحى أولى سفلي يمين\",\n                \"note\": \"\",\n                \"has_treatment\": 0,\n                \"status_id\": 4,\n                \"status_name\": \"وتد\"\n            }\n        ]\n    },\n    \"message\": \"تم تحديث المريض بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "destroy",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/patient/12",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient",
+										"12"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/patient/12",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient",
+												"12"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 27 Jun 2025 18:45:35 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [],\n    \"message\": \"تم حذف المريض بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "update tooth note",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "note",
+											"value": "هذا السن سليم",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/patient/10/tooth/11",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient",
+										"10",
+										"tooth",
+										"11"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "note",
+													"value": "هذا السن سليم",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/patient/10/tooth/11",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient",
+												"10",
+												"tooth",
+												"11"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 27 Jun 2025 19:39:37 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"number\": 11,\n        \"name\": \"ثنية علوي يمين\",\n        \"note\": \"هذا السن سليم\",\n        \"has_treatment\": 0,\n        \"status_id\": 0,\n        \"status_name\": \"سليم\"\n    },\n    \"message\": \"تم تحديث السن بنجاح.\"\n}"
+								}
+							]
+						}
+					]
 				}
 			]
 		},

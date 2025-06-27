@@ -28,6 +28,7 @@ class PatientResource extends JsonResource
             'note' => (string)$this->social_history,
             'intake_medications' => IntakeMedicationResource::collection($this->intakeMedications),
             'diseases' => DiseaseResource::collection($this->diseases),
+            'teeth' => PatientToothResource::collection($this->teeth),
         ];
     }
 }

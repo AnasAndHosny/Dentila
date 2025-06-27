@@ -73,4 +73,10 @@ class Patient extends Model
     {
         return $this->belongsToMany(IntakeMedication::class, 'patient_intake_medications');
     }
+
+    public function teeth(): BelongsToMany
+    {
+        return $this->belongsToMany(Tooth::class, table: 'patient_teeth',)
+            ->withPivot('has_treatment', 'note', 'tooth_status_id');
+    }
 }

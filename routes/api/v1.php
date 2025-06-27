@@ -12,6 +12,7 @@ use App\Http\Controllers\Api\V1\TreatmentPlanController;
 use App\Http\Controllers\Api\V1\TreatmentStepController;
 use App\Http\Controllers\Api\V1\MedicationPlanController;
 use App\Http\Controllers\Api\V1\PatientController;
+use App\Http\Controllers\Api\V1\ToothController;
 use App\Http\Controllers\Api\V1\TreatmentSubstepController;
 
 Route::prefix('v1')->group(function () {
@@ -102,5 +103,9 @@ Route::prefix('v1')->group(function () {
         Route::get('{patient}', 'show');
         Route::patch('{patient}', 'update');
         Route::delete('{patient}', 'destroy');
+    });
+
+    Route::prefix('patient')->controller(ToothController::class)->group(function () {
+        Route::patch('{patient}/tooth/{tooth}', 'update');
     });
 });
