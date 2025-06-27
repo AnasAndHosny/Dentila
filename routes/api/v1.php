@@ -11,6 +11,7 @@ use App\Http\Controllers\Api\V1\TreatmentNoteController;
 use App\Http\Controllers\Api\V1\TreatmentPlanController;
 use App\Http\Controllers\Api\V1\TreatmentStepController;
 use App\Http\Controllers\Api\V1\MedicationPlanController;
+use App\Http\Controllers\Api\V1\PatientController;
 use App\Http\Controllers\Api\V1\TreatmentSubstepController;
 
 Route::prefix('v1')->group(function () {
@@ -93,5 +94,13 @@ Route::prefix('v1')->group(function () {
         Route::post('/', 'store');
         Route::patch('{intakeMedication}', 'update');
         Route::delete('{intakeMedication}', 'destroy');
+    });
+
+    Route::prefix('patient')->controller(PatientController::class)->group(function () {
+        Route::get('/', 'index');
+        Route::post('/', 'store');
+        Route::get('{patient}', 'show');
+        Route::patch('{patient}', 'update');
+        Route::delete('{patient}', 'destroy');
     });
 });
