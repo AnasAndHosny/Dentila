@@ -14,8 +14,9 @@ use App\Http\Controllers\Api\V1\MedicationPlanController;
 use App\Http\Controllers\Api\V1\PatientController;
 use App\Http\Controllers\Api\V1\ToothController;
 use App\Http\Controllers\Api\V1\TreatmentSubstepController;
+use App\Http\Middleware\Cors;
 
-Route::prefix('v1')->group(function () {
+Route::prefix('v1')->middleware([Cors::class])->group(function () {
     Route::get('test', function () {
         return response()->json(['message' => 'API V1 working']);
     });
