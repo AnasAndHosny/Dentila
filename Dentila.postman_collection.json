@@ -7227,6 +7227,881 @@
 							]
 						}
 					]
+				},
+				{
+					"name": "Treatment Plan",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/treatment-plan",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"treatment-plan"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/treatment-plan",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment-plan"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 24 Jun 2025 13:00:33 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 9,\n            \"name\": \"test plan\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 25000,\n            \"tooth_status\": {\n                \"id\": 1,\n                \"name\": \"حشوة\"\n            },\n            \"steps\": [\n                {\n                    \"id\": 38,\n                    \"name\": \"ألمرحلة الثانية\",\n                    \"queue\": 8,\n                    \"optional\": 1,\n                    \"treatment_note\": {\n                        \"id\": 1,\n                        \"title\": \"treat 4\",\n                        \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                        \"duration_value\": 234,\n                        \"duration_unit\": \"days\"\n                    },\n                    \"medication_plan\": {\n                        \"id\": 1,\n                        \"medication\": {\n                            \"id\": 1,\n                            \"image\": null,\n                            \"name\": \"medication 1\",\n                            \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                        },\n                        \"dose\": \"حبة كل 24 ساعة\",\n                        \"duration_value\": 4,\n                        \"duration_unit\": \"weeks\"\n                    },\n                    \"treatment_substeps\": []\n                }\n            ]\n        },\n        {\n            \"id\": 8,\n            \"name\": \"plan 5\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"tooth_status\": {\n                \"id\": 3,\n                \"name\": \"تاج\"\n            },\n            \"steps\": []\n        },\n        {\n            \"id\": 7,\n            \"name\": \"plan 4\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"tooth_status\": null,\n            \"steps\": []\n        },\n        {\n            \"id\": 6,\n            \"name\": \"plan 3\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"tooth_status\": {\n                \"id\": 3,\n                \"name\": \"تاج\"\n            },\n            \"steps\": []\n        },\n        {\n            \"id\": 5,\n            \"name\": \"plan 2\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"tooth_status\": null,\n            \"steps\": []\n        },\n        {\n            \"id\": 4,\n            \"name\": \"plan 1\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"tooth_status\": null,\n            \"steps\": [\n                {\n                    \"id\": 35,\n                    \"name\": \"ألمرحلة الأولى\",\n                    \"queue\": 8,\n                    \"optional\": 1,\n                    \"treatment_note\": {\n                        \"id\": 1,\n                        \"title\": \"treat 4\",\n                        \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                        \"duration_value\": 234,\n                        \"duration_unit\": \"days\"\n                    },\n                    \"medication_plan\": {\n                        \"id\": 1,\n                        \"medication\": {\n                            \"id\": 1,\n                            \"image\": null,\n                            \"name\": \"medication 1\",\n                            \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                        },\n                        \"dose\": \"حبة كل 24 ساعة\",\n                        \"duration_value\": 4,\n                        \"duration_unit\": \"weeks\"\n                    },\n                    \"treatment_substeps\": [\n                        {\n                            \"id\": 1,\n                            \"name\": \"ألمرحلة تجريب\",\n                            \"queue\": 8,\n                            \"optional\": 1\n                        },\n                        {\n                            \"id\": 2,\n                            \"name\": \"ألمرحلة تجريب\",\n                            \"queue\": 8,\n                            \"optional\": 1\n                        },\n                        {\n                            \"id\": 3,\n                            \"name\": \"ألمرحلة تجريب\",\n                            \"queue\": 8,\n                            \"optional\": 1\n                        },\n                        {\n                            \"id\": 4,\n                            \"name\": \"ألمرحلة تجريب\",\n                            \"queue\": 8,\n                            \"optional\": 1\n                        },\n                        {\n                            \"id\": 5,\n                            \"name\": \"ألمرحلة تجريب\",\n                            \"queue\": 8,\n                            \"optional\": 1\n                        },\n                        {\n                            \"id\": 6,\n                            \"name\": \"ألمرحلة تجريب\",\n                            \"queue\": 8,\n                            \"optional\": 1\n                        },\n                        {\n                            \"id\": 7,\n                            \"name\": \"ألمرحلة تجريب\",\n                            \"queue\": 8,\n                            \"optional\": 1\n                        },\n                        {\n                            \"id\": 8,\n                            \"name\": \"ألمرحلة تجريب\",\n                            \"queue\": 8,\n                            \"optional\": 1\n                        },\n                        {\n                            \"id\": 9,\n                            \"name\": \"ألمرحلة تجريب\",\n                            \"queue\": 8,\n                            \"optional\": 1\n                        }\n                    ]\n                },\n                {\n                    \"id\": 37,\n                    \"name\": \"ألمرحلة الثانية\",\n                    \"queue\": 9,\n                    \"optional\": 1,\n                    \"treatment_note\": {\n                        \"id\": 1,\n                        \"title\": \"treat 4\",\n                        \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                        \"duration_value\": 234,\n                        \"duration_unit\": \"days\"\n                    },\n                    \"medication_plan\": {\n                        \"id\": 1,\n                        \"medication\": {\n                            \"id\": 1,\n                            \"image\": null,\n                            \"name\": \"medication 1\",\n                            \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                        },\n                        \"dose\": \"حبة كل 24 ساعة\",\n                        \"duration_value\": 4,\n                        \"duration_unit\": \"weeks\"\n                    },\n                    \"treatment_substeps\": []\n                }\n            ]\n        }\n    ],\n    \"message\": \"تم جلب قائمة خطط العلاج بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "show",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/treatment-plan/4",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"treatment-plan",
+										"4"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/treatment-plan/4",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment-plan",
+												"4"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 24 Jun 2025 13:01:09 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"plan 1\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 150000,\n        \"tooth_status\": null,\n        \"steps\": [\n            {\n                \"id\": 35,\n                \"name\": \"ألمرحلة الأولى\",\n                \"queue\": 8,\n                \"optional\": 1,\n                \"treatment_note\": {\n                    \"id\": 1,\n                    \"title\": \"treat 4\",\n                    \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                    \"duration_value\": 234,\n                    \"duration_unit\": \"days\"\n                },\n                \"medication_plan\": {\n                    \"id\": 1,\n                    \"medication\": {\n                        \"id\": 1,\n                        \"image\": null,\n                        \"name\": \"medication 1\",\n                        \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                    },\n                    \"dose\": \"حبة كل 24 ساعة\",\n                    \"duration_value\": 4,\n                    \"duration_unit\": \"weeks\"\n                },\n                \"treatment_substeps\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 2,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 3,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 4,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 5,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 6,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 7,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 8,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    },\n                    {\n                        \"id\": 9,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 1\n                    }\n                ]\n            },\n            {\n                \"id\": 37,\n                \"name\": \"ألمرحلة الثانية\",\n                \"queue\": 9,\n                \"optional\": 1,\n                \"treatment_note\": {\n                    \"id\": 1,\n                    \"title\": \"treat 4\",\n                    \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                    \"duration_value\": 234,\n                    \"duration_unit\": \"days\"\n                },\n                \"medication_plan\": {\n                    \"id\": 1,\n                    \"medication\": {\n                        \"id\": 1,\n                        \"image\": null,\n                        \"name\": \"medication 1\",\n                        \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                    },\n                    \"dose\": \"حبة كل 24 ساعة\",\n                    \"duration_value\": 4,\n                    \"duration_unit\": \"weeks\"\n                },\n                \"treatment_substeps\": []\n            }\n        ]\n    },\n    \"message\": \"تم جلب خطة العلاج بنجاح.\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Patient Treatments",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/patient/9/treatment",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient",
+										"9",
+										"treatment"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/patient/9/treatment",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient",
+												"9",
+												"treatment"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 20 Jul 2025 16:23:39 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 8,\n            \"name\": \"الخطة بدي أسندها لمريض\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"main_complaint\": \"شكوى\",\n            \"diagnoses\": \"تشخيص\",\n            \"finished\": 0,\n            \"complete_percentage\": 0,\n            \"teeth\": [\n                {\n                    \"number\": 44,\n                    \"name\": \"ضاحك أول سفلي يمين\"\n                },\n                {\n                    \"number\": 45,\n                    \"name\": \"ضاحك ثاني سفلي يمين\"\n                }\n            ],\n            \"steps\": [\n                {\n                    \"id\": 15,\n                    \"name\": \"ألمرحلة الأولى\",\n                    \"queue\": 1,\n                    \"optional\": 1,\n                    \"finished\": 0,\n                    \"note\": \"\",\n                    \"treatment_substeps\": []\n                },\n                {\n                    \"id\": 16,\n                    \"name\": \"ألمرحلة الثانية\",\n                    \"queue\": 2,\n                    \"optional\": 0,\n                    \"finished\": 0,\n                    \"note\": \"\",\n                    \"treatment_substeps\": [\n                        {\n                            \"id\": 27,\n                            \"name\": \"ألمرحلة تجريب\",\n                            \"queue\": 8,\n                            \"optional\": 0,\n                            \"finished\": 0,\n                            \"note\": \"\"\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"id\": 7,\n            \"name\": \"الخطة بدي أسندها لمريض\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"main_complaint\": \"\",\n            \"diagnoses\": \"\",\n            \"finished\": 0,\n            \"complete_percentage\": 0,\n            \"teeth\": [\n                {\n                    \"number\": 44,\n                    \"name\": \"ضاحك أول سفلي يمين\"\n                },\n                {\n                    \"number\": 45,\n                    \"name\": \"ضاحك ثاني سفلي يمين\"\n                }\n            ],\n            \"steps\": [\n                {\n                    \"id\": 13,\n                    \"name\": \"ألمرحلة الأولى\",\n                    \"queue\": 1,\n                    \"optional\": 1,\n                    \"finished\": 0,\n                    \"note\": \"\",\n                    \"treatment_substeps\": []\n                },\n                {\n                    \"id\": 14,\n                    \"name\": \"ألمرحلة الثانية\",\n                    \"queue\": 2,\n                    \"optional\": 0,\n                    \"finished\": 0,\n                    \"note\": \"\",\n                    \"treatment_substeps\": [\n                        {\n                            \"id\": 26,\n                            \"name\": \"ألمرحلة تجريب\",\n                            \"queue\": 8,\n                            \"optional\": 0,\n                            \"finished\": 0,\n                            \"note\": \"\"\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"id\": 6,\n            \"name\": \"الخطة بدي أسندها لمريض\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"main_complaint\": \"\",\n            \"diagnoses\": \"\",\n            \"finished\": 0,\n            \"complete_percentage\": 0,\n            \"teeth\": [\n                {\n                    \"number\": 44,\n                    \"name\": \"ضاحك أول سفلي يمين\"\n                },\n                {\n                    \"number\": 45,\n                    \"name\": \"ضاحك ثاني سفلي يمين\"\n                }\n            ],\n            \"steps\": [\n                {\n                    \"id\": 11,\n                    \"name\": \"ألمرحلة الأولى\",\n                    \"queue\": 1,\n                    \"optional\": 1,\n                    \"finished\": 0,\n                    \"note\": \"\",\n                    \"treatment_substeps\": []\n                },\n                {\n                    \"id\": 12,\n                    \"name\": \"ألمرحلة الثانية\",\n                    \"queue\": 2,\n                    \"optional\": 0,\n                    \"finished\": 0,\n                    \"note\": \"\",\n                    \"treatment_substeps\": [\n                        {\n                            \"id\": 25,\n                            \"name\": \"ألمرحلة تجريب\",\n                            \"queue\": 8,\n                            \"optional\": 0,\n                            \"finished\": 0,\n                            \"note\": \"\"\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"id\": 5,\n            \"name\": \"الخطة بدي أسندها لمريض\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"main_complaint\": \"شكوى\",\n            \"diagnoses\": \"تشخيص\",\n            \"finished\": 0,\n            \"complete_percentage\": 0,\n            \"teeth\": [\n                {\n                    \"number\": 44,\n                    \"name\": \"ضاحك أول سفلي يمين\"\n                },\n                {\n                    \"number\": 45,\n                    \"name\": \"ضاحك ثاني سفلي يمين\"\n                }\n            ],\n            \"steps\": [\n                {\n                    \"id\": 9,\n                    \"name\": \"ألمرحلة الأولى\",\n                    \"queue\": 1,\n                    \"optional\": 1,\n                    \"finished\": 0,\n                    \"note\": \"\",\n                    \"treatment_substeps\": []\n                },\n                {\n                    \"id\": 10,\n                    \"name\": \"ألمرحلة الثانية\",\n                    \"queue\": 2,\n                    \"optional\": 0,\n                    \"finished\": 0,\n                    \"note\": \"\",\n                    \"treatment_substeps\": [\n                        {\n                            \"id\": 24,\n                            \"name\": \"ألمرحلة تجريب\",\n                            \"queue\": 8,\n                            \"optional\": 0,\n                            \"finished\": 0,\n                            \"note\": \"\"\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"id\": 4,\n            \"name\": \"الخطة بدي أسندها لمريض\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"main_complaint\": \"\",\n            \"diagnoses\": \"\",\n            \"finished\": 0,\n            \"complete_percentage\": 50,\n            \"teeth\": [\n                {\n                    \"number\": 42,\n                    \"name\": \"رباعية سفلي يمين\"\n                },\n                {\n                    \"number\": 45,\n                    \"name\": \"ضاحك ثاني سفلي يمين\"\n                }\n            ],\n            \"steps\": [\n                {\n                    \"id\": 7,\n                    \"name\": \"ألمرحلة الأولى\",\n                    \"queue\": 1,\n                    \"optional\": 1,\n                    \"finished\": 1,\n                    \"note\": \"\",\n                    \"treatment_substeps\": []\n                },\n                {\n                    \"id\": 8,\n                    \"name\": \"ألمرحلة الثانية\",\n                    \"queue\": 2,\n                    \"optional\": 0,\n                    \"finished\": 0,\n                    \"note\": \"\",\n                    \"treatment_substeps\": [\n                        {\n                            \"id\": 41,\n                            \"name\": \"ألمرحلة الأولى\",\n                            \"queue\": 0,\n                            \"optional\": 0,\n                            \"finished\": 0,\n                            \"note\": \"\"\n                        },\n                        {\n                            \"id\": 20,\n                            \"name\": \"ألمرحلة تجريب\",\n                            \"queue\": 8,\n                            \"optional\": 0,\n                            \"finished\": 1,\n                            \"note\": \"\"\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"name\": \"الخطة بدي أسندها لمريض\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"main_complaint\": \"\",\n            \"diagnoses\": \"\",\n            \"finished\": 0,\n            \"complete_percentage\": 0,\n            \"teeth\": [\n                {\n                    \"number\": 44,\n                    \"name\": \"ضاحك أول سفلي يمين\"\n                },\n                {\n                    \"number\": 45,\n                    \"name\": \"ضاحك ثاني سفلي يمين\"\n                }\n            ],\n            \"steps\": [\n                {\n                    \"id\": 5,\n                    \"name\": \"ألمرحلة الأولى\",\n                    \"queue\": 1,\n                    \"optional\": 1,\n                    \"finished\": 0,\n                    \"note\": \"\",\n                    \"treatment_substeps\": []\n                },\n                {\n                    \"id\": 6,\n                    \"name\": \"ألمرحلة الثانية\",\n                    \"queue\": 2,\n                    \"optional\": 0,\n                    \"finished\": 0,\n                    \"note\": \"\",\n                    \"treatment_substeps\": [\n                        {\n                            \"id\": 19,\n                            \"name\": \"ألمرحلة تجريب\",\n                            \"queue\": 8,\n                            \"optional\": 0,\n                            \"finished\": 0,\n                            \"note\": \"\"\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"name\": \"الخطة بدي أسندها لمريض\",\n            \"category\": {\n                \"id\": 1,\n                \"name\": \"first category\"\n            },\n            \"cost\": 150000,\n            \"main_complaint\": \"\",\n            \"diagnoses\": \"\",\n            \"finished\": 0,\n            \"complete_percentage\": 0,\n            \"teeth\": [\n                {\n                    \"number\": 44,\n                    \"name\": \"ضاحك أول سفلي يمين\"\n                },\n                {\n                    \"number\": 45,\n                    \"name\": \"ضاحك ثاني سفلي يمين\"\n                }\n            ],\n            \"steps\": [\n                {\n                    \"id\": 3,\n                    \"name\": \"ألمرحلة الأولى\",\n                    \"queue\": 1,\n                    \"optional\": 1,\n                    \"finished\": 0,\n                    \"note\": \"\",\n                    \"treatment_substeps\": []\n                },\n                {\n                    \"id\": 4,\n                    \"name\": \"ألمرحلة الثانية\",\n                    \"queue\": 2,\n                    \"optional\": 0,\n                    \"finished\": 0,\n                    \"note\": \"\",\n                    \"treatment_substeps\": [\n                        {\n                            \"id\": 18,\n                            \"name\": \"ألمرحلة تجريب\",\n                            \"queue\": 8,\n                            \"optional\": 0,\n                            \"finished\": 0,\n                            \"note\": \"\"\n                        }\n                    ]\n                }\n            ]\n        }\n    ],\n    \"message\": \"تم جلب قائمة علاجات المريض بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "store",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "patient_id",
+											"value": "9",
+											"type": "text"
+										},
+										{
+											"key": "treatment_plan_id",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "main_complaint",
+											"value": "شكوى",
+											"description": "nullable",
+											"type": "text"
+										},
+										{
+											"key": "diagnoses",
+											"value": "تشخيص",
+											"description": "nullable",
+											"type": "text"
+										},
+										{
+											"key": "teeth[]",
+											"value": "44",
+											"type": "text"
+										},
+										{
+											"key": "teeth[]",
+											"value": "45",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/patient-treatment",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient-treatment"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "patient_id",
+													"value": "9",
+													"type": "text"
+												},
+												{
+													"key": "treatment_plan_id",
+													"value": "10",
+													"type": "text"
+												},
+												{
+													"key": "main_complaint",
+													"value": "شكوى",
+													"description": "nullable",
+													"type": "text"
+												},
+												{
+													"key": "diagnoses",
+													"value": "تشخيص",
+													"description": "nullable",
+													"type": "text"
+												},
+												{
+													"key": "teeth[]",
+													"value": "44",
+													"type": "text"
+												},
+												{
+													"key": "teeth[]",
+													"value": "45",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/patient-treatment",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient-treatment"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 20 Jul 2025 16:23:57 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 9,\n        \"name\": \"الخطة بدي أسندها لمريض\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 150000,\n        \"main_complaint\": \"شكوى\",\n        \"diagnoses\": \"تشخيص\",\n        \"finished\": 0,\n        \"complete_percentage\": 0,\n        \"teeth\": [\n            {\n                \"number\": 44,\n                \"name\": \"ضاحك أول سفلي يمين\"\n            },\n            {\n                \"number\": 45,\n                \"name\": \"ضاحك ثاني سفلي يمين\"\n            }\n        ],\n        \"steps\": [\n            {\n                \"id\": 17,\n                \"name\": \"ألمرحلة الأولى\",\n                \"queue\": 1,\n                \"optional\": 1,\n                \"finished\": 0,\n                \"note\": \"\",\n                \"treatment_substeps\": []\n            },\n            {\n                \"id\": 18,\n                \"name\": \"ألمرحلة الثانية\",\n                \"queue\": 2,\n                \"optional\": 0,\n                \"finished\": 0,\n                \"note\": \"\",\n                \"treatment_substeps\": [\n                    {\n                        \"id\": 42,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 0,\n                        \"finished\": 0,\n                        \"note\": \"\"\n                    }\n                ]\n            }\n        ]\n    },\n    \"message\": \"تم إنشاء علاج المريض بنجاح.\"\n}"
+								},
+								{
+									"name": "Required",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "patient_id",
+													"value": "9",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "treatment_plan_id",
+													"value": "10",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "main_complaint",
+													"value": "شكوى",
+													"description": "nullable",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "diagnoses",
+													"value": "تشخيص",
+													"description": "nullable",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "teeth[]",
+													"value": "44",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "teeth[]",
+													"value": "45",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/patient-treatment",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient-treatment"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 20 Jul 2025 16:27:10 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"patient_id\": [\n            \"حقل المريض مطلوب.\"\n        ],\n        \"treatment_plan_id\": [\n            \"حقل خطة العلاج مطلوب.\"\n        ],\n        \"teeth\": [\n            \"يجب تقديم الحقل الأسنان\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "Invalid",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "patient_id",
+													"value": "999",
+													"type": "text"
+												},
+												{
+													"key": "treatment_plan_id",
+													"value": "109",
+													"type": "text"
+												},
+												{
+													"key": "main_complaint",
+													"value": "شكوى",
+													"description": "nullable",
+													"type": "text"
+												},
+												{
+													"key": "diagnoses",
+													"value": "تشخيص",
+													"description": "nullable",
+													"type": "text"
+												},
+												{
+													"key": "teeth[]",
+													"value": "449",
+													"type": "text"
+												},
+												{
+													"key": "teeth[]",
+													"value": "459",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/patient-treatment",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient-treatment"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 20 Jul 2025 16:29:44 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"patient_id\": [\n            \"المريض المختار غير صالح.\"\n        ],\n        \"treatment_plan_id\": [\n            \"خطة العلاج المختار غير صالح.\"\n        ],\n        \"teeth.0\": [\n            \"teeth.0 المختار غير صالح.\"\n        ],\n        \"teeth.1\": [\n            \"teeth.1 المختار غير صالح.\"\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "show",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/patient-treatment/4",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient-treatment",
+										"4"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/patient-treatment/4",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient-treatment",
+												"4"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 20 Jul 2025 16:23:30 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"الخطة بدي أسندها لمريض\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 150000,\n        \"main_complaint\": \"\",\n        \"diagnoses\": \"\",\n        \"finished\": 0,\n        \"complete_percentage\": 50,\n        \"teeth\": [\n            {\n                \"number\": 42,\n                \"name\": \"رباعية سفلي يمين\"\n            },\n            {\n                \"number\": 45,\n                \"name\": \"ضاحك ثاني سفلي يمين\"\n            }\n        ],\n        \"steps\": [\n            {\n                \"id\": 7,\n                \"name\": \"ألمرحلة الأولى\",\n                \"queue\": 1,\n                \"optional\": 1,\n                \"finished\": 1,\n                \"note\": \"\",\n                \"treatment_substeps\": []\n            },\n            {\n                \"id\": 8,\n                \"name\": \"ألمرحلة الثانية\",\n                \"queue\": 2,\n                \"optional\": 0,\n                \"finished\": 0,\n                \"note\": \"\",\n                \"treatment_substeps\": [\n                    {\n                        \"id\": 41,\n                        \"name\": \"ألمرحلة الأولى\",\n                        \"queue\": 0,\n                        \"optional\": 0,\n                        \"finished\": 0,\n                        \"note\": \"\"\n                    },\n                    {\n                        \"id\": 20,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 0,\n                        \"finished\": 1,\n                        \"note\": \"\"\n                    }\n                ]\n            }\n        ]\n    },\n    \"message\": \"تم جلب علاج المريض بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"الخطة بدي أسندها لمريض\",\r\n    \"cost\": 150000,\r\n    \"main_complaint\": \"\",\r\n    \"diagnoses\": \"\",\r\n    \"teeth\": [\r\n        {\r\n            \"number\": 42\r\n        },\r\n        {\r\n            \"number\": 45\r\n        }\r\n    ],\r\n    \"steps\": [\r\n        {\r\n            \"id\": 7,\r\n            \"name\": \"ألمرحلة الأولى\",\r\n            \"queue\": 1,\r\n            \"finished\": 0,\r\n            \"note\": \"\",\r\n            \"treatment_substeps\": [\r\n            ]\r\n        },\r\n        {\r\n            \"id\": 8,\r\n            \"name\": \"ألمرحلة الثانية\",\r\n            \"queue\": 2,\r\n            \"finished\": 0,\r\n            \"note\": \"\",\r\n            \"treatment_substeps\": [\r\n                {\r\n                    \"id\": 20,\r\n                    \"name\": \"ألمرحلة تجريب\",\r\n                    \"queue\": 8,\r\n                    \"finished\": 0,\r\n                    \"note\": \"\"\r\n                },\r\n                {\r\n                    \"id\": -1,\r\n                    \"name\": \"ألمرحلة الأولى\",\r\n                    \"queue\": 0,\r\n                    \"finished\": 0,\r\n                    \"note\": \"\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/patient-treatment/4",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient-treatment",
+										"4"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"الخطة بدي أسندها لمريض\",\r\n    \"cost\": 150000,\r\n    \"main_complaint\": \"\",\r\n    \"diagnoses\": \"\",\r\n    \"teeth\": [\r\n        {\r\n            \"number\": 42\r\n        },\r\n        {\r\n            \"number\": 45\r\n        }\r\n    ],\r\n    \"steps\": [\r\n        {\r\n            \"id\": 7,\r\n            \"name\": \"ألمرحلة الأولى\",\r\n            \"queue\": 1,\r\n            \"finished\": 0,\r\n            \"note\": \"\",\r\n            \"treatment_substeps\": [\r\n            ]\r\n        },\r\n        {\r\n            \"id\": 8,\r\n            \"name\": \"ألمرحلة الثانية\",\r\n            \"queue\": 2,\r\n            \"finished\": 0,\r\n            \"note\": \"\",\r\n            \"treatment_substeps\": [\r\n                {\r\n                    \"id\": 20,\r\n                    \"name\": \"ألمرحلة تجريب\",\r\n                    \"queue\": 8,\r\n                    \"finished\": 0,\r\n                    \"note\": \"\"\r\n                },\r\n                {\r\n                    \"id\": -1,\r\n                    \"name\": \"ألمرحلة الأولى\",\r\n                    \"queue\": 0,\r\n                    \"finished\": 0,\r\n                    \"note\": \"\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/patient-treatment/4",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient-treatment",
+												"4"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 20 Jul 2025 16:33:16 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"الخطة بدي أسندها لمريض\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 150000,\n        \"main_complaint\": \"\",\n        \"diagnoses\": \"\",\n        \"finished\": 0,\n        \"complete_percentage\": 0,\n        \"teeth\": [\n            {\n                \"number\": 42,\n                \"name\": \"رباعية سفلي يمين\"\n            },\n            {\n                \"number\": 45,\n                \"name\": \"ضاحك ثاني سفلي يمين\"\n            }\n        ],\n        \"steps\": [\n            {\n                \"id\": 7,\n                \"name\": \"ألمرحلة الأولى\",\n                \"queue\": 1,\n                \"optional\": 1,\n                \"finished\": 0,\n                \"note\": \"\",\n                \"treatment_substeps\": []\n            },\n            {\n                \"id\": 8,\n                \"name\": \"ألمرحلة الثانية\",\n                \"queue\": 2,\n                \"optional\": 0,\n                \"finished\": 0,\n                \"note\": \"\",\n                \"treatment_substeps\": [\n                    {\n                        \"id\": 46,\n                        \"name\": \"ألمرحلة الأولى\",\n                        \"queue\": 0,\n                        \"optional\": 0,\n                        \"finished\": 0,\n                        \"note\": \"\"\n                    },\n                    {\n                        \"id\": 20,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 0,\n                        \"finished\": 0,\n                        \"note\": \"\"\n                    }\n                ]\n            }\n        ]\n    },\n    \"message\": \"تم تحديث علاج المريض بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "destroy",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/patient-treatment/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient-treatment",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/patient-treatment/1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient-treatment",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 20 Jul 2025 16:22:55 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [],\n    \"message\": \"تم حذف علاج المريض بنجاح.\"\n}"
+								}
+							]
+						}
+					]
 				}
 			]
 		},

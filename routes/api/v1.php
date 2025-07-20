@@ -12,6 +12,7 @@ use App\Http\Controllers\Api\V1\TreatmentPlanController;
 use App\Http\Controllers\Api\V1\TreatmentStepController;
 use App\Http\Controllers\Api\V1\MedicationPlanController;
 use App\Http\Controllers\Api\V1\PatientController;
+use App\Http\Controllers\Api\V1\PatientTreatmentController;
 use App\Http\Controllers\Api\V1\ToothController;
 use App\Http\Controllers\Api\V1\TreatmentSubstepController;
 use App\Http\Middleware\Cors;
@@ -106,7 +107,15 @@ Route::prefix('v1')->middleware([Cors::class])->group(function () {
         Route::delete('{patient}', 'destroy');
     });
 
-    Route::prefix('patient')->controller(ToothController::class)->group(function () {
-        Route::patch('{patient}/tooth/{tooth}', 'update');
+    Route::prefix('patient')->group(function () {
+        Route::patch('{patient}/tooth/{tooth}', [ToothController::class, 'update']);
+        Route::get('{patient}/treatment', [PatientTreatmentController::class, 'index']);
+    });
+
+    Route::prefix('patient-treatment')->controller(PatientTreatmentController::class)->group(function () {
+        Route::post('/', 'store');
+        Route::get('{patientTreatment}', 'show');
+        Route::put('{patientTreatment}', 'update');
+        Route::delete('{patientTreatment}', 'destroy');
     });
 });

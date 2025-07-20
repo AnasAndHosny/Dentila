@@ -97,5 +97,7 @@
     "intake medication":"الدواء المأخوذ",
     "patients":"ألمرضى",
     "patient":"المريض",
-    "tooth":"السن"
+    "tooth":"السن",
+    "patient treatments":"علاجات المريض",
+    "patient treatment":"علاج المريض"
 }

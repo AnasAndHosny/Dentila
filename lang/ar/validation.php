@@ -228,6 +228,8 @@ return [
         'treatment_note_id'     => 'ملاحظات العلاج',
         'medication_plan_id'    => 'خطة الدواء',
         'treatment_step_id'     => 'خطوة العلاج',
+        'patient_id'            => 'المريض',
+        'teeth'                 => 'الأسنان',
     ],
 
 ];

@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class PatientTooth extends Model
 {
@@ -12,4 +13,9 @@ class PatientTooth extends Model
         'tooth_status_id',
         'note',
     ];
+
+    public function tooth(): BelongsTo
+    {
+        return $this->belongsTo(Tooth::class);
+    }
 }

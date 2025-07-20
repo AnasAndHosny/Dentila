@@ -5,6 +5,7 @@ namespace App\Models;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
@@ -78,5 +79,10 @@ class Patient extends Model
     {
         return $this->belongsToMany(Tooth::class, table: 'patient_teeth',)
             ->withPivot('has_treatment', 'note', 'tooth_status_id');
+    }
+
+    public function Treatments(): HasMany
+    {
+        return $this->hasMany(PatientTreatment::class);
     }
 }
