@@ -2,6 +2,7 @@
 
 namespace App\Services\V1;
 
+use App\Http\Resources\V1\PatientTreatmentCollection;
 use App\Http\Resources\V1\PatientTreatmentResource;
 use App\Models\Patient;
 use App\Models\PatientTreatment;
@@ -19,7 +20,7 @@ class PatientTreatmentService
     public function index(Patient $patient): array
     {
         $patientTreatments = $this->patientTreatmentRepository->all($patient);
-        $patientTreatments = PatientTreatmentResource::collection( $patientTreatments);
+        $patientTreatments = new PatientTreatmentCollection( $patientTreatments);
         $message = __('messages.index_success', ['class' => __(key: 'patient treatments')]);
         $code = 200;
         return ['data' => $patientTreatments, 'message' => $message, 'code' => $code];

@@ -10,7 +10,7 @@ class PatientRepository
 {
     public function all()
     {
-        return Patient::latest()->get();
+        return Patient::latest()->paginate();
     }
 
     public function create($request)

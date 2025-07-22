@@ -15,7 +15,7 @@ class PatientTreatmentRepository
 {
     public function all(Patient $patient)
     {
-        return $patient->Treatments()->latest()->get();
+        return $patient->Treatments()->latest()->paginate();
     }
 
     public function create($request)
