@@ -24,6 +24,7 @@ class EmployeeResource extends JsonResource
             'gender' => $this->gender,
             'ssn' => (string)$this->ssn,
             'address' => (string)$this->address,
+            'roles' => $this->user->roles->pluck('name'),
         ];
     }
 }

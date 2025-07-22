@@ -40,6 +40,8 @@ class UpdateEmployeeRequest extends FormRequest
             'gender' => ['in:male,female'],
             'ssn' => ['nullable', 'numeric', 'digits:11'],
             'address' => ['nullable', 'string'],
+            'roles' => ['array', 'filled'],
+            'roles.*' => ['required', 'string', 'in:doctor,receptionist'],
         ];
     }
 

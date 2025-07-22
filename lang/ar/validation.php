@@ -230,6 +230,7 @@ return [
         'treatment_step_id'     => 'خطوة العلاج',
         'patient_id'            => 'المريض',
         'teeth'                 => 'الأسنان',
+        'roles'                 => 'الأدوار',
     ],
 
 ];

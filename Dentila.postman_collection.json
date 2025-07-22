@@ -5212,6 +5212,1075 @@
 							]
 						}
 					]
+				},
+				{
+					"name": "Employee",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/employee",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"employee"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/employee",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"employee"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 22 Jul 2025 21:26:34 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 18,\n            \"image\": null,\n            \"name\": \"anas\",\n            \"phone_number\": \"0957875891\",\n            \"birthdate\": \"2002-01-11\",\n            \"age\": 23,\n            \"gender\": \"male\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"doctor\",\n                \"receptionist\"\n            ]\n        },\n        {\n            \"id\": 20,\n            \"image\": null,\n            \"name\": \"leen\",\n            \"phone_number\": \"0957875892\",\n            \"birthdate\": \"2004-01-22\",\n            \"age\": 21,\n            \"gender\": \"female\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"doctor\"\n            ]\n        },\n        {\n            \"id\": 21,\n            \"image\": \"images/1753219521.png\",\n            \"name\": \"rima\",\n            \"phone_number\": \"0957875893\",\n            \"birthdate\": \"2003-01-22\",\n            \"age\": 22,\n            \"gender\": \"female\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"doctor\",\n                \"receptionist\"\n            ]\n        },\n        {\n            \"id\": 22,\n            \"image\": \"images/1753219571.png\",\n            \"name\": \"zaid\",\n            \"phone_number\": \"0957875899\",\n            \"birthdate\": \"2002-07-22\",\n            \"age\": 23,\n            \"gender\": \"male\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"doctor\"\n            ]\n        }\n    ],\n    \"message\": \"تم جلب قائمة الموظفين بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "store",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"description": "nullable",
+											"type": "file",
+											"src": "/C:/Users/Anas/Desktop/Screenshot 2025-05-14 225325.png"
+										},
+										{
+											"key": "name",
+											"value": "zaid",
+											"type": "text"
+										},
+										{
+											"key": "phone_number",
+											"value": "0957875899",
+											"description": "start with:09, digits:10",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "11111111",
+											"description": "min: 8",
+											"type": "text"
+										},
+										{
+											"key": "birthdate",
+											"value": "2002-07-22",
+											"description": "Y-m-d",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "male",
+											"description": "male, female",
+											"type": "text"
+										},
+										{
+											"key": "ssn",
+											"value": "",
+											"description": "numeric, digits:11",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "",
+											"description": "nullable",
+											"type": "text"
+										},
+										{
+											"key": "roles[]",
+											"value": "doctor",
+											"description": "doctor, receptionist or both",
+											"type": "text"
+										},
+										{
+											"key": "roles[]",
+											"value": "receptionist",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/employee",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"employee"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "image",
+													"description": "nullable",
+													"type": "file",
+													"src": "/C:/Users/Anas/Desktop/Screenshot 2025-05-14 225325.png"
+												},
+												{
+													"key": "name",
+													"value": "zaid",
+													"type": "text"
+												},
+												{
+													"key": "phone_number",
+													"value": "0957875899",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "11111111",
+													"description": "min: 8",
+													"type": "text"
+												},
+												{
+													"key": "birthdate",
+													"value": "2002-07-22",
+													"description": "Y-m-d",
+													"type": "text"
+												},
+												{
+													"key": "gender",
+													"value": "male",
+													"description": "male, female",
+													"type": "text"
+												},
+												{
+													"key": "ssn",
+													"value": "",
+													"description": "numeric, digits:11",
+													"type": "text"
+												},
+												{
+													"key": "address",
+													"value": "",
+													"description": "nullable",
+													"type": "text"
+												},
+												{
+													"key": "roles[]",
+													"value": "doctor",
+													"description": "doctor, receptionist or both",
+													"type": "text"
+												},
+												{
+													"key": "roles[]",
+													"value": "receptionist",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/employee",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"employee"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 22 Jul 2025 21:26:12 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 22,\n        \"image\": \"images/1753219571.png\",\n        \"name\": \"zaid\",\n        \"phone_number\": \"0957875899\",\n        \"birthdate\": \"2002-07-22\",\n        \"age\": 23,\n        \"gender\": \"male\",\n        \"ssn\": \"\",\n        \"address\": \"\",\n        \"roles\": [\n            \"doctor\"\n        ]\n    },\n    \"message\": \"تم إنشاء الموظف بنجاح.\"\n}"
+								},
+								{
+									"name": "Unique",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "image",
+													"description": "nullable",
+													"type": "file",
+													"src": "/C:/Users/Anas/Desktop/Screenshot 2025-05-14 225325.png"
+												},
+												{
+													"key": "name",
+													"value": "zaid",
+													"type": "text"
+												},
+												{
+													"key": "phone_number",
+													"value": "0957875899",
+													"description": "start with:09, digits:10",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "11111111",
+													"description": "min: 8",
+													"type": "text"
+												},
+												{
+													"key": "birthdate",
+													"value": "2002-07-22",
+													"description": "Y-m-d",
+													"type": "text"
+												},
+												{
+													"key": "gender",
+													"value": "male",
+													"description": "male, female",
+													"type": "text"
+												},
+												{
+													"key": "ssn",
+													"value": "",
+													"description": "numeric, digits:11",
+													"type": "text"
+												},
+												{
+													"key": "address",
+													"value": "",
+													"description": "nullable",
+													"type": "text"
+												},
+												{
+													"key": "roles[]",
+													"value": "doctor",
+													"description": "doctor, receptionist or both",
+													"type": "text"
+												},
+												{
+													"key": "roles[]",
+													"value": "receptionist",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/employee",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"employee"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 22 Jul 2025 21:27:24 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"phone_number\": [\n            \"قيمة حقل رقم الهاتف مُستخدمة من قبل\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "Required",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "image",
+													"description": "nullable",
+													"type": "file",
+													"src": "/C:/Users/Anas/Desktop/Screenshot 2025-05-14 225325.png",
+													"disabled": true
+												},
+												{
+													"key": "name",
+													"value": "zaid",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "phone_number",
+													"value": "0957875899",
+													"description": "start with:09, digits:10",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "password",
+													"value": "11111111",
+													"description": "min: 8",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "birthdate",
+													"value": "2002-07-22",
+													"description": "Y-m-d",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "gender",
+													"value": "male",
+													"description": "male, female",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "ssn",
+													"value": "",
+													"description": "numeric, digits:11",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "address",
+													"value": "",
+													"description": "nullable",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "roles[]",
+													"value": "doctor",
+													"description": "doctor, receptionist or both",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "roles[]",
+													"value": "receptionist",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/employee",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"employee"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 22 Jul 2025 21:28:02 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"name\": [\n            \"حقل الاسم مطلوب.\"\n        ],\n        \"phone_number\": [\n            \"حقل رقم الهاتف مطلوب.\"\n        ],\n        \"password\": [\n            \"حقل كلمة المرور مطلوب.\"\n        ],\n        \"birthdate\": [\n            \"حقل تاريخ الميلاد مطلوب.\"\n        ],\n        \"gender\": [\n            \"حقل الجنس مطلوب.\"\n        ],\n        \"roles\": [\n            \"يجب تقديم الحقل الأدوار\"\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "show",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/employee/18",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"employee",
+										"18"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/employee/18",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"employee",
+												"18"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 22 Jul 2025 21:37:30 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 18,\n        \"image\": null,\n        \"name\": \"anas\",\n        \"phone_number\": \"0957875891\",\n        \"birthdate\": \"2002-01-11\",\n        \"age\": 23,\n        \"gender\": \"male\",\n        \"ssn\": \"\",\n        \"address\": \"\",\n        \"roles\": [\n            \"doctor\",\n            \"receptionist\"\n        ]\n    },\n    \"message\": \"تم جلب الموظف بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": [],
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "أنااااااااس",
+											"type": "text"
+										},
+										{
+											"key": "phone_number",
+											"value": "0999999910",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "11111111",
+											"type": "text"
+										},
+										{
+											"key": "birthdate",
+											"value": "2002-01-11",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "gender",
+											"value": "male",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "ssn",
+											"value": "12345678911",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "address",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "roles[]",
+											"value": "doctor",
+											"type": "text"
+										},
+										{
+											"key": "roles[]",
+											"value": "receptionist",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "_method",
+											"value": "patch",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/employee/18",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"employee",
+										"18"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "image",
+													"type": "file",
+													"src": [],
+													"disabled": true
+												},
+												{
+													"key": "name",
+													"value": "أنااااااااس",
+													"type": "text"
+												},
+												{
+													"key": "phone_number",
+													"value": "0999999910",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "password",
+													"value": "11111111",
+													"type": "text"
+												},
+												{
+													"key": "birthdate",
+													"value": "2002-01-11",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "gender",
+													"value": "male",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "ssn",
+													"value": "12345678911",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "address",
+													"value": "",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "roles[]",
+													"value": "doctor",
+													"type": "text"
+												},
+												{
+													"key": "roles[]",
+													"value": "receptionist",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "_method",
+													"value": "patch",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/employee/18",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"employee",
+												"18"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 22 Jul 2025 21:38:25 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 18,\n        \"image\": null,\n        \"name\": \"أنااااااااس\",\n        \"phone_number\": \"0957875891\",\n        \"birthdate\": \"2002-01-11\",\n        \"age\": 23,\n        \"gender\": \"male\",\n        \"ssn\": \"\",\n        \"address\": \"\",\n        \"roles\": [\n            \"doctor\"\n        ]\n    },\n    \"message\": \"تم تحديث الموظف بنجاح.\"\n}"
+								},
+								{
+									"name": "Unique",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "image",
+													"type": "file",
+													"src": [],
+													"disabled": true
+												},
+												{
+													"key": "name",
+													"value": "أنااااااااس",
+													"type": "text"
+												},
+												{
+													"key": "phone_number",
+													"value": "0957875891",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "11111111",
+													"type": "text"
+												},
+												{
+													"key": "birthdate",
+													"value": "2002-01-11",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "gender",
+													"value": "male",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "ssn",
+													"value": "12345678911",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "address",
+													"value": "",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "roles[]",
+													"value": "doctor",
+													"type": "text"
+												},
+												{
+													"key": "roles[]",
+													"value": "receptionist",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "_method",
+													"value": "patch",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/employee/18",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"employee",
+												"18"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 22 Jul 2025 21:38:48 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"phone_number\": [\n            \"قيمة حقل رقم الهاتف مُستخدمة من قبل\"\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "destroy",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/employee/23",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"employee",
+										"23"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/employee/23",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"employee",
+												"23"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 22 Jul 2025 21:39:29 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [],\n    \"message\": \"تم حذف الموظف بنجاح.\"\n}"
+								}
+							]
+						}
+					]
 				}
 			]
 		},

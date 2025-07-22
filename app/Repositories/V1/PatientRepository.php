@@ -27,6 +27,8 @@ class PatientRepository
             ]);
         }
 
+        $user->assignRole('patient');
+
         $patient = $user->patient()->create($request->validated());
 
         $patient->diseases()->attach($request['diseases_ids']);

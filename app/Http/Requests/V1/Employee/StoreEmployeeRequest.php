@@ -42,6 +42,8 @@ class StoreEmployeeRequest extends FormRequest
             'gender' => ['required', 'in:male,female'],
             'ssn' => ['nullable', 'numeric', 'digits:11'],
             'address' => ['nullable', 'string'],
+            'roles' => ['present', 'array', 'filled'],
+            'roles.*' => ['required', 'string', 'in:doctor,receptionist'],
         ];
     }
 

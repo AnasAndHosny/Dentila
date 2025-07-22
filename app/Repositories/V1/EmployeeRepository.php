@@ -27,6 +27,8 @@ class EmployeeRepository
                 $request->only(['name', 'phone_number', 'password'])
             );
 
+            $user->assignRole($request['roles']);
+
             return $user->employee()->create($data);
         });
     }
@@ -42,6 +44,12 @@ class EmployeeRepository
             $user = $employee->user;
             $user->fill($request->only(['name', 'phone_number', 'password']));
             $user->save();
+
+            if ($request->has('roles')) {
+                $user->removeRole('doctor');
+                $user->removeRole('receptionist');
+                $user->assignRole($request['roles']);
+            }
 
             $employee->update($data);
             return $employee;
