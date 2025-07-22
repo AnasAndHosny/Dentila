@@ -35,6 +35,7 @@ class MedicationRepository
 
     public function delete(Medication $medication)
     {
+        ImageHelper::destroy($medication);
         return $medication->delete();
     }
 
