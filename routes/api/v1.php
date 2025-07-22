@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\CategoryController;
 use App\Http\Controllers\Api\V1\DiseaseController;
+use App\Http\Controllers\Api\V1\EmployeeController;
 use App\Http\Controllers\Api\V1\IntakeMedicationController;
 use App\Http\Controllers\Api\V1\MedicationController;
 use App\Http\Controllers\Api\V1\ToothStatusController;
@@ -117,5 +118,13 @@ Route::prefix('v1')->middleware([Cors::class])->group(function () {
         Route::get('{patientTreatment}', 'show');
         Route::put('{patientTreatment}', 'update');
         Route::delete('{patientTreatment}', 'destroy');
+    });
+
+    Route::prefix('employee')->controller(EmployeeController::class)->group(function () {
+        Route::get('/', 'index');
+        Route::post('/', 'store');
+        Route::get('{employee}', 'show');
+        Route::patch('{employee}', 'update');
+        Route::delete('{employee}', 'destroy');
     });
 });

@@ -5,23 +5,17 @@ namespace App\Models;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Casts\Attribute;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
-class Patient extends Model
+class Employee extends Model
 {
     protected $fillable = [
         'user_id',
-        'name',
-        'phone_number',
-        'birthdate',
+        'image',
         'gender',
-        'job',
-        'marital_status',
+        'birthdate',
+        'ssn',
         'address',
-        'social_history',
-        'note',
     ];
 
     /**
@@ -39,7 +33,7 @@ class Patient extends Model
     protected function birthdate(): Attribute
     {
         return Attribute::make(
-            get: fn($value) => Carbon::parse($value)->format('Y-m-d'),
+            get: fn($value): string => Carbon::parse($value)->format(format: 'Y-m-d'),
         );
     }
 
@@ -63,26 +57,5 @@ class Patient extends Model
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
-    }
-
-    public function diseases(): BelongsToMany
-    {
-        return $this->belongsToMany(Disease::class, 'patient_diseases');
-    }
-
-    public function intakeMedications(): BelongsToMany
-    {
-        return $this->belongsToMany(IntakeMedication::class, 'patient_intake_medications');
-    }
-
-    public function teeth(): BelongsToMany
-    {
-        return $this->belongsToMany(Tooth::class, table: 'patient_teeth',)
-            ->withPivot('has_treatment', 'note', 'tooth_status_id');
-    }
-
-    public function Treatments(): HasMany
-    {
-        return $this->hasMany(PatientTreatment::class);
     }
 }

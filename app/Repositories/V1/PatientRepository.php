@@ -2,8 +2,9 @@
 
 namespace App\Repositories\V1;
 
-use App\Models\Patient;
 use App\Models\User;
+use App\Models\Patient;
+use Illuminate\Support\Facades\DB;
 
 class PatientRepository
 {
@@ -60,6 +61,11 @@ class PatientRepository
 
     public function delete(Patient $patient)
     {
-        return $patient->delete();
+        return DB::transaction(function () use ($patient) {
+            $user = $patient->user;
+            if (!$user->employee()->exists()) $user->delete();
+
+            return $patient->delete();
+        });
     }
 }
