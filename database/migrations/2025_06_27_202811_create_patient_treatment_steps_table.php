@@ -26,11 +26,11 @@ return new class extends Migration
             $table->foreignIdFor(TreatmentNote::class)->nullable()->default(null)
                 ->constrained('treatment_notes')
                 ->cascadeOnUpdate()
-                ->cascadeOnDelete();
+                ->nullOnDelete();
             $table->foreignIdFor(MedicationPlan::class)->nullable()->default(null)
                 ->constrained('medication_plans')
                 ->cascadeOnUpdate()
-                ->cascadeOnDelete();
+                ->nullOnDelete();
             $table->boolean('finished')->default(value: false);
             $table->string('note')->nullable()->default(null);
             $table->timestamps();

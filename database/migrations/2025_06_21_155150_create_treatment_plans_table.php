@@ -22,7 +22,7 @@ return new class extends Migration
             $table->foreignId('tooth_status_id')->nullable()->default(null)
                 ->constrained('tooth_statuses')
                 ->cascadeOnUpdate()
-                ->cascadeOnDelete();
+                ->nullOnDelete();
             $table->timestamps();
         });
     }

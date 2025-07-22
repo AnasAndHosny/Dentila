@@ -29,7 +29,7 @@ return new class extends Migration
             $table->foreignIdFor(ToothStatus::class)->nullable()->default(null)
                 ->constrained('tooth_statuses')
                 ->cascadeOnUpdate()
-                ->cascadeOnDelete();
+                ->nullOnDelete();
             $table->string('main_complaint')->nullable()->default(null);
             $table->string('diagnoses')->nullable()->default(null);
             $table->boolean('finished')->default(value: false);

@@ -23,11 +23,11 @@ return new class extends Migration
             $table->foreignId('treatment_note_id')->nullable()->default(null)
                 ->constrained('treatment_notes')
                 ->cascadeOnUpdate()
-                ->cascadeOnDelete();
+                ->nullOnDelete();
             $table->foreignId('medication_plan_id')->nullable()->default(null)
                 ->constrained('medication_plans')
                 ->cascadeOnUpdate()
-                ->cascadeOnDelete();
+                ->nullOnDelete();
             $table->timestamps();
         });
     }
