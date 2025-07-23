@@ -9181,6 +9181,449 @@
 									"body": "{\n    \"status\": 1,\n    \"data\": [],\n    \"message\": \"تم حذف علاج المريض بنجاح.\"\n}"
 								}
 							]
+						},
+						{
+							"name": "update note",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "step_id",
+											"value": "7",
+											"description": "or substep_id only one",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "substep_id",
+											"value": "47",
+											"description": "or step_id only one",
+											"type": "text"
+										},
+										{
+											"key": "note",
+											"value": "gdfgdgd",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/patient-treatment/4/note",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient-treatment",
+										"4",
+										"note"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "step_id",
+													"value": "7",
+													"description": "or substep_id only one",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "substep_id",
+													"value": "47",
+													"description": "or step_id only one",
+													"type": "text"
+												},
+												{
+													"key": "note",
+													"value": "gdfgdgd",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/patient-treatment/4/note",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient-treatment",
+												"4",
+												"note"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 23 Jul 2025 10:42:19 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"الخطة بدي أسندها لمريض\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 150000,\n        \"main_complaint\": \"\",\n        \"diagnoses\": \"\",\n        \"finished\": 0,\n        \"complete_percentage\": 0,\n        \"teeth\": [\n            {\n                \"number\": 42,\n                \"name\": \"رباعية سفلي يمين\"\n            },\n            {\n                \"number\": 45,\n                \"name\": \"ضاحك ثاني سفلي يمين\"\n            }\n        ],\n        \"steps\": [\n            {\n                \"id\": 7,\n                \"name\": \"ألمرحلة الأولى\",\n                \"queue\": 1,\n                \"optional\": 1,\n                \"finished\": 0,\n                \"note\": \"gdfgdgd\",\n                \"treatment_substeps\": []\n            },\n            {\n                \"id\": 8,\n                \"name\": \"ألمرحلة الثانية\",\n                \"queue\": 2,\n                \"optional\": 0,\n                \"finished\": 0,\n                \"note\": \"\",\n                \"treatment_substeps\": [\n                    {\n                        \"id\": 47,\n                        \"name\": \"ألمرحلة الأولى\",\n                        \"queue\": 0,\n                        \"optional\": 0,\n                        \"finished\": 0,\n                        \"note\": \"gdfgdgd\"\n                    },\n                    {\n                        \"id\": 20,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 0,\n                        \"finished\": 0,\n                        \"note\": \"\"\n                    }\n                ]\n            }\n        ]\n    },\n    \"message\": \"تم تحديث علاج المريض بنجاح.\"\n}"
+								},
+								{
+									"name": "Required",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "step_id",
+													"value": "7",
+													"description": "or substep_id only one",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "substep_id",
+													"value": "47",
+													"description": "or step_id only one",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "note",
+													"value": "gdfgdgd",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/patient-treatment/4/note",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient-treatment",
+												"4",
+												"note"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 23 Jul 2025 11:51:16 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"step_id\": [\n            \"الحقل step id إذا لم يتوفّر substep id.\"\n        ],\n        \"substep_id\": [\n            \"الحقل substep id إذا لم يتوفّر step id.\"\n        ],\n        \"note\": [\n            \"حقل note مطلوب.\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "Only one field",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "step_id",
+													"value": "7",
+													"description": "or substep_id only one",
+													"type": "text"
+												},
+												{
+													"key": "substep_id",
+													"value": "47",
+													"description": "or step_id only one",
+													"type": "text"
+												},
+												{
+													"key": "note",
+													"value": "gdfgdgd",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/patient-treatment/4/note",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient-treatment",
+												"4",
+												"note"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 23 Jul 2025 11:50:55 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"step_id\": [\n            \"الحقل step id محظور في حال ما لم يكون substep id يساوي null.\"\n        ],\n        \"substep_id\": [\n            \"الحقل substep id محظور في حال ما لم يكون step id يساوي null.\"\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "update check",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "steps[]",
+											"value": "7",
+											"type": "text"
+										},
+										{
+											"key": "steps[]",
+											"value": "8",
+											"type": "text"
+										},
+										{
+											"key": "substeps[]",
+											"value": "47",
+											"type": "text"
+										},
+										{
+											"key": "substeps[]",
+											"value": "20",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/patient-treatment/4/check",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient-treatment",
+										"4",
+										"check"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "steps[]",
+													"value": "7",
+													"type": "text"
+												},
+												{
+													"key": "steps[]",
+													"value": "8",
+													"type": "text"
+												},
+												{
+													"key": "substeps[]",
+													"value": "47",
+													"type": "text"
+												},
+												{
+													"key": "substeps[]",
+													"value": "20",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/patient-treatment/4/check",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient-treatment",
+												"4",
+												"check"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 23 Jul 2025 13:13:43 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"الخطة بدي أسندها لمريض\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 150000,\n        \"main_complaint\": \"\",\n        \"diagnoses\": \"\",\n        \"finished\": 0,\n        \"complete_percentage\": 0,\n        \"teeth\": [\n            {\n                \"number\": 42,\n                \"name\": \"رباعية سفلي يمين\"\n            },\n            {\n                \"number\": 45,\n                \"name\": \"ضاحك ثاني سفلي يمين\"\n            }\n        ],\n        \"steps\": [\n            {\n                \"id\": 7,\n                \"name\": \"ألمرحلة الأولى\",\n                \"queue\": 1,\n                \"optional\": 1,\n                \"finished\": 1,\n                \"note\": \"gdfgdgd\",\n                \"treatment_substeps\": []\n            },\n            {\n                \"id\": 8,\n                \"name\": \"ألمرحلة الثانية\",\n                \"queue\": 2,\n                \"optional\": 0,\n                \"finished\": 0,\n                \"note\": \"\",\n                \"treatment_substeps\": [\n                    {\n                        \"id\": 47,\n                        \"name\": \"ألمرحلة الأولى\",\n                        \"queue\": 0,\n                        \"optional\": 0,\n                        \"finished\": 1,\n                        \"note\": \"gdfgdgd\"\n                    },\n                    {\n                        \"id\": 20,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 0,\n                        \"finished\": 1,\n                        \"note\": \"\"\n                    }\n                ]\n            }\n        ]\n    },\n    \"message\": \"تم تحديث علاج المريض بنجاح.\"\n}"
+								}
+							]
 						}
 					]
 				}

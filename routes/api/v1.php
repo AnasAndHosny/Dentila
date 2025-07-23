@@ -117,6 +117,8 @@ Route::prefix('v1')->middleware([Cors::class])->group(function () {
         Route::post('/', 'store');
         Route::get('{patientTreatment}', 'show');
         Route::put('{patientTreatment}', 'update');
+        Route::patch('{patientTreatment}/note', 'updateNote');
+        Route::patch('{patientTreatment}/check', 'updateCheck');
         Route::delete('{patientTreatment}', 'destroy');
     });
 

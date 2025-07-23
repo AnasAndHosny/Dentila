@@ -115,7 +115,7 @@ return [
     'present' => 'يجب تقديم الحقل :attribute',
     'prohibited' => 'الحقل :attribute محظور',
     'prohibited_if' => 'الحقل :attribute محظور في حال ما إذا كان :other يساوي :value.',
-    'prohibited_unless' => 'الحقل :attribute محظور في حال ما لم يكون :other يساوي :value.',
+    'prohibited_unless' => 'الحقل :attribute محظور في حال ما لم يكون :other يساوي :values.',
     'prohibits' => 'الحقل :attribute يحظر :other من اي يكون موجود',
     'regex' => 'صيغة الحقل :attribute .غير صحيحة',
     'required' => 'حقل :attribute مطلوب.',

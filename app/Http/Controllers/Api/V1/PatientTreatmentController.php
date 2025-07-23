@@ -9,6 +9,8 @@ use App\Http\Controllers\Controller;
 use App\Traits\HandlesServiceResponse;
 use App\Services\V1\PatientTreatmentService;
 use App\Http\Requests\V1\PatientTreatment\StorePatientTreatmentRequest;
+use App\Http\Requests\V1\PatientTreatment\UpdatePatientStepNoteRequest;
+use App\Http\Requests\V1\PatientTreatment\UpdatePatientStepCheckRequest;
 use App\Http\Requests\V1\PatientTreatment\UpdatePatientTreatmentRequest;
 
 class PatientTreatmentController extends Controller
@@ -63,6 +65,28 @@ class PatientTreatmentController extends Controller
         return $this->handleService(
             fn() =>
             $this->patientTreatmentService->update($request, $patientTreatment)
+        );
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function updateNote(UpdatePatientStepNoteRequest $request, PatientTreatment $patientTreatment): JsonResponse
+    {
+        return $this->handleService(
+            fn() =>
+            $this->patientTreatmentService->updateNote($request, $patientTreatment)
+        );
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function updateCheck(UpdatePatientStepCheckRequest $request, PatientTreatment $patientTreatment): JsonResponse
+    {
+        return $this->handleService(
+            fn() =>
+            $this->patientTreatmentService->updateCheck($request, $patientTreatment)
         );
     }
 

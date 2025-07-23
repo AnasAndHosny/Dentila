@@ -10,6 +10,8 @@ use App\Models\TreatmentPlan;
 
 use App\Models\PatientTreatment;
 use Illuminate\Support\Facades\DB;
+use App\Models\PatientTreatmentStep;
+use App\Models\PatientTreatmentSubstep;
 
 class PatientTreatmentRepository
 {
@@ -156,6 +158,38 @@ class PatientTreatmentRepository
 
 
             return $patientTreatment->fresh();
+        });
+    }
+
+    public function updateNote($request, PatientTreatment $patientTreatment)
+    {
+        if ($request['step_id']) {
+            PatientTreatmentStep::find($request['step_id'])->update($request->validated());
+        } else {
+            PatientTreatmentSubstep::find($request['substep_id'])->update($request->validated());
+        }
+
+        return $patientTreatment;
+    }
+
+    public function updateCheck($request, PatientTreatment $patientTreatment)
+    {
+        return DB::transaction(function () use ($request, $patientTreatment) {
+            if ($request->has('steps')) {
+                foreach ($request['steps'] as $stepId) {
+                    $step = PatientTreatmentStep::find($stepId);
+                    $step->update(['finished' => !$step['finished']]);
+                }
+            }
+
+            if ($request->has('substeps')) {
+                foreach ($request['substeps'] as $substepId) {
+                    $substep = PatientTreatmentSubstep::find($substepId);
+                    $substep->update(['finished' => !$substep['finished']]);
+                }
+            }
+
+            return $patientTreatment;
         });
     }
 

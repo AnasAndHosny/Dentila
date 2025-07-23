@@ -55,6 +55,26 @@ class PatientTreatmentService
         return ['data' => $patientTreatment, 'message' => $message, 'code' => $code];
     }
 
+    public function updateNote($request, PatientTreatment $patientTreatment): array
+    {
+        $patientTreatment = $this->patientTreatmentRepository->updateNote($request, $patientTreatment);
+        $patientTreatment = new PatientTreatmentResource($patientTreatment);
+
+        $message = __('messages.update_success', ['class' => __('patient treatment')]);
+        $code = 200;
+        return ['data' => $patientTreatment, 'message' => $message, 'code' => $code];
+    }
+
+    public function updateCheck($request, PatientTreatment $patientTreatment): array
+    {
+        $patientTreatment = $this->patientTreatmentRepository->updateCheck($request, $patientTreatment);
+        $patientTreatment = new PatientTreatmentResource($patientTreatment);
+
+        $message = __('messages.update_success', ['class' => __('patient treatment')]);
+        $code = 200;
+        return ['data' => $patientTreatment, 'message' => $message, 'code' => $code];
+    }
+
     public function destroy(PatientTreatment $patientTreatment): array
     {
         $this->patientTreatmentRepository->delete($patientTreatment);
