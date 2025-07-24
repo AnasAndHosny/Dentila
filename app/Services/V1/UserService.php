@@ -14,6 +14,7 @@ class UserService
             ->first();
         if (!is_null($user)) {
             if (!Auth::attempt($request->only(['phone_number', 'password']))) {
+                $user = null;
                 $message = __('Phone number & password does not match with our record.');
                 $code = 401;
             } else {
