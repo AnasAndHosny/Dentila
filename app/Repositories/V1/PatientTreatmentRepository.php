@@ -2,6 +2,7 @@
 
 namespace App\Repositories\V1;
 
+use App\Events\TreatmentCompleted;
 use App\Models\Tooth;
 use App\Models\Patient;
 use Illuminate\Support\Arr;
@@ -149,9 +150,13 @@ class PatientTreatmentRepository
                 $progress = ($completedMandatoryStepsCount / $mandatoryStepsCount) * 100;
             }
 
-            $finished = ($progress == 100) ? true : false;
+            $finished = false;
+            if ($progress == 100) {
+                $finished = true;
+                event(new TreatmentCompleted($patientTreatment));
+            }
 
-            $patientTreatment->update([
+            $patientTreatment->update(attributes: [
                 'complete_percentage' => round($progress, 2),
                 'finished' => $finished,
             ]);

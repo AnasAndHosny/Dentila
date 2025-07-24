@@ -21,7 +21,7 @@ class PatientToothResource extends JsonResource
             'note' => (string)$this->note,
             'has_treatment' => $this->has_treatment,
             'status_id' => (int)$this->tooth_status_id,
-            'status_name' => (string)optional($this->toothStatus)->name ?? 'سليم',
+            'status_name' => (string)ToothStatus::find($this->tooth_status_id)?->name ?: 'سليم',
         ];
     }
 }
