@@ -3333,7 +3333,77 @@
 									]
 								}
 							},
-							"response": []
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/tooth-status",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"tooth-status"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 24 Jul 2025 08:34:19 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"حشوة\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"لبية\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"تاج\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"وتد\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"زرعة\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"قلع\"\n        }\n    ],\n    \"message\": \"تم جلب قائمة حالات السن بنجاح.\"\n}"
+								}
+							]
 						}
 					]
 				},
@@ -9690,7 +9760,244 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone_number",
+											"value": "admin",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Jul 2025 14:10:31 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST, GET, OPTIONS, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"admin\",\n        \"phone_number\": \"admin\",\n        \"is_verified\": 0,\n        \"created_at\": \"2025-06-22T16:11:50.000000Z\",\n        \"updated_at\": \"2025-06-22T16:11:50.000000Z\",\n        \"token\": \"4|A7hOCZP0XU1aBusjyZCncgHcTaQDHgyCitOn1b21c66bce46\"\n    },\n    \"message\": \"تم تسجيل الدخول بنجاح.\"\n}"
+						},
+						{
+							"name": "Wrong phone or password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone_number",
+											"value": "adminnn",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Jul 2025 14:11:25 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST, GET, OPTIONS, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 1,\n    \"data\": null,\n    \"message\": \"رقم الهاتف وكلمة المرور غير متطابقان.\"\n}"
+						},
+						{
+							"name": "Required",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone_number",
+											"value": "adminnn",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 24 Jul 2025 14:11:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST, GET, OPTIONS, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"phone_number\": [\n            \"حقل رقم الهاتف مطلوب.\"\n        ],\n        \"password\": [\n            \"حقل كلمة المرور مطلوب.\"\n        ]\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "logout",

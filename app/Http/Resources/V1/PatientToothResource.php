@@ -16,12 +16,12 @@ class PatientToothResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'number' => (int)$this->number,
-            'name' => (string)$this->name,
-            'note' => (string)$this->pivot->note,
-            'has_treatment' => (int)$this->pivot->has_treatment,
-            'status_id' => (int)$this->pivot->tooth_status_id,
-            'status_name' => (string)ToothStatus::find($this->pivot->tooth_status_id)?->name ?: 'سليم',
+            'number' => (int)$this->tooth->number,
+            'name' => (string)$this->tooth->name,
+            'note' => (string)$this->note,
+            'has_treatment' => $this->has_treatment,
+            'status_id' => (int)$this->tooth_status_id,
+            'status_name' => (string)optional($this->toothStatus)->name ?? 'سليم',
         ];
     }
 }

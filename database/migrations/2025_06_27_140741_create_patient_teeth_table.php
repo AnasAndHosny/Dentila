@@ -28,7 +28,6 @@ return new class extends Migration
                 ->constrained('tooth_statuses')
                 ->cascadeOnUpdate()
                 ->cascadeOnDelete();
-            $table->boolean('has_treatment')->default(false);
             $table->string('note')->nullable()->default(null);
             $table->timestamps();
         });

@@ -21,6 +21,18 @@ class PatientTreatment extends Model
         'complete_percentage',
     ];
 
+    // Scope for finished treatments
+    public function scopeCompleted($query)
+    {
+        return $query->where('finished', true);
+    }
+
+    // Scope for running (not finished) treatments
+    public function scopeInProgress($query)
+    {
+        return $query->where('finished', false);
+    }
+    
     public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);

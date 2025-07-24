@@ -27,6 +27,6 @@ class PatientTreatmentStep extends Model
     public function substeps(): HasMany
     {
         return $this->hasMany(PatientTreatmentSubstep::class)
-            ->orderBy('queue')->orderBy('created_ut');
+            ->orderBy('queue')->orderBy('created_at');
     }
 }
