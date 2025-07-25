@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Models\Patient;
+use Illuminate\Http\Request;
 use App\Models\PatientTreatment;
 use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;
@@ -27,11 +28,11 @@ class PatientTreatmentController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Patient $patient): JsonResponse
+    public function index(Request $request, Patient $patient): JsonResponse
     {
         return $this->handleService(
             fn() =>
-            $this->patientTreatmentService->index($patient)
+            $this->patientTreatmentService->index($request, $patient)
         );
     }
 

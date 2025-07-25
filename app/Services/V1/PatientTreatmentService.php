@@ -17,9 +17,9 @@ class PatientTreatmentService
         $this->patientTreatmentRepository = $patientTreatmentRepository;
     }
 
-    public function index(Patient $patient): array
+    public function index($request, Patient $patient): array
     {
-        $patientTreatments = $this->patientTreatmentRepository->all($patient);
+        $patientTreatments = $this->patientTreatmentRepository->all($request, $patient);
         $patientTreatments = new PatientTreatmentCollection( $patientTreatments);
         $message = __('messages.index_success', ['class' => __(key: 'patient treatments')]);
         $code = 200;

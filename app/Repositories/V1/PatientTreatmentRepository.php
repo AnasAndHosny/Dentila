@@ -2,23 +2,24 @@
 
 namespace App\Repositories\V1;
 
-use App\Events\TreatmentCompleted;
 use App\Models\Tooth;
 use App\Models\Patient;
 use Illuminate\Support\Arr;
 use App\Models\PatientTooth;
 use App\Models\TreatmentPlan;
-
 use App\Models\PatientTreatment;
+use App\Events\TreatmentCompleted;
 use Illuminate\Support\Facades\DB;
 use App\Models\PatientTreatmentStep;
 use App\Models\PatientTreatmentSubstep;
+use App\Queries\V1\PatientTreatmentsQuery;
 
 class PatientTreatmentRepository
 {
-    public function all(Patient $patient)
+    public function all($request, Patient $patient)
     {
-        return $patient->Treatments()->latest()->paginate();
+        $patients = new PatientTreatmentsQuery($patient->Treatments(), $request);
+        return $patients->latest()->paginate();
     }
 
     public function create($request)
