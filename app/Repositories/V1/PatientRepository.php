@@ -4,13 +4,15 @@ namespace App\Repositories\V1;
 
 use App\Models\User;
 use App\Models\Patient;
+use App\Queries\V1\PatientsQuery;
 use Illuminate\Support\Facades\DB;
 
 class PatientRepository
 {
-    public function all()
+    public function all($request)
     {
-        return Patient::latest()->paginate();
+        $patients = new PatientsQuery(Patient::query(), $request);
+        return $patients->latest()->paginate();
     }
 
     public function create($request)

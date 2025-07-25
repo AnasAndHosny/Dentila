@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Traits\HandlesServiceResponse;
 use App\Http\Requests\V1\Patient\StorePatientRequest;
 use App\Http\Requests\V1\Patient\UpdatePatientRequest;
+use Illuminate\Http\Request;
 
 class PatientController extends Controller
 {
@@ -24,11 +25,11 @@ class PatientController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(): JsonResponse
+    public function index(Request $request): JsonResponse
     {
         return $this->handleService(
             fn() =>
-            $this->patientService->index()
+            $this->patientService->index($request)
         );
     }
 

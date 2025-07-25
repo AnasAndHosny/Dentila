@@ -7386,12 +7386,24 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{base_url}}/patient",
+									"raw": "{{base_url}}/patient?filter[has_treatment]=false",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"patient"
+									],
+									"query": [
+										{
+											"key": "filter[search]",
+											"value": "0944444444",
+											"disabled": true
+										},
+										{
+											"key": "filter[has_treatment]",
+											"value": "false",
+											"description": "true, false"
+										}
 									]
 								}
 							},
@@ -7458,6 +7470,80 @@
 									],
 									"cookie": [],
 									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 11,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875892\",\n                \"birthdate\": \"2002-01-12\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"test 8\"\n                    }\n                ],\n                \"diseases\": [],\n                \"teeth\": [\n                    {\n                        \"number\": 11,\n                        \"name\": \"ثنية علوي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 3,\n                        \"status_name\": \"تاج\"\n                    },\n                    {\n                        \"number\": 18,\n                        \"name\": \"رحى ثالثة علوي يمين\",\n                        \"note\": \"أداة مكسورة في القناة\",\n                        \"has_treatment\": 1,\n                        \"status_id\": 1,\n                        \"status_name\": \"حشوة\"\n                    },\n                    {\n                        \"number\": 21,\n                        \"name\": \"ثنية علوي يسار\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 23,\n                        \"name\": \"ناب علوي يسار\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 23,\n                        \"name\": \"ناب علوي يسار\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 44,\n                        \"name\": \"ضاحك أول سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 45,\n                        \"name\": \"ضاحك ثاني سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    }\n                ]\n            },\n            {\n                \"id\": 10,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875894\",\n                \"birthdate\": \"2002-01-12\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"test 8\"\n                    }\n                ],\n                \"diseases\": [\n                    {\n                        \"id\": 4,\n                        \"name\": \"test 4\"\n                    },\n                    {\n                        \"id\": 3,\n                        \"name\": \"test 3\"\n                    }\n                ],\n                \"teeth\": [\n                    {\n                        \"number\": 11,\n                        \"name\": \"ثنية علوي يمين\",\n                        \"note\": \"هذا السن سليم\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 22,\n                        \"name\": \"رباعية علوي يسار\",\n                        \"note\": \"\",\n                        \"has_treatment\": 1,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 34,\n                        \"name\": \"ضاحك أول سفلي يسار\",\n                        \"note\": \"\",\n                        \"has_treatment\": 1,\n                        \"status_id\": 3,\n                        \"status_name\": \"تاج\"\n                    },\n                    {\n                        \"number\": 46,\n                        \"name\": \"رحى أولى سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 4,\n                        \"status_name\": \"وتد\"\n                    },\n                    {\n                        \"number\": 23,\n                        \"name\": \"ناب علوي يسار\",\n                        \"note\": \"هذا السن سليم\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    }\n                ]\n            },\n            {\n                \"id\": 9,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875896\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [],\n                \"diseases\": [],\n                \"teeth\": [\n                    {\n                        \"number\": 44,\n                        \"name\": \"ضاحك أول سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 45,\n                        \"name\": \"ضاحك ثاني سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 46,\n                        \"name\": \"رحى أولى سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 42,\n                        \"name\": \"رباعية سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    }\n                ]\n            },\n            {\n                \"id\": 8,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875898\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [],\n                \"diseases\": [],\n                \"teeth\": []\n            },\n            {\n                \"id\": 6,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875899\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [],\n                \"diseases\": [],\n                \"teeth\": []\n            },\n            {\n                \"id\": 5,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875897\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [],\n                \"diseases\": [],\n                \"teeth\": []\n            },\n            {\n                \"id\": 4,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875895\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [],\n                \"diseases\": [],\n                \"teeth\": []\n            },\n            {\n                \"id\": 3,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875893\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [],\n                \"diseases\": [],\n                \"teeth\": []\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/v1/patient?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/v1/patient?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; السابق\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/patient?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"التالي &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/v1/patient\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 8,\n        \"total\": 8\n    },\n    \"message\": \"تم جلب قائمة ألمرضى بنجاح.\"\n}"
+								},
+								{
+									"name": "Search",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/patient?filter[search]=0944444444&filter[has_treatment]=false",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient"
+											],
+											"query": [
+												{
+													"key": "filter[search]",
+													"value": "0944444444"
+												},
+												{
+													"key": "filter[has_treatment]",
+													"value": "false",
+													"description": "true, false"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 25 Jul 2025 20:49:57 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 14,\n                \"name\": \"عبدو\",\n                \"phone_number\": \"0944444444\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"test 8\"\n                    }\n                ],\n                \"diseases\": [\n                    {\n                        \"id\": 4,\n                        \"name\": \"test 4\"\n                    },\n                    {\n                        \"id\": 3,\n                        \"name\": \"test 3\"\n                    }\n                ],\n                \"teeth\": [\n                    {\n                        \"number\": 44,\n                        \"name\": \"ضاحك أول سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": false,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 45,\n                        \"name\": \"ضاحك ثاني سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": false,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    }\n                ]\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/v1/patient?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/v1/patient?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; السابق\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/patient?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"التالي &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/v1/patient\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 1,\n        \"total\": 1\n    },\n    \"message\": \"تم جلب قائمة ألمرضى بنجاح.\"\n}"
 								}
 							]
 						},
