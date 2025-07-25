@@ -138,8 +138,10 @@ class PatientTreatmentRepository
 
             // calculate completed percentage
             $mandatoryStepsCount = $patientTreatment->steps()
-                ->where('optional', false)
-                ->orWhere('finished', true)
+                ->where(function ($query) {
+                    $query->where('optional', false)
+                        ->orWhere('finished', true);
+                })
                 ->count();
 
             $completedMandatoryStepsCount = $patientTreatment->steps()
