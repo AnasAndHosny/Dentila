@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 
 class PatientTreatment extends Model
 {
@@ -32,7 +33,7 @@ class PatientTreatment extends Model
     {
         return $query->where('finished', false);
     }
-    
+
     public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
@@ -42,6 +43,11 @@ class PatientTreatment extends Model
     {
         return $this->hasMany(related: PatientTreatmentStep::class)
             ->orderBy('queue')->orderBy('created_ut');
+    }
+
+    public function substeps(): HasManyThrough
+    {
+        return $this->hasManyThrough(PatientTreatmentSubstep::class, PatientTreatmentStep::class);
     }
 
     public function patientTeeth(): BelongsToMany

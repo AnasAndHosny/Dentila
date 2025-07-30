@@ -51,8 +51,6 @@ class UpdatePatientTreatmentRequest extends FormRequest
             ];
             $rules["steps.$i.name"] = ['required', 'string'];
             $rules["steps.$i.queue"] = ['required', 'integer'];
-            $rules["steps.$i.finished"] = ['required', 'boolean'];
-            $rules["steps.$i.note"] = ['present', 'nullable', 'string'];
             $rules["steps.$i.treatment_substeps"] = ['present', 'nullable', 'array'];
 
             foreach ($step['treatment_substeps'] ?? [] as $j => $substep) {
@@ -63,8 +61,6 @@ class UpdatePatientTreatmentRequest extends FormRequest
                 ];
                 $rules["steps.$i.treatment_substeps.$j.name"] = ['required', 'string'];
                 $rules["steps.$i.treatment_substeps.$j.queue"] = ['required', 'integer'];
-                $rules["steps.$i.treatment_substeps.$j.finished"] = ['required', 'boolean'];
-                $rules["steps.$i.treatment_substeps.$j.note"] = ['present', 'nullable', 'string'];
             }
         }
 

@@ -97,8 +97,6 @@ class PatientTreatmentRepository
                     $treatmentStep = $patientTreatment->steps()->create([
                         'name' => $step['name'],
                         'queue' => $step['queue'],
-                        'finished' => $step['finished'],
-                        'note' => $step['note'],
                     ]);
                 } else {
                     $treatmentStep = $patientTreatment->steps()
@@ -107,8 +105,6 @@ class PatientTreatmentRepository
                     $treatmentStep->update([
                         'name' => $step['name'],
                         'queue' => $step['queue'],
-                        'finished' => $step['finished'],
-                        'note' => $step['note'],
                     ]);
                 }
 
@@ -120,8 +116,6 @@ class PatientTreatmentRepository
                             ->create([
                                 'name' => $substep['name'],
                                 'queue' => $substep['queue'],
-                                'finished' => $substep['finished'],
-                                'note' => $substep['note'],
                             ]);
                     } else {
                         $treatmentStep->substeps()
@@ -129,41 +123,12 @@ class PatientTreatmentRepository
                             ->update([
                                 'name' => $substep['name'],
                                 'queue' => $substep['queue'],
-                                'finished' => $substep['finished'],
-                                'note' => $substep['note'],
                             ]);
                     }
                 }
             }
 
-            // calculate completed percentage
-            $mandatoryStepsCount = $patientTreatment->steps()
-                ->where(function ($query) {
-                    $query->where('optional', false)
-                        ->orWhere('finished', true);
-                })
-                ->count();
-
-            $completedMandatoryStepsCount = $patientTreatment->steps()
-                ->where('finished', true)
-                ->count();
-
-            $progress = 0;
-            if ($mandatoryStepsCount > 0) {
-                $progress = ($completedMandatoryStepsCount / $mandatoryStepsCount) * 100;
-            }
-
-            $finished = false;
-            if ($progress == 100) {
-                $finished = true;
-                event(new TreatmentCompleted($patientTreatment));
-            }
-
-            $patientTreatment->update(attributes: [
-                'complete_percentage' => round($progress, 2),
-                'finished' => $finished,
-            ]);
-
+            $patientTreatment = $this->calculateCompletedPercentage($patientTreatment);
 
             return $patientTreatment->fresh();
         });
@@ -183,26 +148,60 @@ class PatientTreatmentRepository
     public function updateCheck($request, PatientTreatment $patientTreatment)
     {
         return DB::transaction(function () use ($request, $patientTreatment) {
-            if ($request->has('steps')) {
-                foreach ($request['steps'] as $stepId) {
-                    $step = PatientTreatmentStep::find($stepId);
-                    $step->update(['finished' => !$step['finished']]);
-                }
-            }
+            $patientTreatment->steps()
+                ->whereNotIn('id', $request['steps'])
+                ->update(['finished' => false]);
+            $patientTreatment->steps()
+                ->whereIn('id', $request['steps'])
+                ->update(['finished' => true]);
 
-            if ($request->has('substeps')) {
-                foreach ($request['substeps'] as $substepId) {
-                    $substep = PatientTreatmentSubstep::find($substepId);
-                    $substep->update(['finished' => !$substep['finished']]);
-                }
-            }
+            $patientTreatment->substeps()
+                ->whereNotIn('patient_treatment_substeps.id', $request['substeps'])
+                ->update(['finished' => false]);
+            $patientTreatment->substeps()
+                ->whereIn('patient_treatment_substeps.id', $request['substeps'])
+                ->update(['finished' => true]);
 
-            return $patientTreatment;
+            $patientTreatment = $this->calculateCompletedPercentage($patientTreatment);
+
+            return $patientTreatment->fresh();
         });
     }
 
     public function delete(PatientTreatment $patientTreatment)
     {
         return $patientTreatment->delete();
+    }
+
+    private function calculateCompletedPercentage(PatientTreatment $patientTreatment)
+    {
+        $mandatoryStepsCount = $patientTreatment->steps()
+            ->where(function ($query) {
+                $query->where('optional', false)
+                    ->orWhere('finished', true);
+            })
+            ->count();
+
+        $completedMandatoryStepsCount = $patientTreatment->steps()
+            ->where('finished', true)
+            ->count();
+
+        $progress = 0;
+        if ($mandatoryStepsCount > 0) {
+            $progress = ($completedMandatoryStepsCount / $mandatoryStepsCount) * 100;
+        }
+
+        $finished = false;
+        if ($progress == 100) {
+            $finished = true;
+            event(new TreatmentCompleted($patientTreatment));
+        }
+
+        $patientTreatment->update(attributes: [
+            'complete_percentage' => round($progress, 2),
+            'finished' => $finished,
+        ]);
+
+        return $patientTreatment;
     }
 }

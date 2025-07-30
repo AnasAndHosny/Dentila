@@ -20,7 +20,7 @@ class PatientTreatmentStepResource extends JsonResource
             'queue' => (int)$this->queue,
             'optional' => (int)$this->optional,
             'finished' => (int)$this->finished,
-            'note' => (string)$this->note,
+            'note' => $this->note,
             'treatment_substeps' => PatientTreatmentSubstepResource::collection($this->substeps),
         ];
     }
