@@ -6351,6 +6351,415 @@
 							]
 						}
 					]
+				},
+				{
+					"name": "Patients",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/patient?filter[has_treatment]=false",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient"
+									],
+									"query": [
+										{
+											"key": "filter[search]",
+											"value": "0944444444",
+											"disabled": true
+										},
+										{
+											"key": "filter[has_treatment]",
+											"value": "false",
+											"description": "true, false"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/patient",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 22 Jul 2025 21:56:34 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 11,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875892\",\n                \"birthdate\": \"2002-01-12\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"test 8\"\n                    }\n                ],\n                \"diseases\": [],\n                \"teeth\": [\n                    {\n                        \"number\": 11,\n                        \"name\": \"ثنية علوي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 3,\n                        \"status_name\": \"تاج\"\n                    },\n                    {\n                        \"number\": 18,\n                        \"name\": \"رحى ثالثة علوي يمين\",\n                        \"note\": \"أداة مكسورة في القناة\",\n                        \"has_treatment\": 1,\n                        \"status_id\": 1,\n                        \"status_name\": \"حشوة\"\n                    },\n                    {\n                        \"number\": 21,\n                        \"name\": \"ثنية علوي يسار\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 23,\n                        \"name\": \"ناب علوي يسار\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 23,\n                        \"name\": \"ناب علوي يسار\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 44,\n                        \"name\": \"ضاحك أول سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 45,\n                        \"name\": \"ضاحك ثاني سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    }\n                ]\n            },\n            {\n                \"id\": 10,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875894\",\n                \"birthdate\": \"2002-01-12\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"test 8\"\n                    }\n                ],\n                \"diseases\": [\n                    {\n                        \"id\": 4,\n                        \"name\": \"test 4\"\n                    },\n                    {\n                        \"id\": 3,\n                        \"name\": \"test 3\"\n                    }\n                ],\n                \"teeth\": [\n                    {\n                        \"number\": 11,\n                        \"name\": \"ثنية علوي يمين\",\n                        \"note\": \"هذا السن سليم\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 22,\n                        \"name\": \"رباعية علوي يسار\",\n                        \"note\": \"\",\n                        \"has_treatment\": 1,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 34,\n                        \"name\": \"ضاحك أول سفلي يسار\",\n                        \"note\": \"\",\n                        \"has_treatment\": 1,\n                        \"status_id\": 3,\n                        \"status_name\": \"تاج\"\n                    },\n                    {\n                        \"number\": 46,\n                        \"name\": \"رحى أولى سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 4,\n                        \"status_name\": \"وتد\"\n                    },\n                    {\n                        \"number\": 23,\n                        \"name\": \"ناب علوي يسار\",\n                        \"note\": \"هذا السن سليم\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    }\n                ]\n            },\n            {\n                \"id\": 9,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875896\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [],\n                \"diseases\": [],\n                \"teeth\": [\n                    {\n                        \"number\": 44,\n                        \"name\": \"ضاحك أول سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 45,\n                        \"name\": \"ضاحك ثاني سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 46,\n                        \"name\": \"رحى أولى سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 42,\n                        \"name\": \"رباعية سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    }\n                ]\n            },\n            {\n                \"id\": 8,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875898\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [],\n                \"diseases\": [],\n                \"teeth\": []\n            },\n            {\n                \"id\": 6,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875899\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [],\n                \"diseases\": [],\n                \"teeth\": []\n            },\n            {\n                \"id\": 5,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875897\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [],\n                \"diseases\": [],\n                \"teeth\": []\n            },\n            {\n                \"id\": 4,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875895\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [],\n                \"diseases\": [],\n                \"teeth\": []\n            },\n            {\n                \"id\": 3,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875893\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [],\n                \"diseases\": [],\n                \"teeth\": []\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/v1/patient?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/v1/patient?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; السابق\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/patient?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"التالي &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/v1/patient\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 8,\n        \"total\": 8\n    },\n    \"message\": \"تم جلب قائمة ألمرضى بنجاح.\"\n}"
+								},
+								{
+									"name": "Search",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/patient?filter[search]=0944444444&filter[has_treatment]=false",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient"
+											],
+											"query": [
+												{
+													"key": "filter[search]",
+													"value": "0944444444"
+												},
+												{
+													"key": "filter[has_treatment]",
+													"value": "false",
+													"description": "true, false"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 25 Jul 2025 20:49:57 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 14,\n                \"name\": \"عبدو\",\n                \"phone_number\": \"0944444444\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"test 8\"\n                    }\n                ],\n                \"diseases\": [\n                    {\n                        \"id\": 4,\n                        \"name\": \"test 4\"\n                    },\n                    {\n                        \"id\": 3,\n                        \"name\": \"test 3\"\n                    }\n                ],\n                \"teeth\": [\n                    {\n                        \"number\": 44,\n                        \"name\": \"ضاحك أول سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": false,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 45,\n                        \"name\": \"ضاحك ثاني سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": false,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    }\n                ]\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/v1/patient?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/v1/patient?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; السابق\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/patient?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"التالي &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/v1/patient\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 1,\n        \"total\": 1\n    },\n    \"message\": \"تم جلب قائمة ألمرضى بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "show",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/patient/10",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient",
+										"10"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/patient/10",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient",
+												"10"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 27 Jun 2025 16:58:31 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 10,\n        \"name\": \"Anas\",\n        \"phone_number\": \"0957875894\",\n        \"birthdate\": \"2002-01-12\",\n        \"age\": 23,\n        \"gender\": \"male\",\n        \"job\": \"مهندس قد الدنيا\",\n        \"marital_status\": \"\",\n        \"address\": \"ضاحية قدسيا\",\n        \"social_history\": \"\",\n        \"note\": \"\",\n        \"intake_medications\": [\n            {\n                \"id\": 1,\n                \"name\": \"test 8\"\n            }\n        ],\n        \"diseases\": [\n            {\n                \"id\": 4,\n                \"name\": \"test 4\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"test 3\"\n            }\n        ],\n        \"teeth\": [\n            {\n                \"number\": 11,\n                \"name\": \"ثنية علوي يمين\",\n                \"note\": \"\",\n                \"has_treatment\": 0,\n                \"status_id\": 0,\n                \"status_name\": \"سليم\"\n            },\n            {\n                \"number\": 22,\n                \"name\": \"رباعية علوي يسار\",\n                \"note\": \"\",\n                \"has_treatment\": 1,\n                \"status_id\": 0,\n                \"status_name\": \"سليم\"\n            },\n            {\n                \"number\": 34,\n                \"name\": \"ضاحك أول سفلي يسار\",\n                \"note\": \"\",\n                \"has_treatment\": 1,\n                \"status_id\": 3,\n                \"status_name\": \"تاج\"\n            },\n            {\n                \"number\": 46,\n                \"name\": \"رحى أولى سفلي يمين\",\n                \"note\": \"\",\n                \"has_treatment\": 0,\n                \"status_id\": 4,\n                \"status_name\": \"وتد\"\n            }\n        ]\n    },\n    \"message\": \"تم جلب المريض بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "destroy",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/patient/12",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient",
+										"12"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/patient/12",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient",
+												"12"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 27 Jun 2025 18:45:35 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [],\n    \"message\": \"تم حذف المريض بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "update tooth note",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "note",
+											"value": "هذا السن سليم",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/patient/10/tooth/11",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient",
+										"10",
+										"tooth",
+										"11"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "note",
+													"value": "هذا السن سليم",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/patient/10/tooth/11",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient",
+												"10",
+												"tooth",
+												"11"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 27 Jun 2025 19:39:37 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"number\": 11,\n        \"name\": \"ثنية علوي يمين\",\n        \"note\": \"هذا السن سليم\",\n        \"has_treatment\": 0,\n        \"status_id\": 0,\n        \"status_name\": \"سليم\"\n    },\n    \"message\": \"تم تحديث السن بنجاح.\"\n}"
+								}
+							]
+						}
+					]
 				}
 			]
 		},
@@ -9800,6 +10209,703 @@
 									],
 									"cookie": [],
 									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"الخطة بدي أسندها لمريض\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 150000,\n        \"main_complaint\": \"\",\n        \"diagnoses\": \"\",\n        \"finished\": 0,\n        \"complete_percentage\": 0,\n        \"teeth\": [\n            {\n                \"number\": 42,\n                \"name\": \"رباعية سفلي يمين\"\n            },\n            {\n                \"number\": 45,\n                \"name\": \"ضاحك ثاني سفلي يمين\"\n            }\n        ],\n        \"steps\": [\n            {\n                \"id\": 7,\n                \"name\": \"ألمرحلة الأولى\",\n                \"queue\": 1,\n                \"optional\": 1,\n                \"finished\": 1,\n                \"note\": \"gdfgdgd\",\n                \"treatment_substeps\": []\n            },\n            {\n                \"id\": 8,\n                \"name\": \"ألمرحلة الثانية\",\n                \"queue\": 2,\n                \"optional\": 0,\n                \"finished\": 0,\n                \"note\": \"\",\n                \"treatment_substeps\": [\n                    {\n                        \"id\": 47,\n                        \"name\": \"ألمرحلة الأولى\",\n                        \"queue\": 0,\n                        \"optional\": 0,\n                        \"finished\": 1,\n                        \"note\": \"gdfgdgd\"\n                    },\n                    {\n                        \"id\": 20,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 0,\n                        \"finished\": 1,\n                        \"note\": \"\"\n                    }\n                ]\n            }\n        ]\n    },\n    \"message\": \"تم تحديث علاج المريض بنجاح.\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Treatment Note",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/treatment-note",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"treatment-note"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/treatment-note",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment-note"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 22 Jun 2025 14:12:44 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 5,\n            \"title\": \"treat 16\",\n            \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n            \"duration_value\": 234,\n            \"duration_unit\": \"days\"\n        },\n        {\n            \"id\": 4,\n            \"title\": \"treat 13\",\n            \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n            \"duration_value\": 234,\n            \"duration_unit\": \"days\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"treat 1\",\n            \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n            \"duration_value\": 234,\n            \"duration_unit\": \"days\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"treat 5\",\n            \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n            \"duration_value\": 234,\n            \"duration_unit\": \"days\"\n        },\n        {\n            \"id\": 1,\n            \"title\": \"treat 7\",\n            \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n            \"duration_value\": 234,\n            \"duration_unit\": \"days\"\n        }\n    ],\n    \"message\": \"تم جلب قائمة ملاحظات العلاج بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "show",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/treatment-note/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"treatment-note",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/treatment-note/1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment-note",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 22 Jun 2025 14:08:29 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"treat 4\",\n        \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n        \"duration_value\": 234,\n        \"duration_unit\": \"days\"\n    },\n    \"message\": \"تم جلب ملاحظة العلاج بنجاح.\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Patient Treatment Notes",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/patient/14/note",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient",
+										"14",
+										"note"
+									],
+									"query": [
+										{
+											"key": "filter[active]",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/patient/14/note",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient",
+												"14",
+												"note"
+											],
+											"query": [
+												{
+													"key": "filter[active]",
+													"value": "true",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 30 Jul 2025 20:12:08 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 8,\n                \"title\": \"treat 4\",\n                \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                \"starts_at\": \"2025-07-30\",\n                \"until_date\": \"2024-10-30\"\n            },\n            {\n                \"id\": 7,\n                \"title\": \"treat 4\",\n                \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                \"starts_at\": \"2025-07-30\",\n                \"until_date\": \"2024-08-20\"\n            },\n            {\n                \"id\": 6,\n                \"title\": \"treat 4\",\n                \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                \"starts_at\": \"2025-07-30\",\n                \"until_date\": \"2025-08-02\"\n            },\n            {\n                \"id\": 5,\n                \"title\": \"treat 4\",\n                \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                \"starts_at\": \"2025-07-30\",\n                \"until_date\": \"2026-03-21\"\n            },\n            {\n                \"id\": 4,\n                \"title\": \"treat 4\",\n                \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                \"starts_at\": \"2025-07-30\",\n                \"until_date\": \"2026-03-21\"\n            },\n            {\n                \"id\": 3,\n                \"title\": \"treat 4\",\n                \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                \"starts_at\": \"2025-07-30\",\n                \"until_date\": \"2026-03-21\"\n            },\n            {\n                \"id\": 2,\n                \"title\": \"treat 4\",\n                \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                \"starts_at\": \"2025-07-30\",\n                \"until_date\": \"2026-03-21\"\n            },\n            {\n                \"id\": 1,\n                \"title\": \"treat 4\",\n                \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                \"starts_at\": \"2025-07-30\",\n                \"until_date\": \"2026-03-21\"\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/v1/patient/14/note?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/v1/patient/14/note?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; السابق\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/patient/14/note?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"التالي &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/v1/patient/14/note\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 8,\n        \"total\": 8\n    },\n    \"message\": \"تم جلب قائمة ملاحظات العلاج بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "store",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "treat 4",
+											"description": "not null",
+											"type": "text"
+										},
+										{
+											"key": "text",
+											"value": "ajfajg;oagjsd\nafj;ajfna;lsdf\nagdgfhfh",
+											"description": "not null",
+											"type": "text"
+										},
+										{
+											"key": "duration_value",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "duration_unit",
+											"value": "days",
+											"description": "days, weeks, months",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/patient/14/note",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient",
+										"14",
+										"note"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title",
+													"value": "treat 4",
+													"type": "text"
+												},
+												{
+													"key": "text",
+													"value": "ajfajg;oagjsd\nafj;ajfna;lsdf\nagdgfhfh",
+													"type": "text"
+												},
+												{
+													"key": "duration_value",
+													"value": "3",
+													"type": "text"
+												},
+												{
+													"key": "duration_unit",
+													"value": "days",
+													"description": "days, weeks, months",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/patient/14/note",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient",
+												"14",
+												"note"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 30 Jul 2025 20:08:56 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 8,\n        \"title\": \"treat 4\",\n        \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n        \"starts_at\": \"2025-07-30\",\n        \"until_date\": \"2025-10-30\"\n    },\n    \"message\": \"تم إنشاء ملاحظة العلاج بنجاح.\"\n}"
+								},
+								{
+									"name": "Required",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title",
+													"value": "treat 4",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "text",
+													"value": "ajfajg;oagjsd\nafj;ajfna;lsdf\nagdgfhfh",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "duration_value",
+													"value": "3",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "duration_unit",
+													"value": "days",
+													"description": "days, weeks, months",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/patient/14/note",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient",
+												"14",
+												"note"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 30 Jul 2025 20:17:45 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"title\": [\n            \"حقل العنوان مطلوب.\"\n        ],\n        \"text\": [\n            \"حقل النص مطلوب.\"\n        ],\n        \"duration_value\": [\n            \"حقل قيمة الدمدة مطلوب.\"\n        ],\n        \"duration_unit\": [\n            \"حقل وحدة المدة مطلوب.\"\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "show",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/patient-note/9",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient-note",
+										"9"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/patient-note/2",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient-note",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 30 Jul 2025 20:26:03 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 2,\n        \"title\": \"treat 4\",\n        \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n        \"starts_at\": \"2025-07-30\",\n        \"until_date\": \"2026-03-21\"\n    },\n    \"message\": \"تم جلب ملاحظة العلاج بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "destroy",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/patient-note/9",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient-note",
+										"9"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/patient-note/10",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient-note",
+												"10"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 30 Jul 2025 21:56:35 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [],\n    \"message\": \"تم حذف ملاحظة العلاج بنجاح.\"\n}"
 								}
 							]
 						}
