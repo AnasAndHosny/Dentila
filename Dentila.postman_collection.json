@@ -10910,6 +10910,538 @@
 							]
 						}
 					]
+				},
+				{
+					"name": "Patient Medication Plan",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/patient/14/medication",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient",
+										"14",
+										"medication"
+									],
+									"query": [
+										{
+											"key": "filter[active]",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/patient/14/medication",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient",
+												"14",
+												"medication"
+											],
+											"query": [
+												{
+													"key": "filter[active]",
+													"value": "true",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 30 Jul 2025 22:11:11 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 5,\n                \"medication\": {\n                    \"id\": 1,\n                    \"image\": null,\n                    \"name\": \"medication 1\",\n                    \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                },\n                \"dose\": \"حبة كل يوم\",\n                \"starts_at\": \"2025-07-30\",\n                \"until_date\": \"2025-08-29\"\n            },\n            {\n                \"id\": 4,\n                \"medication\": {\n                    \"id\": 1,\n                    \"image\": null,\n                    \"name\": \"medication 1\",\n                    \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                },\n                \"dose\": \"حبة كل يوم\",\n                \"starts_at\": \"2025-07-30\",\n                \"until_date\": \"2025-08-29\"\n            },\n            {\n                \"id\": 3,\n                \"medication\": {\n                    \"id\": 1,\n                    \"image\": null,\n                    \"name\": \"medication 1\",\n                    \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                },\n                \"dose\": \"حبة كل يوم\",\n                \"starts_at\": \"2025-07-30\",\n                \"until_date\": \"2025-08-29\"\n            },\n            {\n                \"id\": 2,\n                \"medication\": {\n                    \"id\": 1,\n                    \"image\": null,\n                    \"name\": \"medication 1\",\n                    \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                },\n                \"dose\": \"حبة كل يوم\",\n                \"starts_at\": \"2025-07-30\",\n                \"until_date\": \"2025-08-02\"\n            },\n            {\n                \"id\": 1,\n                \"medication\": {\n                    \"id\": 1,\n                    \"image\": null,\n                    \"name\": \"medication 1\",\n                    \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                },\n                \"dose\": \"حبة كل يوم\",\n                \"starts_at\": \"2025-07-30\",\n                \"until_date\": \"2025-08-02\"\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/v1/patient/14/medication?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/v1/patient/14/medication?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; السابق\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/patient/14/medication?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"التالي &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/v1/patient/14/medication\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 5,\n        \"total\": 5\n    },\n    \"message\": \"تم جلب قائمة خطط منح الدواء بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "store",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "medication_id",
+											"value": "1",
+											"description": "not null",
+											"type": "text"
+										},
+										{
+											"key": "dose",
+											"value": "حبة كل يوم",
+											"description": "not null",
+											"type": "text"
+										},
+										{
+											"key": "duration_value",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "duration_unit",
+											"value": "days",
+											"description": "days, weeks, months",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/patient/14/medication",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient",
+										"14",
+										"medication"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "medication_id",
+													"value": "1",
+													"description": "not null",
+													"type": "text"
+												},
+												{
+													"key": "dose",
+													"value": "حبة كل يوم",
+													"description": "not null",
+													"type": "text"
+												},
+												{
+													"key": "duration_value",
+													"value": "3",
+													"type": "text"
+												},
+												{
+													"key": "duration_unit",
+													"value": "days",
+													"description": "days, weeks, months",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/patient/14/medication",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient",
+												"14",
+												"medication"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 30 Jul 2025 22:10:01 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 1,\n        \"medication\": {\n            \"id\": 1,\n            \"image\": null,\n            \"name\": \"medication 1\",\n            \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n        },\n        \"dose\": \"حبة كل يوم\",\n        \"starts_at\": \"2025-07-30\",\n        \"until_date\": \"2025-08-02\"\n    },\n    \"message\": \"تم إنشاء خطة منح الدواء بنجاح.\"\n}"
+								},
+								{
+									"name": "Required",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "medication_id",
+													"value": "1",
+													"description": "not null",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "dose",
+													"value": "حبة كل يوم",
+													"description": "not null",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "duration_value",
+													"value": "3",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "duration_unit",
+													"value": "days",
+													"description": "days, weeks, months",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/patient/14/medication",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient",
+												"14",
+												"medication"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 30 Jul 2025 22:10:31 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"medication_id\": [\n            \"حقل الدواء مطلوب.\"\n        ],\n        \"duration_value\": [\n            \"حقل قيمة الدمدة مطلوب.\"\n        ],\n        \"duration_unit\": [\n            \"حقل وحدة المدة مطلوب.\"\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "show",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/patient-medication/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient-medication",
+										"3"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/patient-medication/3",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient-medication",
+												"3"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 30 Jul 2025 22:11:59 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 3,\n        \"medication\": {\n            \"id\": 1,\n            \"image\": null,\n            \"name\": \"medication 1\",\n            \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n        },\n        \"dose\": \"حبة كل يوم\",\n        \"starts_at\": \"2025-07-30\",\n        \"until_date\": \"2025-08-29\"\n    },\n    \"message\": \"تم جلب خطة منح الدواء بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "destroy",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/patient-medication/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient-medication",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/patient-medication/2",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient-medication",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 30 Jul 2025 22:13:45 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [],\n    \"message\": \"تم حذف خطة منح الدواء بنجاح.\"\n}"
+								}
+							]
+						}
+					]
 				}
 			]
 		},

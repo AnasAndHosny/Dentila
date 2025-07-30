@@ -13,6 +13,7 @@ use App\Http\Controllers\Api\V1\TreatmentPlanController;
 use App\Http\Controllers\Api\V1\TreatmentStepController;
 use App\Http\Controllers\Api\V1\MedicationPlanController;
 use App\Http\Controllers\Api\V1\PatientController;
+use App\Http\Controllers\Api\V1\PatientMedicationPlanController;
 use App\Http\Controllers\Api\V1\PatientTreatmentController;
 use App\Http\Controllers\Api\V1\PatientTreatmentNoteController;
 use App\Http\Controllers\Api\V1\ToothController;
@@ -114,6 +115,8 @@ Route::prefix('v1')->middleware([Cors::class])->group(function () {
         Route::get('{patient}/treatment', [PatientTreatmentController::class, 'index']);
         Route::get('{patient}/note', [PatientTreatmentNoteController::class, 'index']);
         Route::post('{patient}/note', [PatientTreatmentNoteController::class, 'store']);
+        Route::get('{patient}/medication', [PatientMedicationPlanController::class, 'index']);
+        Route::post('{patient}/medication', [PatientMedicationPlanController::class, 'store']);
     });
 
     Route::prefix('patient-treatment')->controller(PatientTreatmentController::class)->group(function () {
@@ -136,5 +139,10 @@ Route::prefix('v1')->middleware([Cors::class])->group(function () {
     Route::prefix('patient-note')->controller(PatientTreatmentNoteController::class)->group(function () {
         Route::get('{patientTreatmentNote}', 'show');
         Route::delete('{patientTreatmentNote}', 'destroy');
+    });
+
+    Route::prefix('patient-medication')->controller(PatientMedicationPlanController::class)->group(function () {
+        Route::get('{patientMedicationPlan}', 'show');
+        Route::delete('{patientMedicationPlan}', 'destroy');
     });
 });
