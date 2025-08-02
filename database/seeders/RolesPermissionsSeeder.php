@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
@@ -63,5 +64,19 @@ class RolesPermissionsSeeder extends Seeder
         $doctorRole->syncPermissions($doctorPermissions);
         $patientRole->syncPermissions($patientPermissions);
         $receptionistRole->syncPermissions($receptionistPermissions);
+
+        $admin = User::Create([
+            'name' => 'admin',
+            'phone_number' => 'admin',
+            'password' => 'admin'
+        ]);
+        $admin->assignRole($managerRole);
+
+        $admin = User::Create([
+            'name' => 'zaid alshamaa',
+            'phone_number' => '0936293119',
+            'password' => 'superadmin'
+        ]);
+        $admin->assignRole($managerRole);
     }
 }

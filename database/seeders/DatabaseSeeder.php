@@ -15,11 +15,11 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'admin',
-            'phone_number' => 'admin',
-            'password' => 'admin'
-        ]);
+        // User::factory()->create([
+        //     'name' => 'admin',
+        //     'phone_number' => 'admin',
+        //     'password' => 'admin'
+        // ]);
 
         $this->call([
             RolesPermissionsSeeder::class,

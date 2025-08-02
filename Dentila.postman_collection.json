@@ -5319,7 +5319,7 @@
 									},
 									"status": "OK",
 									"code": 200,
-									"_postman_previewlanguage": "json",
+									"_postman_previewlanguage": null,
 									"header": [
 										{
 											"key": "Host",
@@ -5339,7 +5339,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Tue, 22 Jul 2025 21:26:34 GMT"
+											"value": "Sat, 02 Aug 2025 11:12:27 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -5363,7 +5363,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 18,\n            \"image\": null,\n            \"name\": \"anas\",\n            \"phone_number\": \"0957875891\",\n            \"birthdate\": \"2002-01-11\",\n            \"age\": 23,\n            \"gender\": \"male\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"doctor\",\n                \"receptionist\"\n            ]\n        },\n        {\n            \"id\": 20,\n            \"image\": null,\n            \"name\": \"leen\",\n            \"phone_number\": \"0957875892\",\n            \"birthdate\": \"2004-01-22\",\n            \"age\": 21,\n            \"gender\": \"female\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"doctor\"\n            ]\n        },\n        {\n            \"id\": 21,\n            \"image\": \"images/1753219521.png\",\n            \"name\": \"rima\",\n            \"phone_number\": \"0957875893\",\n            \"birthdate\": \"2003-01-22\",\n            \"age\": 22,\n            \"gender\": \"female\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"doctor\",\n                \"receptionist\"\n            ]\n        },\n        {\n            \"id\": 22,\n            \"image\": \"images/1753219571.png\",\n            \"name\": \"zaid\",\n            \"phone_number\": \"0957875899\",\n            \"birthdate\": \"2002-07-22\",\n            \"age\": 23,\n            \"gender\": \"male\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"doctor\"\n            ]\n        }\n    ],\n    \"message\": \"تم جلب قائمة الموظفين بنجاح.\"\n}"
+									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 18,\n            \"image\": null,\n            \"name\": \"أنااااااااس\",\n            \"phone_number\": \"0957875891\",\n            \"birthdate\": \"2002-01-11\",\n            \"age\": 23,\n            \"gender\": \"male\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"doctor\",\n                \"patient\"\n            ],\n            \"is_banned\": true,\n            \"ban_expired_at\": \"2025-08-03T11:12:06.000000Z\"\n        },\n        {\n            \"id\": 20,\n            \"image\": null,\n            \"name\": \"leen\",\n            \"phone_number\": \"0957875892\",\n            \"birthdate\": \"2004-01-22\",\n            \"age\": 21,\n            \"gender\": \"female\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"doctor\"\n            ],\n            \"is_banned\": true,\n            \"ban_expired_at\": null\n        },\n        {\n            \"id\": 21,\n            \"image\": \"images/1753219521.png\",\n            \"name\": \"rima\",\n            \"phone_number\": \"0957875893\",\n            \"birthdate\": \"2003-01-22\",\n            \"age\": 22,\n            \"gender\": \"female\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"doctor\",\n                \"receptionist\"\n            ],\n            \"is_banned\": false,\n            \"ban_expired_at\": null\n        },\n        {\n            \"id\": 22,\n            \"image\": \"images/1753219571.png\",\n            \"name\": \"zaid\",\n            \"phone_number\": \"0957875899\",\n            \"birthdate\": \"2002-07-22\",\n            \"age\": 23,\n            \"gender\": \"male\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"doctor\"\n            ],\n            \"is_banned\": false,\n            \"ban_expired_at\": null\n        }\n    ],\n    \"message\": \"تم جلب قائمة الموظفين بنجاح.\"\n}"
 								}
 							]
 						},
@@ -5467,7 +5467,8 @@
 												},
 												{
 													"key": "phone_number",
-													"value": "0957875899",
+													"value": "0957875879",
+													"description": "start with:09, digits:10",
 													"type": "text"
 												},
 												{
@@ -5509,8 +5510,7 @@
 												{
 													"key": "roles[]",
 													"value": "receptionist",
-													"type": "text",
-													"disabled": true
+													"type": "text"
 												}
 											]
 										},
@@ -5526,7 +5526,7 @@
 									},
 									"status": "Created",
 									"code": 201,
-									"_postman_previewlanguage": "json",
+									"_postman_previewlanguage": null,
 									"header": [
 										{
 											"key": "Host",
@@ -5546,7 +5546,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Tue, 22 Jul 2025 21:26:12 GMT"
+											"value": "Sat, 02 Aug 2025 11:13:05 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -5570,7 +5570,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 22,\n        \"image\": \"images/1753219571.png\",\n        \"name\": \"zaid\",\n        \"phone_number\": \"0957875899\",\n        \"birthdate\": \"2002-07-22\",\n        \"age\": 23,\n        \"gender\": \"male\",\n        \"ssn\": \"\",\n        \"address\": \"\",\n        \"roles\": [\n            \"doctor\"\n        ]\n    },\n    \"message\": \"تم إنشاء الموظف بنجاح.\"\n}"
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 24,\n        \"image\": null,\n        \"name\": \"zaid\",\n        \"phone_number\": \"0957875879\",\n        \"birthdate\": \"2002-07-22\",\n        \"age\": 23,\n        \"gender\": \"male\",\n        \"ssn\": \"\",\n        \"address\": \"\",\n        \"roles\": [\n            \"doctor\",\n            \"receptionist\"\n        ],\n        \"is_banned\": false,\n        \"ban_expired_at\": null\n    },\n    \"message\": \"تم إنشاء الموظف بنجاح.\"\n}"
 								},
 								{
 									"name": "Unique",
@@ -5872,7 +5872,7 @@
 									},
 									"status": "OK",
 									"code": 200,
-									"_postman_previewlanguage": "json",
+									"_postman_previewlanguage": null,
 									"header": [
 										{
 											"key": "Host",
@@ -5892,7 +5892,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Tue, 22 Jul 2025 21:37:30 GMT"
+											"value": "Sat, 02 Aug 2025 11:12:46 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -5916,7 +5916,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 18,\n        \"image\": null,\n        \"name\": \"anas\",\n        \"phone_number\": \"0957875891\",\n        \"birthdate\": \"2002-01-11\",\n        \"age\": 23,\n        \"gender\": \"male\",\n        \"ssn\": \"\",\n        \"address\": \"\",\n        \"roles\": [\n            \"doctor\",\n            \"receptionist\"\n        ]\n    },\n    \"message\": \"تم جلب الموظف بنجاح.\"\n}"
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 18,\n        \"image\": null,\n        \"name\": \"أنااااااااس\",\n        \"phone_number\": \"0957875891\",\n        \"birthdate\": \"2002-01-11\",\n        \"age\": 23,\n        \"gender\": \"male\",\n        \"ssn\": \"\",\n        \"address\": \"\",\n        \"roles\": [\n            \"doctor\",\n            \"patient\"\n        ],\n        \"is_banned\": true,\n        \"ban_expired_at\": \"2025-08-03T11:12:06.000000Z\"\n    },\n    \"message\": \"تم جلب الموظف بنجاح.\"\n}"
 								}
 							]
 						},
@@ -6089,7 +6089,7 @@
 									},
 									"status": "OK",
 									"code": 200,
-									"_postman_previewlanguage": "json",
+									"_postman_previewlanguage": null,
 									"header": [
 										{
 											"key": "Host",
@@ -6109,7 +6109,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Tue, 22 Jul 2025 21:38:25 GMT"
+											"value": "Sat, 02 Aug 2025 11:13:46 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -6133,7 +6133,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 18,\n        \"image\": null,\n        \"name\": \"أنااااااااس\",\n        \"phone_number\": \"0957875891\",\n        \"birthdate\": \"2002-01-11\",\n        \"age\": 23,\n        \"gender\": \"male\",\n        \"ssn\": \"\",\n        \"address\": \"\",\n        \"roles\": [\n            \"doctor\"\n        ]\n    },\n    \"message\": \"تم تحديث الموظف بنجاح.\"\n}"
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 18,\n        \"image\": null,\n        \"name\": \"أنااااااااس\",\n        \"phone_number\": \"0957875891\",\n        \"birthdate\": \"2002-01-11\",\n        \"age\": 23,\n        \"gender\": \"male\",\n        \"ssn\": \"\",\n        \"address\": \"\",\n        \"roles\": [\n            \"patient\",\n            \"doctor\"\n        ],\n        \"is_banned\": true,\n        \"ban_expired_at\": \"2025-08-03T11:12:06.000000Z\"\n    },\n    \"message\": \"تم تحديث الموظف بنجاح.\"\n}"
 								},
 								{
 									"name": "Unique",
@@ -6361,7 +6361,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{base_url}}/patient?filter[has_treatment]=false",
+									"raw": "{{base_url}}/patient",
 									"host": [
 										"{{base_url}}"
 									],
@@ -6377,7 +6377,8 @@
 										{
 											"key": "filter[has_treatment]",
 											"value": "false",
-											"description": "true, false"
+											"description": "true, false",
+											"disabled": true
 										}
 									]
 								}
@@ -6395,86 +6396,25 @@
 											],
 											"path": [
 												"patient"
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Host",
-											"value": "localhost:8000"
-										},
-										{
-											"key": "Connection",
-											"value": "close"
-										},
-										{
-											"key": "X-Powered-By",
-											"value": "PHP/8.2.12"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, private"
-										},
-										{
-											"key": "Date",
-											"value": "Tue, 22 Jul 2025 21:56:34 GMT"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										},
-										{
-											"key": "Access-Control-Allow-Methods",
-											"value": "POST, GET, OPTIONS, PUT, DELETE"
-										},
-										{
-											"key": "Access-Control-Allow-Headers",
-											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
-										},
-										{
-											"key": "Access-Control-Allow-Credentials",
-											"value": "true"
-										}
-									],
-									"cookie": [],
-									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 11,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875892\",\n                \"birthdate\": \"2002-01-12\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"test 8\"\n                    }\n                ],\n                \"diseases\": [],\n                \"teeth\": [\n                    {\n                        \"number\": 11,\n                        \"name\": \"ثنية علوي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 3,\n                        \"status_name\": \"تاج\"\n                    },\n                    {\n                        \"number\": 18,\n                        \"name\": \"رحى ثالثة علوي يمين\",\n                        \"note\": \"أداة مكسورة في القناة\",\n                        \"has_treatment\": 1,\n                        \"status_id\": 1,\n                        \"status_name\": \"حشوة\"\n                    },\n                    {\n                        \"number\": 21,\n                        \"name\": \"ثنية علوي يسار\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 23,\n                        \"name\": \"ناب علوي يسار\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 23,\n                        \"name\": \"ناب علوي يسار\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 44,\n                        \"name\": \"ضاحك أول سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 45,\n                        \"name\": \"ضاحك ثاني سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    }\n                ]\n            },\n            {\n                \"id\": 10,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875894\",\n                \"birthdate\": \"2002-01-12\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"test 8\"\n                    }\n                ],\n                \"diseases\": [\n                    {\n                        \"id\": 4,\n                        \"name\": \"test 4\"\n                    },\n                    {\n                        \"id\": 3,\n                        \"name\": \"test 3\"\n                    }\n                ],\n                \"teeth\": [\n                    {\n                        \"number\": 11,\n                        \"name\": \"ثنية علوي يمين\",\n                        \"note\": \"هذا السن سليم\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 22,\n                        \"name\": \"رباعية علوي يسار\",\n                        \"note\": \"\",\n                        \"has_treatment\": 1,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 34,\n                        \"name\": \"ضاحك أول سفلي يسار\",\n                        \"note\": \"\",\n                        \"has_treatment\": 1,\n                        \"status_id\": 3,\n                        \"status_name\": \"تاج\"\n                    },\n                    {\n                        \"number\": 46,\n                        \"name\": \"رحى أولى سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 4,\n                        \"status_name\": \"وتد\"\n                    },\n                    {\n                        \"number\": 23,\n                        \"name\": \"ناب علوي يسار\",\n                        \"note\": \"هذا السن سليم\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    }\n                ]\n            },\n            {\n                \"id\": 9,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875896\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [],\n                \"diseases\": [],\n                \"teeth\": [\n                    {\n                        \"number\": 44,\n                        \"name\": \"ضاحك أول سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 45,\n                        \"name\": \"ضاحك ثاني سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 46,\n                        \"name\": \"رحى أولى سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 42,\n                        \"name\": \"رباعية سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": 0,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    }\n                ]\n            },\n            {\n                \"id\": 8,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875898\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [],\n                \"diseases\": [],\n                \"teeth\": []\n            },\n            {\n                \"id\": 6,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875899\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [],\n                \"diseases\": [],\n                \"teeth\": []\n            },\n            {\n                \"id\": 5,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875897\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [],\n                \"diseases\": [],\n                \"teeth\": []\n            },\n            {\n                \"id\": 4,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875895\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [],\n                \"diseases\": [],\n                \"teeth\": []\n            },\n            {\n                \"id\": 3,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875893\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [],\n                \"diseases\": [],\n                \"teeth\": []\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/v1/patient?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/v1/patient?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; السابق\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/patient?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"التالي &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/v1/patient\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 8,\n        \"total\": 8\n    },\n    \"message\": \"تم جلب قائمة ألمرضى بنجاح.\"\n}"
-								},
-								{
-									"name": "Search",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/patient?filter[search]=0944444444&filter[has_treatment]=false",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"patient"
 											],
 											"query": [
 												{
 													"key": "filter[search]",
-													"value": "0944444444"
+													"value": "0944444444",
+													"disabled": true
 												},
 												{
 													"key": "filter[has_treatment]",
 													"value": "false",
-													"description": "true, false"
+													"description": "true, false",
+													"disabled": true
 												}
 											]
 										}
 									},
 									"status": "OK",
 									"code": 200,
-									"_postman_previewlanguage": "json",
+									"_postman_previewlanguage": null,
 									"header": [
 										{
 											"key": "Host",
@@ -6494,7 +6434,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Fri, 25 Jul 2025 20:49:57 GMT"
+											"value": "Sat, 02 Aug 2025 11:08:37 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -6518,7 +6458,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 14,\n                \"name\": \"عبدو\",\n                \"phone_number\": \"0944444444\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"test 8\"\n                    }\n                ],\n                \"diseases\": [\n                    {\n                        \"id\": 4,\n                        \"name\": \"test 4\"\n                    },\n                    {\n                        \"id\": 3,\n                        \"name\": \"test 3\"\n                    }\n                ],\n                \"teeth\": [\n                    {\n                        \"number\": 44,\n                        \"name\": \"ضاحك أول سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": false,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    },\n                    {\n                        \"number\": 45,\n                        \"name\": \"ضاحك ثاني سفلي يمين\",\n                        \"note\": \"\",\n                        \"has_treatment\": false,\n                        \"status_id\": 0,\n                        \"status_name\": \"سليم\"\n                    }\n                ]\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/v1/patient?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/v1/patient?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; السابق\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/patient?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"التالي &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/v1/patient\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 1,\n        \"total\": 1\n    },\n    \"message\": \"تم جلب قائمة ألمرضى بنجاح.\"\n}"
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 14,\n                \"name\": \"عبدو\",\n                \"phone_number\": \"0944444444\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"test 8\"\n                    }\n                ],\n                \"diseases\": [\n                    {\n                        \"id\": 4,\n                        \"name\": \"test 4\"\n                    },\n                    {\n                        \"id\": 3,\n                        \"name\": \"test 3\"\n                    }\n                ],\n                \"is_banned\": true,\n                \"ban_expired_at\": null\n            },\n            {\n                \"id\": 13,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875891\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"test 8\"\n                    }\n                ],\n                \"diseases\": [\n                    {\n                        \"id\": 4,\n                        \"name\": \"test 4\"\n                    },\n                    {\n                        \"id\": 3,\n                        \"name\": \"test 3\"\n                    }\n                ],\n                \"is_banned\": true,\n                \"ban_expired_at\": \"2025-08-03T11:05:43.000000Z\"\n            },\n            {\n                \"id\": 11,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875892\",\n                \"birthdate\": \"2002-01-12\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"test 8\"\n                    }\n                ],\n                \"diseases\": [],\n                \"is_banned\": false,\n                \"ban_expired_at\": null\n            },\n            {\n                \"id\": 10,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875894\",\n                \"birthdate\": \"2002-01-12\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"dfgdgdfg\",\n                \"intake_medications\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"test 8\"\n                    }\n                ],\n                \"diseases\": [\n                    {\n                        \"id\": 4,\n                        \"name\": \"test 4\"\n                    },\n                    {\n                        \"id\": 3,\n                        \"name\": \"test 3\"\n                    }\n                ],\n                \"is_banned\": false,\n                \"ban_expired_at\": null\n            },\n            {\n                \"id\": 9,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875896\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [],\n                \"diseases\": [],\n                \"is_banned\": false,\n                \"ban_expired_at\": null\n            },\n            {\n                \"id\": 8,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875898\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [],\n                \"diseases\": [],\n                \"is_banned\": false,\n                \"ban_expired_at\": null\n            },\n            {\n                \"id\": 6,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875899\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [],\n                \"diseases\": [],\n                \"is_banned\": false,\n                \"ban_expired_at\": null\n            },\n            {\n                \"id\": 5,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875897\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [],\n                \"diseases\": [],\n                \"is_banned\": false,\n                \"ban_expired_at\": null\n            },\n            {\n                \"id\": 4,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875895\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [],\n                \"diseases\": [],\n                \"is_banned\": false,\n                \"ban_expired_at\": null\n            },\n            {\n                \"id\": 3,\n                \"name\": \"Anas\",\n                \"phone_number\": \"0957875893\",\n                \"birthdate\": \"2002-01-11\",\n                \"age\": 23,\n                \"gender\": \"male\",\n                \"job\": \"مهندس قد الدنيا\",\n                \"marital_status\": \"\",\n                \"address\": \"ضاحية قدسيا\",\n                \"social_history\": \"\",\n                \"note\": \"\",\n                \"intake_medications\": [],\n                \"diseases\": [],\n                \"is_banned\": false,\n                \"ban_expired_at\": null\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/v1/patient?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/v1/patient?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; السابق\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/patient?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"التالي &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/v1/patient\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 10,\n        \"total\": 10\n    },\n    \"message\": \"تم جلب قائمة ألمرضى بنجاح.\"\n}"
 								}
 							]
 						},
@@ -6557,7 +6497,7 @@
 									},
 									"status": "OK",
 									"code": 200,
-									"_postman_previewlanguage": "json",
+									"_postman_previewlanguage": null,
 									"header": [
 										{
 											"key": "Host",
@@ -6577,7 +6517,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Fri, 27 Jun 2025 16:58:31 GMT"
+											"value": "Sat, 02 Aug 2025 11:04:11 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -6586,10 +6526,22 @@
 										{
 											"key": "Access-Control-Allow-Origin",
 											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 10,\n        \"name\": \"Anas\",\n        \"phone_number\": \"0957875894\",\n        \"birthdate\": \"2002-01-12\",\n        \"age\": 23,\n        \"gender\": \"male\",\n        \"job\": \"مهندس قد الدنيا\",\n        \"marital_status\": \"\",\n        \"address\": \"ضاحية قدسيا\",\n        \"social_history\": \"\",\n        \"note\": \"\",\n        \"intake_medications\": [\n            {\n                \"id\": 1,\n                \"name\": \"test 8\"\n            }\n        ],\n        \"diseases\": [\n            {\n                \"id\": 4,\n                \"name\": \"test 4\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"test 3\"\n            }\n        ],\n        \"teeth\": [\n            {\n                \"number\": 11,\n                \"name\": \"ثنية علوي يمين\",\n                \"note\": \"\",\n                \"has_treatment\": 0,\n                \"status_id\": 0,\n                \"status_name\": \"سليم\"\n            },\n            {\n                \"number\": 22,\n                \"name\": \"رباعية علوي يسار\",\n                \"note\": \"\",\n                \"has_treatment\": 1,\n                \"status_id\": 0,\n                \"status_name\": \"سليم\"\n            },\n            {\n                \"number\": 34,\n                \"name\": \"ضاحك أول سفلي يسار\",\n                \"note\": \"\",\n                \"has_treatment\": 1,\n                \"status_id\": 3,\n                \"status_name\": \"تاج\"\n            },\n            {\n                \"number\": 46,\n                \"name\": \"رحى أولى سفلي يمين\",\n                \"note\": \"\",\n                \"has_treatment\": 0,\n                \"status_id\": 4,\n                \"status_name\": \"وتد\"\n            }\n        ]\n    },\n    \"message\": \"تم جلب المريض بنجاح.\"\n}"
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 10,\n        \"name\": \"Anas\",\n        \"phone_number\": \"0957875894\",\n        \"birthdate\": \"2002-01-12\",\n        \"age\": 23,\n        \"gender\": \"male\",\n        \"job\": \"مهندس قد الدنيا\",\n        \"marital_status\": \"\",\n        \"address\": \"ضاحية قدسيا\",\n        \"social_history\": \"\",\n        \"note\": \"dfgdgdfg\",\n        \"intake_medications\": [\n            {\n                \"id\": 1,\n                \"name\": \"test 8\"\n            }\n        ],\n        \"diseases\": [\n            {\n                \"id\": 4,\n                \"name\": \"test 4\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"test 3\"\n            }\n        ],\n        \"is_banned\": false,\n        \"ban_expired_at\": null\n    },\n    \"message\": \"تم جلب المريض بنجاح.\"\n}"
 								}
 							]
 						},
@@ -6663,32 +6615,60 @@
 									"body": "{\n    \"status\": 1,\n    \"data\": [],\n    \"message\": \"تم حذف المريض بنجاح.\"\n}"
 								}
 							]
-						},
+						}
+					]
+				},
+				{
+					"name": "Auth",
+					"item": [
 						{
-							"name": "update tooth note",
+							"name": "login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Parse the JSON response body\r",
+											"var jsonData = pm.response.json();\r",
+											"\r",
+											"// Set the data.token in the environment variable if it exists\r",
+											"if (pm.response.code == 200 && jsonData.data.token) {\r",
+											"    pm.environment.set(\"token\", jsonData.data.token);\r",
+											"} else {\r",
+											"    pm.environment.set(\"token\", 'not working');\r",
+											"}"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
 							"request": {
-								"method": "PATCH",
+								"method": "POST",
 								"header": [],
 								"body": {
-									"mode": "urlencoded",
-									"urlencoded": [
+									"mode": "formdata",
+									"formdata": [
 										{
-											"key": "note",
-											"value": "هذا السن سليم",
+											"key": "phone_number",
+											"value": "0936293119",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "superadmin",
 											"type": "text"
 										}
 									]
 								},
 								"url": {
-									"raw": "{{base_url}}/patient/10/tooth/11",
+									"raw": "{{base_url}}/manager/login",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
-										"patient",
-										"10",
-										"tooth",
-										"11"
+										"manager",
+										"login"
 									]
 								}
 							},
@@ -6696,33 +6676,114 @@
 								{
 									"name": "Success",
 									"originalRequest": {
-										"method": "PATCH",
+										"method": "POST",
 										"header": [],
 										"body": {
-											"mode": "urlencoded",
-											"urlencoded": [
+											"mode": "formdata",
+											"formdata": [
 												{
-													"key": "note",
-													"value": "هذا السن سليم",
+													"key": "phone_number",
+													"value": "0936293119",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "superadmin",
 													"type": "text"
 												}
 											]
 										},
 										"url": {
-											"raw": "{{base_url}}/patient/10/tooth/11",
+											"raw": "{{base_url}}/manager/login",
 											"host": [
 												"{{base_url}}"
 											],
 											"path": [
-												"patient",
-												"10",
-												"tooth",
-												"11"
+												"manager",
+												"login"
 											]
 										}
 									},
 									"status": "OK",
 									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 02 Aug 2025 11:06:57 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 17,\n        \"name\": \"zaid alshamaa\",\n        \"phone_number\": \"0936293119\",\n        \"is_verified\": 0,\n        \"created_at\": \"2025-08-02T08:05:25.000000Z\",\n        \"updated_at\": \"2025-08-02T08:05:25.000000Z\",\n        \"token\": \"17|feRkB9e9OV9CLJnrvs1XsuPVdruzEhoJHcIu73H4286c7664\",\n        \"roles\": [\n            {\n                \"id\": 1,\n                \"name\": \"manager\",\n                \"guard_name\": \"web\",\n                \"created_at\": \"2025-07-22T19:08:21.000000Z\",\n                \"updated_at\": \"2025-07-22T19:08:21.000000Z\",\n                \"pivot\": {\n                    \"model_type\": \"App\\\\Models\\\\User\",\n                    \"model_id\": 17,\n                    \"role_id\": 1\n                }\n            }\n        ],\n        \"bans\": []\n    },\n    \"message\": \"تم تسجيل الدخول بنجاح.\"\n}"
+								},
+								{
+									"name": "Wrong phone or password",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "phone_number",
+													"value": "adminnn",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "admin",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/login",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"login"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
 									"_postman_previewlanguage": "json",
 									"header": [
 										{
@@ -6743,7 +6804,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Fri, 27 Jun 2025 19:39:37 GMT"
+											"value": "Thu, 24 Jul 2025 14:11:25 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -6752,10 +6813,605 @@
 										{
 											"key": "Access-Control-Allow-Origin",
 											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"number\": 11,\n        \"name\": \"ثنية علوي يمين\",\n        \"note\": \"هذا السن سليم\",\n        \"has_treatment\": 0,\n        \"status_id\": 0,\n        \"status_name\": \"سليم\"\n    },\n    \"message\": \"تم تحديث السن بنجاح.\"\n}"
+									"body": "{\n    \"status\": 1,\n    \"data\": null,\n    \"message\": \"رقم الهاتف وكلمة المرور غير متطابقان.\"\n}"
+								},
+								{
+									"name": "Required",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "phone_number",
+													"value": "adminnn",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "password",
+													"value": "admin",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/login",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"login"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 24 Jul 2025 14:11:49 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"phone_number\": [\n            \"حقل رقم الهاتف مطلوب.\"\n        ],\n        \"password\": [\n            \"حقل كلمة المرور مطلوب.\"\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "logout",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/logout",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/logout",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"logout"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 02 Aug 2025 11:08:04 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 17,\n        \"name\": \"zaid alshamaa\",\n        \"phone_number\": \"0936293119\",\n        \"is_verified\": 0,\n        \"created_at\": \"2025-08-02T08:05:25.000000Z\",\n        \"updated_at\": \"2025-08-02T08:05:25.000000Z\",\n        \"bans\": []\n    },\n    \"message\": \"تم تسجيل الخروج بنجاح.\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Ban",
+					"item": [
+						{
+							"name": "ban an employee",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "until_value",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "until_unit",
+											"value": "days",
+											"description": "days, weeks, months",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/employee/18/ban",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"employee",
+										"18",
+										"ban"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "until_value",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "until_unit",
+													"value": "days",
+													"description": "days, weeks, months",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/employee/18/ban",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"employee",
+												"18",
+												"ban"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 02 Aug 2025 11:05:11 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 18,\n        \"image\": null,\n        \"name\": \"أنااااااااس\",\n        \"phone_number\": \"0957875891\",\n        \"birthdate\": \"2002-01-11\",\n        \"age\": 23,\n        \"gender\": \"male\",\n        \"ssn\": \"\",\n        \"address\": \"\",\n        \"roles\": [\n            \"doctor\",\n            \"patient\"\n        ],\n        \"is_banned\": true,\n        \"ban_expired_at\": \"2025-08-03T11:05:11.000000Z\"\n    },\n    \"message\": \"تم حظر الحساب بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "unban an employee",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{base_url}}/employee/25/unban",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"employee",
+										"25",
+										"unban"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": []
+										},
+										"url": {
+											"raw": "{{base_url}}/employee/18/unban",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"employee",
+												"18",
+												"unban"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 02 Aug 2025 11:05:27 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 18,\n        \"image\": null,\n        \"name\": \"أنااااااااس\",\n        \"phone_number\": \"0957875891\",\n        \"birthdate\": \"2002-01-11\",\n        \"age\": 23,\n        \"gender\": \"male\",\n        \"ssn\": \"\",\n        \"address\": \"\",\n        \"roles\": [\n            \"doctor\",\n            \"patient\"\n        ],\n        \"is_banned\": false,\n        \"ban_expired_at\": null\n    },\n    \"message\": \"تم إلغاء حظر ألحساب بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "ban a patient",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "until_value",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "until_unit",
+											"value": "days",
+											"description": "days, weeks, months",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/patient/14/ban",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient",
+										"14",
+										"ban"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "until_value",
+													"value": "1",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "until_unit",
+													"value": "days",
+													"description": "days, weeks, months",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/patient/14/ban",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient",
+												"14",
+												"ban"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 02 Aug 2025 11:06:28 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 14,\n        \"name\": \"عبدو\",\n        \"phone_number\": \"0944444444\",\n        \"birthdate\": \"2002-01-11\",\n        \"age\": 23,\n        \"gender\": \"male\",\n        \"job\": \"مهندس قد الدنيا\",\n        \"marital_status\": \"\",\n        \"address\": \"ضاحية قدسيا\",\n        \"social_history\": \"\",\n        \"note\": \"\",\n        \"intake_medications\": [\n            {\n                \"id\": 1,\n                \"name\": \"test 8\"\n            }\n        ],\n        \"diseases\": [\n            {\n                \"id\": 4,\n                \"name\": \"test 4\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"test 3\"\n            }\n        ],\n        \"is_banned\": true,\n        \"ban_expired_at\": null\n    },\n    \"message\": \"تم حظر الحساب بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "unban a patient",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/patient/14/unban",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient",
+										"14",
+										"unban"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/patient/14/unban",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient",
+												"14",
+												"unban"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 02 Aug 2025 11:06:14 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 14,\n        \"name\": \"عبدو\",\n        \"phone_number\": \"0944444444\",\n        \"birthdate\": \"2002-01-11\",\n        \"age\": 23,\n        \"gender\": \"male\",\n        \"job\": \"مهندس قد الدنيا\",\n        \"marital_status\": \"\",\n        \"address\": \"ضاحية قدسيا\",\n        \"social_history\": \"\",\n        \"note\": \"\",\n        \"intake_medications\": [\n            {\n                \"id\": 1,\n                \"name\": \"test 8\"\n            }\n        ],\n        \"diseases\": [\n            {\n                \"id\": 4,\n                \"name\": \"test 4\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"test 3\"\n            }\n        ],\n        \"is_banned\": false,\n        \"ban_expired_at\": null\n    },\n    \"message\": \"تم إلغاء حظر ألحساب بنجاح.\"\n}"
 								}
 							]
 						}
@@ -11442,344 +12098,1386 @@
 							]
 						}
 					]
+				},
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Parse the JSON response body\r",
+											"var jsonData = pm.response.json();\r",
+											"\r",
+											"// Set the data.token in the environment variable if it exists\r",
+											"if (pm.response.code == 200 && jsonData.data.token) {\r",
+											"    pm.environment.set(\"token\", jsonData.data.token);\r",
+											"} else {\r",
+											"    pm.environment.set(\"token\", 'not working');\r",
+											"}"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone_number",
+											"value": "0999999999",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "superadmin",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/doctor/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"doctor",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "phone_number",
+													"value": "0999999999",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "11111111",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/doctor/login",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"doctor",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 02 Aug 2025 11:54:02 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 19,\n        \"name\": \"zaid\",\n        \"phone_number\": \"0999999999\",\n        \"is_verified\": 0,\n        \"created_at\": \"2025-08-02T11:52:55.000000Z\",\n        \"updated_at\": \"2025-08-02T11:52:55.000000Z\",\n        \"token\": \"20|bDPHTm4Cgw65y7bF27hijBjeP0nCXUQmAoCSgwH296974792\",\n        \"roles\": [\n            {\n                \"id\": 2,\n                \"name\": \"doctor\",\n                \"guard_name\": \"web\",\n                \"created_at\": \"2025-07-22T19:08:21.000000Z\",\n                \"updated_at\": \"2025-07-22T19:08:21.000000Z\",\n                \"pivot\": {\n                    \"model_type\": \"App\\\\Models\\\\User\",\n                    \"model_id\": 19,\n                    \"role_id\": 2\n                }\n            },\n            {\n                \"id\": 4,\n                \"name\": \"receptionist\",\n                \"guard_name\": \"web\",\n                \"created_at\": \"2025-07-22T19:08:21.000000Z\",\n                \"updated_at\": \"2025-07-22T19:08:21.000000Z\",\n                \"pivot\": {\n                    \"model_type\": \"App\\\\Models\\\\User\",\n                    \"model_id\": 19,\n                    \"role_id\": 4\n                }\n            }\n        ],\n        \"bans\": []\n    },\n    \"message\": \"تم تسجيل الدخول بنجاح.\"\n}"
+								},
+								{
+									"name": "Wrong phone or password",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "phone_number",
+													"value": "adminnn",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "admin",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/login",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"login"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 24 Jul 2025 14:11:25 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": null,\n    \"message\": \"رقم الهاتف وكلمة المرور غير متطابقان.\"\n}"
+								},
+								{
+									"name": "Required",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "phone_number",
+													"value": "adminnn",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "password",
+													"value": "admin",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/login",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"login"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 24 Jul 2025 14:11:49 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"phone_number\": [\n            \"حقل رقم الهاتف مطلوب.\"\n        ],\n        \"password\": [\n            \"حقل كلمة المرور مطلوب.\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "Banned",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "phone_number",
+													"value": "0999999999",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "11111111",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/doctor/login",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"doctor",
+												"login"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 02 Aug 2025 11:55:54 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": {\n        \"error\": \"Banned\"\n    },\n    \"message\": \"عذراً, تم حظر حسابك.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "logout",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/logout",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/logout",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"logout"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 02 Aug 2025 11:08:04 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 17,\n        \"name\": \"zaid alshamaa\",\n        \"phone_number\": \"0936293119\",\n        \"is_verified\": 0,\n        \"created_at\": \"2025-08-02T08:05:25.000000Z\",\n        \"updated_at\": \"2025-08-02T08:05:25.000000Z\",\n        \"bans\": []\n    },\n    \"message\": \"تم تسجيل الخروج بنجاح.\"\n}"
+								}
+							]
+						}
+					]
 				}
 			]
 		},
 		{
 			"name": "Patient",
-			"item": []
-		},
-		{
-			"name": "Receptionist",
-			"item": []
-		},
-		{
-			"name": "Auth",
 			"item": [
 				{
-					"name": "login",
-					"event": [
+					"name": "Auth",
+					"item": [
 						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"// Parse the JSON response body\r",
-									"var jsonData = pm.response.json();\r",
-									"\r",
-									"// Set the data.token in the environment variable if it exists\r",
-									"if (pm.response.code == 200 && jsonData.data.token) {\r",
-									"    pm.environment.set(\"token\", jsonData.data.token);\r",
-									"} else {\r",
-									"    pm.environment.set(\"token\", 'not working');\r",
-									"}"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
+							"name": "login",
+							"event": [
 								{
-									"key": "phone_number",
-									"value": "admin",
-									"type": "text"
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Parse the JSON response body\r",
+											"var jsonData = pm.response.json();\r",
+											"\r",
+											"// Set the data.token in the environment variable if it exists\r",
+											"if (pm.response.code == 200 && jsonData.data.token) {\r",
+											"    pm.environment.set(\"token\", jsonData.data.token);\r",
+											"} else {\r",
+											"    pm.environment.set(\"token\", 'not working');\r",
+											"}"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone_number",
+											"value": "0999999999",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "11111111",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/patient/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "phone_number",
+													"value": "0999999999",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "11111111",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/patient/login",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 02 Aug 2025 11:59:28 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 19,\n        \"name\": \"zaid\",\n        \"phone_number\": \"0999999999\",\n        \"is_verified\": 0,\n        \"created_at\": \"2025-08-02T11:52:55.000000Z\",\n        \"updated_at\": \"2025-08-02T11:52:55.000000Z\",\n        \"token\": \"26|mkShfepIYDGHjDSafKit89FXcu1cYX7BkDAxKVQlf01516ea\",\n        \"roles\": [\n            {\n                \"id\": 2,\n                \"name\": \"doctor\",\n                \"guard_name\": \"web\",\n                \"created_at\": \"2025-07-22T19:08:21.000000Z\",\n                \"updated_at\": \"2025-07-22T19:08:21.000000Z\",\n                \"pivot\": {\n                    \"model_type\": \"App\\\\Models\\\\User\",\n                    \"model_id\": 19,\n                    \"role_id\": 2\n                }\n            },\n            {\n                \"id\": 4,\n                \"name\": \"receptionist\",\n                \"guard_name\": \"web\",\n                \"created_at\": \"2025-07-22T19:08:21.000000Z\",\n                \"updated_at\": \"2025-07-22T19:08:21.000000Z\",\n                \"pivot\": {\n                    \"model_type\": \"App\\\\Models\\\\User\",\n                    \"model_id\": 19,\n                    \"role_id\": 4\n                }\n            },\n            {\n                \"id\": 3,\n                \"name\": \"patient\",\n                \"guard_name\": \"web\",\n                \"created_at\": \"2025-07-22T19:08:21.000000Z\",\n                \"updated_at\": \"2025-07-22T19:08:21.000000Z\",\n                \"pivot\": {\n                    \"model_type\": \"App\\\\Models\\\\User\",\n                    \"model_id\": 19,\n                    \"role_id\": 3\n                }\n            }\n        ],\n        \"bans\": []\n    },\n    \"message\": \"تم تسجيل الدخول بنجاح.\"\n}"
 								},
 								{
-									"key": "password",
-									"value": "admin",
-									"type": "text"
+									"name": "Wrong phone or password",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "phone_number",
+													"value": "adminnn",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "admin",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/login",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"login"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 24 Jul 2025 14:11:25 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": null,\n    \"message\": \"رقم الهاتف وكلمة المرور غير متطابقان.\"\n}"
+								},
+								{
+									"name": "Required",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "phone_number",
+													"value": "adminnn",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "password",
+													"value": "admin",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/login",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"login"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 24 Jul 2025 14:11:49 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"phone_number\": [\n            \"حقل رقم الهاتف مطلوب.\"\n        ],\n        \"password\": [\n            \"حقل كلمة المرور مطلوب.\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "Banned",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "phone_number",
+													"value": "0999999999",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "11111111",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/patient/login",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient",
+												"login"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 02 Aug 2025 11:59:46 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": {\n        \"error\": \"Banned\"\n    },\n    \"message\": \"عذراً, تم حظر حسابك.\"\n}"
 								}
 							]
 						},
-						"url": {
-							"raw": "{{base_url}}/login",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"login"
+						{
+							"name": "logout",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/logout",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/logout",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"logout"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 02 Aug 2025 11:08:04 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 17,\n        \"name\": \"zaid alshamaa\",\n        \"phone_number\": \"0936293119\",\n        \"is_verified\": 0,\n        \"created_at\": \"2025-08-02T08:05:25.000000Z\",\n        \"updated_at\": \"2025-08-02T08:05:25.000000Z\",\n        \"bans\": []\n    },\n    \"message\": \"تم تسجيل الخروج بنجاح.\"\n}"
+								}
 							]
-						}
-					},
-					"response": [
-						{
-							"name": "Success",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "phone_number",
-											"value": "admin",
-											"type": "text"
-										},
-										{
-											"key": "password",
-											"value": "admin",
-											"type": "text"
-										}
-									]
-								},
-								"url": {
-									"raw": "{{base_url}}/login",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"login"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.2.12"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Date",
-									"value": "Thu, 24 Jul 2025 14:10:31 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Access-Control-Allow-Methods",
-									"value": "POST, GET, OPTIONS, PUT, DELETE"
-								},
-								{
-									"key": "Access-Control-Allow-Headers",
-									"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
-								},
-								{
-									"key": "Access-Control-Allow-Credentials",
-									"value": "true"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"admin\",\n        \"phone_number\": \"admin\",\n        \"is_verified\": 0,\n        \"created_at\": \"2025-06-22T16:11:50.000000Z\",\n        \"updated_at\": \"2025-06-22T16:11:50.000000Z\",\n        \"token\": \"4|A7hOCZP0XU1aBusjyZCncgHcTaQDHgyCitOn1b21c66bce46\"\n    },\n    \"message\": \"تم تسجيل الدخول بنجاح.\"\n}"
-						},
-						{
-							"name": "Wrong phone or password",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "phone_number",
-											"value": "adminnn",
-											"type": "text"
-										},
-										{
-											"key": "password",
-											"value": "admin",
-											"type": "text"
-										}
-									]
-								},
-								"url": {
-									"raw": "{{base_url}}/login",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"login"
-									]
-								}
-							},
-							"status": "Unauthorized",
-							"code": 401,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.2.12"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Date",
-									"value": "Thu, 24 Jul 2025 14:11:25 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Access-Control-Allow-Methods",
-									"value": "POST, GET, OPTIONS, PUT, DELETE"
-								},
-								{
-									"key": "Access-Control-Allow-Headers",
-									"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
-								},
-								{
-									"key": "Access-Control-Allow-Credentials",
-									"value": "true"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"status\": 1,\n    \"data\": null,\n    \"message\": \"رقم الهاتف وكلمة المرور غير متطابقان.\"\n}"
-						},
-						{
-							"name": "Required",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "phone_number",
-											"value": "adminnn",
-											"type": "text",
-											"disabled": true
-										},
-										{
-											"key": "password",
-											"value": "admin",
-											"type": "text",
-											"disabled": true
-										}
-									]
-								},
-								"url": {
-									"raw": "{{base_url}}/login",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"login"
-									]
-								}
-							},
-							"status": "Unprocessable Content",
-							"code": 422,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Host",
-									"value": "localhost:8000"
-								},
-								{
-									"key": "Connection",
-									"value": "close"
-								},
-								{
-									"key": "X-Powered-By",
-									"value": "PHP/8.2.12"
-								},
-								{
-									"key": "Cache-Control",
-									"value": "no-cache, private"
-								},
-								{
-									"key": "Date",
-									"value": "Thu, 24 Jul 2025 14:11:49 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Access-Control-Allow-Methods",
-									"value": "POST, GET, OPTIONS, PUT, DELETE"
-								},
-								{
-									"key": "Access-Control-Allow-Headers",
-									"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
-								},
-								{
-									"key": "Access-Control-Allow-Credentials",
-									"value": "true"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"phone_number\": [\n            \"حقل رقم الهاتف مطلوب.\"\n        ],\n        \"password\": [\n            \"حقل كلمة المرور مطلوب.\"\n        ]\n    }\n}"
 						}
 					]
-				},
-				{
-					"name": "logout",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{base_url}}/logout",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"logout"
-							]
-						}
-					},
-					"response": []
 				}
 			]
 		},
 		{
-			"name": "test",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{base_url}}/test2",
-					"host": [
-						"{{base_url}}"
-					],
-					"path": [
-						"test2"
+			"name": "Receptionist",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Parse the JSON response body\r",
+											"var jsonData = pm.response.json();\r",
+											"\r",
+											"// Set the data.token in the environment variable if it exists\r",
+											"if (pm.response.code == 200 && jsonData.data.token) {\r",
+											"    pm.environment.set(\"token\", jsonData.data.token);\r",
+											"} else {\r",
+											"    pm.environment.set(\"token\", 'not working');\r",
+											"}"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone_number",
+											"value": "0999999999",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "11111111",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/receptionist/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"receptionist",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "phone_number",
+													"value": "0999999999",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "11111111",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/receptionist/login",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"receptionist",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 02 Aug 2025 11:58:10 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 19,\n        \"name\": \"zaid\",\n        \"phone_number\": \"0999999999\",\n        \"is_verified\": 0,\n        \"created_at\": \"2025-08-02T11:52:55.000000Z\",\n        \"updated_at\": \"2025-08-02T11:52:55.000000Z\",\n        \"token\": \"25|scokgc2MMNFE0xXBmvuoeMUIXFpWINlM6FRSR4zm3ec21783\",\n        \"roles\": [\n            {\n                \"id\": 2,\n                \"name\": \"doctor\",\n                \"guard_name\": \"web\",\n                \"created_at\": \"2025-07-22T19:08:21.000000Z\",\n                \"updated_at\": \"2025-07-22T19:08:21.000000Z\",\n                \"pivot\": {\n                    \"model_type\": \"App\\\\Models\\\\User\",\n                    \"model_id\": 19,\n                    \"role_id\": 2\n                }\n            },\n            {\n                \"id\": 4,\n                \"name\": \"receptionist\",\n                \"guard_name\": \"web\",\n                \"created_at\": \"2025-07-22T19:08:21.000000Z\",\n                \"updated_at\": \"2025-07-22T19:08:21.000000Z\",\n                \"pivot\": {\n                    \"model_type\": \"App\\\\Models\\\\User\",\n                    \"model_id\": 19,\n                    \"role_id\": 4\n                }\n            }\n        ],\n        \"bans\": []\n    },\n    \"message\": \"تم تسجيل الدخول بنجاح.\"\n}"
+								},
+								{
+									"name": "Wrong phone or password",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "phone_number",
+													"value": "adminnn",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "admin",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/login",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"login"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 24 Jul 2025 14:11:25 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": null,\n    \"message\": \"رقم الهاتف وكلمة المرور غير متطابقان.\"\n}"
+								},
+								{
+									"name": "Required",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "phone_number",
+													"value": "adminnn",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "password",
+													"value": "admin",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/login",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"login"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 24 Jul 2025 14:11:49 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"phone_number\": [\n            \"حقل رقم الهاتف مطلوب.\"\n        ],\n        \"password\": [\n            \"حقل كلمة المرور مطلوب.\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "Banned",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "phone_number",
+													"value": "0999999999",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "11111111",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/receptionist/login",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"receptionist",
+												"login"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 02 Aug 2025 11:57:08 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": {\n        \"error\": \"Banned\"\n    },\n    \"message\": \"عذراً, تم حظر حسابك.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "logout",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/logout",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/logout",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"logout"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 02 Aug 2025 11:08:04 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 17,\n        \"name\": \"zaid alshamaa\",\n        \"phone_number\": \"0936293119\",\n        \"is_verified\": 0,\n        \"created_at\": \"2025-08-02T08:05:25.000000Z\",\n        \"updated_at\": \"2025-08-02T08:05:25.000000Z\",\n        \"bans\": []\n    },\n    \"message\": \"تم تسجيل الخروج بنجاح.\"\n}"
+								}
+							]
+						}
 					]
 				}
-			},
-			"response": []
+			]
 		}
 	],
 	"auth": {

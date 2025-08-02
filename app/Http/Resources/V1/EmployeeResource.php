@@ -25,6 +25,8 @@ class EmployeeResource extends JsonResource
             'ssn' => (string)$this->ssn,
             'address' => (string)$this->address,
             'roles' => $this->user->roles->pluck('name'),
+            'is_banned' => $this->user->isBanned(),
+            'ban_expired_at' => $this->user->bans()->latest()->first()->expired_at ?? null,
         ];
     }
 }
