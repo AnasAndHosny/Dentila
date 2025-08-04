@@ -5,6 +5,7 @@ namespace App\Models;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -33,6 +34,13 @@ class Patient extends Model
         'birthdate' => 'date:Y-m-d',
     ];
 
+    protected static function booted()
+    {
+        static::created(function (Patient $patient) {
+            $patient->account()->create();
+        });
+    }
+
     /**
      * Accessor for the birthday attribute.
      */
@@ -58,6 +66,20 @@ class Patient extends Model
     public function getAgeAttribute()
     {
         return Carbon::parse($this->attributes['birthdate'])->age;
+    }
+
+    public function scopeHasDue($query)
+    {
+        return $query->whereHas('account', function ($q) {
+            $q->where('balance', '<', 0);
+        });
+    }
+
+    public function scopeClearBalance($query)
+    {
+        return $query->whereHas('account', function ($q) {
+            $q->where('balance', '>=', 0);
+        });
     }
 
     public function user(): BelongsTo
@@ -93,5 +115,10 @@ class Patient extends Model
     public function medicationPlans(): HasMany
     {
         return $this->hasMany(PatientMedicationPlan::class);
+    }
+
+    public function account(): HasOne
+    {
+        return $this->hasOne(PatientAccount::class);
     }
 }

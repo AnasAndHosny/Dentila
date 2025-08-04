@@ -1,26 +1,26 @@
 <?php
 
+use App\Http\Middleware\Cors;
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\V1\UserBanned;
 use App\Http\Controllers\Api\V1\AuthController;
-use App\Http\Controllers\Api\V1\CategoryController;
+use App\Http\Controllers\Api\V1\ToothController;
 use App\Http\Controllers\Api\V1\DiseaseController;
+use App\Http\Controllers\Api\V1\PatientController;
+use App\Http\Controllers\Api\V1\CategoryController;
 use App\Http\Controllers\Api\V1\EmployeeController;
-use App\Http\Controllers\Api\V1\IntakeMedicationController;
 use App\Http\Controllers\Api\V1\MedicationController;
 use App\Http\Controllers\Api\V1\ToothStatusController;
 use App\Http\Controllers\Api\V1\TreatmentNoteController;
 use App\Http\Controllers\Api\V1\TreatmentPlanController;
 use App\Http\Controllers\Api\V1\TreatmentStepController;
 use App\Http\Controllers\Api\V1\MedicationPlanController;
-use App\Http\Controllers\Api\V1\PatientController;
-use App\Http\Controllers\Api\V1\PatientMedicationPlanController;
+use App\Http\Controllers\Api\V1\PatientAccountController;
+use App\Http\Controllers\Api\V1\IntakeMedicationController;
 use App\Http\Controllers\Api\V1\PatientTreatmentController;
-use App\Http\Controllers\Api\V1\PatientTreatmentNoteController;
-use App\Http\Controllers\Api\V1\ToothController;
 use App\Http\Controllers\Api\V1\TreatmentSubstepController;
-use App\Http\Middleware\Cors;
-use App\Http\Middleware\V1\UserBanned;
-use App\Models\Employee;
+use App\Http\Controllers\Api\V1\PatientTreatmentNoteController;
+use App\Http\Controllers\Api\V1\PatientMedicationPlanController;
 
 Route::prefix('v1')->middleware([Cors::class])->group(function () {
     Route::get('test', function () {
@@ -120,11 +120,18 @@ Route::prefix('v1')->middleware([Cors::class])->group(function () {
 
         Route::prefix('patient')->group(function () {
             Route::patch('{patient}/tooth/{tooth}', [ToothController::class, 'update']);
+
             Route::get('{patient}/treatment', [PatientTreatmentController::class, 'index']);
+
             Route::get('{patient}/note', [PatientTreatmentNoteController::class, 'index']);
             Route::post('{patient}/note', [PatientTreatmentNoteController::class, 'store']);
+
             Route::get('{patient}/medication', [PatientMedicationPlanController::class, 'index']);
             Route::post('{patient}/medication', [PatientMedicationPlanController::class, 'store']);
+
+            Route::get('{patient}/account/transactions', [PatientAccountController::class, 'transactions']);
+            Route::post('{patient}/account/deposit', [PatientAccountController::class, 'deposit']);
+            Route::post('{patient}/account/withdraw', [PatientAccountController::class, 'withdraw']);
         });
 
         Route::prefix('patient-treatment')->controller(PatientTreatmentController::class)->group(function () {

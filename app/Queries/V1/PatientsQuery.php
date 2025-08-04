@@ -2,6 +2,7 @@
 
 namespace App\Queries\V1;
 
+use App\Filters\V1\HasDueFilter;
 use Spatie\QueryBuilder\QueryBuilder;
 use App\Filters\V1\HasTreatmentFilter;
 use Spatie\QueryBuilder\AllowedFilter;
@@ -17,6 +18,7 @@ class PatientsQuery extends QueryBuilder
             ->allowedFilters([
                 AllowedFilter::custom('search', new PatientSearchFilter),
                 AllowedFilter::custom('has_treatment', new HasTreatmentFilter),
+                AllowedFilter::custom('has_due', new HasDueFilter),
             ]);
     }
 }

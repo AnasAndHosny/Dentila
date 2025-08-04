@@ -24,51 +24,74 @@ class PatientTreatmentRepository
 
     public function create($request)
     {
-        $patient = Patient::find($request['patient_id']);
-        $treatmentPlan = TreatmentPlan::find($request['treatment_plan_id']);
+        return DB::transaction(function () use ($request) {
+            $patient = Patient::find($request['patient_id']);
+            $treatmentPlan = TreatmentPlan::find($request['treatment_plan_id']);
 
-        $patientTreatment = $treatmentPlan->toArray();
-        $patientTreatment['main_complaint'] = $request['main_complaint'];
-        $patientTreatment['diagnoses'] = $request['diagnoses'];
+            $patientTreatment = $treatmentPlan->toArray();
+            $patientTreatment['main_complaint'] = $request['main_complaint'];
+            $patientTreatment['diagnoses'] = $request['diagnoses'];
 
-        $patientTreatment = $patient->Treatments()->create($patientTreatment);
+            $patientTreatment = $patient->Treatments()->create($patientTreatment);
 
-        foreach ($request['teeth'] as $tooth) {
-            $toothId = Tooth::where('number', $tooth)->first()->id;
-            $patientTooth = PatientTooth::query()
-                ->where('patient_id', $request['patient_id'])
-                ->where('tooth_id', $toothId)
-                ->first();
+            $patient->account->applyTransaction(
+                type: 'debit',
+                amount: $patientTreatment->cost,
+                treatmentId: $patientTreatment->id,
+                note: 'علاج جديد: ' . $patientTreatment->name
+            );
 
-            if (!$patientTooth) {
-                $patientTooth = PatientTooth::create([
-                    'patient_id' => $request['patient_id'],
-                    'tooth_id' => $toothId,
-                ]);
+            foreach ($request['teeth'] as $tooth) {
+                $toothId = Tooth::where('number', $tooth)->first()->id;
+                $patientTooth = PatientTooth::query()
+                    ->where('patient_id', $request['patient_id'])
+                    ->where('tooth_id', $toothId)
+                    ->first();
+
+                if (!$patientTooth) {
+                    $patientTooth = PatientTooth::create([
+                        'patient_id' => $request['patient_id'],
+                        'tooth_id' => $toothId,
+                    ]);
+                }
+
+                $patientTreatment->patientTeeth()->attach($patientTooth);
             }
 
-            $patientTreatment->patientTeeth()->attach($patientTooth);
-        }
+            foreach ($treatmentPlan->treatmentSteps as $treatmentPlanStep) {
+                $treatmentStep = $patientTreatment->steps()->create($treatmentPlanStep->toArray());
 
-        foreach ($treatmentPlan->treatmentSteps as $treatmentPlanStep) {
-            $treatmentStep = $patientTreatment->steps()->create($treatmentPlanStep->toArray());
-
-            foreach ($treatmentPlanStep->treatmentSubsteps as $treatmentPlanSubstep) {
-                $treatmentStep->substeps()->create($treatmentPlanSubstep->toArray());
+                foreach ($treatmentPlanStep->treatmentSubsteps as $treatmentPlanSubstep) {
+                    $treatmentStep->substeps()->create($treatmentPlanSubstep->toArray());
+                }
             }
-        }
-        return $patientTreatment;
+            return $patientTreatment;
+        });
     }
 
     public function update($request, PatientTreatment $patientTreatment)
     {
         return DB::transaction(function () use ($request, $patientTreatment) {
+            $oldCost = $patientTreatment->cost;
+
             $patientTreatment->update([
                 'name' => $request['name'],
                 'cost' => $request['cost'],
                 'main_complaint' => $request['main_complaint'],
                 'diagnoses' => $request['diagnoses'],
             ]);
+
+            $diff = $patientTreatment->cost - $oldCost;
+
+            if ($diff != 0) {
+                $type = $diff > 0 ? 'debit' : 'credit';
+                $patientTreatment->patient->account->applyTransaction(
+                    type: $type,
+                    amount: abs($diff),
+                    treatmentId: $patientTreatment->id,
+                    note: 'تعديل كلفة العلاج: ' . $patientTreatment->name
+                );
+            }
 
             $teeth = Arr::pluck($request['teeth'], 'number');
             $patientTreatment->patientTeeth()->whereNotIn('tooth_id', $teeth)->detach();
@@ -170,6 +193,13 @@ class PatientTreatmentRepository
 
     public function delete(PatientTreatment $patientTreatment)
     {
+        $patientTreatment->patient->account->applyTransaction(
+            type: 'credit',
+            amount: $patientTreatment->cost,
+            treatmentId: $patientTreatment->id,
+            note: 'إلغاء خطة العلاج: "' . $patientTreatment->name . '" واسترجاع المبلغ المستحق.'
+        );
+
         return $patientTreatment->delete();
     }
 

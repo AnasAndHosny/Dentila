@@ -33,6 +33,7 @@ class DatabaseSeeder extends Seeder
             ToothSeeder::class,
             PatientTreatmentSeeder::class,
             EmployeeSeeder::class,
+            PatientAccountSeeder::class,
         ]);
     }
 }

@@ -99,5 +99,8 @@
     "patient":"المريض",
     "tooth":"السن",
     "patient treatments":"علاجات المريض",
-    "patient treatment":"علاج المريض"
+    "patient treatment":"علاج المريض",
+    "patient transactions":"دفعات المريض",
+    "deposit":"عملية الإيداع",
+    "withdraw":"عملية السحب"
 }

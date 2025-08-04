@@ -39,6 +39,11 @@ class PatientTreatment extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function patient(): BelongsTo
+    {
+        return $this->belongsTo(Patient::class);
+    }
+
     public function steps(): HasMany
     {
         return $this->hasMany(related: PatientTreatmentStep::class)
