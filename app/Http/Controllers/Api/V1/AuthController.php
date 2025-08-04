@@ -86,4 +86,20 @@ class AuthController extends Controller
             $this->userService->unban($patient)
         );
     }
+
+    public function employeeProfile(): JsonResponse
+    {
+        return $this->handleService(
+            fn() =>
+            $this->userService->employeeProfile()
+        );
+    }
+
+    public function patientProfile(): JsonResponse
+    {
+        return $this->handleService(
+            fn() =>
+            $this->userService->patientProfile()
+        );
+    }
 }

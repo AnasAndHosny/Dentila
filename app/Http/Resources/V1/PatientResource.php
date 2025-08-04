@@ -26,7 +26,7 @@ class PatientResource extends JsonResource
             'marital_status' => (string)$this->marital_status,
             'address' => (string)$this->address,
             'social_history' => (string)$this->social_history,
-            'note' => (string)$this->note,
+            'note' => $this->when(!$request->user()->hasRole('patient'), (string)$this->note),
             'intake_medications' => IntakeMedicationResource::collection($this->intakeMedications),
             'diseases' => DiseaseResource::collection($this->diseases),
             'teeth' => $this->when($request->user()->hasRole('doctor'), PatientToothResource::collection($this->teeth)),

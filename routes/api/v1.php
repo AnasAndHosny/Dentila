@@ -36,6 +36,8 @@ Route::prefix('v1')->middleware([Cors::class])->group(function () {
             Route::post('patient/{patient}/ban', 'patientBan');
             Route::get('patient/{patient}/unban', 'patientUnban');
             Route::get('logout', 'logout');
+            Route::get('employee/profile', 'employeeProfile');
+            Route::get('patient/profile', 'patientProfile');
         });
 
         Route::prefix('medication')->controller(MedicationController::class)->group(function () {

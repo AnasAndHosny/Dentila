@@ -90,4 +90,26 @@ class UserService
         $code = 200;
         return ['data' => $model, 'message' => $message, 'code' => $code];
     }
+
+    public function employeeProfile(): array
+    {
+        $employee = auth()->user()->employee;
+
+        $employee = new EmployeeResource($employee);
+
+        $message = __('messages.show_success', ['class' => __('employee')]);
+        $code = 200;
+        return ['data' => $employee, 'message' => $message, 'code' => $code];
+    }
+
+    public function patientProfile(): array
+    {
+        $patient = auth()->user()->patient;
+
+        $patient = new PatientResource($patient);
+
+        $message = __('messages.show_success', ['class' => __('patient')]);
+        $code = 200;
+        return ['data' => $patient, 'message' => $message, 'code' => $code];
+    }
 }
