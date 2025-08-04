@@ -5,7 +5,7 @@
 		"description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Scripts\" tab**\n\nAdding tests to your requests can help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/fa30ea0a-373d-4545-a668-e7b283cca343/aW1hZ2UucG5n\" width=\"2162\" height=\"1530\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n    \n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "30807483",
-		"_collection_link": "https://blue-shadow-113022.postman.co/workspace/Laravel-Projects~1973ad45-8feb-4ba3-93d8-ab61227c2019/collection/30807483-e2d6202e-6bfc-4c7f-b828-f7608a198a51?action=share&source=collection_link&creator=30807483"
+		"_collection_link": "https://blue-shadow-113022.postman.co/workspace/1973ad45-8feb-4ba3-93d8-ab61227c2019/collection/30807483-e2d6202e-6bfc-4c7f-b828-f7608a198a51?action=share&source=collection_link&creator=30807483"
 	},
 	"item": [
 		{
@@ -48,11 +48,14 @@
 											}
 										],
 										"url": {
-											"raw": "{{base_url}}/medication",
+											"raw": "localhost:8000/api/v1/medication",
 											"host": [
-												"{{base_url}}"
+												"localhost"
 											],
+											"port": "8000",
 											"path": [
+												"api",
+												"v1",
 												"medication"
 											]
 										}
@@ -169,11 +172,14 @@
 											]
 										},
 										"url": {
-											"raw": "{{base_url}}/medication",
+											"raw": "localhost:8000/api/v1/medication",
 											"host": [
-												"{{base_url}}"
+												"localhost"
 											],
+											"port": "8000",
 											"path": [
+												"api",
+												"v1",
 												"medication"
 											]
 										}
@@ -408,11 +414,14 @@
 											}
 										],
 										"url": {
-											"raw": "{{base_url}}/medication/2",
+											"raw": "localhost:8000/api/v1/medication/2",
 											"host": [
-												"{{base_url}}"
+												"localhost"
 											],
+											"port": "8000",
 											"path": [
+												"api",
+												"v1",
 												"medication",
 												"2"
 											]
@@ -545,11 +554,14 @@
 											]
 										},
 										"url": {
-											"raw": "{{base_url}}/medication/1",
+											"raw": "localhost:8000/api/v1/medication/1",
 											"host": [
-												"{{base_url}}"
+												"localhost"
 											],
+											"port": "8000",
 											"path": [
+												"api",
+												"v1",
 												"medication",
 												"1"
 											]
@@ -713,11 +725,14 @@
 											}
 										],
 										"url": {
-											"raw": "{{base_url}}/medication/2",
+											"raw": "localhost:8000/api/v1/medication/2",
 											"host": [
-												"{{base_url}}"
+												"localhost"
 											],
+											"port": "8000",
 											"path": [
+												"api",
+												"v1",
 												"medication",
 												"2"
 											]
@@ -797,11 +812,14 @@
 											}
 										],
 										"url": {
-											"raw": "{{base_url}}/medication/5/plans",
+											"raw": "localhost:8000/api/v1/medication/5/plans",
 											"host": [
-												"{{base_url}}"
+												"localhost"
 											],
+											"port": "8000",
 											"path": [
+												"api",
+												"v1",
 												"medication",
 												"5",
 												"plans"
@@ -885,11 +903,14 @@
 											}
 										],
 										"url": {
-											"raw": "{{base_url}}/medication-plan",
+											"raw": "localhost:8000/api/v1/medication-plan",
 											"host": [
-												"{{base_url}}"
+												"localhost"
 											],
+											"port": "8000",
 											"path": [
+												"api",
+												"v1",
 												"medication-plan"
 											]
 										}
@@ -9289,7 +9310,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{base_url}}/patient/13/treatment?filter[case]=in_progress&filter[tooth]=13",
+											"raw": "{{base_url}}/patient/13/treatment",
 											"host": [
 												"{{base_url}}"
 											],
@@ -9302,18 +9323,20 @@
 												{
 													"key": "filter[case]",
 													"value": "in_progress",
-													"description": "completed, in_progress"
+													"description": "completed, in_progress",
+													"disabled": true
 												},
 												{
 													"key": "filter[tooth]",
-													"value": "13"
+													"value": "13",
+													"disabled": true
 												}
 											]
 										}
 									},
 									"status": "OK",
 									"code": 200,
-									"_postman_previewlanguage": "json",
+									"_postman_previewlanguage": null,
 									"header": [
 										{
 											"key": "Host",
@@ -9333,7 +9356,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Fri, 25 Jul 2025 17:28:29 GMT"
+											"value": "Mon, 04 Aug 2025 01:02:16 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -9357,7 +9380,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 16,\n                \"name\": \"الخطة بدي أسندها لمريض\",\n                \"category\": {\n                    \"id\": 1,\n                    \"name\": \"first category\"\n                },\n                \"cost\": 150000,\n                \"main_complaint\": \"شكوى\",\n                \"diagnoses\": \"تشخيص\",\n                \"finished\": 0,\n                \"complete_percentage\": 50,\n                \"teeth\": [\n                    {\n                        \"number\": 13,\n                        \"name\": \"ناب علوي يمين\"\n                    },\n                    {\n                        \"number\": 14,\n                        \"name\": \"ضاحك أول علوي يمين\"\n                    }\n                ],\n                \"steps\": [\n                    {\n                        \"id\": 29,\n                        \"name\": \"ألمرحلة الأولى\",\n                        \"queue\": 1,\n                        \"optional\": 1,\n                        \"finished\": 1,\n                        \"note\": \"\",\n                        \"treatment_substeps\": []\n                    },\n                    {\n                        \"id\": 30,\n                        \"name\": \"ألمرحلة الثانية\",\n                        \"queue\": 2,\n                        \"optional\": 0,\n                        \"finished\": 0,\n                        \"note\": \"\",\n                        \"treatment_substeps\": [\n                            {\n                                \"id\": 52,\n                                \"name\": \"ألمرحلة تجريب\",\n                                \"queue\": 8,\n                                \"optional\": 0,\n                                \"finished\": 0,\n                                \"note\": \"\"\n                            }\n                        ]\n                    }\n                ]\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/v1/patient/13/treatment?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/v1/patient/13/treatment?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; السابق\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/patient/13/treatment?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"التالي &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/v1/patient/13/treatment\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 1,\n        \"total\": 1\n    },\n    \"message\": \"تم جلب قائمة علاجات المريض بنجاح.\"\n}"
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 16,\n                \"name\": \"الخطة بدي أسندها لمريض\",\n                \"category\": {\n                    \"id\": 1,\n                    \"name\": \"first category\"\n                },\n                \"cost\": 150000,\n                \"main_complaint\": \"شكوى\",\n                \"diagnoses\": \"تشخيص\",\n                \"finished\": 1,\n                \"complete_percentage\": 100,\n                \"teeth\": [\n                    {\n                        \"number\": 44,\n                        \"name\": \"ضاحك أول سفلي يمين\"\n                    },\n                    {\n                        \"number\": 45,\n                        \"name\": \"ضاحك ثاني سفلي يمين\"\n                    }\n                ],\n                \"steps\": [\n                    {\n                        \"id\": 29,\n                        \"name\": \"ألمرحلة الأولى\",\n                        \"queue\": 1,\n                        \"optional\": 1,\n                        \"finished\": 1,\n                        \"note\": null,\n                        \"treatment_note\": {\n                            \"id\": 1,\n                            \"title\": \"treat 4\",\n                            \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                            \"duration_value\": 234,\n                            \"duration_unit\": \"days\"\n                        },\n                        \"medication_plan\": {\n                            \"id\": 1,\n                            \"medication\": {\n                                \"id\": 1,\n                                \"image\": null,\n                                \"name\": \"medication 1\",\n                                \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                            },\n                            \"dose\": \"حبة كل 24 ساعة\",\n                            \"duration_value\": 4,\n                            \"duration_unit\": \"weeks\"\n                        },\n                        \"treatment_substeps\": []\n                    },\n                    {\n                        \"id\": 30,\n                        \"name\": \"ألمرحلة الثانية\",\n                        \"queue\": 2,\n                        \"optional\": 0,\n                        \"finished\": 1,\n                        \"note\": null,\n                        \"treatment_note\": {\n                            \"id\": 1,\n                            \"title\": \"treat 4\",\n                            \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                            \"duration_value\": 234,\n                            \"duration_unit\": \"days\"\n                        },\n                        \"medication_plan\": {\n                            \"id\": 1,\n                            \"medication\": {\n                                \"id\": 1,\n                                \"image\": null,\n                                \"name\": \"medication 1\",\n                                \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                            },\n                            \"dose\": \"حبة كل 24 ساعة\",\n                            \"duration_value\": 4,\n                            \"duration_unit\": \"weeks\"\n                        },\n                        \"treatment_substeps\": [\n                            {\n                                \"id\": 52,\n                                \"name\": \"ألمرحلة تجريب\",\n                                \"queue\": 8,\n                                \"optional\": 0,\n                                \"finished\": 1,\n                                \"note\": null\n                            },\n                            {\n                                \"id\": 71,\n                                \"name\": \"ألمرحلة تجريب\",\n                                \"queue\": 8,\n                                \"optional\": 0,\n                                \"finished\": 0,\n                                \"note\": null\n                            }\n                        ]\n                    }\n                ]\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/v1/patient/13/treatment?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/v1/patient/13/treatment?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; السابق\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/patient/13/treatment?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"التالي &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/v1/patient/13/treatment\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 1,\n        \"total\": 1\n    },\n    \"message\": \"تم جلب قائمة علاجات المريض بنجاح.\"\n}"
 								}
 							]
 						},
@@ -9468,7 +9491,7 @@
 									},
 									"status": "Created",
 									"code": 201,
-									"_postman_previewlanguage": "json",
+									"_postman_previewlanguage": null,
 									"header": [
 										{
 											"key": "Host",
@@ -9488,7 +9511,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Sun, 20 Jul 2025 16:23:57 GMT"
+											"value": "Mon, 04 Aug 2025 01:02:39 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -9512,7 +9535,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 9,\n        \"name\": \"الخطة بدي أسندها لمريض\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 150000,\n        \"main_complaint\": \"شكوى\",\n        \"diagnoses\": \"تشخيص\",\n        \"finished\": 0,\n        \"complete_percentage\": 0,\n        \"teeth\": [\n            {\n                \"number\": 44,\n                \"name\": \"ضاحك أول سفلي يمين\"\n            },\n            {\n                \"number\": 45,\n                \"name\": \"ضاحك ثاني سفلي يمين\"\n            }\n        ],\n        \"steps\": [\n            {\n                \"id\": 17,\n                \"name\": \"ألمرحلة الأولى\",\n                \"queue\": 1,\n                \"optional\": 1,\n                \"finished\": 0,\n                \"note\": \"\",\n                \"treatment_substeps\": []\n            },\n            {\n                \"id\": 18,\n                \"name\": \"ألمرحلة الثانية\",\n                \"queue\": 2,\n                \"optional\": 0,\n                \"finished\": 0,\n                \"note\": \"\",\n                \"treatment_substeps\": [\n                    {\n                        \"id\": 42,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 0,\n                        \"finished\": 0,\n                        \"note\": \"\"\n                    }\n                ]\n            }\n        ]\n    },\n    \"message\": \"تم إنشاء علاج المريض بنجاح.\"\n}"
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 24,\n        \"name\": \"الخطة بدي أسندها لمريض\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 150000,\n        \"main_complaint\": \"شكوى\",\n        \"diagnoses\": \"تشخيص\",\n        \"finished\": 0,\n        \"complete_percentage\": 0,\n        \"teeth\": [\n            {\n                \"number\": 44,\n                \"name\": \"ضاحك أول سفلي يمين\"\n            },\n            {\n                \"number\": 45,\n                \"name\": \"ضاحك ثاني سفلي يمين\"\n            }\n        ],\n        \"steps\": [\n            {\n                \"id\": 45,\n                \"name\": \"ألمرحلة الأولى\",\n                \"queue\": 1,\n                \"optional\": 1,\n                \"finished\": 0,\n                \"note\": null,\n                \"treatment_note\": {\n                    \"id\": 1,\n                    \"title\": \"treat 4\",\n                    \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                    \"duration_value\": 234,\n                    \"duration_unit\": \"days\"\n                },\n                \"medication_plan\": {\n                    \"id\": 1,\n                    \"medication\": {\n                        \"id\": 1,\n                        \"image\": null,\n                        \"name\": \"medication 1\",\n                        \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                    },\n                    \"dose\": \"حبة كل 24 ساعة\",\n                    \"duration_value\": 4,\n                    \"duration_unit\": \"weeks\"\n                },\n                \"treatment_substeps\": []\n            },\n            {\n                \"id\": 46,\n                \"name\": \"ألمرحلة الثانية\",\n                \"queue\": 2,\n                \"optional\": 0,\n                \"finished\": 0,\n                \"note\": null,\n                \"treatment_note\": {\n                    \"id\": 1,\n                    \"title\": \"treat 4\",\n                    \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                    \"duration_value\": 234,\n                    \"duration_unit\": \"days\"\n                },\n                \"medication_plan\": {\n                    \"id\": 1,\n                    \"medication\": {\n                        \"id\": 1,\n                        \"image\": null,\n                        \"name\": \"medication 1\",\n                        \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                    },\n                    \"dose\": \"حبة كل 24 ساعة\",\n                    \"duration_value\": 4,\n                    \"duration_unit\": \"weeks\"\n                },\n                \"treatment_substeps\": [\n                    {\n                        \"id\": 77,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 0,\n                        \"finished\": 0,\n                        \"note\": null\n                    }\n                ]\n            }\n        ]\n    },\n    \"message\": \"تم إنشاء علاج المريض بنجاح.\"\n}"
 								},
 								{
 									"name": "Required",
@@ -9757,7 +9780,7 @@
 									},
 									"status": "OK",
 									"code": 200,
-									"_postman_previewlanguage": "json",
+									"_postman_previewlanguage": null,
 									"header": [
 										{
 											"key": "Host",
@@ -9777,7 +9800,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Sun, 20 Jul 2025 16:23:30 GMT"
+											"value": "Mon, 04 Aug 2025 01:04:10 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -9801,7 +9824,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"الخطة بدي أسندها لمريض\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 150000,\n        \"main_complaint\": \"\",\n        \"diagnoses\": \"\",\n        \"finished\": 0,\n        \"complete_percentage\": 50,\n        \"teeth\": [\n            {\n                \"number\": 42,\n                \"name\": \"رباعية سفلي يمين\"\n            },\n            {\n                \"number\": 45,\n                \"name\": \"ضاحك ثاني سفلي يمين\"\n            }\n        ],\n        \"steps\": [\n            {\n                \"id\": 7,\n                \"name\": \"ألمرحلة الأولى\",\n                \"queue\": 1,\n                \"optional\": 1,\n                \"finished\": 1,\n                \"note\": \"\",\n                \"treatment_substeps\": []\n            },\n            {\n                \"id\": 8,\n                \"name\": \"ألمرحلة الثانية\",\n                \"queue\": 2,\n                \"optional\": 0,\n                \"finished\": 0,\n                \"note\": \"\",\n                \"treatment_substeps\": [\n                    {\n                        \"id\": 41,\n                        \"name\": \"ألمرحلة الأولى\",\n                        \"queue\": 0,\n                        \"optional\": 0,\n                        \"finished\": 0,\n                        \"note\": \"\"\n                    },\n                    {\n                        \"id\": 20,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 0,\n                        \"finished\": 1,\n                        \"note\": \"\"\n                    }\n                ]\n            }\n        ]\n    },\n    \"message\": \"تم جلب علاج المريض بنجاح.\"\n}"
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"الخطة بدي أسندها لمريض\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 150000,\n        \"main_complaint\": \"\",\n        \"diagnoses\": \"\",\n        \"finished\": 0,\n        \"complete_percentage\": 0,\n        \"teeth\": [\n            {\n                \"number\": 11,\n                \"name\": \"ثنية علوي يمين\"\n            },\n            {\n                \"number\": 45,\n                \"name\": \"ضاحك ثاني سفلي يمين\"\n            }\n        ],\n        \"steps\": [\n            {\n                \"id\": 7,\n                \"name\": \"ألمرحلة الأولى\",\n                \"queue\": 1,\n                \"optional\": 1,\n                \"finished\": 0,\n                \"note\": null,\n                \"treatment_note\": null,\n                \"medication_plan\": null,\n                \"treatment_substeps\": []\n            },\n            {\n                \"id\": 8,\n                \"name\": \"ألمرحلة الثانية\",\n                \"queue\": 2,\n                \"optional\": 0,\n                \"finished\": 0,\n                \"note\": null,\n                \"treatment_note\": null,\n                \"medication_plan\": null,\n                \"treatment_substeps\": [\n                    {\n                        \"id\": 51,\n                        \"name\": \"ألمرحلة الأولى\",\n                        \"queue\": 0,\n                        \"optional\": 0,\n                        \"finished\": 0,\n                        \"note\": null\n                    },\n                    {\n                        \"id\": 20,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 0,\n                        \"finished\": 0,\n                        \"note\": null\n                    }\n                ]\n            }\n        ]\n    },\n    \"message\": \"تم جلب علاج المريض بنجاح.\"\n}"
 								}
 							]
 						},
@@ -9838,7 +9861,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"name\": \"الخطة بدي أسندها لمريض\",\r\n    \"cost\": 150000,\r\n    \"main_complaint\": \"\",\r\n    \"diagnoses\": \"\",\r\n    \"teeth\": [\r\n        {\r\n            \"number\": 42\r\n        },\r\n        {\r\n            \"number\": 45\r\n        }\r\n    ],\r\n    \"steps\": [\r\n        {\r\n            \"id\": 7,\r\n            \"name\": \"ألمرحلة الأولى\",\r\n            \"queue\": 1,\r\n            \"finished\": 0,\r\n            \"note\": \"\",\r\n            \"treatment_substeps\": [\r\n            ]\r\n        },\r\n        {\r\n            \"id\": 8,\r\n            \"name\": \"ألمرحلة الثانية\",\r\n            \"queue\": 2,\r\n            \"finished\": 0,\r\n            \"note\": \"\",\r\n            \"treatment_substeps\": [\r\n                {\r\n                    \"id\": 20,\r\n                    \"name\": \"ألمرحلة تجريب\",\r\n                    \"queue\": 8,\r\n                    \"finished\": 0,\r\n                    \"note\": \"\"\r\n                },\r\n                {\r\n                    \"id\": -1,\r\n                    \"name\": \"ألمرحلة الأولى\",\r\n                    \"queue\": 0,\r\n                    \"finished\": 0,\r\n                    \"note\": \"\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+											"raw": "{\r\n                \"id\": 16,\r\n                \"name\": \"الخطة بدي أسندها لمريض\",\r\n                \"category\": {\r\n                    \"id\": 1,\r\n                    \"name\": \"first category\"\r\n                },\r\n                \"cost\": 150000,\r\n                \"main_complaint\": \"شكوى\",\r\n                \"diagnoses\": \"تشخيص\",\r\n                \"finished\": 1,\r\n                \"complete_percentage\": 100,\r\n                \"teeth\": [\r\n                    {\r\n                        \"number\": 44,\r\n                        \"name\": \"ضاحك أول سفلي يمين\"\r\n                    },\r\n                    {\r\n                        \"number\": 45,\r\n                        \"name\": \"ضاحك ثاني سفلي يمين\"\r\n                    }\r\n                ],\r\n                \"steps\": [\r\n                    {\r\n                        \"id\": 29,\r\n                        \"name\": \"ألمرحلة الأولى\",\r\n                        \"queue\": 1,\r\n                        \"optional\": 1,\r\n                        \"finished\": 1,\r\n                        \"note\": \"\",\r\n                        \"treatment_substeps\": []\r\n                    },\r\n                    {\r\n                        \"id\": 30,\r\n                        \"name\": \"ألمرحلة الثانية\",\r\n                        \"queue\": 2,\r\n                        \"optional\": 0,\r\n                        \"finished\": 1,\r\n                        \"note\": \"\",\r\n                        \"treatment_substeps\": [\r\n                            {\r\n                                \"id\": 52,\r\n                                \"name\": \"ألمرحلة تجريب\",\r\n                                \"queue\": 8,\r\n                                \"optional\": 0,\r\n                                \"finished\": 0,\r\n                                \"note\": \"\"\r\n                            }\r\n                        ]\r\n                    }\r\n                ]\r\n            }",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -9846,19 +9869,19 @@
 											}
 										},
 										"url": {
-											"raw": "{{base_url}}/patient-treatment/4",
+											"raw": "{{base_url}}/patient-treatment/16",
 											"host": [
 												"{{base_url}}"
 											],
 											"path": [
 												"patient-treatment",
-												"4"
+												"16"
 											]
 										}
 									},
 									"status": "OK",
 									"code": 200,
-									"_postman_previewlanguage": "json",
+									"_postman_previewlanguage": null,
 									"header": [
 										{
 											"key": "Host",
@@ -9878,7 +9901,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Sun, 20 Jul 2025 16:33:16 GMT"
+											"value": "Mon, 04 Aug 2025 01:04:42 GMT"
 										},
 										{
 											"key": "Content-Type",
@@ -9902,7 +9925,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"الخطة بدي أسندها لمريض\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 150000,\n        \"main_complaint\": \"\",\n        \"diagnoses\": \"\",\n        \"finished\": 0,\n        \"complete_percentage\": 0,\n        \"teeth\": [\n            {\n                \"number\": 42,\n                \"name\": \"رباعية سفلي يمين\"\n            },\n            {\n                \"number\": 45,\n                \"name\": \"ضاحك ثاني سفلي يمين\"\n            }\n        ],\n        \"steps\": [\n            {\n                \"id\": 7,\n                \"name\": \"ألمرحلة الأولى\",\n                \"queue\": 1,\n                \"optional\": 1,\n                \"finished\": 0,\n                \"note\": \"\",\n                \"treatment_substeps\": []\n            },\n            {\n                \"id\": 8,\n                \"name\": \"ألمرحلة الثانية\",\n                \"queue\": 2,\n                \"optional\": 0,\n                \"finished\": 0,\n                \"note\": \"\",\n                \"treatment_substeps\": [\n                    {\n                        \"id\": 46,\n                        \"name\": \"ألمرحلة الأولى\",\n                        \"queue\": 0,\n                        \"optional\": 0,\n                        \"finished\": 0,\n                        \"note\": \"\"\n                    },\n                    {\n                        \"id\": 20,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 0,\n                        \"finished\": 0,\n                        \"note\": \"\"\n                    }\n                ]\n            }\n        ]\n    },\n    \"message\": \"تم تحديث علاج المريض بنجاح.\"\n}"
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 16,\n        \"name\": \"الخطة بدي أسندها لمريض\",\n        \"category\": {\n            \"id\": 1,\n            \"name\": \"first category\"\n        },\n        \"cost\": 150000,\n        \"main_complaint\": \"شكوى\",\n        \"diagnoses\": \"تشخيص\",\n        \"finished\": 1,\n        \"complete_percentage\": 100,\n        \"teeth\": [\n            {\n                \"number\": 44,\n                \"name\": \"ضاحك أول سفلي يمين\"\n            },\n            {\n                \"number\": 45,\n                \"name\": \"ضاحك ثاني سفلي يمين\"\n            }\n        ],\n        \"steps\": [\n            {\n                \"id\": 29,\n                \"name\": \"ألمرحلة الأولى\",\n                \"queue\": 1,\n                \"optional\": 1,\n                \"finished\": 1,\n                \"note\": null,\n                \"treatment_note\": {\n                    \"id\": 1,\n                    \"title\": \"treat 4\",\n                    \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                    \"duration_value\": 234,\n                    \"duration_unit\": \"days\"\n                },\n                \"medication_plan\": {\n                    \"id\": 1,\n                    \"medication\": {\n                        \"id\": 1,\n                        \"image\": null,\n                        \"name\": \"medication 1\",\n                        \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                    },\n                    \"dose\": \"حبة كل 24 ساعة\",\n                    \"duration_value\": 4,\n                    \"duration_unit\": \"weeks\"\n                },\n                \"treatment_substeps\": []\n            },\n            {\n                \"id\": 30,\n                \"name\": \"ألمرحلة الثانية\",\n                \"queue\": 2,\n                \"optional\": 0,\n                \"finished\": 1,\n                \"note\": null,\n                \"treatment_note\": {\n                    \"id\": 1,\n                    \"title\": \"treat 4\",\n                    \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n                    \"duration_value\": 234,\n                    \"duration_unit\": \"days\"\n                },\n                \"medication_plan\": {\n                    \"id\": 1,\n                    \"medication\": {\n                        \"id\": 1,\n                        \"image\": null,\n                        \"name\": \"medication 1\",\n                        \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n                    },\n                    \"dose\": \"حبة كل 24 ساعة\",\n                    \"duration_value\": 4,\n                    \"duration_unit\": \"weeks\"\n                },\n                \"treatment_substeps\": [\n                    {\n                        \"id\": 52,\n                        \"name\": \"ألمرحلة تجريب\",\n                        \"queue\": 8,\n                        \"optional\": 0,\n                        \"finished\": 1,\n                        \"note\": null\n                    }\n                ]\n            }\n        ]\n    },\n    \"message\": \"تم تحديث علاج المريض بنجاح.\"\n}"
 								}
 							]
 						},

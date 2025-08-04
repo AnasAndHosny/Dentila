@@ -24,6 +24,16 @@ class PatientTreatmentStep extends Model
         return $this->belongsTo(PatientTreatment::class);
     }
 
+    public function treatmentNote(): BelongsTo
+    {
+        return $this->belongsTo(TreatmentNote::class);
+    }
+
+    public function medicationPlan(): BelongsTo
+    {
+        return $this->belongsTo(MedicationPlan::class);
+    }
+
     public function substeps(): HasMany
     {
         return $this->hasMany(PatientTreatmentSubstep::class)

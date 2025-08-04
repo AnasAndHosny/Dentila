@@ -21,6 +21,8 @@ class PatientTreatmentStepResource extends JsonResource
             'optional' => (int)$this->optional,
             'finished' => (int)$this->finished,
             'note' => $this->note,
+            'treatment_note' => new TreatmentNoteResource($this->treatmentNote),
+            'medication_plan' => new MedicationPlanResource($this->medicationPlan),
             'treatment_substeps' => PatientTreatmentSubstepResource::collection($this->substeps),
         ];
     }
