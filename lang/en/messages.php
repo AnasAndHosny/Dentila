@@ -9,5 +9,5 @@ return [
     'update_success'                => ':Class updated successfully.',
     'destroy_success'               => ':Class deleted successfully.',
     'banned'                        => 'Sorry, your account has been banned.',
-    'notVerified'                   => 'Please verify your email.',
+    'notVerified'                   => 'Please verify your phone number.',
 ];

@@ -9,5 +9,5 @@ return [
     'update_success'                => 'تم تحديث :class بنجاح.',
     'destroy_success'               => 'تم حذف :class بنجاح.',
     'banned'                        => 'عذراً, تم حظر حسابك.',
-    'notVerified'                   => 'يرجى توثيق بريدك الإلكتروني.',
+    'notVerified'                   => 'يرجى توثيق رقم هاتفك.',
 ];

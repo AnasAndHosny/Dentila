@@ -1,8 +1,11 @@
 <?php
 
 use App\Http\Middleware\Cors;
+use App\Http\Middleware\V1\UserVerified;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\V1\UserBanned;
+use App\Http\Controllers\Api\V1\OtpController;
 use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\ToothController;
 use App\Http\Controllers\Api\V1\DiseaseController;
@@ -19,8 +22,11 @@ use App\Http\Controllers\Api\V1\PatientAccountController;
 use App\Http\Controllers\Api\V1\IntakeMedicationController;
 use App\Http\Controllers\Api\V1\PatientTreatmentController;
 use App\Http\Controllers\Api\V1\TreatmentSubstepController;
+use App\Http\Controllers\Api\V1\Auth\ResetPasswordController;
+use App\Http\Controllers\Api\V1\Auth\ForgetPasswordController;
 use App\Http\Controllers\Api\V1\PatientTreatmentNoteController;
 use App\Http\Controllers\Api\V1\PatientMedicationPlanController;
+use App\Http\Controllers\Api\V1\Auth\PhoneVerificationController;
 
 Route::prefix('v1')->middleware([Cors::class])->group(function () {
     Route::get('test', function () {
@@ -28,14 +34,22 @@ Route::prefix('v1')->middleware([Cors::class])->group(function () {
     });
 
     Route::post('{role}/login', [AuthController::class, 'login'])->whereIn('role', ['manager', 'doctor', 'patient', 'receptionist']);
+    Route::get('logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
 
-    Route::middleware(['auth:sanctum', UserBanned::class])->group(function () {
+    Route::prefix('otp')->group(function () {
+        Route::get('phone-verification', [PhoneVerificationController::class, 'sendPhoneVerification'])->middleware('auth:sanctum');
+        Route::post('phone-verification', [PhoneVerificationController::class, 'phoneVerification'])->middleware('auth:sanctum');
+        Route::post('password/forget-password', [ForgetPasswordController::class, 'forgetPassword']);
+        Route::post('password/reset', [ResetPasswordController::class, 'passwordReset']);
+        Route::post('check', [OtpController::class, 'check']);
+    });
+
+    Route::middleware(['auth:sanctum', UserBanned::class, UserVerified::class])->group(function () {
         Route::controller(AuthController::class)->group(function () {
             Route::post('employee/{employee}/ban', 'employeeBan');
             Route::get('employee/{employee}/unban', 'employeeUnban');
             Route::post('patient/{patient}/ban', 'patientBan');
             Route::get('patient/{patient}/unban', 'patientUnban');
-            Route::get('logout', 'logout');
             Route::get('employee/profile', 'employeeProfile');
             Route::get('patient/profile', 'patientProfile');
         });

@@ -70,6 +70,7 @@ class RolesPermissionsSeeder extends Seeder
             'phone_number' => 'admin',
             'password' => 'admin'
         ]);
+        $admin->markPhoneAsVerified();
         $admin->assignRole($managerRole);
 
         $admin = User::Create([
@@ -77,6 +78,7 @@ class RolesPermissionsSeeder extends Seeder
             'phone_number' => '0936293119',
             'password' => 'superadmin'
         ]);
+        $admin->markPhoneAsVerified();
         $admin->assignRole($managerRole);
     }
 }

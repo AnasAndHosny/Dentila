@@ -58,4 +58,26 @@ class User extends Authenticatable
     {
         return $this->hasOne(Employee::class);
     }
+
+    /**
+     * Determine if the user has verified their phone number.
+     *
+     * @return bool
+     */
+    public function hasVerifiedPhone()
+    {
+        return $this->is_verified;
+    }
+
+    /**
+     * Mark the given user's phone number as verified.
+     *
+     * @return bool
+     */
+    public function markPhoneAsVerified()
+    {
+        return $this->forceFill([
+            'is_verified' => true,
+        ])->save();
+    }
 }

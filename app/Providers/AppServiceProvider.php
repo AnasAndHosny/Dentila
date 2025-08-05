@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use App\Channels\WhatsAppChannel;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Notifications\ChannelManager;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -21,5 +23,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Model::automaticallyEagerLoadRelationships();
+
+        app(ChannelManager::class)->extend('whatsapp', function () {
+            return new WhatsAppChannel;
+        });
     }
 }

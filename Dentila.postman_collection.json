@@ -5,7 +5,7 @@
 		"description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Scripts\" tab**\n\nAdding tests to your requests can help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/fa30ea0a-373d-4545-a668-e7b283cca343/aW1hZ2UucG5n\" width=\"2162\" height=\"1530\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n    \n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "30807483",
-		"_collection_link": "https://blue-shadow-113022.postman.co/workspace/1973ad45-8feb-4ba3-93d8-ab61227c2019/collection/30807483-e2d6202e-6bfc-4c7f-b828-f7608a198a51?action=share&source=collection_link&creator=30807483"
+		"_collection_link": "https://blue-shadow-113022.postman.co/workspace/Laravel-Projects~1973ad45-8feb-4ba3-93d8-ab61227c2019/collection/30807483-e2d6202e-6bfc-4c7f-b828-f7608a198a51?action=share&source=collection_link&creator=30807483"
 	},
 	"item": [
 		{
@@ -48,14 +48,11 @@
 											}
 										],
 										"url": {
-											"raw": "localhost:8000/api/v1/medication",
+											"raw": "{{base_url}}/medication",
 											"host": [
-												"localhost"
+												"{{base_url}}"
 											],
-											"port": "8000",
 											"path": [
-												"api",
-												"v1",
 												"medication"
 											]
 										}
@@ -172,14 +169,11 @@
 											]
 										},
 										"url": {
-											"raw": "localhost:8000/api/v1/medication",
+											"raw": "{{base_url}}/medication",
 											"host": [
-												"localhost"
+												"{{base_url}}"
 											],
-											"port": "8000",
 											"path": [
-												"api",
-												"v1",
 												"medication"
 											]
 										}
@@ -414,14 +408,11 @@
 											}
 										],
 										"url": {
-											"raw": "localhost:8000/api/v1/medication/2",
+											"raw": "{{base_url}}/medication/2",
 											"host": [
-												"localhost"
+												"{{base_url}}"
 											],
-											"port": "8000",
 											"path": [
-												"api",
-												"v1",
 												"medication",
 												"2"
 											]
@@ -554,14 +545,11 @@
 											]
 										},
 										"url": {
-											"raw": "localhost:8000/api/v1/medication/1",
+											"raw": "{{base_url}}/medication/1",
 											"host": [
-												"localhost"
+												"{{base_url}}"
 											],
-											"port": "8000",
 											"path": [
-												"api",
-												"v1",
 												"medication",
 												"1"
 											]
@@ -725,14 +713,11 @@
 											}
 										],
 										"url": {
-											"raw": "localhost:8000/api/v1/medication/2",
+											"raw": "{{base_url}}/medication/2",
 											"host": [
-												"localhost"
+												"{{base_url}}"
 											],
-											"port": "8000",
 											"path": [
-												"api",
-												"v1",
 												"medication",
 												"2"
 											]
@@ -812,14 +797,11 @@
 											}
 										],
 										"url": {
-											"raw": "localhost:8000/api/v1/medication/5/plans",
+											"raw": "{{base_url}}/medication/5/plans",
 											"host": [
-												"localhost"
+												"{{base_url}}"
 											],
-											"port": "8000",
 											"path": [
-												"api",
-												"v1",
 												"medication",
 												"5",
 												"plans"
@@ -903,14 +885,11 @@
 											}
 										],
 										"url": {
-											"raw": "localhost:8000/api/v1/medication-plan",
+											"raw": "{{base_url}}/medication-plan",
 											"host": [
-												"localhost"
+												"{{base_url}}"
 											],
-											"port": "8000",
 											"path": [
-												"api",
-												"v1",
 												"medication-plan"
 											]
 										}
@@ -14406,6 +14385,1601 @@
 									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 36,\n        \"amount\": 5200,\n        \"type\": \"debit\",\n        \"note\": \"عملية سحب: تمت بموافقة الطبيب\",\n        \"method\": \"manual\",\n        \"created_by\": \"zaid\",\n        \"created_at\": \"2025-08-02 16:39:49\"\n    },\n    \"message\": \"تم إنشاء عملية السحب بنجاح.\"\n}"
 								}
 							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "OTP",
+			"item": [
+				{
+					"name": "send message verification code",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "locale",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/otp/phone-verification",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"otp",
+								"phone-verification"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/otp/phone-verification",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"otp",
+										"phone-verification"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Aug 2025 22:11:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST, GET, OPTIONS, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 17,\n        \"name\": \"زيد الشمعة\",\n        \"phone_number\": \"0936293119\",\n        \"is_verified\": 0,\n        \"created_at\": \"2025-08-02T08:05:25.000000Z\",\n        \"updated_at\": \"2025-08-05T22:10:11.000000Z\"\n    },\n    \"message\": \"تم إرسال رمز التوثيق إلى رقم هاتفك بنجاح.\"\n}"
+						},
+						{
+							"name": "already verified",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/otp/phone-verification",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"otp",
+										"phone-verification"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Aug 2025 22:11:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST, GET, OPTIONS, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 17,\n        \"name\": \"زيد الشمعة\",\n        \"phone_number\": \"0936293119\",\n        \"is_verified\": 1,\n        \"created_at\": \"2025-08-02T08:05:25.000000Z\",\n        \"updated_at\": \"2025-08-05T22:10:11.000000Z\"\n    },\n    \"message\": \"إن رقم هاتفك موثق بالفعل.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "verify phone",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "locale",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "otp",
+									"value": "8846",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/otp/phone-verification",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"otp",
+								"phone-verification"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "otp",
+											"value": "8846",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/otp/phone-verification",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"otp",
+										"phone-verification"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Aug 2025 22:10:11 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST, GET, OPTIONS, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 17,\n        \"name\": \"زيد الشمعة\",\n        \"phone_number\": \"0936293119\",\n        \"is_verified\": true,\n        \"created_at\": \"2025-08-02T08:05:25.000000Z\",\n        \"updated_at\": \"2025-08-05T22:10:11.000000Z\"\n    },\n    \"message\": \"تم توثيق رقم هاتفك بنجاح.\"\n}"
+						},
+						{
+							"name": "OTP does not exist",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "otp",
+											"value": "345335",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/otp/phone-verification",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"otp",
+										"phone-verification"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Aug 2025 22:02:27 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST, GET, OPTIONS, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 0,\n    \"data\": {\n        \"id\": 17,\n        \"name\": \"زيد الشمعة\",\n        \"phone_number\": \"0936293119\",\n        \"is_verified\": 0,\n        \"created_at\": \"2025-08-02T08:05:25.000000Z\",\n        \"updated_at\": \"2025-08-05T21:18:42.000000Z\"\n    },\n    \"message\": \"رمز المرور لمرة واحدة غير موجود\"\n}"
+						},
+						{
+							"name": "OTP Expired",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "otp",
+											"value": "8846",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/otp/phone-verification",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"otp",
+										"phone-verification"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Aug 2025 22:04:16 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST, GET, OPTIONS, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 0,\n    \"data\": {\n        \"id\": 17,\n        \"name\": \"زيد الشمعة\",\n        \"phone_number\": \"0936293119\",\n        \"is_verified\": 0,\n        \"created_at\": \"2025-08-02T08:05:25.000000Z\",\n        \"updated_at\": \"2025-08-05T21:18:42.000000Z\"\n    },\n    \"message\": \"رمز المرور لمرة واحدة منتهي الصلاحية\"\n}"
+						},
+						{
+							"name": "OTP is not valid",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "otp",
+											"value": "8846",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/otp/phone-verification",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"otp",
+										"phone-verification"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Aug 2025 22:04:48 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST, GET, OPTIONS, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 0,\n    \"data\": {\n        \"id\": 17,\n        \"name\": \"زيد الشمعة\",\n        \"phone_number\": \"0936293119\",\n        \"is_verified\": 0,\n        \"created_at\": \"2025-08-02T08:05:25.000000Z\",\n        \"updated_at\": \"2025-08-05T21:18:42.000000Z\"\n    },\n    \"message\": \"رمز المرور لمرة واحدة غير صالح\"\n}"
+						}
+					]
+				},
+				{
+					"name": "forget password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "locale",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone_number",
+									"value": "0936293119",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/otp/password/forget-password",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"otp",
+								"password",
+								"forget-password"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone_number",
+											"value": "0936293119",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/otp/password/forget-password",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"otp",
+										"password",
+										"forget-password"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Aug 2025 22:15:12 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST, GET, OPTIONS, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"phone_number\": \"0936293119\"\n    },\n    \"message\": \"تم إرسال رمز إعادة تعيين كلمة المرور إلى رقم هاتفك بنجاح.\"\n}"
+						},
+						{
+							"name": "Invalid phone",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone_number",
+											"value": "0936293118",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/otp/password/forget-password",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"otp",
+										"password",
+										"forget-password"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Aug 2025 22:15:32 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST, GET, OPTIONS, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"phone_number\": [\n            \"رقم الهاتف المختار غير صالح.\"\n        ]\n    }\n}"
+						},
+						{
+							"name": "Required",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone_number",
+											"value": "0936293118",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/otp/password/forget-password",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"otp",
+										"password",
+										"forget-password"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Aug 2025 22:15:53 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST, GET, OPTIONS, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"phone_number\": [\n            \"حقل رقم الهاتف مطلوب.\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "reset password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "locale",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone_number",
+									"value": "0936293119",
+									"type": "text"
+								},
+								{
+									"key": "otp",
+									"value": "1795",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/otp/password/reset",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"otp",
+								"password",
+								"reset"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone_number",
+											"value": "0936293119",
+											"type": "text"
+										},
+										{
+											"key": "otp",
+											"value": "1795",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/otp/password/reset",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"otp",
+										"password",
+										"reset"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Aug 2025 22:34:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST, GET, OPTIONS, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"phone_number\": \"0936293119\"\n    },\n    \"message\": \"تم إعادة تعيين كلمة المرور الخاصة بك بنجاح.\"\n}"
+						},
+						{
+							"name": "OTP is not valid",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone_number",
+											"value": "0936293119",
+											"type": "text"
+										},
+										{
+											"key": "otp",
+											"value": "1795",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/otp/password/reset",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"otp",
+										"password",
+										"reset"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Aug 2025 22:26:11 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST, GET, OPTIONS, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 0,\n    \"data\": {\n        \"phone_number\": \"0936293119\"\n    },\n    \"message\": \"رمز المرور لمرة واحدة غير صالح\"\n}"
+						},
+						{
+							"name": "OTP does not exist",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone_number",
+											"value": "0936293119",
+											"type": "text"
+										},
+										{
+											"key": "otp",
+											"value": "0975",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/otp/password/reset",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"otp",
+										"password",
+										"reset"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Aug 2025 22:19:26 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST, GET, OPTIONS, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 0,\n    \"data\": {\n        \"phone_number\": \"0936293119\"\n    },\n    \"message\": \"رمز المرور لمرة واحدة غير موجود\"\n}"
+						},
+						{
+							"name": "OTP Expired",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone_number",
+											"value": "0936293119",
+											"type": "text"
+										},
+										{
+											"key": "otp",
+											"value": "1795",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/otp/password/reset",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"otp",
+										"password",
+										"reset"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Aug 2025 22:33:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST, GET, OPTIONS, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 0,\n    \"data\": {\n        \"phone_number\": \"0936293119\"\n    },\n    \"message\": \"رمز المرور لمرة واحدة منتهي الصلاحية\"\n}"
+						}
+					]
+				},
+				{
+					"name": "check otp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "locale",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phone_number",
+									"value": "0936293119",
+									"type": "text"
+								},
+								{
+									"key": "otp",
+									"value": "9976",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/otp/check",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"otp",
+								"check"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OTP is valid",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "phone_number",
+											"value": "0936293119",
+											"type": "text"
+										},
+										{
+											"key": "otp",
+											"value": "9976",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/otp/check",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"otp",
+										"check"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Aug 2025 22:46:06 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST, GET, OPTIONS, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"phone_number\": \"0936293119\"\n    },\n    \"message\": \"رمز المرور لمرة واحدة صالح\"\n}"
+						},
+						{
+							"name": "OTP is not valid",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "phone_number",
+											"value": "0936293119",
+											"type": "text"
+										},
+										{
+											"key": "otp",
+											"value": "9976",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/otp/check",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"otp",
+										"check"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Aug 2025 22:48:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST, GET, OPTIONS, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"phone_number\": \"0936293119\"\n    },\n    \"message\": \"رمز المرور لمرة واحدة غير صالح\"\n}"
+						},
+						{
+							"name": "OTP Expired",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "phone_number",
+											"value": "0936293119",
+											"type": "text"
+										},
+										{
+											"key": "otp",
+											"value": "9976",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/otp/check",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"otp",
+										"check"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Aug 2025 22:46:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST, GET, OPTIONS, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"phone_number\": \"0936293119\"\n    },\n    \"message\": \"رمز المرور لمرة واحدة منتهي الصلاحية\"\n}"
+						},
+						{
+							"name": "OTP does not exist",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "phone_number",
+											"value": "0936293119",
+											"type": "text"
+										},
+										{
+											"key": "otp",
+											"value": "9979",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/otp/check",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"otp",
+										"check"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 05 Aug 2025 22:48:47 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST, GET, OPTIONS, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"phone_number\": \"0936293119\"\n    },\n    \"message\": \"رمز المرور لمرة واحدة غير موجود\"\n}"
 						}
 					]
 				}

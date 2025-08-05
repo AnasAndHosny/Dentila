@@ -71,7 +71,7 @@
     "Password resetting":"إعادة تعيين كلمة المرور",
     "Use the below code for resetting your password":"استخدم الرمز الآتي لإعادة تعيين كلمة المرور",
     "Your phone number is already verified.":"إن رقم هاتفك موثق بالفعل.",
-    "The verification code has been sent successfully to your phone number.":"تم إرسال رمز التوثيق إلى رقم هاتفك بنجاح.",
+    "Phone number verification code sent successfully.":"تم إرسال رمز التوثيق إلى رقم هاتفك بنجاح.",
     "OTP is valid":"رمز المرور لمرة واحدة صالح",
     "OTP does not exist":"رمز المرور لمرة واحدة غير موجود",
     "OTP is not valid":"رمز المرور لمرة واحدة غير صالح",
