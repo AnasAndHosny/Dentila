@@ -102,5 +102,7 @@
     "patient treatment":"علاج المريض",
     "patient transactions":"دفعات المريض",
     "deposit":"عملية الإيداع",
-    "withdraw":"عملية السحب"
+    "withdraw":"عملية السحب",
+    "Old password is wrong.":"كلمة المرور القديمة خاطئة",
+    "Password changed successfully.":"تم تغيير كلمة المرور بنجاح"
 }

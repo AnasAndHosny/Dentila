@@ -1,10 +1,10 @@
 <?php
 
 use App\Http\Middleware\Cors;
-use App\Http\Middleware\V1\UserVerified;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\V1\UserBanned;
+use App\Http\Middleware\V1\UserVerified;
 use App\Http\Controllers\Api\V1\OtpController;
 use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\ToothController;
@@ -23,6 +23,7 @@ use App\Http\Controllers\Api\V1\IntakeMedicationController;
 use App\Http\Controllers\Api\V1\PatientTreatmentController;
 use App\Http\Controllers\Api\V1\TreatmentSubstepController;
 use App\Http\Controllers\Api\V1\Auth\ResetPasswordController;
+use App\Http\Controllers\Api\V1\Auth\ChangePasswordController;
 use App\Http\Controllers\Api\V1\Auth\ForgetPasswordController;
 use App\Http\Controllers\Api\V1\PatientTreatmentNoteController;
 use App\Http\Controllers\Api\V1\PatientMedicationPlanController;
@@ -45,6 +46,8 @@ Route::prefix('v1')->middleware([Cors::class])->group(function () {
     });
 
     Route::middleware(['auth:sanctum', UserBanned::class, UserVerified::class])->group(function () {
+        Route::post('password/change', [ChangePasswordController::class, 'passwordChange']);
+
         Route::controller(AuthController::class)->group(function () {
             Route::post('employee/{employee}/ban', 'employeeBan');
             Route::get('employee/{employee}/unban', 'employeeUnban');
