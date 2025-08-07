@@ -27,8 +27,8 @@ class StoreTreatmentStepRequest extends FormRequest
         return [
             'treatment_plan_id' => ['required', 'exists:treatment_plans,id'],
             'name' => ['required', 'string'],
-            'queue' => ['nullable', 'integer'],
-            'optional' => ['nullable', 'boolean'],
+            'queue' => ['integer'],
+            'optional' => ['boolean'],
             'treatment_note_id' => ['nullable', 'exists:treatment_notes,id'],
             'medication_plan_id' => ['nullable', 'exists:medication_plans,id'],
         ];
