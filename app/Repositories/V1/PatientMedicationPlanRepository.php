@@ -12,7 +12,7 @@ class PatientMedicationPlanRepository
     public function all(Patient $patient)
     {
         $patientMedicationPlans =new PatientMedicationPlansQuery($patient->medicationPlans());
-        return $patientMedicationPlans->latest()->paginate();
+        return $patientMedicationPlans->latest();
     }
 
     public function create($request, Patient $patient)

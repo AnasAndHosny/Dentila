@@ -29,6 +29,14 @@ class PatientAccountController extends Controller
         );
     }
 
+    public function myTransactions(): JsonResponse
+    {
+        return $this->handleService(
+            fn() =>
+            $this->patientAccountService->myTransactions()
+        );
+    }
+
     public function deposit(DepositRequest $request, Patient $patient): JsonResponse
     {
         return $this->handleService(

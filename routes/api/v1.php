@@ -142,12 +142,15 @@ Route::prefix('v1')->middleware([Cors::class])->group(function () {
 
             Route::get('{patient}/treatment', [PatientTreatmentController::class, 'index']);
 
+            Route::get('me/note', [PatientTreatmentNoteController::class, 'myIndex']);
             Route::get('{patient}/note', [PatientTreatmentNoteController::class, 'index']);
             Route::post('{patient}/note', [PatientTreatmentNoteController::class, 'store']);
 
+            Route::get('me/medication', [PatientMedicationPlanController::class, 'myIndex']);
             Route::get('{patient}/medication', [PatientMedicationPlanController::class, 'index']);
             Route::post('{patient}/medication', [PatientMedicationPlanController::class, 'store']);
 
+            Route::get('me/account/transactions', [PatientAccountController::class, 'myTransactions']);
             Route::get('{patient}/account/transactions', [PatientAccountController::class, 'transactions']);
             Route::post('{patient}/account/deposit', [PatientAccountController::class, 'deposit']);
             Route::post('{patient}/account/withdraw', [PatientAccountController::class, 'withdraw']);

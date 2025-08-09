@@ -20,7 +20,17 @@ class PatientMedicationPlanService
     public function index(Patient $patient): array
     {
         $medicationPlans = $this->patientMedicationPlanRepo->all($patient);
-        $medicationPlans = new PatientMedicationPlanCollection($medicationPlans);
+        $medicationPlans = new PatientMedicationPlanCollection($medicationPlans->paginate());
+        $message = __('messages.index_success', ['class' => __('medication plans')]);
+        $code = 200;
+        return ['data' => $medicationPlans, 'message' => $message, 'code' => $code];
+    }
+
+    public function myIndex(): array
+    {
+        $patient = auth()->user()->patient;
+        $medicationPlans = $this->patientMedicationPlanRepo->all($patient);
+        $medicationPlans = PatientMedicationPlanResource::collection($medicationPlans->active()->get());
         $message = __('messages.index_success', ['class' => __('medication plans')]);
         $code = 200;
         return ['data' => $medicationPlans, 'message' => $message, 'code' => $code];

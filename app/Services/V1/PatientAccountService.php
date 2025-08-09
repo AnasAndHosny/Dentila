@@ -17,6 +17,16 @@ class PatientAccountService
         return ['data' => $patientAccount, 'message' => $message, 'code' => $code];
     }
 
+    public function myTransactions(): array
+    {
+        $patient = auth()->user()->patient;
+        $patientAccount = $patient->account;
+        $patientAccount = new PatientAccountResource($patientAccount);
+        $message = __('messages.show_success', ['class' => __('patient transactions')]);
+        $code = 200;
+        return ['data' => $patientAccount, 'message' => $message, 'code' => $code];
+    }
+
     public function deposit($request, Patient $patient): array
     {
         $note = 'عملية إيداع';

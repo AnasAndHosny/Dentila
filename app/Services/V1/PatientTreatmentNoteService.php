@@ -20,7 +20,17 @@ class PatientTreatmentNoteService
     public function index(Patient $patient): array
     {
         $treatmentNotes = $this->patientTreatmentNoteRepo->all($patient);
-        $treatmentNotes = new PatientTreatmentNoteCollection($treatmentNotes);
+        $treatmentNotes = new PatientTreatmentNoteCollection($treatmentNotes->paginate());
+        $message = __('messages.index_success', ['class' => __('treatment notes')]);
+        $code = 200;
+        return ['data' => $treatmentNotes, 'message' => $message, 'code' => $code];
+    }
+
+    public function myIndex(): array
+    {
+        $patient = auth()->user()->patient;
+        $treatmentNotes = $this->patientTreatmentNoteRepo->all($patient);
+        $treatmentNotes = PatientTreatmentNoteResource::collection($treatmentNotes->active()->get());
         $message = __('messages.index_success', ['class' => __('treatment notes')]);
         $code = 200;
         return ['data' => $treatmentNotes, 'message' => $message, 'code' => $code];

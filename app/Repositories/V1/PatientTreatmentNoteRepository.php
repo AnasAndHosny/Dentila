@@ -12,7 +12,7 @@ class PatientTreatmentNoteRepository
     public function all(Patient $patient)
     {
         $patientTreatmentNotes =new PatientTreatmentsNoteQuery($patient->treatmentNotes());
-        return $patientTreatmentNotes->latest()->paginate();
+        return $patientTreatmentNotes->latest();
     }
 
     public function create($request, Patient $patient)

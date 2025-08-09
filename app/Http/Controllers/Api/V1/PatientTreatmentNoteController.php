@@ -34,6 +34,17 @@ class PatientTreatmentNoteController extends Controller
     }
 
     /**
+     * Display a listing of the resource.
+     */
+    public function myIndex(): JsonResponse
+    {
+        return $this->handleService(
+            fn() =>
+            $this->patientTreatmentNoteService->myIndex()
+        );
+    }
+
+    /**
      * Store a newly created resource in storage.
      */
     public function store(StorePatientTreatmentNoteRequest $request, Patient $patient): JsonResponse
