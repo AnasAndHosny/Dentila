@@ -35,6 +35,8 @@ Route::prefix('v1')->middleware([Cors::class])->group(function () {
     });
 
     Route::post('{role}/login', [AuthController::class, 'login'])->whereIn('role', ['manager', 'doctor', 'patient', 'receptionist']);
+    Route::post('signup', [PatientController::class, 'signup']);
+    Route::post('auth/check-phone', [AuthController::class, 'checkPhone']);
     Route::get('logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
 
     Route::prefix('otp')->group(function () {

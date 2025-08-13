@@ -104,5 +104,6 @@
     "deposit":"عملية الإيداع",
     "withdraw":"عملية السحب",
     "Old password is wrong.":"كلمة المرور القديمة خاطئة",
-    "Password changed successfully.":"تم تغيير كلمة المرور بنجاح"
+    "Password changed successfully.":"تم تغيير كلمة المرور بنجاح",
+    "Phone number is available.":"رقم الهاتف متاح."
 }

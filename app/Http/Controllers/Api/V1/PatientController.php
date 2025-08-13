@@ -3,13 +3,14 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Models\Patient;
+use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use App\Services\V1\PatientService;
 use App\Http\Controllers\Controller;
 use App\Traits\HandlesServiceResponse;
 use App\Http\Requests\V1\Patient\StorePatientRequest;
+use App\Http\Requests\V1\Patient\PatientSignupRequest;
 use App\Http\Requests\V1\Patient\UpdatePatientRequest;
-use Illuminate\Http\Request;
 
 class PatientController extends Controller
 {
@@ -41,6 +42,14 @@ class PatientController extends Controller
         return $this->handleService(
             fn() =>
             $this->patientService->store($request)
+        );
+    }
+
+    public function signup(PatientSignupRequest $request)
+    {
+        return $this->handleService(
+            fn() =>
+            $this->patientService->signup($request)
         );
     }
 

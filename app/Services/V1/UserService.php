@@ -36,6 +36,14 @@ class UserService
         return ['data' => $user, 'message' => $message, 'code' => $code];
     }
 
+    public function checkPhone($request): array
+    {
+        $phone = $request->validated();
+        $message = __('Phone number is available.');
+        $code = 200;
+        return ['data' => $phone, 'message' => $message, 'code' => $code];
+    }
+
     public function logout(): array
     {
         $user = Auth::user();

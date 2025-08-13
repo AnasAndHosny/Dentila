@@ -8,6 +8,7 @@ use App\Services\V1\UserService;
 use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\V1\Auth\BanRequest;
+use App\Http\Requests\V1\Auth\CheckPhoneRequest;
 use App\Traits\HandlesServiceResponse;
 use App\Http\Requests\V1\Auth\SigninRequest;
 use App\Models\Employee;
@@ -45,6 +46,14 @@ class AuthController extends Controller
             $message = $th->getMessage();
             return ApiResponse::Error($data, $message);
         }
+    }
+    
+    public function checkPhone(CheckPhoneRequest $request): JsonResponse
+    {
+        return $this->handleService(
+            fn() =>
+            $this->userService->checkPhone($request)
+        );
     }
 
     public function logout(): JsonResponse

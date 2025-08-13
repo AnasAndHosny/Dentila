@@ -35,6 +35,16 @@ class PatientService
         return ['data' =>  $patient, 'message' => $message, 'code' => $code];
     }
 
+    public function signup($request): array
+    {
+        $patient = $this->patientRepository->signup($request);
+        $patient = new PatientResource($patient);
+
+        $message = __('messages.store_success', ['class' => __('patient')]);
+        $code = 201;
+        return ['data' =>  $patient, 'message' => $message, 'code' => $code];
+    }
+
     public function show(Patient $patient): array
     {
         $patient = new PatientResource($patient);

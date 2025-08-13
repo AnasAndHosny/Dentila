@@ -36,6 +36,22 @@ class PatientRepository
         $patient->diseases()->attach($request['diseases_ids']);
         $patient->intakeMedications()->attach($request['intake_medications_ids']);
 
+        return $patient;
+    }
+
+    public function signup($request)
+    {
+        $user = User::create(attributes: [
+            'name' => $request['name'],
+            'phone_number' => $request['phone_number'],
+            'password' => $request['password'],
+        ]);
+        $user->assignRole('patient');
+
+        $patient = $user->patient()->create($request->validated());
+
+        $patient->diseases()->attach($request['diseases_ids']);
+        $patient->intakeMedications()->attach($request['intake_medications_ids']);
 
         return $patient;
     }

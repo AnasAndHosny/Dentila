@@ -26,11 +26,11 @@ class PatientResource extends JsonResource
             'marital_status' => (string)$this->marital_status,
             'address' => (string)$this->address,
             'social_history' => (string)$this->social_history,
-            'note' => $this->when(!$request->user()->hasRole('patient'), (string)$this->note),
+            'note' => $this->when($request->user() && !$request->user()->hasRole('patient'), (string)$this->note),
             'intake_medications' => IntakeMedicationResource::collection($this->intakeMedications),
             'diseases' => DiseaseResource::collection($this->diseases),
-            'teeth' => $this->when($request->user()->hasRole('doctor'), PatientToothResource::collection($this->teeth)),
-            $this->mergeWhen($request->user()->hasAnyRole(['manager', 'receptionist']), [
+            'teeth' => $this->when($request->user() && $request->user()->hasRole('doctor'), PatientToothResource::collection($this->teeth)),
+            $this->mergeWhen($request->user() && $request->user()->hasAnyRole(['manager', 'receptionist']), [
                 'is_banned' => $this->user->isBanned(),
                 'ban_expired_at' => $this->user->bans()->latest()->first()->expired_at ?? null,
             ]),
