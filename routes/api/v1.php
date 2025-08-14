@@ -47,6 +47,9 @@ Route::prefix('v1')->middleware([Cors::class])->group(function () {
         Route::post('check', [OtpController::class, 'check']);
     });
 
+    Route::get('disease', [DiseaseController::class, 'index']);
+    Route::get('intake-medication', [IntakeMedicationController::class, 'index']);
+
     Route::middleware(['auth:sanctum', UserBanned::class, UserVerified::class])->group(function () {
         Route::post('password/change', [ChangePasswordController::class, 'passwordChange']);
 
@@ -118,14 +121,12 @@ Route::prefix('v1')->middleware([Cors::class])->group(function () {
         });
 
         Route::prefix('disease')->controller(DiseaseController::class)->group(function () {
-            Route::get('/', 'index');
             Route::post('/', 'store');
             Route::patch('{disease}', 'update');
             Route::delete('{disease}', 'destroy');
         });
 
         Route::prefix('intake-medication')->controller(IntakeMedicationController::class)->group(function () {
-            Route::get('/', 'index');
             Route::post('/', 'store');
             Route::patch('{intakeMedication}', 'update');
             Route::delete('{intakeMedication}', 'destroy');
