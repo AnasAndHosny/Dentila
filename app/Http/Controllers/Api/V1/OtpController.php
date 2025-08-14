@@ -17,7 +17,7 @@ class OtpController extends Controller
         $this->otp = new Otp;
     }
 
-    public function check(CheckOtpRequest $request):JsonResponse
+    public function check(CheckOtpRequest $request): JsonResponse
     {
         $otp = $this->otp->check($request->phone_number . '|reset', $request->otp);
 
@@ -27,6 +27,9 @@ class OtpController extends Controller
 
         $code = $otp->status ? 200 : 400;
         $message = __($otp->message);
+
+        if ($code == 400) return ApiResponse::Error($data, $message, $code);
+
         return ApiResponse::Success($data, $message, $code);
     }
 }

@@ -15988,7 +15988,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 17,\n        \"name\": \"زيد الشمعة\",\n        \"phone_number\": \"0936293119\",\n        \"is_verified\": 1,\n        \"created_at\": \"2025-08-02T08:05:25.000000Z\",\n        \"updated_at\": \"2025-08-05T22:10:11.000000Z\"\n    },\n    \"message\": \"إن رقم هاتفك موثق بالفعل.\"\n}"
+							"body": "{\n    \"status\": 0,\n    \"data\": {\n        \"id\": 17,\n        \"name\": \"زيد الشمعة\",\n        \"phone_number\": \"0936293119\",\n        \"is_verified\": 1,\n        \"created_at\": \"2025-08-02T08:05:25.000000Z\",\n        \"updated_at\": \"2025-08-05T22:10:11.000000Z\"\n    },\n    \"message\": \"إن رقم هاتفك موثق بالفعل.\"\n}"
 						}
 					]
 				},
@@ -17243,7 +17243,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"phone_number\": \"0936293119\"\n    },\n    \"message\": \"رمز المرور لمرة واحدة غير صالح\"\n}"
+							"body": "{\n    \"status\": 0,\n    \"data\": {\n        \"phone_number\": \"0936293119\"\n    },\n    \"message\": \"رمز المرور لمرة واحدة غير صالح\"\n}"
 						},
 						{
 							"name": "OTP Expired",
@@ -17328,7 +17328,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"phone_number\": \"0936293119\"\n    },\n    \"message\": \"رمز المرور لمرة واحدة منتهي الصلاحية\"\n}"
+							"body": "{\n    \"status\": 0,\n    \"data\": {\n        \"phone_number\": \"0936293119\"\n    },\n    \"message\": \"رمز المرور لمرة واحدة منتهي الصلاحية\"\n}"
 						},
 						{
 							"name": "OTP does not exist",
@@ -17413,7 +17413,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"phone_number\": \"0936293119\"\n    },\n    \"message\": \"رمز المرور لمرة واحدة غير موجود\"\n}"
+							"body": "{\n    \"status\": 0,\n    \"data\": {\n        \"phone_number\": \"0936293119\"\n    },\n    \"message\": \"رمز المرور لمرة واحدة غير موجود\"\n}"
 						}
 					]
 				}

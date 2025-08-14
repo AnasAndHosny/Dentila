@@ -27,7 +27,7 @@ class PhoneVerificationController extends Controller
         if ($user->hasVerifiedPhone()) {
             $message = __('Your phone number is already verified.');
             $code = 400;
-            return ApiResponse::Success($user, $message, 400);
+            return ApiResponse::Error($user, $message, 400);
         }
 
 
