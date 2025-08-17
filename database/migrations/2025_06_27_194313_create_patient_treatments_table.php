@@ -16,6 +16,10 @@ return new class extends Migration
     {
         Schema::create('patient_treatments', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('doctor_id')
+                ->constrained('employees')
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
             $table->foreignIdFor(Patient::class)
                 ->constrained('patients')
                 ->cascadeOnUpdate()

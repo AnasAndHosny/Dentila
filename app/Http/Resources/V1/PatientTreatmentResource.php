@@ -23,6 +23,10 @@ class PatientTreatmentResource extends JsonResource
             'diagnoses' => (string)$this->diagnoses,
             'finished' => (int)$this->finished,
             'complete_percentage' => (int)$this->complete_percentage,
+            'doctor' => [
+                'id' => (int)$this->doctor->id,
+                'name' => $this->doctor->user->name,
+            ],
             'teeth' => PatientTreatmentToothResource::collection($this->patientTeeth),
             'steps' => PatientTreatmentStepResource::collection($this->steps),
         ];

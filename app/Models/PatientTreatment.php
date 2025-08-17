@@ -22,6 +22,15 @@ class PatientTreatment extends Model
         'complete_percentage',
     ];
 
+    protected static function booted()
+    {
+        static::creating(function ($patientTreatment) {
+            if (auth()->check()) {
+                $patientTreatment->doctor_id = auth()->user()->employee->id;
+            }
+        });
+    }
+
     // Scope for finished treatments
     public function scopeCompleted($query)
     {
@@ -37,6 +46,11 @@ class PatientTreatment extends Model
     public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function doctor(): BelongsTo
+    {
+        return $this->belongsTo(Employee::class, 'doctor_id');
     }
 
     public function patient(): BelongsTo

@@ -16,6 +16,7 @@ class PatientTreatmentsQuery extends QueryBuilder
 
         $this
             ->allowedFilters([
+                AllowedFilter::partial('search', 'name'),
                 AllowedFilter::custom('case', new TreatmentCaseFilter),
                 AllowedFilter::custom('tooth', new ToothNumberFilter),
             ])

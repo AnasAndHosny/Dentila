@@ -19,6 +19,12 @@ class PatientTreatmentRepository
     public function all($request, Patient $patient)
     {
         $patients = new PatientTreatmentsQuery($patient->Treatments(), $request);
+
+        $patients->where(function ($query) {
+            $query->where('doctor_id', auth()->user()->employee->id)
+                ->orWhere('finished', true);
+        });
+
         return $patients->latest()->paginate();
     }
 
@@ -172,17 +178,21 @@ class PatientTreatmentRepository
     {
         return DB::transaction(function () use ($request, $patientTreatment) {
             $patientTreatment->steps()
-                ->whereNotIn('id', $request['steps'])
+                ->whereNotIn('id', $request['steps'] ?? [])
                 ->update(['finished' => false]);
             $patientTreatment->steps()
-                ->whereIn('id', $request['steps'])
-                ->update(['finished' => true]);
+                ->whereIn('id', $request['steps'] ?? [])
+                ->update([
+                    'finished' => true,
+                    'treatment_note_id' => null,
+                    'medication_plan_id' => null,
+                ]);
 
             $patientTreatment->substeps()
-                ->whereNotIn('patient_treatment_substeps.id', $request['substeps'])
+                ->whereNotIn('patient_treatment_substeps.id', $request['substeps'] ?? [])
                 ->update(['finished' => false]);
             $patientTreatment->substeps()
-                ->whereIn('patient_treatment_substeps.id', $request['substeps'])
+                ->whereIn('patient_treatment_substeps.id', $request['substeps'] ?? [])
                 ->update(['finished' => true]);
 
             $patientTreatment = $this->calculateCompletedPercentage($patientTreatment);
