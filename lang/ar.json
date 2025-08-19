@@ -105,5 +105,9 @@
     "withdraw":"عملية السحب",
     "Old password is wrong.":"كلمة المرور القديمة خاطئة",
     "Password changed successfully.":"تم تغيير كلمة المرور بنجاح",
-    "Phone number is available.":"رقم الهاتف متاح."
+    "Phone number is available.":"رقم الهاتف متاح.",
+    "treatment evaluations":"تقييمات العلاج",
+    "treatment evaluation":"تقييم العلاج",
+    "doctors":"الأطباء",
+    "doctor reviews":"تقييمات الطبيب"
 }

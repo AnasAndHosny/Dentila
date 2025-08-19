@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Middleware\Cors;
-use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\V1\UserBanned;
 use App\Http\Middleware\V1\UserVerified;
@@ -25,6 +24,7 @@ use App\Http\Controllers\Api\V1\TreatmentSubstepController;
 use App\Http\Controllers\Api\V1\Auth\ResetPasswordController;
 use App\Http\Controllers\Api\V1\Auth\ChangePasswordController;
 use App\Http\Controllers\Api\V1\Auth\ForgetPasswordController;
+use App\Http\Controllers\Api\V1\TreatmentEvaluationController;
 use App\Http\Controllers\Api\V1\PatientTreatmentNoteController;
 use App\Http\Controllers\Api\V1\PatientMedicationPlanController;
 use App\Http\Controllers\Api\V1\Auth\PhoneVerificationController;
@@ -157,6 +157,8 @@ Route::prefix('v1')->middleware([Cors::class])->group(function () {
             Route::get('{patient}/account/transactions', [PatientAccountController::class, 'transactions']);
             Route::post('{patient}/account/deposit', [PatientAccountController::class, 'deposit']);
             Route::post('{patient}/account/withdraw', [PatientAccountController::class, 'withdraw']);
+
+            Route::get('me/treatment/evaluation', [TreatmentEvaluationController::class, 'myEvaluations']);
         });
 
         Route::prefix('patient-treatment')->controller(PatientTreatmentController::class)->group(function () {
@@ -185,5 +187,14 @@ Route::prefix('v1')->middleware([Cors::class])->group(function () {
             Route::get('{patientMedicationPlan}', 'show');
             Route::delete('{patientMedicationPlan}', 'destroy');
         });
+
+        Route::prefix('treatment/evaluation')->controller(TreatmentEvaluationController::class)->group(function () {
+            Route::get('{treatmentEvaluation}', 'show');
+            Route::patch('{treatmentEvaluation}/rate', 'rate');
+            Route::delete('{treatmentEvaluation}/dismes', 'dismes');
+        });
+
+        Route::get('doctor', [TreatmentEvaluationController::class, 'doctors']);
+        Route::get('doctor/{employee}/review', [TreatmentEvaluationController::class, 'doctorReviews']);
     });
 });

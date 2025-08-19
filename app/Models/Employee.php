@@ -58,4 +58,17 @@ class Employee extends Model
     {
         return $this->belongsTo(User::class);
     }
+    
+    public function treatmentEvaluations()
+    {
+        return $this->hasMany(TreatmentEvaluation::class, 'doctor_id');
+    }
+
+    /* متوسط التقييم (يمكن استخدام withAvg عند الجلب) */
+    public function getAvgRatingAttribute(): ?float
+    {
+        return (float) $this->treatmentEvaluations()
+            ->completed()
+            ->avg('rating');
+    }
 }

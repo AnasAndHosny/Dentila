@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -72,5 +73,10 @@ class PatientTreatment extends Model
     public function patientTeeth(): BelongsToMany
     {
         return $this->belongsToMany(PatientTooth::class, 'patient_treatment_teeth');
+    }
+
+    public function evaluation(): HasOne
+    {
+        return $this->hasOne(TreatmentEvaluation::class);
     }
 }

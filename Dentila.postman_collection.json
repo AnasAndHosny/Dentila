@@ -7416,6 +7416,242 @@
 							]
 						}
 					]
+				},
+				{
+					"name": "Review",
+					"item": [
+						{
+							"name": "doctors",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/doctor",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"doctor"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/doctor",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"doctor"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 19 Aug 2025 10:57:34 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 27,\n            \"image\": null,\n            \"name\": \"زيد الشمعة\",\n            \"phone_number\": \"0936293119\",\n            \"birthdate\": \"2002-07-22\",\n            \"age\": 23,\n            \"gender\": \"male\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"manager\",\n                \"doctor\",\n                \"receptionist\",\n                \"patient\"\n            ],\n            \"is_banned\": false,\n            \"ban_expired_at\": null,\n            \"avg_rating\": 4\n        },\n        {\n            \"id\": 18,\n            \"image\": null,\n            \"name\": \"أنااااااااس\",\n            \"phone_number\": \"0957875891\",\n            \"birthdate\": \"2002-01-11\",\n            \"age\": 23,\n            \"gender\": \"male\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"patient\",\n                \"doctor\"\n            ],\n            \"is_banned\": true,\n            \"ban_expired_at\": \"2025-08-28T11:34:09.000000Z\",\n            \"avg_rating\": 0\n        },\n        {\n            \"id\": 20,\n            \"image\": null,\n            \"name\": \"leen\",\n            \"phone_number\": \"0957875892\",\n            \"birthdate\": \"2004-01-22\",\n            \"age\": 21,\n            \"gender\": \"female\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"doctor\"\n            ],\n            \"is_banned\": true,\n            \"ban_expired_at\": null,\n            \"avg_rating\": 0\n        },\n        {\n            \"id\": 21,\n            \"image\": \"images/1753219521.png\",\n            \"name\": \"rima\",\n            \"phone_number\": \"0957875893\",\n            \"birthdate\": \"2003-01-22\",\n            \"age\": 22,\n            \"gender\": \"female\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"doctor\",\n                \"receptionist\"\n            ],\n            \"is_banned\": false,\n            \"ban_expired_at\": null,\n            \"avg_rating\": 0\n        },\n        {\n            \"id\": 22,\n            \"image\": \"images/1753219571.png\",\n            \"name\": \"zaid\",\n            \"phone_number\": \"0957875899\",\n            \"birthdate\": \"2002-07-22\",\n            \"age\": 23,\n            \"gender\": \"male\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"doctor\"\n            ],\n            \"is_banned\": false,\n            \"ban_expired_at\": null,\n            \"avg_rating\": 0\n        },\n        {\n            \"id\": 24,\n            \"image\": null,\n            \"name\": \"zaid\",\n            \"phone_number\": \"0957875879\",\n            \"birthdate\": \"2002-07-22\",\n            \"age\": 23,\n            \"gender\": \"male\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"doctor\",\n                \"receptionist\"\n            ],\n            \"is_banned\": false,\n            \"ban_expired_at\": null,\n            \"avg_rating\": 0\n        },\n        {\n            \"id\": 25,\n            \"image\": null,\n            \"name\": \"zaid\",\n            \"phone_number\": \"0999999999\",\n            \"birthdate\": \"2002-07-22\",\n            \"age\": 23,\n            \"gender\": \"male\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"doctor\",\n                \"receptionist\",\n                \"patient\"\n            ],\n            \"is_banned\": false,\n            \"ban_expired_at\": \"2025-08-03T11:59:42.000000Z\",\n            \"avg_rating\": 0\n        },\n        {\n            \"id\": 26,\n            \"image\": null,\n            \"name\": \"zaid\",\n            \"phone_number\": \"0957845899\",\n            \"birthdate\": \"2002-07-22\",\n            \"age\": 23,\n            \"gender\": \"male\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"doctor\",\n                \"receptionist\"\n            ],\n            \"is_banned\": false,\n            \"ban_expired_at\": null,\n            \"avg_rating\": 0\n        }\n    ],\n    \"message\": \"تم جلب قائمة الأطباء بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "doctor reviews",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/doctor/27/review",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"doctor",
+										"27",
+										"review"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/doctor/27/review",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"doctor",
+												"27",
+												"review"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 19 Aug 2025 14:17:34 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 8,\n                \"doctor\": {\n                    \"id\": 27,\n                    \"name\": \"زيد الشمعة\"\n                },\n                \"patient\": {\n                    \"id\": 28,\n                    \"name\": \"Anas albalah\"\n                },\n                \"treatment\": {\n                    \"id\": 3,\n                    \"name\": \"الخطة بدي أسندها لمريض\",\n                    \"finished_at\": \"2025-07-20\"\n                },\n                \"rating\": 3,\n                \"comment\": \"الدكتور حمار\"\n            },\n            {\n                \"id\": 7,\n                \"doctor\": {\n                    \"id\": 27,\n                    \"name\": \"زيد الشمعة\"\n                },\n                \"patient\": {\n                    \"id\": 28,\n                    \"name\": \"Anas albalah\"\n                },\n                \"treatment\": {\n                    \"id\": 38,\n                    \"name\": \"الخطة بدي أسندها لمريض\",\n                    \"finished_at\": \"2025-08-18\"\n                },\n                \"rating\": 4,\n                \"comment\": \"الدكتور حمار\"\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/v1/doctor/27/review?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/v1/doctor/27/review?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; السابق\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/doctor/27/review?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"التالي &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/v1/doctor/27/review\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 2,\n        \"total\": 2\n    },\n    \"message\": \"تم جلب قائمة doctor reviews بنجاح.\"\n}"
+								},
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/doctor/27/review",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"doctor",
+												"27",
+												"review"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 19 Aug 2025 15:08:59 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 8,\n                \"doctor\": {\n                    \"id\": 27,\n                    \"name\": \"زيد الشمعة\"\n                },\n                \"patient\": {\n                    \"id\": 28,\n                    \"name\": \"Anas albalah\"\n                },\n                \"treatment\": {\n                    \"id\": 3,\n                    \"name\": \"الخطة بدي أسندها لمريض\",\n                    \"finished_at\": \"2025-07-20\"\n                },\n                \"rating\": 3,\n                \"comment\": \"الدكتور حمار\"\n            },\n            {\n                \"id\": 7,\n                \"doctor\": {\n                    \"id\": 27,\n                    \"name\": \"زيد الشمعة\"\n                },\n                \"patient\": {\n                    \"id\": 28,\n                    \"name\": \"Anas albalah\"\n                },\n                \"treatment\": {\n                    \"id\": 38,\n                    \"name\": \"الخطة بدي أسندها لمريض\",\n                    \"finished_at\": \"2025-08-18\"\n                },\n                \"rating\": 4,\n                \"comment\": \"الدكتور حمار\"\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/v1/doctor/27/review?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/v1/doctor/27/review?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; السابق\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/doctor/27/review?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"التالي &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/v1/doctor/27/review\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 2,\n        \"total\": 2\n    },\n    \"message\": \"تم جلب قائمة تقييمات الطبيب بنجاح.\"\n}"
+								}
+							]
+						}
+					]
 				}
 			]
 		},
@@ -9507,7 +9743,6 @@
 										{
 											"key": "Content-Type",
 											"value": "application/json",
-											"name": "Content-Type",
 											"description": "",
 											"type": "text"
 										},
@@ -9799,7 +10034,6 @@
 										{
 											"key": "Content-Type",
 											"value": "application/json",
-											"name": "Content-Type",
 											"description": "",
 											"type": "text"
 										},
@@ -9903,7 +10137,6 @@
 										{
 											"key": "Content-Type",
 											"value": "application/json",
-											"name": "Content-Type",
 											"description": "",
 											"type": "text"
 										},
@@ -13967,6 +14200,385 @@
 									],
 									"cookie": [],
 									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"test 8\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"test 3\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"test 4\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"test 5\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"test 6\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"test 7\"\n        }\n    ],\n    \"message\": \"تم جلب قائمة الأدوية المأخوذة بنجاح.\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Review",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/patient/me/treatment/evaluation",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient",
+										"me",
+										"treatment",
+										"evaluation"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/patient/me/treatment/evaluation",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient",
+												"me",
+												"treatment",
+												"evaluation"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 18 Aug 2025 13:31:30 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 7,\n            \"doctor\": {\n                \"id\": 27,\n                \"name\": \"زيد الشمعة\"\n            },\n            \"patient\": {\n                \"id\": 28,\n                \"name\": \"Anas albalah\"\n            },\n            \"treatment\": {\n                \"id\": 38,\n                \"name\": \"الخطة بدي أسندها لمريض\",\n                \"finished_at\": \"2025-08-18\"\n            }\n        },\n        {\n            \"id\": 8,\n            \"doctor\": {\n                \"id\": 27,\n                \"name\": \"زيد الشمعة\"\n            },\n            \"patient\": {\n                \"id\": 28,\n                \"name\": \"Anas albalah\"\n            },\n            \"treatment\": {\n                \"id\": 3,\n                \"name\": \"الخطة بدي أسندها لمريض\",\n                \"finished_at\": \"2025-07-20\"\n            }\n        },\n        {\n            \"id\": 9,\n            \"doctor\": {\n                \"id\": 27,\n                \"name\": \"زيد الشمعة\"\n            },\n            \"patient\": {\n                \"id\": 28,\n                \"name\": \"Anas albalah\"\n            },\n            \"treatment\": {\n                \"id\": 2,\n                \"name\": \"الخطة بدي أسندها لمريض\",\n                \"finished_at\": \"2025-07-20\"\n            }\n        },\n        {\n            \"id\": 10,\n            \"doctor\": {\n                \"id\": 27,\n                \"name\": \"زيد الشمعة\"\n            },\n            \"patient\": {\n                \"id\": 28,\n                \"name\": \"Anas albalah\"\n            },\n            \"treatment\": {\n                \"id\": 5,\n                \"name\": \"الخطة بدي أسندها لمريض\",\n                \"finished_at\": \"2025-07-20\"\n            }\n        },\n        {\n            \"id\": 11,\n            \"doctor\": {\n                \"id\": 27,\n                \"name\": \"زيد الشمعة\"\n            },\n            \"patient\": {\n                \"id\": 28,\n                \"name\": \"Anas albalah\"\n            },\n            \"treatment\": {\n                \"id\": 8,\n                \"name\": \"الخطة بدي أسندها لمريض\",\n                \"finished_at\": \"2025-07-20\"\n            }\n        },\n        {\n            \"id\": 12,\n            \"doctor\": {\n                \"id\": 27,\n                \"name\": \"زيد الشمعة\"\n            },\n            \"patient\": {\n                \"id\": 28,\n                \"name\": \"Anas albalah\"\n            },\n            \"treatment\": {\n                \"id\": 10,\n                \"name\": \"الخطة بدي أسندها لمريض\",\n                \"finished_at\": \"2025-07-20\"\n            }\n        },\n        {\n            \"id\": 13,\n            \"doctor\": {\n                \"id\": 27,\n                \"name\": \"زيد الشمعة\"\n            },\n            \"patient\": {\n                \"id\": 28,\n                \"name\": \"Anas albalah\"\n            },\n            \"treatment\": {\n                \"id\": 37,\n                \"name\": \"الخطة بدي أسندها لمريض\",\n                \"finished_at\": \"2025-08-15\"\n            }\n        },\n        {\n            \"id\": 14,\n            \"doctor\": {\n                \"id\": 27,\n                \"name\": \"زيد الشمعة\"\n            },\n            \"patient\": {\n                \"id\": 28,\n                \"name\": \"Anas albalah\"\n            },\n            \"treatment\": {\n                \"id\": 36,\n                \"name\": \"الخطة بدي أسندها لمريض\",\n                \"finished_at\": \"2025-08-06\"\n            }\n        }\n    ],\n    \"message\": \"تم جلب قائمة تقييمات العلاج بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "rate",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "rating",
+											"value": "4",
+											"description": "between: 0,5",
+											"type": "text"
+										},
+										{
+											"key": "comment",
+											"value": "الدكتور حمار",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/treatment/evaluation/6/rate",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"treatment",
+										"evaluation",
+										"6",
+										"rate"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "rating",
+													"value": "4",
+													"type": "text"
+												},
+												{
+													"key": "comment",
+													"value": "الدكتور حمار",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/treatment/evaluation/6/rate",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment",
+												"evaluation",
+												"6",
+												"rate"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 18 Aug 2025 13:24:11 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 6,\n        \"doctor\": {\n            \"id\": 27,\n            \"name\": \"زيد الشمعة\"\n        },\n        \"patient\": {\n            \"id\": 28,\n            \"name\": \"Anas albalah\"\n        },\n        \"treatment\": {\n            \"id\": 38,\n            \"name\": \"الخطة بدي أسندها لمريض\",\n            \"finished_at\": \"2025-08-18\"\n        },\n        \"rating\": 4,\n        \"comment\": \"الدكتور حمار\"\n    },\n    \"message\": \"تم تحديث تقييم العلاج بنجاح.\"\n}"
+								},
+								{
+									"name": "Between 0 and 5",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "rating",
+													"value": "49",
+													"description": "between: 0,5",
+													"type": "text"
+												},
+												{
+													"key": "comment",
+													"value": "الدكتور حمار",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/treatment/evaluation/6/rate",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment",
+												"evaluation",
+												"6",
+												"rate"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 18 Aug 2025 13:25:34 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"rating\": [\n            \"يجب أن تكون قيمة التقييم بين 1 و 5.\"\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "dismes",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/treatment/evaluation/4/dismes",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"treatment",
+										"evaluation",
+										"4",
+										"dismes"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/treatment/evaluation/5/dismes",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"treatment",
+												"evaluation",
+												"5",
+												"dismes"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 18 Aug 2025 13:22:05 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [],\n    \"message\": \"تم حذف تقييم العلاج بنجاح.\"\n}"
 								}
 							]
 						}

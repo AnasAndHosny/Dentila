@@ -121,4 +121,9 @@ class Patient extends Model
     {
         return $this->hasOne(PatientAccount::class);
     }
+
+    public function treatmentEvaluations(): HasMany
+    {
+        return $this->hasMany(TreatmentEvaluation::class);
+    }
 }
