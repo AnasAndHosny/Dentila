@@ -13,6 +13,7 @@
         "laravel/telescope": "^5.9",
         "laravel/tinker": "^2.10.1",
         "mchev/banhammer": "^2.4",
+        "pusher/pusher-php-server": "^7.2",
         "spatie/laravel-permission": "^6.20",
         "spatie/laravel-query-builder": "^6.3"
     },

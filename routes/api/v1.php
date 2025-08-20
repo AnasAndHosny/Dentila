@@ -13,6 +13,7 @@ use App\Http\Controllers\Api\V1\CategoryController;
 use App\Http\Controllers\Api\V1\EmployeeController;
 use App\Http\Controllers\Api\V1\MedicationController;
 use App\Http\Controllers\Api\V1\ToothStatusController;
+use App\Http\Controllers\Api\V1\NotificationController;
 use App\Http\Controllers\Api\V1\TreatmentNoteController;
 use App\Http\Controllers\Api\V1\TreatmentPlanController;
 use App\Http\Controllers\Api\V1\TreatmentStepController;
@@ -196,5 +197,10 @@ Route::prefix('v1')->middleware([Cors::class])->group(function () {
 
         Route::get('doctor', [TreatmentEvaluationController::class, 'doctors'])->middleware('can:doctor.index');
         Route::get('doctor/{employee}/review', [TreatmentEvaluationController::class, 'doctorReviews'])->middleware('can:doctor.showReviews');
+
+        Route::prefix('notifications')->controller(NotificationController::class)->group(function () {
+            Route::get('/', 'index');
+            Route::get('mark-all', 'markAllAsRead');
+        });
     });
 });

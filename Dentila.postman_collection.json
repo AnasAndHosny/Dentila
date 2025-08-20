@@ -7558,71 +7558,6 @@
 										},
 										{
 											"key": "Date",
-											"value": "Tue, 19 Aug 2025 14:17:34 GMT"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										},
-										{
-											"key": "Access-Control-Allow-Methods",
-											"value": "POST, GET, OPTIONS, PUT, DELETE"
-										},
-										{
-											"key": "Access-Control-Allow-Headers",
-											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
-										},
-										{
-											"key": "Access-Control-Allow-Credentials",
-											"value": "true"
-										}
-									],
-									"cookie": [],
-									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"current_page\": 1,\n        \"data\": [\n            {\n                \"id\": 8,\n                \"doctor\": {\n                    \"id\": 27,\n                    \"name\": \"زيد الشمعة\"\n                },\n                \"patient\": {\n                    \"id\": 28,\n                    \"name\": \"Anas albalah\"\n                },\n                \"treatment\": {\n                    \"id\": 3,\n                    \"name\": \"الخطة بدي أسندها لمريض\",\n                    \"finished_at\": \"2025-07-20\"\n                },\n                \"rating\": 3,\n                \"comment\": \"الدكتور حمار\"\n            },\n            {\n                \"id\": 7,\n                \"doctor\": {\n                    \"id\": 27,\n                    \"name\": \"زيد الشمعة\"\n                },\n                \"patient\": {\n                    \"id\": 28,\n                    \"name\": \"Anas albalah\"\n                },\n                \"treatment\": {\n                    \"id\": 38,\n                    \"name\": \"الخطة بدي أسندها لمريض\",\n                    \"finished_at\": \"2025-08-18\"\n                },\n                \"rating\": 4,\n                \"comment\": \"الدكتور حمار\"\n            }\n        ],\n        \"first_page_url\": \"http://localhost:8000/api/v1/doctor/27/review?page=1\",\n        \"from\": 1,\n        \"last_page\": 1,\n        \"last_page_url\": \"http://localhost:8000/api/v1/doctor/27/review?page=1\",\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; السابق\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8000/api/v1/doctor/27/review?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"التالي &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"next_page_url\": null,\n        \"path\": \"http://localhost:8000/api/v1/doctor/27/review\",\n        \"per_page\": 15,\n        \"prev_page_url\": null,\n        \"to\": 2,\n        \"total\": 2\n    },\n    \"message\": \"تم جلب قائمة doctor reviews بنجاح.\"\n}"
-								},
-								{
-									"name": "Success",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/doctor/27/review",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"doctor",
-												"27",
-												"review"
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": null,
-									"header": [
-										{
-											"key": "Host",
-											"value": "localhost:8000"
-										},
-										{
-											"key": "Connection",
-											"value": "close"
-										},
-										{
-											"key": "X-Powered-By",
-											"value": "PHP/8.2.12"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, private"
-										},
-										{
-											"key": "Date",
 											"value": "Tue, 19 Aug 2025 15:08:59 GMT"
 										},
 										{
@@ -10854,6 +10789,175 @@
 									],
 									"cookie": [],
 									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"treat 4\",\n        \"text\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\",\n        \"duration_value\": 234,\n        \"duration_unit\": \"days\"\n    },\n    \"message\": \"تم جلب ملاحظة العلاج بنجاح.\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Medication Plan",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/medication-plan",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"medication-plan"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/medication-plan",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"medication-plan"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 21 Jun 2025 02:45:10 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 4,\n            \"medication\": {\n                \"id\": 7,\n                \"image\": null,\n                \"name\": \"medication 9\",\n                \"info\": null\n            },\n            \"dose\": \"حبة كل 24 ساعة\",\n            \"duration_value\": 4,\n            \"duration_unit\": \"weeks\"\n        },\n        {\n            \"id\": 3,\n            \"medication\": {\n                \"id\": 5,\n                \"image\": \"images/1750380602.jpg\",\n                \"name\": \"medication 2\",\n                \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n            },\n            \"dose\": null,\n            \"duration_value\": 4,\n            \"duration_unit\": \"weeks\"\n        },\n        {\n            \"id\": 1,\n            \"medication\": {\n                \"id\": 5,\n                \"image\": \"images/1750380602.jpg\",\n                \"name\": \"medication 2\",\n                \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n            },\n            \"dose\": null,\n            \"duration_value\": 4,\n            \"duration_unit\": \"weeks\"\n        }\n    ],\n    \"message\": \"تم جلب قائمة خطط منح الدواء بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "show",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "locale",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/medication-plan/2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"medication-plan",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "locale",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{base_url}}/medication-plan/3",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"medication-plan",
+												"3"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 21 Jun 2025 02:45:47 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 3,\n        \"medication\": {\n            \"id\": 5,\n            \"image\": \"images/1750380602.jpg\",\n            \"name\": \"medication 2\",\n            \"info\": \"ajfajg;oagjsd\\nafj;ajfna;lsdf\\nagdgfhfh\"\n        },\n        \"dose\": null,\n        \"duration_value\": 4,\n        \"duration_unit\": \"weeks\"\n    },\n    \"message\": \"تم جلب خطة منح الدواء بنجاح.\"\n}"
 								}
 							]
 						}
@@ -18049,6 +18153,46 @@
 							"body": "{\n    \"status\": 0,\n    \"data\": {\n        \"phone_number\": \"0936293119\"\n    },\n    \"message\": \"رمز المرور لمرة واحدة غير موجود\"\n}"
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "Notification",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/notifications",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"notifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mark all as read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/notifications/mark-all",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"notifications",
+								"mark-all"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
