@@ -21,6 +21,12 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->api(prepend: [
             \App\Http\Middleware\Localization::class, //change locale language for api routes
         ]);
+
+        $middleware->alias([
+            'role' => \Spatie\Permission\Middleware\RoleMiddleware::class,
+            'permission' => \Spatie\Permission\Middleware\PermissionMiddleware::class,
+            'role_or_permission' => \Spatie\Permission\Middleware\RoleOrPermissionMiddleware::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         // handle NotAuthorized exceptions from api requests and send JsonResponse

@@ -28,7 +28,18 @@ class RolesPermissionsSeeder extends Seeder
 
 
         // Define permissions
-        $managerPermissions = [];
+        $managerPermissions = [
+            'user.ban', 'user.unban',
+            'medication.index', 'medication.store', 'medication.show', 'medication.update', 'medication.destroy', 'medication.showPlans',
+            'medicationPlan.index', 'medicationPlan.store', 'medicationPlan.show', 'medicationPlan.update', 'medicationPlan.destroy',
+            'treatmentNote.index', 'treatmentNote.store', 'treatmentNote.show', 'treatmentNote.update', 'treatmentNote.destroy',
+            'category.index', 'category.store', 'category.show', 'category.update', 'category.destroy', 'category.showPlans',
+            'toothStatus.index',
+            'treatmentPlan.index', 'treatmentPlan.store', 'treatmentPlan.show', 'treatmentPlan.update', 'treatmentPlan.destroy',
+            'patient.index', 'patient.show', 'patient.destroy',
+            'employee.index', 'employee.store', 'employee.show', 'employee.update', 'employee.destroy',
+            'doctor.index', 'doctor.showReviews', 'treatmentEvaluation.show'
+        ];
 
         // Create permissions
         foreach ($managerPermissions as $permissionName) {
@@ -36,7 +47,17 @@ class RolesPermissionsSeeder extends Seeder
         }
 
         // Define permissions
-        $doctorPermissions = [];
+        $doctorPermissions = [
+            'disease.store', 'disease.update', 'disease.destroy',
+            'intakeMedication.store', 'intakeMedication.update', 'intakeMedication.destroy',
+            'patient.index', 'patient.show', 'patient.update', 'patient.destroy',
+            'treatmentPlan.index', 'treatmentPlan.show',
+            'patientTreatment.index', 'patientTreatment.store', 'patientTreatment.show', 'patientTreatment.update', 'patientTreatment.destroy',
+            'treatmentNote.index', 'treatmentNote.show',
+            'medicationPlan.index', 'medicationPlan.show',
+            'patientNote.index', 'patientNote.store', 'patientNote.show', 'patientNote.destroy',
+            'patientMedication.index', 'patientMedication.store', 'patientMedication.show', 'patientMedication.destroy',
+        ];
 
         // Create permissions
         foreach ($doctorPermissions as $permissionName) {
@@ -44,7 +65,12 @@ class RolesPermissionsSeeder extends Seeder
         }
 
         // Define permissions
-        $patientPermissions = [];
+        $patientPermissions = [
+            'account.index.my',
+            'patientNote.index.my', 'patientNote.show.my',
+            'patientMedication.index.my', 'patientMedication.show.my',
+            'treatmentEvaluation.index.my', 'treatmentEvaluation.show.my', 'treatmentEvaluation.rate.my', 'treatmentEvaluation.dismes.my',
+        ];
 
         // Create permissions
         foreach ($patientPermissions as $permissionName) {
@@ -52,7 +78,10 @@ class RolesPermissionsSeeder extends Seeder
         }
 
         // Define permissions
-        $receptionistPermissions = [];
+        $receptionistPermissions = [
+            'patient.index', 'patient.store', 'patient.show', 'patient.destroy',
+            'account.index', 'account.deposit', 'account.withdraw',
+        ];
 
         // Create permissions
         foreach ($receptionistPermissions as $permissionName) {
