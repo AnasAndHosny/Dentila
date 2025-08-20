@@ -10,11 +10,11 @@ class ToothRepository
     public function update($request, Patient $patient, int $tooth)
     {
         $toothId = Tooth::where('number', $tooth)->first()->id;
-        $patient->teeth()->syncWithoutDetaching($toothId);
-        $patient->teeth()->updateExistingPivot($toothId,[
+        $patient->originalTeeth()->syncWithoutDetaching($toothId);
+        $patient->originalTeeth()->updateExistingPivot($toothId,[
             'note' => $request['note']
         ]);
-        $tooth = $patient->teeth()->find($toothId);
+        $tooth = $patient->teeth()->where('tooth_id', $toothId)->first();
         return $tooth;
     }
 }

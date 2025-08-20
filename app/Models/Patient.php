@@ -102,6 +102,12 @@ class Patient extends Model
         return $this->hasMany(PatientTooth::class);
     }
 
+    public function originalTeeth(): BelongsToMany
+    {
+        return $this->belongsToMany(Tooth::class, table: 'patient_teeth',)
+            ->withPivot('has_treatment', 'note', 'tooth_status_id');
+    }
+
     public function Treatments(): HasMany
     {
         return $this->hasMany(PatientTreatment::class);
