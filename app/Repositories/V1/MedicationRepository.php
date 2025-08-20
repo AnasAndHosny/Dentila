@@ -25,11 +25,7 @@ class MedicationRepository
     public function update($request, Medication $medication)
     {
         $image = ImageHelper::update($request, $medication);
-        $medication->update([
-            'image' => $image,
-            'name' => $request['name'] ?? $medication['name'],
-            'info' => $request['info'] ?? $medication['info'],
-        ]);
+        $medication->update($request->validated());
         return $medication;
     }
 
