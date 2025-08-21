@@ -2,9 +2,8 @@
 
 namespace App\Models;
 
+use App\Events\TransactionCreated;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Notifications\Notification;
-use App\Notifications\TransactionNotification;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Transaction extends Model
@@ -27,12 +26,9 @@ class Transaction extends Model
         });
 
         static::created(function ($transaction) {
-        // أرسل الإشعار للمريض المرتبط بالحساب
-        if ($transaction->account && $transaction->account->patient && $transaction->account->patient->user) {
-            $user = $transaction->account->patient->user;
-            $user->notify( new TransactionNotification($transaction));
-        }
-    });
+            // أرسل الإشعار للمريض المرتبط بالحساب
+            event(new TransactionCreated($transaction));
+        });
     }
 
     public function account(): BelongsTo
