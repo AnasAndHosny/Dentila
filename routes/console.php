@@ -15,3 +15,4 @@ Schedule::call(function () {
 
 Schedule::command('otp:clean')->daily();
 
+Schedule::command('patients:payment-reminders')->weeklyOn(5, '9:00');
