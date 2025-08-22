@@ -35,9 +35,14 @@ class TreatmentEvaluation extends Model
     {
         return $q->whereNull('rating')->whereDate('created_at', '<=', Carbon::now()->subMonth());
     }
-    
+
     public function scopeCompleted($q)
     {
         return $q->whereNotNull('rating');
+    }
+
+    public function scopeDue($q)
+    {
+        return $q->whereNull('rating')->whereBetween('created_at', [now()->subMonth()->startOfDay(), now()->subMonth()->endOfDay()]);
     }
 }
