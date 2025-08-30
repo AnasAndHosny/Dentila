@@ -109,5 +109,8 @@
     "treatment evaluations":"تقييمات العلاج",
     "treatment evaluation":"تقييم العلاج",
     "doctors":"الأطباء",
-    "doctor reviews":"تقييمات الطبيب"
+    "doctor reviews":"تقييمات الطبيب",
+    "appointments":"المواعيد",
+    "appointment":"الموعد",
+    "This appointment overlaps with another appointment for the same doctor.":"هذا الموعد يتداخل مع موعد آخر للطبيب."
 }

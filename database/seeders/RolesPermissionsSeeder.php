@@ -81,6 +81,7 @@ class RolesPermissionsSeeder extends Seeder
         $receptionistPermissions = [
             'patient.index', 'patient.store', 'patient.show', 'patient.destroy',
             'account.index', 'account.deposit', 'account.withdraw',
+            'doctor.index'
         ];
 
         // Create permissions

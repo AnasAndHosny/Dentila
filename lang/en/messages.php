@@ -10,4 +10,23 @@ return [
     'destroy_success'               => ':Class deleted successfully.',
     'banned'                        => 'Sorry, your account has been banned.',
     'notVerified'                   => 'Please verify your phone number.',
+    'appointment' => [
+        'not_found'   => "No appointments found to shift.",
+        'conflict'    => "This appointment conflicts with another appointment for the doctor (Date: :date, Time: :start - :end).",
+        'invalid_transition' => 'Invalid transition from :from to :to.',
+        'updated_successfully' => 'Appointment status updated successfully to :to.',
+    ],
+
+    'queue' => [
+        'added'   => 'Patient has been added to the queue.',
+        'removed' => 'Patient has been removed from the queue.',
+        'updated' => 'Queue turn status updated to :status.',
+    ],
+
+    'queue_turn' => [
+        'created_successfully' => 'Queue turn created successfully',
+        'updated_successfully' => 'Queue turn updated successfully.',
+        'invalid_transition'   => 'Cannot transition from :from to :to.',
+        'list'                 => 'Queue turn list retrieved successfully.',
+    ],
 ];

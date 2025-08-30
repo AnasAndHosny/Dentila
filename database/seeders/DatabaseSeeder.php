@@ -34,6 +34,9 @@ class DatabaseSeeder extends Seeder
             PatientTreatmentSeeder::class,
             EmployeeSeeder::class,
             PatientAccountSeeder::class,
+            AppointmentStatusSeeder::class,
+            AppointmentSeeder::class,
+            QueueTurnStatusSeeder::class,
         ]);
     }
 }

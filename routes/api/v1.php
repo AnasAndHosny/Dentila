@@ -11,7 +11,9 @@ use App\Http\Controllers\Api\V1\DiseaseController;
 use App\Http\Controllers\Api\V1\PatientController;
 use App\Http\Controllers\Api\V1\CategoryController;
 use App\Http\Controllers\Api\V1\EmployeeController;
+use App\Http\Controllers\Api\V1\QueueTurnController;
 use App\Http\Controllers\Api\V1\MedicationController;
+use App\Http\Controllers\Api\V1\AppointmentController;
 use App\Http\Controllers\Api\V1\ToothStatusController;
 use App\Http\Controllers\Api\V1\NotificationController;
 use App\Http\Controllers\Api\V1\TreatmentNoteController;
@@ -201,6 +203,23 @@ Route::prefix('v1')->middleware([Cors::class])->group(function () {
         Route::prefix('notifications')->controller(NotificationController::class)->group(function () {
             Route::get('/', 'index');
             Route::get('mark-all', 'markAllAsRead');
+        });
+
+        Route::prefix('appointment')->controller(AppointmentController::class)->group(function () {
+            Route::get('/', 'index');
+            Route::post('/', 'store');
+            Route::patch('{appointment}', 'update');
+        });
+
+        Route::get('patient/{patient}/appointments', [AppointmentController::class, 'getAppointmentsByPatient']);
+        Route::get('doctor/{employee}/appointments', [AppointmentController::class, 'getAppointmentsByDoctor']);
+        Route::post('doctor/{employee}/appointments/shift', [AppointmentController::class, 'shiftAppointments']);
+
+        Route::prefix('queue-turns')->controller(QueueTurnController::class)->group(function () {
+            Route::post('/', 'store');
+            Route::patch('/{queueTurn}', 'update');
+            Route::get('/', 'index');
+            Route::get('/history', 'history');
         });
     });
 });

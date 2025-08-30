@@ -16558,6 +16558,1290 @@
 							]
 						}
 					]
+				},
+				{
+					"name": "Appointment",
+					"item": [
+						{
+							"name": "Queue",
+							"item": [
+								{
+									"name": "add_turne",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "patient_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "doctor_id",
+													"value": "2",
+													"type": "text"
+												},
+												{
+													"key": "appointment_id",
+													"value": "",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/queue-turns",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"queue-turns"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update_turn_status",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "queue_turn_status",
+													"value": "In Progress",
+													"type": "text"
+												},
+												{
+													"key": "_method",
+													"value": "patch",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/queue-turns/15",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"queue-turns",
+												"15"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "return_queue",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/queue-turns",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"queue-turns"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "return_queue_history",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/queue-turns/history",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"queue-turns",
+												"history"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "doctors",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/doctor",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"doctor"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/doctor",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"doctor"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 19 Aug 2025 10:57:34 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 27,\n            \"image\": null,\n            \"name\": \"زيد الشمعة\",\n            \"phone_number\": \"0936293119\",\n            \"birthdate\": \"2002-07-22\",\n            \"age\": 23,\n            \"gender\": \"male\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"manager\",\n                \"doctor\",\n                \"receptionist\",\n                \"patient\"\n            ],\n            \"is_banned\": false,\n            \"ban_expired_at\": null,\n            \"avg_rating\": 4\n        },\n        {\n            \"id\": 18,\n            \"image\": null,\n            \"name\": \"أنااااااااس\",\n            \"phone_number\": \"0957875891\",\n            \"birthdate\": \"2002-01-11\",\n            \"age\": 23,\n            \"gender\": \"male\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"patient\",\n                \"doctor\"\n            ],\n            \"is_banned\": true,\n            \"ban_expired_at\": \"2025-08-28T11:34:09.000000Z\",\n            \"avg_rating\": 0\n        },\n        {\n            \"id\": 20,\n            \"image\": null,\n            \"name\": \"leen\",\n            \"phone_number\": \"0957875892\",\n            \"birthdate\": \"2004-01-22\",\n            \"age\": 21,\n            \"gender\": \"female\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"doctor\"\n            ],\n            \"is_banned\": true,\n            \"ban_expired_at\": null,\n            \"avg_rating\": 0\n        },\n        {\n            \"id\": 21,\n            \"image\": \"images/1753219521.png\",\n            \"name\": \"rima\",\n            \"phone_number\": \"0957875893\",\n            \"birthdate\": \"2003-01-22\",\n            \"age\": 22,\n            \"gender\": \"female\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"doctor\",\n                \"receptionist\"\n            ],\n            \"is_banned\": false,\n            \"ban_expired_at\": null,\n            \"avg_rating\": 0\n        },\n        {\n            \"id\": 22,\n            \"image\": \"images/1753219571.png\",\n            \"name\": \"zaid\",\n            \"phone_number\": \"0957875899\",\n            \"birthdate\": \"2002-07-22\",\n            \"age\": 23,\n            \"gender\": \"male\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"doctor\"\n            ],\n            \"is_banned\": false,\n            \"ban_expired_at\": null,\n            \"avg_rating\": 0\n        },\n        {\n            \"id\": 24,\n            \"image\": null,\n            \"name\": \"zaid\",\n            \"phone_number\": \"0957875879\",\n            \"birthdate\": \"2002-07-22\",\n            \"age\": 23,\n            \"gender\": \"male\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"doctor\",\n                \"receptionist\"\n            ],\n            \"is_banned\": false,\n            \"ban_expired_at\": null,\n            \"avg_rating\": 0\n        },\n        {\n            \"id\": 25,\n            \"image\": null,\n            \"name\": \"zaid\",\n            \"phone_number\": \"0999999999\",\n            \"birthdate\": \"2002-07-22\",\n            \"age\": 23,\n            \"gender\": \"male\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"doctor\",\n                \"receptionist\",\n                \"patient\"\n            ],\n            \"is_banned\": false,\n            \"ban_expired_at\": \"2025-08-03T11:59:42.000000Z\",\n            \"avg_rating\": 0\n        },\n        {\n            \"id\": 26,\n            \"image\": null,\n            \"name\": \"zaid\",\n            \"phone_number\": \"0957845899\",\n            \"birthdate\": \"2002-07-22\",\n            \"age\": 23,\n            \"gender\": \"male\",\n            \"ssn\": \"\",\n            \"address\": \"\",\n            \"roles\": [\n                \"doctor\",\n                \"receptionist\"\n            ],\n            \"is_banned\": false,\n            \"ban_expired_at\": null,\n            \"avg_rating\": 0\n        }\n    ],\n    \"message\": \"تم جلب قائمة الأطباء بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/appointment?filter[date_range][from]=2025-07-01&filter[date_range][to]=",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"appointment"
+									],
+									"query": [
+										{
+											"key": "filter[date_range][from]",
+											"value": "2025-07-01",
+											"description": "required, nullable"
+										},
+										{
+											"key": "filter[date_range][to]",
+											"value": "",
+											"description": "required, nullable"
+										},
+										{
+											"key": "filter[status]",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/appointment?filter[date_range][from]=2025-07-01&filter[date_range][to]=",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"appointment"
+											],
+											"query": [
+												{
+													"key": "filter[date_range][from]",
+													"value": "2025-07-01",
+													"description": "required, nullable"
+												},
+												{
+													"key": "filter[date_range][to]",
+													"value": "",
+													"description": "required, nullable"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 16 Aug 2025 11:10:11 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 14,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 1,\n                \"name\": \"ranmi\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-07-24\",\n            \"start_time\": \"10:29\",\n            \"end_time\": \"10:59\",\n            \"duration\": 30\n        },\n        {\n            \"id\": 15,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 1,\n                \"name\": \"ranmi\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-07-24\",\n            \"start_time\": \"10:29\",\n            \"end_time\": \"10:59\",\n            \"duration\": 30\n        },\n        {\n            \"id\": 16,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 1,\n                \"name\": \"ranmi\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-07-24\",\n            \"start_time\": \"10:29\",\n            \"end_time\": \"10:59\",\n            \"duration\": 30\n        },\n        {\n            \"id\": 17,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 1,\n                \"name\": \"ranmi\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-07-24\",\n            \"start_time\": \"10:29\",\n            \"end_time\": \"10:59\",\n            \"duration\": 30\n        },\n        {\n            \"id\": 18,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 1,\n                \"name\": \"ranmi\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-07-24\",\n            \"start_time\": \"10:29\",\n            \"end_time\": \"10:59\",\n            \"duration\": 30\n        },\n        {\n            \"id\": 19,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 1,\n                \"name\": \"ranmi\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-07-24\",\n            \"start_time\": \"10:29\",\n            \"end_time\": \"10:59\",\n            \"duration\": 30\n        },\n        {\n            \"id\": 20,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 1,\n                \"name\": \"ranmi\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-08-16\",\n            \"start_time\": \"10:29\",\n            \"end_time\": \"10:59\",\n            \"duration\": 30\n        },\n        {\n            \"id\": 21,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 1,\n                \"name\": \"ranmi\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-08-16\",\n            \"start_time\": \"10:29\",\n            \"end_time\": \"10:59\",\n            \"duration\": 30\n        },\n        {\n            \"id\": 22,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 1,\n                \"name\": \"ranmi\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-08-16\",\n            \"start_time\": \"10:29\",\n            \"end_time\": \"10:59\",\n            \"duration\": 30\n        },\n        {\n            \"id\": 23,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 1,\n                \"name\": \"ranmi\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-08-16\",\n            \"start_time\": \"10:29\",\n            \"end_time\": \"10:59\",\n            \"duration\": 30\n        },\n        {\n            \"id\": 24,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 1,\n                \"name\": \"ranmi\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-08-16\",\n            \"start_time\": \"10:10\",\n            \"end_time\": \"10:28\",\n            \"duration\": 18\n        },\n        {\n            \"id\": 25,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 2,\n                \"name\": \"ahmad\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-08-16\",\n            \"start_time\": \"10:50\",\n            \"end_time\": \"11:28\",\n            \"duration\": 38\n        },\n        {\n            \"id\": 28,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 2,\n                \"name\": \"ahmad\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-08-16\",\n            \"start_time\": \"09:28\",\n            \"end_time\": \"09:50\",\n            \"duration\": 22\n        }\n    ],\n    \"message\": \"تم جلب قائمة المواعيد بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "store",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "patient_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "doctor_id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "start_time",
+											"value": "2025-09-26 09:28:00",
+											"type": "text"
+										},
+										{
+											"key": "end_time",
+											"value": "2025-09-26 09:50:00",
+											"description": "after start time",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/appointment",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"appointment"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "patient_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "doctor_id",
+													"value": "2",
+													"type": "text"
+												},
+												{
+													"key": "start_time",
+													"value": "2025-08-16 09:28:00",
+													"type": "text"
+												},
+												{
+													"key": "end_time",
+													"value": "2025-08-16 09:50:00",
+													"description": "after start time",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/appointment",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"appointment"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 16 Aug 2025 11:09:50 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 28,\n        \"patient\": {\n            \"id\": 1,\n            \"name\": \"ahmad\"\n        },\n        \"doctor\": {\n            \"id\": 2,\n            \"name\": \"ahmad\"\n        },\n        \"status_id\": 1,\n        \"status\": \"Pending\",\n        \"date\": \"2025-08-16\",\n        \"start_time\": \"09:28\",\n        \"end_time\": \"09:50\",\n        \"duration\": 22\n    },\n    \"message\": \"تم إنشاء الموعد بنجاح.\"\n}"
+								},
+								{
+									"name": "Appointment Overlap",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "patient_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "doctor_id",
+													"value": "2",
+													"type": "text"
+												},
+												{
+													"key": "start_time",
+													"value": "2025-08-16 10:50:00",
+													"type": "text"
+												},
+												{
+													"key": "end_time",
+													"value": "2025-08-16 11:28:00",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/appointment",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"appointment"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 16 Aug 2025 11:02:17 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"end_time\": [\n            \"هذا الموعد يتداخل مع موعد آخر للطبيب.\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "end time should be after start time",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "patient_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "doctor_id",
+													"value": "2",
+													"type": "text"
+												},
+												{
+													"key": "start_time",
+													"value": "2025-08-16 09:50:00",
+													"type": "text"
+												},
+												{
+													"key": "end_time",
+													"value": "2025-08-16 09:28:00",
+													"description": "after start time",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/appointment",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"appointment"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 16 Aug 2025 11:05:56 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"end_time\": [\n            \"يجب على الحقل وقت الانتهاء أن يكون تاريخًا لاحقًا للتاريخ وقت البدء.\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "Start time should be after now",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "patient_id",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "doctor_id",
+													"value": "2",
+													"type": "text"
+												},
+												{
+													"key": "start_time",
+													"value": "2025-08-14 09:28:00",
+													"type": "text"
+												},
+												{
+													"key": "end_time",
+													"value": "2025-08-16 09:50:00",
+													"description": "after start time",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/appointment",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"appointment"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 16 Aug 2025 11:35:59 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"start_time\": [\n            \"يجب على الحقل وقت البدء أن يكون تاريخًا لاحقًا للتاريخ 2025-08-16.\"\n        ],\n        \"end_time\": [\n            \"هذا الموعد يتداخل مع موعد آخر للطبيب.\"\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "appointment_status",
+											"value": "Pending",
+											"type": "text"
+										},
+										{
+											"key": "_method",
+											"value": "patch",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/appointment/23",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"appointment",
+										"23"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "appointment_status",
+													"value": "Pending",
+													"type": "text"
+												},
+												{
+													"key": "_method",
+													"value": "patch",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/appointment/23",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"appointment",
+												"23"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 16 Aug 2025 13:30:36 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 23,\n        \"patient\": {\n            \"id\": 1,\n            \"name\": \"ahmad\"\n        },\n        \"doctor\": {\n            \"id\": 1,\n            \"name\": \"ranmi\"\n        },\n        \"status_id\": 1,\n        \"status\": \"Pending\",\n        \"date\": \"2025-08-16\",\n        \"start_time\": \"10:29\",\n        \"end_time\": \"10:59\",\n        \"duration\": 30\n    },\n    \"message\": \"تم تحديث الموعد بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "update completed",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "appointment_status",
+											"value": "Scheduled",
+											"type": "text"
+										},
+										{
+											"key": "_method",
+											"value": "patch",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/appointment/21",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"appointment",
+										"21"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "appointment_status",
+													"value": "Pending",
+													"type": "text"
+												},
+												{
+													"key": "_method",
+													"value": "patch",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/appointment/23",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"appointment",
+												"23"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 16 Aug 2025 13:30:36 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 23,\n        \"patient\": {\n            \"id\": 1,\n            \"name\": \"ahmad\"\n        },\n        \"doctor\": {\n            \"id\": 1,\n            \"name\": \"ranmi\"\n        },\n        \"status_id\": 1,\n        \"status\": \"Pending\",\n        \"date\": \"2025-08-16\",\n        \"start_time\": \"10:29\",\n        \"end_time\": \"10:59\",\n        \"duration\": 30\n    },\n    \"message\": \"تم تحديث الموعد بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "appoi by patient",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/patient/1/appointments?filter[date_range][from]=2025-07-01&filter[date_range][to]=&filter[status]=Pending",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"patient",
+										"1",
+										"appointments"
+									],
+									"query": [
+										{
+											"key": "filter[date_range][from]",
+											"value": "2025-07-01",
+											"description": "required, nullable"
+										},
+										{
+											"key": "filter[date_range][to]",
+											"value": "",
+											"description": "required, nullable"
+										},
+										{
+											"key": "filter[status]",
+											"value": "Pending"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/patient/1/appointments?filter[date_range][from]=2025-07-01&filter[date_range][to]=&filter[status]=Pending",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"patient",
+												"1",
+												"appointments"
+											],
+											"query": [
+												{
+													"key": "filter[date_range][from]",
+													"value": "2025-07-01",
+													"description": "required, nullable"
+												},
+												{
+													"key": "filter[date_range][to]",
+													"value": "",
+													"description": "required, nullable"
+												},
+												{
+													"key": "filter[status]",
+													"value": "Pending"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 16 Aug 2025 14:30:04 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 14,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 1,\n                \"name\": \"ranmi\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-07-24\",\n            \"start_time\": \"10:29\",\n            \"end_time\": \"10:59\",\n            \"duration\": 30\n        },\n        {\n            \"id\": 15,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 1,\n                \"name\": \"ranmi\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-07-24\",\n            \"start_time\": \"10:29\",\n            \"end_time\": \"10:59\",\n            \"duration\": 30\n        },\n        {\n            \"id\": 16,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 1,\n                \"name\": \"ranmi\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-07-24\",\n            \"start_time\": \"10:29\",\n            \"end_time\": \"10:59\",\n            \"duration\": 30\n        },\n        {\n            \"id\": 17,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 1,\n                \"name\": \"ranmi\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-07-24\",\n            \"start_time\": \"10:29\",\n            \"end_time\": \"10:59\",\n            \"duration\": 30\n        },\n        {\n            \"id\": 18,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 1,\n                \"name\": \"ranmi\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-07-24\",\n            \"start_time\": \"10:29\",\n            \"end_time\": \"10:59\",\n            \"duration\": 30\n        },\n        {\n            \"id\": 19,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 1,\n                \"name\": \"ranmi\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-07-24\",\n            \"start_time\": \"10:29\",\n            \"end_time\": \"10:59\",\n            \"duration\": 30\n        },\n        {\n            \"id\": 20,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 1,\n                \"name\": \"ranmi\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-08-16\",\n            \"start_time\": \"10:29\",\n            \"end_time\": \"10:59\",\n            \"duration\": 30\n        },\n        {\n            \"id\": 21,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 1,\n                \"name\": \"ranmi\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-08-16\",\n            \"start_time\": \"10:29\",\n            \"end_time\": \"10:59\",\n            \"duration\": 30\n        },\n        {\n            \"id\": 22,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 1,\n                \"name\": \"ranmi\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-08-16\",\n            \"start_time\": \"10:29\",\n            \"end_time\": \"10:59\",\n            \"duration\": 30\n        },\n        {\n            \"id\": 23,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 1,\n                \"name\": \"ranmi\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-08-16\",\n            \"start_time\": \"10:29\",\n            \"end_time\": \"10:59\",\n            \"duration\": 30\n        },\n        {\n            \"id\": 24,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 1,\n                \"name\": \"ranmi\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-08-16\",\n            \"start_time\": \"10:10\",\n            \"end_time\": \"10:28\",\n            \"duration\": 18\n        },\n        {\n            \"id\": 25,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 2,\n                \"name\": \"ahmad\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-08-16\",\n            \"start_time\": \"10:50\",\n            \"end_time\": \"11:28\",\n            \"duration\": 38\n        }\n    ],\n    \"message\": \"تم جلب قائمة المواعيد بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "appoi by doctor",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/doctor/2/appointments?filter[date_range][from]=2025-07-01&filter[date_range][to]=&filter[status]=",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"doctor",
+										"2",
+										"appointments"
+									],
+									"query": [
+										{
+											"key": "filter[date_range][from]",
+											"value": "2025-07-01"
+										},
+										{
+											"key": "filter[date_range][to]",
+											"value": ""
+										},
+										{
+											"key": "filter[status]",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/doctor/2/appointments?filter[date_range][from]=2025-07-01&filter[date_range][to]=",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"doctor",
+												"2",
+												"appointments"
+											],
+											"query": [
+												{
+													"key": "filter[date_range][from]",
+													"value": "2025-07-01"
+												},
+												{
+													"key": "filter[date_range][to]",
+													"value": ""
+												},
+												{
+													"key": "filter[status]",
+													"value": "",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 16 Aug 2025 14:30:28 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 25,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 2,\n                \"name\": \"ahmad\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-08-16\",\n            \"start_time\": \"10:50\",\n            \"end_time\": \"11:28\",\n            \"duration\": 38\n        },\n        {\n            \"id\": 28,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 2,\n                \"name\": \"ahmad\"\n            },\n            \"status_id\": 2,\n            \"status\": \"Deleted\",\n            \"date\": \"2025-08-16\",\n            \"start_time\": \"09:28\",\n            \"end_time\": \"09:50\",\n            \"duration\": 22\n        }\n    ],\n    \"message\": \"تم جلب قائمة المواعيد بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "shift doctor appointments",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "from",
+											"value": "2025-08-17 05:30:00",
+											"type": "text"
+										},
+										{
+											"key": "to",
+											"value": "2025-08-17 08:30:00",
+											"type": "text"
+										},
+										{
+											"key": "target_time",
+											"value": "2025-08-17 06:30:00",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/doctor/2/appointments/shift",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"doctor",
+										"2",
+										"appointments",
+										"shift"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/doctor/2/appointments?filter[date_range][from]=2025-07-01&filter[date_range][to]=",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"doctor",
+												"2",
+												"appointments"
+											],
+											"query": [
+												{
+													"key": "filter[date_range][from]",
+													"value": "2025-07-01"
+												},
+												{
+													"key": "filter[date_range][to]",
+													"value": ""
+												},
+												{
+													"key": "filter[status]",
+													"value": "",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "Text",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 16 Aug 2025 14:30:28 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 25,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 2,\n                \"name\": \"ahmad\"\n            },\n            \"status_id\": 1,\n            \"status\": \"Pending\",\n            \"date\": \"2025-08-16\",\n            \"start_time\": \"10:50\",\n            \"end_time\": \"11:28\",\n            \"duration\": 38\n        },\n        {\n            \"id\": 28,\n            \"patient\": {\n                \"id\": 1,\n                \"name\": \"ahmad\"\n            },\n            \"doctor\": {\n                \"id\": 2,\n                \"name\": \"ahmad\"\n            },\n            \"status_id\": 2,\n            \"status\": \"Deleted\",\n            \"date\": \"2025-08-16\",\n            \"start_time\": \"09:28\",\n            \"end_time\": \"09:50\",\n            \"duration\": 22\n        }\n    ],\n    \"message\": \"تم جلب قائمة المواعيد بنجاح.\"\n}"
+								}
+							]
+						}
+					]
 				}
 			]
 		},
@@ -18189,6 +19473,24 @@
 							"path": [
 								"notifications",
 								"mark-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test Realtime",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/test/realtime",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"test",
+								"realtime"
 							]
 						}
 					},

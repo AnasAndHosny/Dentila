@@ -5,6 +5,7 @@ namespace App\Models;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Employee extends Model
@@ -58,7 +59,7 @@ class Employee extends Model
     {
         return $this->belongsTo(User::class);
     }
-    
+
     public function treatmentEvaluations()
     {
         return $this->hasMany(TreatmentEvaluation::class, 'doctor_id');
@@ -70,5 +71,15 @@ class Employee extends Model
         return (float) $this->treatmentEvaluations()
             ->completed()
             ->avg('rating');
+    }
+
+    public function appointments(): HasMany
+    {
+        return $this->hasMany(Appointment::class);
+    }
+
+    public function queueTurns()
+    {
+        return $this->hasMany(QueueTurn::class);
     }
 }
