@@ -73,6 +73,7 @@ class RolesPermissionsSeeder extends Seeder
             'treatmentEvaluation.index.my', 'treatmentEvaluation.show.my', 'treatmentEvaluation.rate.my', 'treatmentEvaluation.dismes.my',
             'doctor.index',
             'appointment.patient.my', 'appointment.delete.my', 'appointment.store',
+            'queue.checkIn',
         ];
 
         // Create permissions

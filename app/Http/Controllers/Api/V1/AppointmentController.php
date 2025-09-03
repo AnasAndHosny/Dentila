@@ -124,4 +124,12 @@ class AppointmentController extends Controller
             fn() => $this->appointmentService->getAvailableSlots($request)
         );
     }
+
+    public function checkIn(string $code)
+    {
+        return $this->handleService(
+            fn() =>
+            $this->appointmentService->checkInWithCode($code, auth()->user())
+        );
+    }
 }

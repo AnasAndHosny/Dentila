@@ -29,4 +29,13 @@ return [
         'invalid_transition'   => 'Cannot transition from :from to :to.',
         'list'                 => 'Queue turn list retrieved successfully.',
     ],
+
+    // Appointment check-in
+    'appointment' => [
+        'invalid_code'         => 'Invalid check-in code.',
+        'checked_in_success'   => 'You have been checked in successfully.',
+        'patient_not_found'    => 'No patient profile linked to this user.',
+        'no_scheduled'         => 'No scheduled appointment found.',
+        'check_in_not_allowed' => 'Check-in is only allowed from 30 minutes before until 15 minutes after the appointment time (:time).',
+    ],
 ];

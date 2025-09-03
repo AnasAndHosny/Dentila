@@ -5,7 +5,9 @@ namespace App\Repositories\V1;
 use Carbon\Carbon;
 use App\Models\Patient;
 use App\Models\Employee;
+use App\Models\QueueTurn;
 use App\Models\Appointment;
+use App\Models\QueueTurnStatus;
 use App\Models\AppointmentStatus;
 use Illuminate\Support\Facades\DB;
 use App\Queries\V1\AppointmentsQuery;
@@ -237,5 +239,60 @@ class AppointmentRepository
         }
 
         return $appointment->refresh();
+    }
+
+    public function checkInWithCode(string $code, $user)
+    {
+        // تحقق من الكود العام
+        $isValid = \App\Models\CheckInCode::where('code', $code)->where('is_active', true)->exists();
+        if (! $isValid) {
+            throw new \Exception(__('messages.appointment.invalid_code'));
+        }
+
+        // نجيب المريض من المستخدم
+        $patient = $user->patient;
+        if (! $patient) {
+            throw new \Exception(__('messages.appointment.patient_not_found'));
+        }
+
+        // نجيب موعده القادم
+        $appointment = Appointment::where('patient_id', $patient->id)
+            ->whereHas('appointmentStatus', fn($q) => $q->where('name', 'Scheduled'))
+            ->orderBy('start_time')
+            ->first();
+
+        if (! $appointment) {
+            throw new \Exception(__('messages.appointment.no_scheduled'));
+        }
+
+        // تحقق من الوقت
+        $now       = now();
+        $startTime = Carbon::parse($appointment->start_time);
+        $earliest  = $startTime->copy()->subMinutes(30);
+        $latest    = $startTime->copy()->addMinutes(15);
+
+        if (! $now->between($earliest, $latest)) {
+            throw new \Exception(__('messages.appointment.check_in_not_allowed', [
+                'time' => $appointment->start_time
+            ]));
+        }
+
+        // تحديث الحالة
+        $appointment->update([
+            'appointment_status_id' => AppointmentStatus::firstWhere('name', 'Checked In')->id,
+        ]);
+
+        // إدخال في الطابور إذا لسا ما موجود
+        if (! $appointment->queueTurn) {
+            QueueTurn::create([
+                'appointment_id'       => $appointment->id,
+                'patient_id'           => $appointment->patient_id,
+                'employee_id'          => $appointment->employee_id,
+                'queue_turn_status_id' => QueueTurnStatus::firstWhere('name', 'Checked In')->id,
+                'arrival_time'         => now(),
+            ]);
+        }
+
+        return $appointment->fresh('appointmentStatus');
     }
 }

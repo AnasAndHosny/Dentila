@@ -92,4 +92,15 @@ class AppointmentService
 
         return ['data' => $slots, 'message' => $message, 'code' => $code];
     }
+
+    public function checkInWithCode(string $code, $user): array
+    {
+        $appointment = $this->appointmentRepo->checkInWithCode($code, $user);
+
+        return [
+            'data'    => new AppointmentResource($appointment),
+            'message' => __('messages.appointment.checked_in_success'),
+            'code'    => 200,
+        ];
+    }
 }

@@ -218,7 +218,7 @@ Route::prefix('v1')->middleware([Cors::class])->group(function () {
         Route::get('doctor/{employee}/appointments', [AppointmentController::class, 'getAppointmentsByDoctor'])->middleware('can:appointment.index');
         Route::post('doctor/{employee}/appointments/shift', [AppointmentController::class, 'shiftAppointments'])->middleware('can:appointment.update');
         Route::post('/appointments/available-slots', [AppointmentController::class, 'getAvailableSlots']);
-
+        Route::get('appointments/check-in/{code}', [AppointmentController::class, 'checkIn'])->middleware('can:queue.checkIn');
 
         Route::prefix('queue-turns')->controller(QueueTurnController::class)->group(function () {
             Route::post('/', 'store')->middleware('can:queue.store');
