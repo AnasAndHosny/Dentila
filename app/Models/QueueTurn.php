@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Events\QueueTurnAdded;
 use Illuminate\Database\Eloquent\Model;
 
 class QueueTurn extends Model
@@ -13,6 +14,13 @@ class QueueTurn extends Model
         'queue_turn_status_id',
         'arrival_time',
     ];
+
+    protected static function booted()
+    {
+        static::created(function ($queueTurn) {
+            event(new QueueTurnAdded($queueTurn));
+        });
+    }
 
     public function patient()
     {
