@@ -82,6 +82,13 @@ class Patient extends Model
         });
     }
 
+    public function scopeInQueue($query)
+    {
+        return $query->whereHas('queueTurns', function ($q) {
+            $q->where('queue_turn_status_id', QueueTurnStatus::firstWhere('name', 'Checked In')->id);
+        });
+    }
+
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);

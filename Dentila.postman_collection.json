@@ -8622,7 +8622,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{base_url}}/patient?filter[has_treatment]=false",
+									"raw": "{{base_url}}/patient?filter[in_queue]=true",
 									"host": [
 										"{{base_url}}"
 									],
@@ -8638,7 +8638,12 @@
 										{
 											"key": "filter[has_treatment]",
 											"value": "false",
-											"description": "true, false"
+											"description": "true, false",
+											"disabled": true
+										},
+										{
+											"key": "filter[in_queue]",
+											"value": "true"
 										}
 									]
 								}
@@ -15571,71 +15576,6 @@
 							},
 							"response": [
 								{
-									"name": "Error",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/appointments/check-in/abcd",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"appointments",
-												"check-in",
-												"abcd"
-											]
-										}
-									},
-									"status": "Internal Server Error",
-									"code": 500,
-									"_postman_previewlanguage": null,
-									"header": [
-										{
-											"key": "Host",
-											"value": "localhost:8000"
-										},
-										{
-											"key": "Connection",
-											"value": "close"
-										},
-										{
-											"key": "X-Powered-By",
-											"value": "PHP/8.2.12"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, private"
-										},
-										{
-											"key": "Date",
-											"value": "Wed, 03 Sep 2025 16:59:08 GMT"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										},
-										{
-											"key": "Access-Control-Allow-Methods",
-											"value": "POST, GET, OPTIONS, PUT, DELETE"
-										},
-										{
-											"key": "Access-Control-Allow-Headers",
-											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
-										},
-										{
-											"key": "Access-Control-Allow-Credentials",
-											"value": "true"
-										}
-									],
-									"cookie": [],
-									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": \"يمكن تسجيل الوصول فقط قبل الموعد بـ 30 دقيقة وحتى بعده بـ 15 دقيقة (الوقت: 2025-09-02 20:00:00).\"\n}"
-								},
-								{
 									"name": "Success",
 									"originalRequest": {
 										"method": "GET",
@@ -15699,6 +15639,71 @@
 									],
 									"cookie": [],
 									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 28,\n        \"patient\": {\n            \"id\": 18,\n            \"name\": \"زيد الشمعة\"\n        },\n        \"doctor\": {\n            \"id\": 18,\n            \"name\": \"أنااااااااس\"\n        },\n        \"status_id\": 7,\n        \"status\": \"Checked In\",\n        \"date\": \"2025-09-03\",\n        \"start_time\": \"20:00\",\n        \"end_time\": \"20:30\",\n        \"duration\": 30,\n        \"can_delete\": false\n    },\n    \"message\": \"تم تسجيل وصولك بنجاح.\"\n}"
+								},
+								{
+									"name": "Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/appointments/check-in/abcd",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"appointments",
+												"check-in",
+												"abcd"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 03 Sep 2025 16:59:08 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": \"يمكن تسجيل الوصول فقط قبل الموعد بـ 30 دقيقة وحتى بعده بـ 15 دقيقة (الوقت: 2025-09-02 20:00:00).\"\n}"
 								}
 							]
 						}
