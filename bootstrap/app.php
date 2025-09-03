@@ -37,7 +37,7 @@ return Application::configure(basePath: dirname(__DIR__))
         // handle NotAuthorized exceptions from api requests and send JsonResponse
         $exceptions->render(function (AccessDeniedHttpException $e, $request) {
             if ($request->is('api/*')) {
-                return Response::Error(['error' => 'Not Authorized'], __('messages.notAuthorized'), 403);
+                return ApiResponse::Error([], __($e->getMessage()), $e->getStatusCode());
             }
         });
 

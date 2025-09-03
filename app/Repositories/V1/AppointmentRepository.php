@@ -16,93 +16,98 @@ class AppointmentRepository
     public function all($request)
     {
         $appointments = new AppointmentsQuery(Appointment::query(), $request);
-        return $appointments->orderBy('start_date')->get();
+        return $appointments->orderBy('start_time')->get();
     }
 
     public function getByPatient($request, Patient $patient)
     {
         $appointments = new AppointmentsQuery($patient->appointments(), $request);
-        return $appointments->orderBy('start_date')->get();
+        return $appointments->orderByDesc('start_time')->get();
     }
 
     public function getByDoctor($request, Employee $employee)
     {
         $appointments = new AppointmentsQuery($employee->appointments(), $request);
-        return $appointments->orderBy('start_date')->get();
+        return $appointments->orderBy('start_time')->get();
     }
     public function create($request)
     {
+        $status = 'Scheduled';
+        if (auth()->user() && auth()->user()->patient && auth()->user()->patient->id == $request['patient_id']) {
+            $status = 'Pending';
+        }
+
         return Appointment::create([
             'patient_id' => $request['patient_id'],
             'employee_id' => $request['doctor_id'],
-            'appointment_status_id' => AppointmentStatus::firstWhere('name', 'Scheduled')->id,
+            'appointment_status_id' => AppointmentStatus::firstWhere('name', $status)->id,
             'start_time' => $request['start_time'],
             'end_time' => $request['end_time'],
         ]);
     }
 
     public function update($request, Appointment $appointment)
-{
-    $data = $request->validated();
+    {
+        $data = $request->validated();
 
-    if ($request->has('appointment_status')) {
-        $newStatusName     = $request['appointment_status'];
-        $currentStatusName = $appointment->appointmentStatus->name;
+        if ($request->has('appointment_status')) {
+            $newStatusName     = $request['appointment_status'];
+            $currentStatusName = $appointment->appointmentStatus->name;
 
-        // transitions array لتحديد الانتقالات المسموحة
-        $transitions = [
-            'Pending'     => ['Scheduled', 'Refused', 'Deleted'],
-            'Scheduled'   => ['Checked In', 'Cancelled', 'No Show'],
-            'Checked In'  => ['In Progress', 'Cancelled'],
-            'In Progress' => ['Completed', 'Cancelled'],
-            'Refused'     => [],
-            'No Show'     => [],
-            'Completed'   => [],
-            'Cancelled'   => [],
-            'Deleted'     => [],
-        ];
+            // transitions array لتحديد الانتقالات المسموحة
+            $transitions = [
+                'Pending'     => ['Scheduled', 'Refused', 'Deleted'],
+                'Scheduled'   => ['Checked In', 'Cancelled', 'No Show'],
+                'Checked In'  => ['In Progress', 'Cancelled'],
+                'In Progress' => ['Completed', 'Cancelled'],
+                'Refused'     => [],
+                'No Show'     => [],
+                'Completed'   => [],
+                'Cancelled'   => [],
+                'Deleted'     => [],
+            ];
 
-        if (! in_array($newStatusName, $transitions[$currentStatusName] ?? [])) {
-            throw new \Exception(
-                trans('messages.appointment.invalid_transition', [
-                    'from' => $currentStatusName,
-                    'to'   => $newStatusName,
-                ])
-            );
-        }
-
-        $data['appointment_status_id'] = AppointmentStatus::firstWhere('name', $newStatusName)->id;
-
-        // ---------------- sync مع الطابور ----------------
-        $queueTurn = \App\Models\QueueTurn::where('appointment_id', $appointment->id)->first();
-
-        if ($newStatusName === 'Checked In' && ! $queueTurn) {
-            // أول دخول للطابور
-            \App\Models\QueueTurn::create([
-                'appointment_id'       => $appointment->id,
-                'patient_id'           => $appointment->patient_id,
-                'employee_id'          => $appointment->employee_id,
-                'queue_turn_status_id' => \App\Models\QueueTurnStatus::firstWhere('name', 'Checked In')->id,
-                'arrival_time'         => now(),
-            ]);
-        } elseif ($queueTurn) {
-            // إذا الدور موجود، نشوف إذا الحالة الجديدة وحدة من حالات الدور
-            $validQueueStatuses = ['Checked In', 'In Progress', 'Completed', 'Cancelled'];
-
-            if (in_array($newStatusName, $validQueueStatuses)) {
-                $queueTurn->update([
-                    'queue_turn_status_id' => \App\Models\QueueTurnStatus::firstWhere('name', $newStatusName)->id,
-                ]);
+            if (! in_array($newStatusName, $transitions[$currentStatusName] ?? [])) {
+                throw new \Exception(
+                    trans('messages.appointment.invalid_transition', [
+                        'from' => $currentStatusName,
+                        'to'   => $newStatusName,
+                    ])
+                );
             }
-            // ملاحظة: ما عاد في delete → حتى لو الموعد راح لـ Cancelled/Completed الدور بيضل بس مع حالة جديدة.
+
+            $data['appointment_status_id'] = AppointmentStatus::firstWhere('name', $newStatusName)->id;
+
+            // ---------------- sync مع الطابور ----------------
+            $queueTurn = \App\Models\QueueTurn::where('appointment_id', $appointment->id)->first();
+
+            if ($newStatusName === 'Checked In' && ! $queueTurn) {
+                // أول دخول للطابور
+                \App\Models\QueueTurn::create([
+                    'appointment_id'       => $appointment->id,
+                    'patient_id'           => $appointment->patient_id,
+                    'employee_id'          => $appointment->employee_id,
+                    'queue_turn_status_id' => \App\Models\QueueTurnStatus::firstWhere('name', 'Checked In')->id,
+                    'arrival_time'         => now(),
+                ]);
+            } elseif ($queueTurn) {
+                // إذا الدور موجود، نشوف إذا الحالة الجديدة وحدة من حالات الدور
+                $validQueueStatuses = ['Checked In', 'In Progress', 'Completed', 'Cancelled'];
+
+                if (in_array($newStatusName, $validQueueStatuses)) {
+                    $queueTurn->update([
+                        'queue_turn_status_id' => \App\Models\QueueTurnStatus::firstWhere('name', $newStatusName)->id,
+                    ]);
+                }
+                // ملاحظة: ما عاد في delete → حتى لو الموعد راح لـ Cancelled/Completed الدور بيضل بس مع حالة جديدة.
+            }
         }
+
+        $appointment->update($data);
+        $appointment->load('appointmentStatus');
+
+        return $appointment;
     }
-
-    $appointment->update($data);
-    $appointment->load('appointmentStatus');
-
-    return $appointment;
-}
 
 
 
@@ -164,5 +169,73 @@ class AppointmentRepository
 
             return $appointments;
         });
+    }
+
+    public function getAvailableSlots($request)
+    {
+        $doctorId = $request->doctor_id;
+        $date     = Carbon::parse($request->date);
+        $patientId = auth()->user()->patient->id;
+
+        $workStart = $date->copy()->setTime(9, 0);
+        $workEnd   = $date->copy()->setTime(21, 0);
+
+        // المواعيد الحالية عند الدكتور
+        $appointments = Appointment::where('employee_id', $doctorId)
+            ->whereDate('start_time', $date)
+            ->get();
+
+        // آخر موعد للمريض
+        $lastPatientAppointment = Appointment::where('patient_id', $patientId)
+            ->orderBy('start_time', 'desc')
+            ->first();
+
+        $interval = 30; // دقائق افتراضية
+        if ($lastPatientAppointment && $lastPatientAppointment->appointmentStatus->name === 'Cancelled') {
+            $diff = Carbon::parse($lastPatientAppointment->end_time)
+                ->diffInMinutes(Carbon::parse($lastPatientAppointment->start_time));
+            if ($diff > 30) {
+                $interval = $diff;
+            }
+        }
+
+        $slots = [];
+        $cursor = $workStart->copy();
+
+        while ($cursor->lt($workEnd)) {
+            $slotStart = $cursor->copy();
+            $slotEnd   = $cursor->copy()->addMinutes($interval);
+
+            // تحقق من التعارض مع مواعيد الدكتور
+            $conflict = $appointments->first(function ($app) use ($slotStart, $slotEnd) {
+                return !(
+                    Carbon::parse($app->end_time)->lte($slotStart) ||
+                    Carbon::parse($app->start_time)->gte($slotEnd)
+                );
+            });
+
+            if (!$conflict && $slotEnd->lte($workEnd)) {
+                $slots[] = [
+                    'start_time' => $slotStart->format('H:i'),
+                    'end_time'   => $slotEnd->format('H:i'),
+                ];
+            }
+
+            $cursor->addMinutes($interval);
+        }
+
+        return $slots;
+    }
+
+    public function delete(Appointment $appointment)
+    {
+        if ($appointment->appointmentStatus->name == 'Pending') {
+            $appointment->update(['appointment_status_id' => AppointmentStatus::firstWhere('name', 'Deleted')->id]);
+        }
+        if ($appointment->appointmentStatus->name == 'Scheduled') {
+            $appointment->update(['appointment_status_id' => AppointmentStatus::firstWhere('name', 'Cancelled')->id]);
+        }
+
+        return $appointment->refresh();
     }
 }

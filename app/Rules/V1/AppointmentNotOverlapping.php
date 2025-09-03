@@ -33,13 +33,10 @@ class AppointmentNotOverlapping implements ValidationRule
             $query->where('id', '!=', $this->appointmentId);
         }
 
+        // التحقق من التعارض (معادلة صارمة: startA < endB && endA > startB)
         $overlap = $query->where(function ($q) {
-            $q->whereBetween('start_time', [$this->startTime, $this->endTime])
-                ->orWhereBetween('end_time', [$this->startTime, $this->endTime])
-                ->orWhere(function ($q2) {
-                    $q2->where('start_time', '<=', $this->startTime)
-                        ->where('end_time', '>=', $this->endTime);
-                });
+            $q->where('start_time', '<', $this->endTime)
+                ->where('end_time', '>', $this->startTime);
         })->exists();
 
         if ($overlap) {

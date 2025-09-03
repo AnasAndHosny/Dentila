@@ -57,6 +57,7 @@ class RolesPermissionsSeeder extends Seeder
             'medicationPlan.index', 'medicationPlan.show',
             'patientNote.index', 'patientNote.store', 'patientNote.show', 'patientNote.destroy',
             'patientMedication.index', 'patientMedication.store', 'patientMedication.show', 'patientMedication.destroy',
+            'appointment.doctor.my',
         ];
 
         // Create permissions
@@ -70,6 +71,8 @@ class RolesPermissionsSeeder extends Seeder
             'patientNote.index.my', 'patientNote.show.my',
             'patientMedication.index.my', 'patientMedication.show.my',
             'treatmentEvaluation.index.my', 'treatmentEvaluation.show.my', 'treatmentEvaluation.rate.my', 'treatmentEvaluation.dismes.my',
+            'doctor.index',
+            'appointment.patient.my', 'appointment.delete.my', 'appointment.store',
         ];
 
         // Create permissions
@@ -81,7 +84,9 @@ class RolesPermissionsSeeder extends Seeder
         $receptionistPermissions = [
             'patient.index', 'patient.store', 'patient.show', 'patient.destroy',
             'account.index', 'account.deposit', 'account.withdraw',
-            'doctor.index'
+            'doctor.index',
+            'appointment.index', 'appointment.store', 'appointment.update',
+            'queue.index', 'queue.update', 'queue.store',
         ];
 
         // Create permissions

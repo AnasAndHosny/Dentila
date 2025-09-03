@@ -16,7 +16,7 @@ class QueueTurnResource extends JsonResource
             ],
             'doctor'       => [
                 'id'   => $this->doctor?->id,
-                'name' => $this->doctor?->name,
+                'name' => $this->doctor?->user->name,
             ],
             'status'       => $this->status->name,
             'arrival_time' => $this->arrival_time,

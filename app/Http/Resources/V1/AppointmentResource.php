@@ -30,6 +30,9 @@ class AppointmentResource extends JsonResource
             'start_time' => $this->startTimeOnly,
             'end_time' => $this->endTimeOnly,
             'duration' => $this->durationInMinutes,
+            $this->mergeWhen($request->user() && $request->user()->hasAnyRole(['patient']), [
+                'can_delete' => $this->canDelete(),
+            ]),
         ];
     }
 }

@@ -69,4 +69,11 @@ class Appointment extends Model
     {
         return $this->hasOne(QueueTurn::class);
     }
+
+    public function canDelete()
+    {
+        if ($this->appointmentStatus->name == 'Pending') return true;
+        if ($this->appointmentStatus->name == 'Scheduled' && $this->start_time >= now()->addDay()) return true;
+        return false;
+    }
 }

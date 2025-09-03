@@ -206,20 +206,25 @@ Route::prefix('v1')->middleware([Cors::class])->group(function () {
         });
 
         Route::prefix('appointment')->controller(AppointmentController::class)->group(function () {
-            Route::get('/', 'index');
-            Route::post('/', 'store');
-            Route::patch('{appointment}', 'update');
+            Route::get('/', 'index')->middleware('can:appointment.index');
+            Route::post('/', 'store')->middleware('can:create,App\Models\Appointment');
+            Route::patch('{appointment}', 'update')->middleware('can:appointment.update');
+            Route::delete('{appointment}', 'delete')->middleware('can:delete,appointment');
         });
 
-        Route::get('patient/{patient}/appointments', [AppointmentController::class, 'getAppointmentsByPatient']);
-        Route::get('doctor/{employee}/appointments', [AppointmentController::class, 'getAppointmentsByDoctor']);
-        Route::post('doctor/{employee}/appointments/shift', [AppointmentController::class, 'shiftAppointments']);
+        Route::get('patient/me/appointments', [AppointmentController::class, 'getPatientAppointments'])->middleware('can:appointment.patient.my');
+        Route::get('patient/{patient}/appointments', [AppointmentController::class, 'getAppointmentsByPatient'])->middleware('can:appointment.index');
+        Route::get('doctor/me/appointments', [AppointmentController::class, 'getDoctorAppointments'])->middleware('can:appointment.doctor.my');
+        Route::get('doctor/{employee}/appointments', [AppointmentController::class, 'getAppointmentsByDoctor'])->middleware('can:appointment.index');
+        Route::post('doctor/{employee}/appointments/shift', [AppointmentController::class, 'shiftAppointments'])->middleware('can:appointment.update');
+        Route::post('/appointments/available-slots', [AppointmentController::class, 'getAvailableSlots']);
+
 
         Route::prefix('queue-turns')->controller(QueueTurnController::class)->group(function () {
-            Route::post('/', 'store');
-            Route::patch('/{queueTurn}', 'update');
-            Route::get('/', 'index');
-            Route::get('/history', 'history');
+            Route::post('/', 'store')->middleware('can:queue.store');
+            Route::patch('/{queueTurn}', 'update')->middleware('can:queue.update');
+            Route::get('/', 'index')->middleware('can:queue.index');
+            Route::get('/history', 'history')->middleware('can:queue.index');
         });
     });
 });

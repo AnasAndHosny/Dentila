@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\V1;
 
+use Carbon\Carbon;
 use App\Models\Patient;
 use App\Models\Employee;
 use App\Models\Appointment;
@@ -10,6 +11,7 @@ use App\Traits\HandlesServiceResponse;
 use App\Services\V1\AppointmentService;
 use App\Http\Requests\V1\Appointment\GetAppointmentRequest;
 use App\Http\Requests\V1\Appointment\StoreAppointmentRequest;
+use App\Http\Requests\V1\Appointment\GetAvailableSlotsRequest;
 use App\Http\Requests\V1\Appointment\ShiftAppointmentsRequest;
 use App\Http\Requests\V1\Appointment\UpdateAppointmentRequest;
 
@@ -57,11 +59,36 @@ class AppointmentController extends Controller
         );
     }
 
+    public function delete(Appointment $appointment)
+    {
+        return $this->handleService(
+            fn() =>
+            $this->appointmentService->delete($appointment)
+        );
+    }
+
     public function getAppointmentsByPatient(GetAppointmentRequest $request, Patient $patient)
     {
         return $this->handleService(
             fn() =>
             $this->appointmentService->getByPatient($request, $patient)
+        );
+    }
+
+    public function getPatientAppointments()
+    {
+        $patient = auth()->user()->patient;
+        $request = request()->merge([
+            'filter' => [
+                'date_range' => [
+                    'from' => Carbon::now()->subWeeks(2)->toDateString(),
+                    'to'   => Carbon::now()->addWeeks(2)->toDateString(),
+                ]
+            ]
+        ]);
+
+        return $this->handleService(
+            fn() => $this->appointmentService->getByPatient($request, $patient)
         );
     }
 
@@ -73,11 +100,28 @@ class AppointmentController extends Controller
         );
     }
 
+    public function getDoctorAppointments(GetAppointmentRequest $request)
+    {
+        $employee = auth()->user()->employee;
+
+        return $this->handleService(
+            fn() =>
+            $this->appointmentService->getByDoctor($request, $employee)
+        );
+    }
+
     public function shiftAppointments(ShiftAppointmentsRequest $request, Employee $employee)
     {
         return $this->handleService(
             fn() =>
             $this->appointmentService->shiftAppointments($request, $employee)
+        );
+    }
+
+    public function getAvailableSlots(GetAvailableSlotsRequest $request)
+    {
+        return $this->handleService(
+            fn() => $this->appointmentService->getAvailableSlots($request)
         );
     }
 }

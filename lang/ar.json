@@ -112,5 +112,8 @@
     "doctor reviews":"تقييمات الطبيب",
     "appointments":"المواعيد",
     "appointment":"الموعد",
-    "This appointment overlaps with another appointment for the same doctor.":"هذا الموعد يتداخل مع موعد آخر للطبيب."
+    "This appointment overlaps with another appointment for the same doctor.":"هذا الموعد يتداخل مع موعد آخر للطبيب.",
+    "available slots":"الأوقات المتاحة",
+    "You can't delete this appointment.":"لا يمكنك حذف هذا الموعد.",
+    "You already have an appointment booked.":"لديك موعد محجوز بالفعل."
 }

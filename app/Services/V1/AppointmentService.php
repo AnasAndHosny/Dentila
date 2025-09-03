@@ -2,15 +2,11 @@
 
 namespace App\Services\V1;
 
-use App\Models\Category;
+use App\Models\Patient;
+use App\Models\Employee;
 use App\Models\Appointment;
-use App\Http\Resources\V1\CategoryResource;
 use App\Http\Resources\V1\AppointmentResource;
 use App\Repositories\V1\AppointmentRepository;
-use App\Http\Resources\V1\TreatmentPlanResource;
-use App\Models\Employee;
-use App\Models\Patient;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class AppointmentService
 {
@@ -50,6 +46,17 @@ class AppointmentService
         return ['data' => $appointment, 'message' => $message, 'code' => $code];
     }
 
+    public function delete(Appointment $appointment): array
+    {
+        $appointment = $this->appointmentRepo->delete($appointment);
+        $appointment = new AppointmentResource($appointment);
+
+
+        $message = __('messages.destroy_success', ['class' => __('appointment')]);
+        $code = 200;
+        return ['data' => $appointment, 'message' => $message, 'code' => $code];
+    }
+
     public function getByPatient($request, Patient $patient)
     {
         $appointments = $this->appointmentRepo->getByPatient($request, $patient);
@@ -75,5 +82,14 @@ class AppointmentService
         $message = __('messages.index_success', ['class' => __('appointments')]);
         $code = 200;
         return ['data' => $appointments, 'message' => $message, 'code' => $code];
+    }
+
+    public function getAvailableSlots($request): array
+    {
+        $slots = $this->appointmentRepo->getAvailableSlots($request);
+        $message = __('messages.index_success', ['class' => __('available slots')]);
+        $code = 200;
+
+        return ['data' => $slots, 'message' => $message, 'code' => $code];
     }
 }
