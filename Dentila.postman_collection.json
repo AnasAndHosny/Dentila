@@ -12676,6 +12676,848 @@
 							]
 						}
 					]
+				},
+				{
+					"name": "Working Hours",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/doctor/my/working-hours",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"doctor",
+										"my",
+										"working-hours"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/doctor-working-hours",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"doctor-working-hours"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 03 Sep 2025 22:34:44 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"day_of_week\": \"Monday\",\n            \"start_time\": \"09:00\",\n            \"end_time\": \"11:00\"\n        },\n        {\n            \"id\": 2,\n            \"day_of_week\": \"Tuesday\",\n            \"start_time\": \"09:00\",\n            \"end_time\": \"22:00\"\n        },\n        {\n            \"id\": 4,\n            \"day_of_week\": \"Thursday\",\n            \"start_time\": \"09:00\",\n            \"end_time\": \"22:00\"\n        },\n        {\n            \"id\": 3,\n            \"day_of_week\": \"Sunday\",\n            \"start_time\": \"09:00\",\n            \"end_time\": \"22:00\"\n        }\n    ],\n    \"message\": \"تم جلب قائمة ساعات العمل بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "store",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "day_of_week",
+											"value": "Thursday",
+											"description": "'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'",
+											"type": "text"
+										},
+										{
+											"key": "start_time",
+											"value": "09:00",
+											"type": "text"
+										},
+										{
+											"key": "end_time",
+											"value": "22:00",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/doctor-working-hours",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"doctor-working-hours"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "day_of_week",
+													"value": "Thursday",
+													"description": "'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'",
+													"type": "text"
+												},
+												{
+													"key": "start_time",
+													"value": "09:00",
+													"type": "text"
+												},
+												{
+													"key": "end_time",
+													"value": "22:00",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/doctor-working-hours",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"doctor-working-hours"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 03 Sep 2025 22:34:42 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 4,\n        \"day_of_week\": \"Thursday\",\n        \"start_time\": \"09:00\",\n        \"end_time\": \"22:00\"\n    },\n    \"message\": \"تم إنشاء ساعات العمل بنجاح.\"\n}"
+								},
+								{
+									"name": "Unique",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "day_of_week",
+													"value": "Thursday",
+													"description": "'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'",
+													"type": "text"
+												},
+												{
+													"key": "start_time",
+													"value": "09:00",
+													"type": "text"
+												},
+												{
+													"key": "end_time",
+													"value": "22:00",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/doctor-working-hours",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"doctor-working-hours"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 03 Sep 2025 22:41:18 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"day_of_week\": [\n            \"قيمة حقل يوم الأسبوع مُستخدمة من قبل\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "Required",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "day_of_week",
+													"value": "Thursday",
+													"description": "'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "start_time",
+													"value": "09:00",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "end_time",
+													"value": "22:00",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/doctor-working-hours",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"doctor-working-hours"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 03 Sep 2025 22:41:33 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"day_of_week\": [\n            \"حقل يوم الأسبوع مطلوب.\"\n        ],\n        \"start_time\": [\n            \"حقل وقت البدء مطلوب.\"\n        ],\n        \"end_time\": [\n            \"حقل وقت الانتهاء مطلوب.\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "end after start",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "day_of_week",
+													"value": "Wednesday",
+													"description": "'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'",
+													"type": "text"
+												},
+												{
+													"key": "start_time",
+													"value": "12:00",
+													"type": "text"
+												},
+												{
+													"key": "end_time",
+													"value": "09:00",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/doctor-working-hours",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"doctor-working-hours"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 03 Sep 2025 22:42:29 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"end_time\": [\n            \"يجب على الحقل وقت الانتهاء أن يكون تاريخًا لاحقًا للتاريخ وقت البدء.\"\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "start_time",
+											"value": "12:00",
+											"type": "text"
+										},
+										{
+											"key": "end_time",
+											"value": "11:00",
+											"type": "text"
+										},
+										{
+											"key": "_method",
+											"value": "put",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/doctor-working-hours/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"doctor-working-hours",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "start_time",
+													"value": "11:00",
+													"type": "text"
+												},
+												{
+													"key": "end_time",
+													"value": "16:00",
+													"type": "text"
+												},
+												{
+													"key": "_method",
+													"value": "put",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/doctor-working-hours/1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"doctor-working-hours",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 03 Sep 2025 22:43:32 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"id\": 1,\n        \"day_of_week\": \"Monday\",\n        \"start_time\": \"11:00\",\n        \"end_time\": \"16:00\"\n    },\n    \"message\": \"تم تحديث ساعات العمل بنجاح.\"\n}"
+								},
+								{
+									"name": "Required",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "start_time",
+													"value": "11:00",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "end_time",
+													"value": "16:00",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "_method",
+													"value": "put",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/doctor-working-hours/1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"doctor-working-hours",
+												"1"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 03 Sep 2025 22:43:57 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"start_time\": [\n            \"حقل وقت البدء مطلوب.\"\n        ],\n        \"end_time\": [\n            \"حقل وقت الانتهاء مطلوب.\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "end after start",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "start_time",
+													"value": "12:00",
+													"type": "text"
+												},
+												{
+													"key": "end_time",
+													"value": "11:00",
+													"type": "text"
+												},
+												{
+													"key": "_method",
+													"value": "put",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/doctor-working-hours/1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"doctor-working-hours",
+												"1"
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 03 Sep 2025 22:43:03 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"end_time\": [\n            \"يجب على الحقل وقت الانتهاء أن يكون تاريخًا لاحقًا للتاريخ وقت البدء.\"\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "destroy",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/doctor-working-hours/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"doctor-working-hours",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/doctor-working-hours/1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"doctor-working-hours",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 03 Sep 2025 22:44:14 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [],\n    \"message\": \"تم حذف ساعات العمل بنجاح.\"\n}"
+								}
+							]
+						}
+					]
 				}
 			]
 		},

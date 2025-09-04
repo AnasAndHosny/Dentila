@@ -24,6 +24,7 @@ use App\Http\Controllers\Api\V1\PatientAccountController;
 use App\Http\Controllers\Api\V1\IntakeMedicationController;
 use App\Http\Controllers\Api\V1\PatientTreatmentController;
 use App\Http\Controllers\Api\V1\TreatmentSubstepController;
+use App\Http\Controllers\Api\V1\DoctorWorkingHourController;
 use App\Http\Controllers\Api\V1\Auth\ResetPasswordController;
 use App\Http\Controllers\Api\V1\Auth\ChangePasswordController;
 use App\Http\Controllers\Api\V1\Auth\ForgetPasswordController;
@@ -225,6 +226,15 @@ Route::prefix('v1')->middleware([Cors::class])->group(function () {
             Route::patch('/{queueTurn}', 'update')->middleware('can:queue.update');
             Route::get('/', 'index')->middleware('can:queue.index');
             Route::get('/history', 'history')->middleware('can:queue.index');
+        });
+
+        Route::get('doctor/my/working-hours', [DoctorWorkingHourController::class, 'myIndex'])->middleware('can:working-hours.index.my');
+        Route::get('doctor/{employee}/working-hours', [DoctorWorkingHourController::class, 'index'])->middleware('can:working-hours.index');
+
+        Route::prefix('doctor-working-hours')->controller(DoctorWorkingHourController::class)->group(function () {
+            Route::post('/', 'store')->middleware('can:working-hours.store');
+            Route::put('/{doctorWorkingHour}', 'update')->middleware('can:update,doctorWorkingHour');
+            Route::delete('/{doctorWorkingHour}', 'destroy')->middleware('can:delete,doctorWorkingHour');
         });
     });
 });

@@ -82,4 +82,9 @@ class Employee extends Model
     {
         return $this->hasMany(QueueTurn::class);
     }
+
+    public function workingHours(): HasMany
+    {
+        return $this->hasMany(DoctorWorkingHour::class, 'doctor_id');
+    }
 }

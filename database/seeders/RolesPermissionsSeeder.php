@@ -38,7 +38,8 @@ class RolesPermissionsSeeder extends Seeder
             'treatmentPlan.index', 'treatmentPlan.store', 'treatmentPlan.show', 'treatmentPlan.update', 'treatmentPlan.destroy',
             'patient.index', 'patient.show', 'patient.destroy',
             'employee.index', 'employee.store', 'employee.show', 'employee.update', 'employee.destroy',
-            'doctor.index', 'doctor.showReviews', 'treatmentEvaluation.show'
+            'doctor.index', 'doctor.showReviews', 'treatmentEvaluation.show',
+            'working-hours.index', 'working-hours.store', 'working-hours.update', 'working-hours.destroy',
         ];
 
         // Create permissions
@@ -58,6 +59,7 @@ class RolesPermissionsSeeder extends Seeder
             'patientNote.index', 'patientNote.store', 'patientNote.show', 'patientNote.destroy',
             'patientMedication.index', 'patientMedication.store', 'patientMedication.show', 'patientMedication.destroy',
             'appointment.doctor.my',
+            'working-hours.index.my', 'working-hours.store', 'working-hours.update.my', 'working-hours.destroy.my',
         ];
 
         // Create permissions
