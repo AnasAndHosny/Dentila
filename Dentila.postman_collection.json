@@ -7587,6 +7587,431 @@
 							]
 						}
 					]
+				},
+				{
+					"name": "Reports",
+					"item": [
+						{
+							"name": "Finance",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "start_date",
+											"value": "2025-05-01",
+											"type": "text"
+										},
+										{
+											"key": "end_date",
+											"value": "2025-11-01",
+											"type": "text"
+										},
+										{
+											"key": "frequency",
+											"value": "weekly",
+											"description": "daily, weekly, monthly, yearly",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/reports/patient-account",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"reports",
+										"patient-account"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "start_date",
+													"value": "2025-05-01",
+													"type": "text"
+												},
+												{
+													"key": "end_date",
+													"value": "2025-11-01",
+													"type": "text"
+												},
+												{
+													"key": "frequency",
+													"value": "",
+													"description": "daily, weekly, monthly, yearly",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/reports/patient-account",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"reports",
+												"patient-account"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 04 Sep 2025 22:51:13 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"from\": \"2025-05-01\",\n            \"to\": \"2025-05-31\",\n            \"accounts\": 0,\n            \"with_due\": 0,\n            \"clear_balance\": 0,\n            \"total_balance\": 0,\n            \"avg_balance\": 0\n        },\n        {\n            \"from\": \"2025-06-01\",\n            \"to\": \"2025-06-30\",\n            \"accounts\": 0,\n            \"with_due\": 0,\n            \"clear_balance\": 0,\n            \"total_balance\": 0,\n            \"avg_balance\": 0\n        },\n        {\n            \"from\": \"2025-07-01\",\n            \"to\": \"2025-07-31\",\n            \"accounts\": 0,\n            \"with_due\": 0,\n            \"clear_balance\": 0,\n            \"total_balance\": 0,\n            \"avg_balance\": 0\n        },\n        {\n            \"from\": \"2025-08-01\",\n            \"to\": \"2025-08-31\",\n            \"accounts\": 7,\n            \"with_due\": 3,\n            \"clear_balance\": 4,\n            \"total_balance\": -1492223,\n            \"avg_balance\": -213174.71\n        },\n        {\n            \"from\": \"2025-09-01\",\n            \"to\": \"2025-09-30\",\n            \"accounts\": 0,\n            \"with_due\": 0,\n            \"clear_balance\": 0,\n            \"total_balance\": 0,\n            \"avg_balance\": 0\n        },\n        {\n            \"from\": \"2025-10-01\",\n            \"to\": \"2025-10-31\",\n            \"accounts\": 0,\n            \"with_due\": 0,\n            \"clear_balance\": 0,\n            \"total_balance\": 0,\n            \"avg_balance\": 0\n        },\n        {\n            \"from\": \"2025-11-01\",\n            \"to\": \"2025-11-01\",\n            \"accounts\": 0,\n            \"with_due\": 0,\n            \"clear_balance\": 0,\n            \"total_balance\": 0,\n            \"avg_balance\": 0\n        },\n        {\n            \"from\": \"2025-05-01\",\n            \"to\": \"2025-11-01\",\n            \"accounts\": 7,\n            \"with_due\": 3,\n            \"clear_balance\": 4,\n            \"total_balance\": -1492223,\n            \"avg_balance\": -13323.42\n        }\n    ],\n    \"message\": \"تم جلب تقرير حساب المريض بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Finance excel",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "start_date",
+											"value": "2025-05-01",
+											"type": "text"
+										},
+										{
+											"key": "end_date",
+											"value": "2025-11-01",
+											"type": "text"
+										},
+										{
+											"key": "frequency",
+											"value": "",
+											"description": "daily, weekly, monthly, yearly",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/reports/patient-account/download/excel",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"reports",
+										"patient-account",
+										"download",
+										"excel"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Finance pdf",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "start_date",
+											"value": "2025-05-01",
+											"type": "text"
+										},
+										{
+											"key": "end_date",
+											"value": "2025-09-01",
+											"type": "text"
+										},
+										{
+											"key": "frequency",
+											"value": "",
+											"description": "daily, weekly, monthly, yearly",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/reports/patient-account/download/pdf",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"reports",
+										"patient-account",
+										"download",
+										"pdf"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Partients",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "start_date",
+											"value": "2025-05-01",
+											"type": "text"
+										},
+										{
+											"key": "end_date",
+											"value": "2025-11-01",
+											"type": "text"
+										},
+										{
+											"key": "frequency",
+											"value": "monthly",
+											"description": "daily, weekly, monthly, yearly",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/reports/patient",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"reports",
+										"patient"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "start_date",
+													"value": "2025-05-01",
+													"type": "text"
+												},
+												{
+													"key": "end_date",
+													"value": "2025-11-01",
+													"type": "text"
+												},
+												{
+													"key": "frequency",
+													"value": "",
+													"description": "daily, weekly, monthly, yearly",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/reports/patient",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"reports",
+												"patient"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 04 Sep 2025 22:51:48 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": [\n        {\n            \"from\": \"2025-05-01\",\n            \"to\": \"2025-05-31\",\n            \"new_patients\": 0,\n            \"returning_patients\": 0,\n            \"total_visits\": 0,\n            \"scheduled_appointments\": 0,\n            \"canceled_appointments\": 0,\n            \"completed_treatments\": 0,\n            \"inprogress_treatments\": 0,\n            \"avg_patient_rating\": 0,\n            \"avg_visits_per_patient\": 0\n        },\n        {\n            \"from\": \"2025-06-01\",\n            \"to\": \"2025-06-30\",\n            \"new_patients\": 8,\n            \"returning_patients\": 0,\n            \"total_visits\": 0,\n            \"scheduled_appointments\": 0,\n            \"canceled_appointments\": 0,\n            \"completed_treatments\": 0,\n            \"inprogress_treatments\": 0,\n            \"avg_patient_rating\": 0,\n            \"avg_visits_per_patient\": 0\n        },\n        {\n            \"from\": \"2025-07-01\",\n            \"to\": \"2025-07-31\",\n            \"new_patients\": 2,\n            \"returning_patients\": 0,\n            \"total_visits\": 0,\n            \"scheduled_appointments\": 0,\n            \"canceled_appointments\": 0,\n            \"completed_treatments\": 0,\n            \"inprogress_treatments\": 0,\n            \"avg_patient_rating\": 0,\n            \"avg_visits_per_patient\": 0\n        },\n        {\n            \"from\": \"2025-08-01\",\n            \"to\": \"2025-08-31\",\n            \"new_patients\": 7,\n            \"returning_patients\": 0,\n            \"total_visits\": 0,\n            \"scheduled_appointments\": 0,\n            \"canceled_appointments\": 0,\n            \"completed_treatments\": 0,\n            \"inprogress_treatments\": 0,\n            \"avg_patient_rating\": 0,\n            \"avg_visits_per_patient\": 0\n        },\n        {\n            \"from\": \"2025-09-01\",\n            \"to\": \"2025-09-30\",\n            \"new_patients\": 0,\n            \"returning_patients\": 2,\n            \"total_visits\": 27,\n            \"scheduled_appointments\": 0,\n            \"canceled_appointments\": 0,\n            \"completed_treatments\": 0,\n            \"inprogress_treatments\": 0,\n            \"avg_patient_rating\": 0,\n            \"avg_visits_per_patient\": 13.5\n        },\n        {\n            \"from\": \"2025-10-01\",\n            \"to\": \"2025-10-31\",\n            \"new_patients\": 0,\n            \"returning_patients\": 1,\n            \"total_visits\": 1,\n            \"scheduled_appointments\": 0,\n            \"canceled_appointments\": 0,\n            \"completed_treatments\": 0,\n            \"inprogress_treatments\": 0,\n            \"avg_patient_rating\": 0,\n            \"avg_visits_per_patient\": 1\n        },\n        {\n            \"from\": \"2025-11-01\",\n            \"to\": \"2025-11-01\",\n            \"new_patients\": 0,\n            \"returning_patients\": 0,\n            \"total_visits\": 0,\n            \"scheduled_appointments\": 0,\n            \"canceled_appointments\": 0,\n            \"completed_treatments\": 0,\n            \"inprogress_treatments\": 0,\n            \"avg_patient_rating\": 0,\n            \"avg_visits_per_patient\": 0\n        },\n        {\n            \"from\": \"2025-05-01\",\n            \"to\": \"2025-11-01\",\n            \"new_patients\": 17,\n            \"returning_patients\": 3,\n            \"total_visits\": 28,\n            \"scheduled_appointments\": 0,\n            \"canceled_appointments\": 0,\n            \"completed_treatments\": 0,\n            \"inprogress_treatments\": 0,\n            \"avg_patient_rating\": 0,\n            \"avg_visits_per_patient\": 14.5\n        }\n    ],\n    \"message\": \"تم جلب تقرير المريض بنجاح.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Partients excel",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "start_date",
+											"value": "2025-05-01",
+											"type": "text"
+										},
+										{
+											"key": "end_date",
+											"value": "2025-11-01",
+											"type": "text"
+										},
+										{
+											"key": "frequency",
+											"value": "",
+											"description": "daily, weekly, monthly, yearly",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/reports/patient/download/excel",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"reports",
+										"patient",
+										"download",
+										"excel"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Partients pdf",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "start_date",
+											"value": "2025-05-01",
+											"type": "text"
+										},
+										{
+											"key": "end_date",
+											"value": "2025-11-01",
+											"type": "text"
+										},
+										{
+											"key": "frequency",
+											"value": "",
+											"description": "daily, weekly, monthly, yearly",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/reports/patient/download/pdf",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"reports",
+										"patient",
+										"download",
+										"pdf"
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				}
 			]
 		},

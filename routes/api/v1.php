@@ -32,8 +32,10 @@ use App\Http\Controllers\Api\V1\Auth\ChangePasswordController;
 use App\Http\Controllers\Api\V1\Auth\ForgetPasswordController;
 use App\Http\Controllers\Api\V1\TreatmentEvaluationController;
 use App\Http\Controllers\Api\V1\PatientTreatmentNoteController;
+use App\Http\Controllers\Api\V1\Report\PatientReportController;
 use App\Http\Controllers\Api\V1\PatientMedicationPlanController;
 use App\Http\Controllers\Api\V1\Auth\PhoneVerificationController;
+use App\Http\Controllers\Api\V1\Report\PatientAccountReportController;
 
 Route::prefix('v1')->middleware([Cors::class])->group(function () {
     Route::get('test', function () {
@@ -56,7 +58,7 @@ Route::prefix('v1')->middleware([Cors::class])->group(function () {
     Route::get('disease', [DiseaseController::class, 'index']);
     Route::get('intake-medication', [IntakeMedicationController::class, 'index']);
 
-        Route::post('/stripe/webhook', [StripeWebhookController::class, 'handleWebhook']);
+    Route::post('/stripe/webhook', [StripeWebhookController::class, 'handleWebhook']);
 
     Route::middleware(['auth:sanctum', UserBanned::class, UserVerified::class])->group(function () {
         Route::post('password/change', [ChangePasswordController::class, 'passwordChange']);
@@ -242,5 +244,14 @@ Route::prefix('v1')->middleware([Cors::class])->group(function () {
         });
 
         Route::post('/create-payment-intent', [PaymentController::class, 'createPaymentIntent'])->middleware('role:patient');
+
+        Route::prefix('reports')->group(function () {
+            Route::post('patient-account', [PatientAccountReportController::class, 'report']);
+            Route::post('patient-account/download/excel', [PatientAccountReportController::class, 'reportExcel']);
+            Route::post('patient-account/download/pdf', [PatientAccountReportController::class, 'reportPdf']);
+            Route::post('patient', [PatientReportController::class, 'report']);
+            Route::post('patient/download/excel', [PatientReportController::class, 'reportExcel']);
+            Route::post('patient/download/pdf', [PatientReportController::class, 'reportPdf']);
+        })->middleware('can:report.index');
     });
 });
