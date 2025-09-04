@@ -9,6 +9,7 @@ use App\Http\Controllers\Api\V1\AuthController;
 use App\Http\Controllers\Api\V1\ToothController;
 use App\Http\Controllers\Api\V1\DiseaseController;
 use App\Http\Controllers\Api\V1\PatientController;
+use App\Http\Controllers\Api\V1\PaymentController;
 use App\Http\Controllers\Api\V1\CategoryController;
 use App\Http\Controllers\Api\V1\EmployeeController;
 use App\Http\Controllers\Api\V1\QueueTurnController;
@@ -16,6 +17,7 @@ use App\Http\Controllers\Api\V1\MedicationController;
 use App\Http\Controllers\Api\V1\AppointmentController;
 use App\Http\Controllers\Api\V1\ToothStatusController;
 use App\Http\Controllers\Api\V1\NotificationController;
+use App\Http\Controllers\Api\V1\StripeWebhookController;
 use App\Http\Controllers\Api\V1\TreatmentNoteController;
 use App\Http\Controllers\Api\V1\TreatmentPlanController;
 use App\Http\Controllers\Api\V1\TreatmentStepController;
@@ -53,6 +55,8 @@ Route::prefix('v1')->middleware([Cors::class])->group(function () {
 
     Route::get('disease', [DiseaseController::class, 'index']);
     Route::get('intake-medication', [IntakeMedicationController::class, 'index']);
+
+        Route::post('/stripe/webhook', [StripeWebhookController::class, 'handleWebhook']);
 
     Route::middleware(['auth:sanctum', UserBanned::class, UserVerified::class])->group(function () {
         Route::post('password/change', [ChangePasswordController::class, 'passwordChange']);
@@ -236,5 +240,7 @@ Route::prefix('v1')->middleware([Cors::class])->group(function () {
             Route::put('/{doctorWorkingHour}', 'update')->middleware('can:update,doctorWorkingHour');
             Route::delete('/{doctorWorkingHour}', 'destroy')->middleware('can:delete,doctorWorkingHour');
         });
+
+        Route::post('/create-payment-intent', [PaymentController::class, 'createPaymentIntent'])->middleware('role:patient');
     });
 });

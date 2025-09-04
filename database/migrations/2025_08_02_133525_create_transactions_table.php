@@ -30,7 +30,7 @@ return new class extends Migration
                 ->nullOnDelete();
             $table->enum('type', ['debit', 'credit']);
             $table->unsignedInteger('amount');
-            $table->enum('method', ['manual'])->default('manual');
+            $table->enum('method', ['manual', 'electronic'])->default('manual');
             $table->string('note')->nullable()->default(null);
             $table->timestamps();
         });

@@ -40,4 +40,8 @@ return [
         'password' => env('WHATSAPP_API_PASSWORD'),
     ],
 
+    'stripe' => [
+        'secret' => env('STRIPE_SECRET'),
+        'key' => env('STRIPE_KEY'),
+    ],
 ];

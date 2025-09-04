@@ -16550,6 +16550,122 @@
 							]
 						}
 					]
+				},
+				{
+					"name": "Payments",
+					"item": [
+						{
+							"name": "create payment intent",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "amount",
+											"value": "50",
+											"type": "text"
+										},
+										{
+											"key": "currency",
+											"value": "usd",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/create-payment-intent",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"create-payment-intent"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "amount",
+													"value": "50",
+													"type": "text"
+												},
+												{
+													"key": "currency",
+													"value": "usd",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/create-payment-intent",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"create-payment-intent"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 04 Sep 2025 03:26:12 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"client_secret\": \"pi_3S3ToODC377kNMDx0cAExbG7_secret_0oBvNZO6jjWQQnzBbRRKnm3g9\"\n    },\n    \"message\": \"تم إنشاء client_secret بنجاح.\"\n}"
+								}
+							]
+						}
+					]
 				}
 			]
 		},
