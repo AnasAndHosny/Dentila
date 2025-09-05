@@ -32,6 +32,11 @@ class Patient extends Model
      */
     protected $casts = [
         'birthdate' => 'date:Y-m-d',
+        'job' => 'encrypted',
+        'marital_status' => 'encrypted',
+        'address' => 'encrypted',
+        'social_history' => 'encrypted',
+        'note' => 'encrypted',
     ];
 
     protected static function booted()
