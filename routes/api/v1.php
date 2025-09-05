@@ -211,6 +211,7 @@ Route::prefix('v1')->middleware([Cors::class])->group(function () {
         Route::prefix('notifications')->controller(NotificationController::class)->group(function () {
             Route::get('/', 'index');
             Route::get('mark-all', 'markAllAsRead');
+            Route::post('send', 'send')->middleware('can:notify.user');
         });
 
         Route::prefix('appointment')->controller(AppointmentController::class)->group(function () {

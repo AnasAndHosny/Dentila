@@ -119,5 +119,6 @@
     "working hours":"ساعات العمل",
     "patient account report":"تقرير حساب المريض",
     "patient report":"تقرير المريض",
-    "Dashboard statistics for current month":"إحصائيات الداشبورد للشهر الحالي"
+    "Dashboard statistics for current month":"إحصائيات الداشبورد للشهر الحالي",
+    "Notification sent successfully.":"تم إرسال الإشعار بنجاح."
 }

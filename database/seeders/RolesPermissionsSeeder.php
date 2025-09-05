@@ -41,6 +41,7 @@ class RolesPermissionsSeeder extends Seeder
             'doctor.index', 'doctor.showReviews', 'treatmentEvaluation.show',
             'working-hours.index', 'working-hours.store', 'working-hours.update', 'working-hours.destroy',
             'report.index',
+            'notify.user',
         ];
 
         // Create permissions
@@ -91,6 +92,7 @@ class RolesPermissionsSeeder extends Seeder
             'doctor.index',
             'appointment.index', 'appointment.store', 'appointment.update',
             'queue.index', 'queue.update', 'queue.store',
+            'notify.user',
         ];
 
         // Create permissions

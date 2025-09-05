@@ -21982,6 +21982,248 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Send",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "patient_id",
+									"value": "17",
+									"type": "text"
+								},
+								{
+									"key": "title_ar",
+									"value": "عنوان",
+									"type": "text"
+								},
+								{
+									"key": "title_en",
+									"value": "title",
+									"type": "text"
+								},
+								{
+									"key": "body_ar",
+									"value": "محتوى",
+									"type": "text"
+								},
+								{
+									"key": "body_en",
+									"value": "Content",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/notifications/send",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"notifications",
+								"send"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "patient_id",
+											"value": "17",
+											"type": "text"
+										},
+										{
+											"key": "title_ar",
+											"value": "عنوان",
+											"type": "text"
+										},
+										{
+											"key": "title_en",
+											"value": "title",
+											"type": "text"
+										},
+										{
+											"key": "body_ar",
+											"value": "محتوى",
+											"type": "text"
+										},
+										{
+											"key": "body_en",
+											"value": "Content",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/notifications/send",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"notifications",
+										"send"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Sep 2025 12:00:02 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST, GET, OPTIONS, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"title_ar\": \"عنوان\",\n        \"title_en\": \"title\",\n        \"body_ar\": \"محتوى\",\n        \"body_en\": \"Content\"\n    },\n    \"message\": \"تم إرسال الإشعار بنجاح.\"\n}"
+						},
+						{
+							"name": "Required",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "patient_id",
+											"value": "17",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "title_ar",
+											"value": "عنوان",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "title_en",
+											"value": "title",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "body_ar",
+											"value": "محتوى",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "body_en",
+											"value": "Content",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/notifications/send",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"notifications",
+										"send"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Sep 2025 12:00:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST, GET, OPTIONS, PUT, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 0,\n    \"data\": [],\n    \"message\": {\n        \"patient_id\": [\n            \"حقل المريض مطلوب.\"\n        ],\n        \"title_ar\": [\n            \"حقل title ar مطلوب.\"\n        ],\n        \"title_en\": [\n            \"حقل title en مطلوب.\"\n        ],\n        \"body_ar\": [\n            \"حقل body ar مطلوب.\"\n        ],\n        \"body_en\": [\n            \"حقل body en مطلوب.\"\n        ]\n    }\n}"
+						}
+					]
 				}
 			]
 		},

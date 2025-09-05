@@ -2,6 +2,8 @@
 
 namespace App\Services\V1;
 
+use App\Models\Patient;
+use App\Events\SendNotifications;
 use Illuminate\Support\Facades\Auth;
 
 class NotificationService
@@ -33,5 +35,23 @@ class NotificationService
         $message = __('messages.update_success', ['class' => __('notifications')]);
         $code = 200;
         return ['data' => [], 'message' => $message, 'code' => $code];
+    }
+
+    public function send($request): array
+    {
+        $data = [
+            'title_ar' => $request['title_ar'],
+            'title_en' => $request['title_en'],
+            'body_ar' => $request['body_ar'],
+            'body_en' => $request['body_en'],
+        ];
+
+        $user = Patient::find($request['patient_id'])->user;
+
+        event(new SendNotifications($data, $user));
+
+        $message = __('Notification sent successfully.');
+        $code = 200;
+        return ['data' => $data, 'message' => $message, 'code' => $code];
     }
 }
