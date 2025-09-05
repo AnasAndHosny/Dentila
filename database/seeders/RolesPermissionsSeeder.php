@@ -40,6 +40,7 @@ class RolesPermissionsSeeder extends Seeder
             'employee.index', 'employee.store', 'employee.show', 'employee.update', 'employee.destroy',
             'doctor.index', 'doctor.showReviews', 'treatmentEvaluation.show',
             'working-hours.index', 'working-hours.store', 'working-hours.update', 'working-hours.destroy',
+            'report.index',
         ];
 
         // Create permissions

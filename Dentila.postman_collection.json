@@ -8010,6 +8010,89 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "dashboard",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/reports/dashboard",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"reports",
+										"dashboard"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/reports/dashboard",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"reports",
+												"dashboard"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Sep 2025 10:48:36 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "POST, GET, OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "locale, Origin, Content-Type, Accept, Authorization, X-Request-With"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"data\": {\n        \"patients\": {\n            \"new\": 17,\n            \"returning\": 0,\n            \"total\": 17\n        },\n        \"appointments\": {\n            \"total\": 34,\n            \"scheduled\": 2,\n            \"cancelled\": 6,\n            \"completed\": 3\n        },\n        \"treatments\": {\n            \"completed\": 5,\n            \"in_progress\": 29\n        },\n        \"accounts\": {\n            \"created\": 7,\n            \"with_due\": 2,\n            \"total_balance\": 6018877\n        }\n    },\n    \"message\": \"إحصائيات الداشبورد للشهر الحالي\"\n}"
+								}
+							]
 						}
 					]
 				}

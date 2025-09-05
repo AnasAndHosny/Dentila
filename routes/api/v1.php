@@ -35,6 +35,7 @@ use App\Http\Controllers\Api\V1\PatientTreatmentNoteController;
 use App\Http\Controllers\Api\V1\Report\PatientReportController;
 use App\Http\Controllers\Api\V1\PatientMedicationPlanController;
 use App\Http\Controllers\Api\V1\Auth\PhoneVerificationController;
+use App\Http\Controllers\Api\V1\Report\DashboardReportController;
 use App\Http\Controllers\Api\V1\Report\PatientAccountReportController;
 
 Route::prefix('v1')->middleware([Cors::class])->group(function () {
@@ -245,13 +246,14 @@ Route::prefix('v1')->middleware([Cors::class])->group(function () {
 
         Route::post('/create-payment-intent', [PaymentController::class, 'createPaymentIntent'])->middleware('role:patient');
 
-        Route::prefix('reports')->group(function () {
+        Route::prefix('reports')->middleware('can:report.index')->group(function () {
             Route::post('patient-account', [PatientAccountReportController::class, 'report']);
             Route::post('patient-account/download/excel', [PatientAccountReportController::class, 'reportExcel']);
             Route::post('patient-account/download/pdf', [PatientAccountReportController::class, 'reportPdf']);
             Route::post('patient', [PatientReportController::class, 'report']);
             Route::post('patient/download/excel', [PatientReportController::class, 'reportExcel']);
             Route::post('patient/download/pdf', [PatientReportController::class, 'reportPdf']);
-        })->middleware('can:report.index');
+            Route::get('dashboard', [DashboardReportController::class, 'report']);
+        });
     });
 });
