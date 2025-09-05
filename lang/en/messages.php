@@ -10,12 +10,6 @@ return [
     'destroy_success'               => ':Class deleted successfully.',
     'banned'                        => 'Sorry, your account has been banned.',
     'notVerified'                   => 'Please verify your phone number.',
-    'appointment' => [
-        'not_found'   => "No appointments found to shift.",
-        'conflict'    => "This appointment conflicts with another appointment for the doctor (Date: :date, Time: :start - :end).",
-        'invalid_transition' => 'Invalid transition from :from to :to.',
-        'updated_successfully' => 'Appointment status updated successfully to :to.',
-    ],
 
     'queue' => [
         'added'   => 'Patient has been added to the queue.',
@@ -37,5 +31,9 @@ return [
         'patient_not_found'    => 'No patient profile linked to this user.',
         'no_scheduled'         => 'No scheduled appointment found.',
         'check_in_not_allowed' => 'Check-in is only allowed from 30 minutes before until 15 minutes after the appointment time (:time).',
+        'not_found'            => "No appointments found to shift.",
+        'conflict'             => "This appointment conflicts with another appointment for the doctor (Date: :date, Time: :start - :end).",
+        'invalid_transition'   => 'Invalid transition from :from to :to.',
+        'updated_successfully' => 'Appointment status updated successfully to :to.',
     ],
 ];

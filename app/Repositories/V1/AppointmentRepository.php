@@ -123,6 +123,9 @@ class AppointmentRepository
         return DB::transaction(function () use ($employee, $from, $to, $newStartDateTime) {
 
             $appointments = $employee->appointments()
+                ->whereHas('appointmentStatus', function ($q) {
+                    $q->where('name', 'Scheduled');
+                })
                 ->whereBetween('start_time', [$from, $to])
                 ->orderBy('start_time')
                 ->get();
@@ -131,7 +134,7 @@ class AppointmentRepository
                 throw new \Exception(trans('messages.appointment.not_found'));
             }
 
-            $firstOriginalStart = Carbon::parse($appointments->first()->start_time);
+            $firstOriginalStart = Carbon::parse($from);
             $newStart = Carbon::parse($newStartDateTime);
             $diff = $firstOriginalStart->diffInSeconds($newStart, false);
 
@@ -140,17 +143,13 @@ class AppointmentRepository
                 $newEndTime   = Carbon::parse($appointment->end_time)->addSeconds($diff);
 
                 $conflict = $employee->appointments()
-                    ->whereHas('appointmentStatus', function ($q) {
-                        $q->where('name', 'Scheduled');
-                    })
+                    ->whereHas('appointmentStatus', fn($q) => $q->where('name', 'Scheduled'))
                     ->where('id', '!=', $appointment->id)
                     ->where(function ($q) use ($newStartTime, $newEndTime) {
-                        $q->whereBetween('start_time', [$newStartTime, $newEndTime])
-                            ->orWhereBetween('end_time', [$newStartTime, $newEndTime])
-                            ->orWhere(function ($q2) use ($newStartTime, $newEndTime) {
-                                $q2->where('start_time', '<', $newStartTime)
-                                    ->where('end_time', '>', $newEndTime);
-                            });
+                        $q->where(function ($q2) use ($newStartTime, $newEndTime) {
+                            $q2->where('start_time', '<', $newEndTime)
+                                ->where('end_time', '>', $newStartTime);
+                        });
                     })
                     ->first();
 
@@ -165,8 +164,15 @@ class AppointmentRepository
                 }
 
                 $appointment->update([
+                    'appointment_status_id' => AppointmentStatus::firstWhere('name', 'Cancelled')->id,
+                ]);
+
+                Appointment::create([
+                    'patient_id' => $appointment->patient_id,
+                    'employee_id' => $appointment->employee_id,
+                    'appointment_status_id' =>  $appointment->appointment_status_id,
                     'start_time' => $newStartTime,
-                    'end_time'   => $newEndTime,
+                    'end_time' => $newEndTime,
                 ]);
             }
 
