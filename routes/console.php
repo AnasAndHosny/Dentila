@@ -22,3 +22,5 @@ Schedule::command('evaluations:send-reminders')->dailyAt('8:00');
 Schedule::job(new \App\Jobs\SendAppointmentReminders)->hourly();
 
 Schedule::job(new \App\Jobs\UpdateAppointmentStatuses)->everyFiveMinutes();
+
+Schedule::job(new \App\Jobs\SendDoctorShiftReminders)->dailyAt('07:00');

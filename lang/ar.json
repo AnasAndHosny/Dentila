@@ -120,5 +120,12 @@
     "patient account report":"تقرير حساب المريض",
     "patient report":"تقرير المريض",
     "Dashboard statistics for current month":"إحصائيات الداشبورد للشهر الحالي",
-    "Notification sent successfully.":"تم إرسال الإشعار بنجاح."
+    "Notification sent successfully.":"تم إرسال الإشعار بنجاح.",
+    "Monday":"الاثنين",
+    "Tuesday":"الثلاثاء",
+    "Wednesday":"الأربعاء",
+    "Thursday":"الخميس",
+    "Friday":"الجمعة",
+    "Saturday":"السبت",
+    "Sunday":"الأحد"
 }
