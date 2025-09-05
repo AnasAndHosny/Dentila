@@ -18,3 +18,7 @@ Schedule::command('otp:clean')->daily();
 Schedule::command('patients:payment-reminders')->weeklyOn(5, '9:00');
 
 Schedule::command('evaluations:send-reminders')->dailyAt('8:00');
+
+Schedule::job(new \App\Jobs\SendAppointmentReminders)->hourly();
+
+Schedule::job(new \App\Jobs\UpdateAppointmentStatuses)->everyFiveMinutes();
