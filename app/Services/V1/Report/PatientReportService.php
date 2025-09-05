@@ -6,6 +6,8 @@ use Carbon\Carbon;
 use App\Models\Patient;
 use App\Models\Appointment;
 use App\Models\PatientTreatment;
+use App\Models\AppointmentStatus;
+use App\Models\TreatmentEvaluation;
 
 class PatientReportService
 {
@@ -22,6 +24,7 @@ class PatientReportService
         $frequency = $request->input('frequency', 'monthly');
 
         $report = [];
+
         $total = [
             'from' => $startDate->toDateString(),
             'to' => $endDate->toDateString(),
@@ -36,46 +39,58 @@ class PatientReportService
             'avg_visits_per_patient' => 0,
         ];
 
+        // لحساب المتوسط الكلي للتقييمات
+        $ratingSum = 0;
+        $ratingCount = 0;
+
         while ($startDate->lt($endDate)) {
             $toDate = $this->calculateEndDate($startDate, $frequency, $endDate);
 
             // المرضى الجدد
             $newPatients = Patient::whereBetween('created_at', [$startDate, $toDate])->count();
 
-            // المرضى اللي كان عندهم مواعيد خلال الفترة
+            // المرضى اللي عندهم مواعيد
             $patientsWithAppointments = Appointment::whereBetween('start_time', [$startDate, $toDate])
                 ->distinct('patient_id')
                 ->count('patient_id');
 
-            // المرضى العائدين (نتأكد ما يكون سالب)
+            // المرضى العائدين
             $returningPatients = max(0, $patientsWithAppointments - $newPatients);
 
-            // الزيارات الكلية (عدد المواعيد)
+            // عدد المواعيد
             $totalVisits = Appointment::whereBetween('start_time', [$startDate, $toDate])->count();
 
             // المواعيد المحجوزة
             $scheduledAppointments = Appointment::whereBetween('start_time', [$startDate, $toDate])
-                ->where('status', 'scheduled')
+                ->where('appointment_status_id', AppointmentStatus::firstWhere('name', 'Scheduled')->id)
                 ->count();
 
             // المواعيد الملغاة
             $canceledAppointments = Appointment::whereBetween('start_time', [$startDate, $toDate])
-                ->where('status', 'canceled')
+                ->where('appointment_status_id', AppointmentStatus::firstWhere('name', 'Cancelled')->id)
                 ->count();
 
             // المعالجات المكتملة
             $completedTreatments = PatientTreatment::whereBetween('updated_at', [$startDate, $toDate])
-                ->where('status', 'completed')
+                ->where('finished', true)
                 ->count();
 
             // المعالجات قيد التنفيذ
             $inprogressTreatments = PatientTreatment::whereBetween('updated_at', [$startDate, $toDate])
-                ->where('status', 'in_progress')
+                ->where('finished', false)
                 ->count();
 
-            // التقييم (إذا عندك جدول reviews أو rating عمود بالـ patient)
-            $avgRating = Patient::whereBetween('created_at', [$startDate, $toDate])
+            // التقييم من جدول TreatmentEvaluation
+            $avgRating = TreatmentEvaluation::whereBetween('created_at', [$startDate, $toDate])
+                ->whereNotNull('rating')
                 ->avg('rating') ?? 0;
+
+            $ratingsCountPeriod = TreatmentEvaluation::whereBetween('created_at', [$startDate, $toDate])
+                ->whereNotNull('rating')
+                ->count();
+
+            $ratingSum += $avgRating * $ratingsCountPeriod;
+            $ratingCount += $ratingsCountPeriod;
 
             // متوسط عدد الزيارات لكل مريض
             $patientsCount = $newPatients + $returningPatients;
@@ -97,7 +112,7 @@ class PatientReportService
 
             // تحديث المجاميع
             foreach ($total as $key => $value) {
-                if (in_array($key, ['from', 'to'])) {
+                if (in_array($key, ['from', 'to', 'avg_patient_rating'])) {
                     continue;
                 }
                 $total[$key] += $entry[$key];
@@ -106,6 +121,9 @@ class PatientReportService
             $report[] = $entry;
             $startDate = $this->calculateNextStartDate($startDate, $frequency);
         }
+
+        // تحديث المتوسط الكلي للتقييمات
+        $total['avg_patient_rating'] = $ratingCount > 0 ? round($ratingSum / $ratingCount, 2) : 0;
 
         // تحديث المدى الكلي
         $total['from'] = $request->has('start_date') ? $request->start_date : $report[0]['from'];
