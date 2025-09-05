@@ -78,7 +78,7 @@ class QueueTurnRepository
                 $turn->effective_time = $effectiveTime;
                 return $turn;
             })
-            ->sortBy('effective_time')
+            ->sortByDesc('effective_time')
             ->values();
     }
 

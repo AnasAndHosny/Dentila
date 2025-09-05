@@ -9,6 +9,7 @@ use App\Models\QueueTurn;
 use App\Models\Appointment;
 use App\Models\QueueTurnStatus;
 use App\Models\AppointmentStatus;
+use App\Models\DoctorWorkingHour;
 use Illuminate\Support\Facades\DB;
 use App\Queries\V1\AppointmentsQuery;
 
@@ -179,8 +180,18 @@ class AppointmentRepository
         $date     = Carbon::parse($request->date);
         $patientId = auth()->user()->patient->id;
 
-        $workStart = $date->copy()->setTime(9, 0);
-        $workEnd   = $date->copy()->setTime(21, 0);
+        // نجيب دوام الدكتور حسب اليوم المطلوب
+        $dayOfWeek = $date->format('l'); // Monday, Tuesday...
+        $workingHour = DoctorWorkingHour::where('doctor_id', $doctorId)
+            ->where('day_of_week', $dayOfWeek)
+            ->first();
+
+        if (!$workingHour) {
+            return []; // الدكتور ما عندو دوام بهاليوم
+        }
+
+        $workStart = $date->copy()->setTimeFromTimeString($workingHour->start_time);
+        $workEnd   = $date->copy()->setTimeFromTimeString($workingHour->end_time);
 
         // المواعيد الحالية عند الدكتور
         $appointments = Appointment::where('employee_id', $doctorId)
