@@ -28,6 +28,7 @@ class EmployeeRepository
             );
 
             $user->assignRole($request['roles']);
+            $user->markPhoneAsVerified();
 
             return $user->employee()->create($data);
         });
