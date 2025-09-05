@@ -26,6 +26,9 @@ class PaymentController extends Controller
             $paymentIntent = PaymentIntent::create([
                 'amount' => $request->amount * 100,
                 'currency' => $request->currency,
+                'automatic_payment_methods' => [
+                    'enabled' => true,
+                ],
                 'metadata' => [
                     'patient_account_id' => $patientAccountId,
                 ],

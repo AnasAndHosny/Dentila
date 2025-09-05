@@ -33,8 +33,8 @@ class TransactionCreated implements ShouldBroadcast
 
     public function broadcastWith(): array
     {
-        $typeAr   = $this->transaction->type === 'deposit' ? 'إيداع' : 'سحب';
-        $typeEn = $this->transaction->type === 'deposit' ? 'Deposit' : 'Withdrawal';
+        $typeAr   = $this->transaction->type === 'credit' ? 'إيداع' : 'سحب';
+        $typeEn = $this->transaction->type === 'credit' ? 'Deposit' : 'Withdrawal';
 
         return [
             'title_en' => 'New Transaction',

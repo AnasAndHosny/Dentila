@@ -24,7 +24,7 @@ return new class extends Migration
                 ->constrained()
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
-            $table->foreignId('created_by')
+            $table->foreignId('created_by')->nullable()
                 ->constrained('employees')
                 ->cascadeOnUpdate()
                 ->nullOnDelete();

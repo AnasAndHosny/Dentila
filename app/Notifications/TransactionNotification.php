@@ -50,8 +50,8 @@ class TransactionNotification extends Notification implements ShouldQueue
      */
     public function toDatabase(object $notifiable): array
     {
-        $typeAr   = $this->transaction->type === 'deposit' ? 'إيداع' : 'سحب';
-        $typeEn = $this->transaction->type === 'deposit' ? 'Deposit' : 'Withdrawal';
+        $typeAr   = $this->transaction->type === 'credit' ? 'إيداع' : 'سحب';
+        $typeEn = $this->transaction->type === 'credit' ? 'Deposit' : 'Withdrawal';
 
         return [
             'title_en' => 'New Transaction',
@@ -77,7 +77,7 @@ class TransactionNotification extends Notification implements ShouldQueue
     public function toWhatsapp(object $notifiable)
     {
         $amount = number_format(abs($this->transaction->amount));
-        $type = $this->transaction->type === 'deposit' ? 'إيداع' : 'سحب';
+        $type = $this->transaction->type === 'credit' ? 'إيداع' : 'سحب';
 
         $template = Arr::random(self::$whatsappMessages);
 
