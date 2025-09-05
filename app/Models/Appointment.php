@@ -16,6 +16,27 @@ class Appointment extends Model
         'end_time',
     ];
 
+    protected static function booted()
+    {
+        static::created(function (Appointment $appointment) {
+            if ($appointment->appointmentStatus->name === 'Scheduled') {
+                event(new \App\Events\AppointmentStatusChanged($appointment));
+            }
+        });
+
+        static::updated(function (Appointment $appointment) {
+            $originalStatus = $appointment->getOriginal('appointment_status_id');
+            $currentStatus  = $appointment->appointment_status_id;
+
+            $allowedStatuses = AppointmentStatus::whereIn('name', ['Scheduled', 'Refused', 'Cancelled'])->pluck('id')->toArray();
+
+            // تحقق من أن الحالة تغيرت وأنها ضمن الحالات المطلوبة
+            if ($originalStatus !== $currentStatus && in_array($currentStatus, $allowedStatuses)) {
+                event(new \App\Events\AppointmentStatusChanged($appointment));
+            }
+        });
+    }
+
     public function getDurationInMinutesAttribute()
     {
         $start = Carbon::parse($this->start_time);     //هوت كان عاطي أيرور
